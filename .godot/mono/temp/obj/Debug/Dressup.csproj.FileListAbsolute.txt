@@ -1,0 +1,17 @@
+/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/bin/Debug/Dressup.deps.json
+/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/bin/Debug/Dressup.runtimeconfig.json
+/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/bin/Debug/Dressup.dll
+/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/bin/Debug/ref/Dressup.dll
+/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/bin/Debug/Dressup.pdb
+/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/bin/Debug/GodotSharp.dll
+/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/bin/Debug/GodotSharpEditor.dll
+/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/obj/Debug/Dressup.csproj.AssemblyReference.cache
+/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/obj/Debug/Dressup.GeneratedMSBuildEditorConfig.editorconfig
+/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/obj/Debug/Dressup.AssemblyInfoInputs.cache
+/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/obj/Debug/Dressup.AssemblyInfo.cs
+/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/obj/Debug/Dressup.csproj.CoreCompileInputs.cache
+/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/obj/Debug/Dressup.csproj.CopyComplete
+/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/obj/Debug/Dressup.dll
+/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/obj/Debug/ref/Dressup.dll
+/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/obj/Debug/Dressup.pdb
+/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/obj/Debug/Dressup.genruntimeconfig.cache

@@ -1,0 +1,84 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/xenntric/Documents/Godot Projects/Dressup/Dressup.csproj": {}
+  },
+  "projects": {
+    "/home/xenntric/Documents/Godot Projects/Dressup/Dressup.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/xenntric/Documents/Godot Projects/Dressup/Dressup.csproj",
+        "projectName": "Dressup",
+        "projectPath": "/home/xenntric/Documents/Godot Projects/Dressup/Dressup.csproj",
+        "packagesPath": "/home/xenntric/.nuget/packages/",
+        "outputPath": "/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/home/xenntric/.local/share/godot/mono/GodotNuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/xenntric/.nuget/NuGet/NuGet.Config",
+          "/home/xenntric/.nuget/NuGet/config/Godot.Offline.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Godot.SourceGenerators": {
+              "target": "Package",
+              "version": "[4.0.0-rc.1, )"
+            },
+            "GodotSharp": {
+              "target": "Package",
+              "version": "[4.0.0-rc.1, )"
+            },
+            "GodotSharpEditor": {
+              "target": "Package",
+              "version": "[4.0.0-rc.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.13, 6.0.13]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

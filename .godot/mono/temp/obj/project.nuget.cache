@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "sV3JLUH05VeK2HxeSAgIajklsYCrzGSzQbjnNaID8BPYGpbTjCSUunnjMqQzZwuivTJGhDpRxZkqj2MSe826fQ==",
+  "success": true,
+  "projectFilePath": "/home/xenntric/Documents/Godot Projects/Dressup/Dressup.csproj",
+  "expectedPackageFiles": [
+    "/home/xenntric/.nuget/packages/godot.sourcegenerators/4.0.0-rc.1/godot.sourcegenerators.4.0.0-rc.1.nupkg.sha512",
+    "/home/xenntric/.nuget/packages/godotsharp/4.0.0-rc.1/godotsharp.4.0.0-rc.1.nupkg.sha512",
+    "/home/xenntric/.nuget/packages/godotsharpeditor/4.0.0-rc.1/godotsharpeditor.4.0.0-rc.1.nupkg.sha512",
+    "/home/xenntric/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.13/microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}
