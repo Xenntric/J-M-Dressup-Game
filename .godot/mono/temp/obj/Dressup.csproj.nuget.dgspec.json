@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/xenntric/Documents/Godot Projects/Dressup/Dressup.csproj": {}
+    "/home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/Dressup.csproj": {}
   },
   "projects": {
-    "/home/xenntric/Documents/Godot Projects/Dressup/Dressup.csproj": {
+    "/home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/Dressup.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/xenntric/Documents/Godot Projects/Dressup/Dressup.csproj",
+        "projectUniqueName": "/home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/Dressup.csproj",
         "projectName": "Dressup",
-        "projectPath": "/home/xenntric/Documents/Godot Projects/Dressup/Dressup.csproj",
+        "projectPath": "/home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/Dressup.csproj",
         "packagesPath": "/home/xenntric/.nuget/packages/",
-        "outputPath": "/home/xenntric/Documents/Godot Projects/Dressup/.godot/mono/temp/obj/",
+        "outputPath": "/home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/.godot/mono/temp/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/home/xenntric/.local/share/godot/mono/GodotNuGetFallbackFolder"
@@ -44,15 +44,15 @@
           "dependencies": {
             "Godot.SourceGenerators": {
               "target": "Package",
-              "version": "[4.0.0-rc.1, )"
+              "version": "[4.0.0-rc.2, )"
             },
             "GodotSharp": {
               "target": "Package",
-              "version": "[4.0.0-rc.1, )"
+              "version": "[4.0.0-rc.2, )"
             },
             "GodotSharpEditor": {
               "target": "Package",
-              "version": "[4.0.0-rc.1, )"
+              "version": "[4.0.0-rc.2, )"
             }
           },
           "imports": [

@@ -1,8 +1,9 @@
+Area2D
+Node2D
+Node
+StaticBody2D
+CollisionShape2D
 Control
 VBoxContainer
 CanvasGroup
-CollisionShape2D
-Area2D
-Node2D
 Sprite2D
-Node

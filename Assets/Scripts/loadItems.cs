@@ -30,11 +30,12 @@ public struct loadItems
                 var hat_item = new Items();
                 var texture = (Texture2D)GD.Load(hat);
 
-                hat_item.item = new Node2D();
                 hat_item.item_sprite = new Sprite2D();
                 hat_item.item_collider = new CollisionShape2D();
                 hat_item.item_area = new Area2D();
-            
+                hat_item.item_body = new StaticBody2D();
+                hat_item.item = new Node2D();
+
                 //GD.Print(hat_item.item_collider.GlobalTransform);
                 //GD.Print(hat_item.item_collider.GlobalPosition);
 

@@ -1,24 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnlms1bm4euxx"]
+[gd_scene load_steps=7 format=3 uid="uid://datctv4lilhv1"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/MouseControl.cs" id="1_70s2r"]
+[ext_resource type="Script" path="res://Assets/Scripts/MouseNode.cs" id="1_sebjo"]
 [ext_resource type="Texture2D" uid="uid://ca22x7ja7vc77" path="res://Assets/Characters/character.PNG" id="1_xe8ly"]
+[ext_resource type="Script" path="res://Assets/Scripts/SignalScript.cs" id="2_luyfc"]
 [ext_resource type="Script" path="res://Assets/Scripts/FolderGenerator.cs" id="2_wdook"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhmjx"]
+size = Vector2(228, 275)
 
-[node name="Node2D" type="Node2D"]
-script = ExtResource("1_70s2r")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmr7d"]
+size = Vector2(132, 134)
 
-[node name="Character" type="Sprite2D" parent="."]
-position = Vector2(570, 369)
-texture = ExtResource("1_xe8ly")
+[node name="DressUpScene" type="Node2D"]
 
-[node name="Area2D" type="Area2D" parent="Character"]
+[node name="MouseControlNode" type="Node" parent="."]
+script = ExtResource("1_sebjo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/Area2D"]
+[node name="folder" type="Node2D" parent="."]
+position = Vector2(571, 371)
+
+[node name="Area2D" type="Area2D" parent="folder"]
+script = ExtResource("2_luyfc")
+
+[node name="SignalTarget" type="Node" parent="folder/Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="folder/Area2D"]
 shape = SubResource("RectangleShape2D_vhmjx")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
-[node name="Hat Folder" type="Node2D" parent="."]
-position = Vector2(520, 292)
+[node name="Character" type="Sprite2D" parent="folder/Area2D"]
+texture = ExtResource("1_xe8ly")
+
+[node name="Hat Folder" type="Node2D" parent="." groups=["Folders"]]
+position = Vector2(576, 275)
 script = ExtResource("2_wdook")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(216, 167)
+shape = SubResource("RectangleShape2D_fmr7d")
