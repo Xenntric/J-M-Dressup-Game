@@ -1,5 +1,5 @@
 2a60927148abd1d33b818b535e306557
-::res://::1677022579
+::res://::1677058207
 icon.svg::CompressedTexture2D::813288404080885267::1676901383::1676901383::1::::<><>::
 README.md::TextFile::-1::1676901383::0::1::::<><>::
 ::res://Assets/::1676901383
@@ -13,11 +13,11 @@ top hat.png::CompressedTexture2D::914419443044285061::1676901383::1676901383::1:
 ::res://Assets/Clothes/Shoes/::1677010218
 headshot.png::CompressedTexture2D::4785989734212734375::1677010216::1677010218::1::::<><>::
 shoe_wellington.png::CompressedTexture2D::8866131298539875784::1676901383::1676901383::1::::<><>::
-::res://Assets/Scenes/::1677010855
-main_dressup.tscn::PackedScene::7198641740776767480::1677010855::0::1::::<><>::uid://ca22x7ja7vc77<>res://Assets/Scripts/FolderGenerator.cs<>uid://2vwjc21e0fnr<>uid://dsvrwlfhok34x
-::res://Assets/Scripts/::1677005590
-FolderGenerator.cs::CSharpScript::-1::1677008568::0::1::::<><>::
+::res://Assets/Scenes/::1677030238
+main_dressup.tscn::PackedScene::7198641740776767480::1677030238::0::1::::<><>::res://Assets/Scripts/MouseNode.cs<>uid://ca22x7ja7vc77<>res://Assets/Scripts/FolderGenerator.cs<>uid://2vwjc21e0fnr<>uid://dsvrwlfhok34x
+::res://Assets/Scripts/::1677029515
+FolderGenerator.cs::CSharpScript::-1::1677029430::0::1::::<><>::
 Items.cs::CSharpScript::-1::1676901383::0::1::::<><>::
 loadItems.cs::CSharpScript::-1::1676901383::0::1::::<><>::
-MouseNode.cs::CSharpScript::-1::1677011060::0::1::::<><>::
-SignalScript.cs::CSharpScript::-1::1677011058::0::1::::<><>::
+MouseNode.cs::CSharpScript::-1::1677030822::0::1::::<><>::
+SignalScript.cs::CSharpScript::-1::1677029887::0::1::::<><>::

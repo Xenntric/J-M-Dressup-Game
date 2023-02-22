@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://datctv4lilhv1"]
+[gd_scene load_steps=8 format=3 uid="uid://datctv4lilhv1"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/MouseNode.cs" id="1_787kk"]
 [ext_resource type="Texture2D" uid="uid://ca22x7ja7vc77" path="res://Assets/Characters/character.PNG" id="1_xe8ly"]
@@ -8,6 +8,8 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhmjx"]
 size = Vector2(228, 275)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ldeyx"]
 
 [node name="DressUpScene" type="Node2D"]
 
@@ -19,9 +21,11 @@ position = Vector2(357, 341)
 scale = Vector2(0.33, 0.33)
 
 [node name="J" type="Sprite2D" parent="Characters"]
+visible = false
 texture = ExtResource("3_gbgc1")
 
 [node name="M" type="Sprite2D" parent="Characters"]
+visible = false
 position = Vector2(1357.58, 9.09119)
 texture = ExtResource("4_nv3ic")
 
@@ -35,6 +39,7 @@ shape = SubResource("RectangleShape2D_vhmjx")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="Character" type="Sprite2D" parent="folder/Area2D"]
+material = SubResource("CanvasItemMaterial_ldeyx")
 texture = ExtResource("1_xe8ly")
 
 [node name="Hat Folder" type="Node2D" parent="." groups=["Folders"]]

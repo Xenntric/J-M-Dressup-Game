@@ -5,8 +5,8 @@ using System.Collections.Generic;
 public partial class FolderGenerator : Node2D
 {
 
-	//private Node MC;
-	//private Script MCS;
+	private MouseNode MN;
+
 	bool flicked;
 	//SignalScript signalScript;
 	public loadItems LoadItems;
@@ -34,7 +34,8 @@ public partial class FolderGenerator : Node2D
 		return null;
 	}
 	public override void _Ready()
-	{
+	{		
+		MN = GetNode<MouseNode>(new NodePath("/root/DressUpScene/MouseControlNode"));
 		List<Items> hats = new List<Items>(LoadItems.Construct_Hats(clothestoFind()));
 		items_nodes = new List<Node2D>();
 		//MC = GetNode<Node>("../MouseControl");
@@ -85,6 +86,7 @@ public partial class FolderGenerator : Node2D
 			new_hat_area.Name       = item.item_name + " Area2D";
 			new_hat_collider.Name   = item.item_name + " Collision Shape";
 
+			MN.addToZIndex(new_hat_node);
 			//Resource script = GD.Load("Assets/Scripts/SignalScript.cs");
 			
 			// ulong objId = new_hat_area.GetInstanceId();

@@ -37,39 +37,15 @@ public partial class SignalScript : Area2D
 
 		//MN.addNode(thisParent, null);
 	}
-	public override void _Input(InputEvent @event)
-	{
-		// base._Input(@event);
-		
-		// if (@event.IsActionPressed("Grab") && Hovering)
-		// {
-		// 	clicked = true;
-		// 	GD.Print("Grabbed: " + this.Name + " @ Z index: " + this.ZIndex);
-		// }
-		// else if (@event.IsActionReleased("Grab") && Hovering)
-		// {
-		// 	GD.Print("Released");
-
-		// 	clicked = false;
-		// }
-	}
 
 	public void mouse_on()
 	{
+		//thisParent.ZIndex = 1;
         MN.Items_nodes.Add(thisParent);
 	}
 	public void mouse_off()
 	{
+		//thisParent.ZIndex = 0;
         MN.Items_nodes.Remove(thisParent);
 	}
-	public override void _Process(double delta)
-	{
-		// if(clicked)
-		// {
-		// 	//GD.Print("mouse pos: " + GetViewport().GetMousePosition());
-		// 	thisParent.Position = GetViewport().GetMousePosition() - (originalPos);
-		// }
-		// else{this.Position = this.Position;}
-	}
-
 }
