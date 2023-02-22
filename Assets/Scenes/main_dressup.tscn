@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://datctv4lilhv1"]
+[gd_scene load_steps=7 format=3 uid="uid://datctv4lilhv1"]
 
+[ext_resource type="Script" path="res://Assets/Scripts/MouseNode.cs" id="1_787kk"]
 [ext_resource type="Texture2D" uid="uid://ca22x7ja7vc77" path="res://Assets/Characters/character.PNG" id="1_xe8ly"]
 [ext_resource type="Script" path="res://Assets/Scripts/FolderGenerator.cs" id="2_wdook"]
 [ext_resource type="Texture2D" uid="uid://2vwjc21e0fnr" path="res://Assets/Characters/J.png" id="3_gbgc1"]
@@ -10,20 +11,19 @@ size = Vector2(228, 275)
 
 [node name="DressUpScene" type="Node2D"]
 
+[node name="MouseControlNode" type="Node" parent="."]
+script = ExtResource("1_787kk")
+
 [node name="Characters" type="Node2D" parent="."]
 position = Vector2(357, 341)
 scale = Vector2(0.33, 0.33)
 
 [node name="J" type="Sprite2D" parent="Characters"]
-scale = Vector2(1, 1)
 texture = ExtResource("3_gbgc1")
 
 [node name="M" type="Sprite2D" parent="Characters"]
 position = Vector2(1357.58, 9.09119)
-scale = Vector2(1, 1)
 texture = ExtResource("4_nv3ic")
-
-[node name="MouseControlNode" type="Node" parent="."]
 
 [node name="folder" type="Node2D" parent="."]
 
