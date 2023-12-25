@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://datctv4lilhv1"]
+[gd_scene load_steps=11 format=3 uid="uid://datctv4lilhv1"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/MouseNode.cs" id="1_787kk"]
 [ext_resource type="Texture2D" uid="uid://ca22x7ja7vc77" path="res://Assets/Art/Characters/character.PNG" id="1_xe8ly"]
+[ext_resource type="Texture2D" uid="uid://cwuerq3acdchl" path="res://Assets/Art/Splash Art/background.png" id="2_di5s5"]
 [ext_resource type="Script" path="res://Assets/Scripts/FolderGenerator.cs" id="2_wdook"]
 [ext_resource type="Texture2D" uid="uid://2vwjc21e0fnr" path="res://Assets/Art/Characters/J.png" id="3_gbgc1"]
 [ext_resource type="Texture2D" uid="uid://dsvrwlfhok34x" path="res://Assets/Art/Characters/M.png" id="4_nv3ic"]
@@ -14,9 +15,18 @@ size = Vector2(228, 275)
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ldeyx"]
 
 [node name="DressUpScene" type="Node2D"]
+texture_filter = 1
 
 [node name="MouseControlNode" type="Node" parent="."]
 script = ExtResource("1_787kk")
+
+[node name="BackgroundNode" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="BackgroundNode"]
+modulate = Color(0.411765, 0.223529, 0.647059, 1)
+position = Vector2(576, 324)
+scale = Vector2(1168, 664)
+texture = ExtResource("2_di5s5")
 
 [node name="Characters" type="Node2D" parent="."]
 position = Vector2(357, 341)
@@ -30,7 +40,6 @@ position = Vector2(1357.58, 9.09119)
 texture = ExtResource("4_nv3ic")
 
 [node name="folder" type="Node2D" parent="."]
-visible = false
 
 [node name="Area2D" type="Area2D" parent="folder"]
 position = Vector2(579, 381)

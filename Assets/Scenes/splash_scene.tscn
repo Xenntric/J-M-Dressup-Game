@@ -1,7 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://jrkflywtdx4e"]
+[gd_scene load_steps=37 format=3 uid="uid://jrkflywtdx4e"]
 
+[ext_resource type="Script" path="res://Assets/Scripts/SplashScreen/MenuScript.cs" id="1_7cnoy"]
 [ext_resource type="Texture2D" uid="uid://btpf2oqpvghbm" path="res://Assets/Art/Splash Art/Portraits/SpriteFrame_1.png" id="1_fpdbn"]
 [ext_resource type="Texture2D" uid="uid://cwuerq3acdchl" path="res://Assets/Art/Splash Art/background.png" id="1_woctu"]
+[ext_resource type="PackedScene" uid="uid://datctv4lilhv1" path="res://Assets/Scenes/main_dressup.tscn" id="2_pchsh"]
 [ext_resource type="Texture2D" uid="uid://ce18ww5kud14c" path="res://Assets/Art/Splash Art/Portraits/SpriteFrame_2.png" id="2_ufrph"]
 [ext_resource type="Texture2D" uid="uid://by6n3gextcqvp" path="res://Assets/Art/Splash Art/Usernames/Bollsachs/SpriteFrameBorder_1.png" id="5_gi0x4"]
 [ext_resource type="Texture2D" uid="uid://4ecghptwke0f" path="res://Assets/Art/Splash Art/Usernames/Bollsachs/SpriteFrameBorder_2.png" id="6_uftrk"]
@@ -11,6 +13,29 @@
 [ext_resource type="Texture2D" uid="uid://dn3i68bdv4xmv" path="res://Assets/Art/Splash Art/Logo/SpriteFrame_2.png" id="8_pmhre"]
 [ext_resource type="Texture2D" uid="uid://beipxchhovxhh" path="res://Assets/Art/Splash Art/blackScreen.png" id="9_86jgh"]
 [ext_resource type="Texture2D" uid="uid://tdkqa0sbknsd" path="res://Assets/Art/Splash Art/heart.png" id="11_sn8v0"]
+[ext_resource type="Texture2D" uid="uid://brfkt1lif80bv" path="res://Assets/Art/Menu/Play/PlayFrame_unselected_1.png" id="12_m0rsq"]
+[ext_resource type="Texture2D" uid="uid://ctxtf0lgyk3nc" path="res://Assets/Art/Menu/Play/PlayFrame_unselected_2.png" id="13_ked5s"]
+[ext_resource type="Texture2D" uid="uid://xhlq187tpwp0" path="res://Assets/Art/Menu/Play/PlayFrame_selected_1.png" id="14_ounxn"]
+[ext_resource type="Texture2D" uid="uid://bg8i2c4x8u160" path="res://Assets/Art/Menu/Play/PlayFrame_selected_2.png" id="15_743m7"]
+[ext_resource type="Texture2D" uid="uid://cn2033rpygsuv" path="res://Assets/Art/Menu/Quit/QuitFrame_unselected_1.png" id="16_d6ad7"]
+[ext_resource type="Texture2D" uid="uid://bdpegum7nejtl" path="res://Assets/Art/Menu/Quit/QuitFrame_unselected_2.png" id="17_dfrey"]
+[ext_resource type="Texture2D" uid="uid://b8kq07robme7i" path="res://Assets/Art/Menu/Quit/QuitFrame_selected_1.png" id="18_nwih1"]
+[ext_resource type="Texture2D" uid="uid://6gq5gpbh4pcb" path="res://Assets/Art/Menu/Quit/QuitFrame_selected_2.png" id="19_31s80"]
+
+[sub_resource type="Animation" id="Animation_43n6u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-14, -66)]
+}
 
 [sub_resource type="Animation" id="Animation_kdcyd"]
 resource_name = "heart_slide"
@@ -19,29 +44,14 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../NinePatchRect:position")
+tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-24, -72), Vector2(-24, -46)]
-}
-
-[sub_resource type="Animation" id="Animation_43n6u"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../NinePatchRect:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-24, -72)]
+"values": [Vector2(-10, -64), Vector2(-10, -38)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qwflm"]
@@ -107,7 +117,8 @@ animations = [{
 }]
 
 [sub_resource type="Animation" id="Animation_yr6fi"]
-length = 4.5
+resource_name = "Splash_Animation"
+length = 6.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -115,7 +126,7 @@ tracks/0/path = NodePath("Logoslide:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(1, 4),
+"times": PackedFloat32Array(1.2, 4.2),
 "transitions": PackedFloat32Array(0.1, 1),
 "update": 0,
 "values": [Vector2(13099.6, 16865.6), Vector2(13099.6, 11301.7)]
@@ -127,7 +138,7 @@ tracks/1/path = NodePath("Usernames:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(2, 4.5),
+"times": PackedFloat32Array(2.2, 4.7),
 "transitions": PackedFloat32Array(0.175, 1),
 "update": 0,
 "values": [Vector2(12925, 15300.7), Vector2(12925, 9389.08)]
@@ -135,51 +146,98 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BlackScreen:self_modulate")
+tracks/2/path = NodePath(".:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(5.2, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BlackScreen:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_lpwt5"]
-resource_name = "Username_Slide"
-length = 4.5
+[sub_resource type="Animation" id="Animation_1gbt2"]
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Logoslide:position")
+tracks/0/path = NodePath("../Control:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.4, 4.5),
-"transitions": PackedFloat32Array(0.1, 1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(13099.6, 16865.6), Vector2(13099.6, 11301.7)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Usernames:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(1.4, 4.5),
-"transitions": PackedFloat32Array(0.15, 1),
+
+[sub_resource type="Animation" id="Animation_tltqa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(12925, 15300.7), Vector2(13099.6, 9736.82)]
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7kc5o"]
 _data = {
-"RESET": SubResource("Animation_yr6fi"),
-"Username_Slide": SubResource("Animation_lpwt5")
+"Menu_Animation": SubResource("Animation_1gbt2"),
+"RESET": SubResource("Animation_tltqa"),
+"Splash_Animation": SubResource("Animation_yr6fi")
 }
 
-[node name="SplashScene" type="Node2D"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_ry1in"]
+frames = 2
+frame_0/texture = ExtResource("12_m0rsq")
+frame_0/duration = 0.25
+frame_1/texture = ExtResource("13_ked5s")
+frame_1/duration = 0.25
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_6t8hu"]
+frames = 2
+frame_0/texture = ExtResource("14_ounxn")
+frame_0/duration = 0.25
+frame_1/texture = ExtResource("15_743m7")
+frame_1/duration = 0.25
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_nnwea"]
+frames = 2
+frame_0/texture = ExtResource("16_d6ad7")
+frame_0/duration = 0.25
+frame_1/texture = ExtResource("17_dfrey")
+frame_1/duration = 0.25
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_y28gp"]
+frames = 2
+frame_0/texture = ExtResource("18_nwih1")
+frame_0/duration = 0.25
+frame_1/texture = ExtResource("19_31s80")
+frame_1/duration = 0.25
+
+[node name="SplashScene" type="Node2D" node_paths=PackedStringArray("SplashAnimation", "MenuControlNode")]
+texture_filter = 1
+script = ExtResource("1_7cnoy")
+SplashAnimation = NodePath("Splash Art/AnimateSplash")
+MenuControlNode = NodePath("Control")
+MainGame = ExtResource("2_pchsh")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(577.875, 326.375)
@@ -188,38 +246,35 @@ texture = ExtResource("1_woctu")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 self_modulate = Color(1, 1, 1, 0.145098)
-texture_filter = 1
-offset_left = -24.0
-offset_top = -72.0
-offset_right = 879.0
-offset_bottom = 556.0
+offset_left = -14.0
+offset_top = -66.0
+offset_right = 889.0
+offset_bottom = 562.0
 scale = Vector2(1.33754, 1.14983)
 texture = ExtResource("11_sn8v0")
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="NinePatchRect"]
-root_node = NodePath("../../Heart")
+[node name="AnimateHearts" type="AnimationPlayer" parent="NinePatchRect"]
 libraries = {
 "": SubResource("AnimationLibrary_qwflm")
 }
 autoplay = "heart_slide"
 
 [node name="Splash Art" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 1)
 scale = Vector2(0.0458028, 0.0460109)
 
 [node name="Portraits" type="AnimatedSprite2D" parent="Splash Art"]
-texture_filter = 1
 position = Vector2(12401, 5390.03)
 scale = Vector2(7.81157, 7.788)
 sprite_frames = SubResource("SpriteFrames_xqfjg")
 autoplay = "default"
 
 [node name="Usernames" type="Node2D" parent="Splash Art"]
-position = Vector2(12925, 15300.7)
+position = Vector2(12925, 9389.08)
 
 [node name="bollsachs" type="AnimatedSprite2D" parent="Splash Art/Usernames"]
-texture_filter = 1
 position = Vector2(8558.43, 173.866)
 scale = Vector2(28.198, 28.198)
 sprite_frames = SubResource("SpriteFrames_3tm6u")
@@ -227,7 +282,6 @@ autoplay = "default"
 frame_progress = 0.0240518
 
 [node name="xenntric" type="AnimatedSprite2D" parent="Splash Art/Usernames"]
-texture_filter = 1
 position = Vector2(-8733.11, 173.866)
 scale = Vector2(29.0023, 29.0023)
 sprite_frames = SubResource("SpriteFrames_wmcls")
@@ -235,22 +289,26 @@ autoplay = "default"
 frame_progress = 0.873045
 
 [node name="Logoslide" type="Node2D" parent="Splash Art"]
-position = Vector2(13099.6, 16865.6)
+position = Vector2(13099.6, 11301.7)
 
 [node name="Logo" type="AnimatedSprite2D" parent="Splash Art/Logoslide"]
-texture_filter = 1
 scale = Vector2(23.0119, 22.9772)
 sprite_frames = SubResource("SpriteFrames_3718d")
 autoplay = "default"
 frame_progress = 0.695564
 
+[node name="AnimateSplash" type="AnimationPlayer" parent="Splash Art"]
+libraries = {
+"": SubResource("AnimationLibrary_7kc5o")
+}
+
 [node name="BlackScreen" type="Sprite2D" parent="Splash Art"]
-position = Vector2(12575.7, 7041.81)
-scale = Vector2(25500.6, 14431.4)
+position = Vector2(12575.7, 7128.74)
+scale = Vector2(26391.4, 15156.4)
 texture = ExtResource("9_86jgh")
 
 [node name="Control" type="Control" parent="."]
-visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchor_right = 0.493
 anchor_bottom = 0.938
@@ -258,39 +316,31 @@ offset_left = 528.0
 offset_top = 24.0
 offset_right = 528.0
 offset_bottom = 24.0
+mouse_default_cursor_shape = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="Main Button" type="Button" parent="Control"]
-visible = false
+[node name="Play" type="TextureButton" parent="Control"]
 layout_mode = 0
-offset_right = 97.0
-offset_bottom = 31.0
-text = "Main Game"
+offset_left = -456.0
+offset_top = 208.0
+offset_right = 3907.0
+offset_bottom = 2294.0
+scale = Vector2(0.0448679, 0.0448679)
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AnimatedTexture_ry1in")
+texture_hover = SubResource("AnimatedTexture_6t8hu")
+stretch_mode = 0
 
-[node name="Exit Button" type="Button" parent="Control"]
-visible = false
+[node name="Quit" type="TextureButton" parent="Control"]
 layout_mode = 0
-offset_top = 32.0
-offset_right = 97.0
-offset_bottom = 63.0
-text = "Exit"
+offset_left = -440.0
+offset_top = 312.0
+offset_right = -279.0
+offset_bottom = 389.0
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AnimatedTexture_nnwea")
+texture_hover = SubResource("AnimatedTexture_y28gp")
+stretch_mode = 0
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
-visible = false
-texture_repeat = 2
-layout_mode = 0
-offset_right = 80.0
-offset_bottom = 64.0
-texture = ExtResource("11_sn8v0")
-
-[node name="AnimateSlideIn" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Splash Art")
-libraries = {
-"": SubResource("AnimationLibrary_7kc5o")
-}
-autoplay = "RESET"
-
-[node name="Heart" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(80, 56)
-scale = Vector2(1.54348, 1.54348)
-texture = ExtResource("11_sn8v0")
+[connection signal="pressed" from="Control/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/Quit" to="." method="_on_quit_pressed"]

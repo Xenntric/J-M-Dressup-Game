@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e2lylvnc8k8w"
-path="res://.godot/imported/top hat 2.png-0349a1ed3a80006cd11439b381f380cf.ctex"
+uid="uid://dlvybxj7a6ox5"
+path="res://.godot/imported/QuitFrame_1.png-d5b739849a2d3c6031e98e4a52bd8f7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Clothes/Hats/top hat 2.png"
-dest_files=["res://.godot/imported/top hat 2.png-0349a1ed3a80006cd11439b381f380cf.ctex"]
+source_file="res://Assets/Art/Menu/Quit/QuitFrame_1.png"
+dest_files=["res://.godot/imported/QuitFrame_1.png-d5b739849a2d3c6031e98e4a52bd8f7d.ctex"]
 
 [params]
 

@@ -4,3 +4,6 @@ res://Assets/Scenes/splash_scene.tscn
 res://Assets/Scripts/MouseNode.cs
 res://Assets/Scripts/SignalScript.cs
 res://Assets/Scripts/SplashScreen/ArtTweenIn.cs
+res://Assets/Scripts/SplashScreen/menu_script.cs
+res://Assets/Scripts/SplashScreen/MenuScript.cs
+res://Assets/Scenes/Quit.cs

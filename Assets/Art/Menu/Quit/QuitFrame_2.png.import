@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4qvrryj38o3q"
-path="res://.godot/imported/SpriteFrameBorder_2.png-8039d76144526ecc1871e833a8f76ada.ctex"
+uid="uid://bddkoq8uf0kht"
+path="res://.godot/imported/QuitFrame_2.png-e0ed3ffad01b1ea1c01c0d003ebba403.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Splash Art/SpriteFrameBorder_2.png"
-dest_files=["res://.godot/imported/SpriteFrameBorder_2.png-8039d76144526ecc1871e833a8f76ada.ctex"]
+source_file="res://Assets/Art/Menu/Quit/QuitFrame_2.png"
+dest_files=["res://.godot/imported/QuitFrame_2.png-e0ed3ffad01b1ea1c01c0d003ebba403.ctex"]
 
 [params]
 

@@ -1,9 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1703507879
+::res://::1703516426
 icon.svg::CompressedTexture2D::813288404080885267::1703360763::1703360763::1::::<><>::
 README.md::TextFile::-1::1703360763::0::1::::<><>::
 ::res://Assets/::1703434572
-::res://Assets/Art/::1703436989
+::res://Assets/Art/::1703517035
 ::res://Assets/Art/Characters/::1703434572
 character.PNG::CompressedTexture2D::4830261693504359120::1703360763::1703434572::1::::<><>::
 J.png::CompressedTexture2D::1939802704992210663::1703360763::1703434572::1::::<><>::
@@ -14,32 +14,51 @@ top hat.png::CompressedTexture2D::914419443044285061::1703360763::1703434572::1:
 ::res://Assets/Art/Clothes/Shoes/::1703434572
 headshot.png::CompressedTexture2D::4785989734212734375::1703360763::1703434572::1::::<><>::
 shoe_wellington.png::CompressedTexture2D::8866131298539875784::1703360763::1703434572::1::::<><>::
+::res://Assets/Art/Menu/::1703516969
+::res://Assets/Art/Menu/Play/::1703518076
+PlayFrame_1.png::CompressedTexture2D::6535997966629732371::1703517344::1703517384::1::::<><>::
+PlayFrame_2.png::CompressedTexture2D::4131029812860423169::1703517357::1703517384::1::::<><>::
+PlayFrame_selected_1.png::CompressedTexture2D::1629491925641661655::1703517874::1703518006::1::::<><>::
+PlayFrame_selected_2.png::CompressedTexture2D::2876212314718791279::1703517927::1703518006::1::::<><>::
+PlayFrame_unselected_1.png::CompressedTexture2D::3590595397293251507::1703517863::1703518006::1::::<><>::
+PlayFrame_unselected_2.png::CompressedTexture2D::6155073967065992188::1703518071::1703518078::1::::<><>::
+Untitled_Artwork-1.png::CompressedTexture2D::4322527955967091559::1703516674::1703517038::1::::<><>::
+Untitled_Artwork-2.png::CompressedTexture2D::249968532962003973::1703516674::1703517038::1::::<><>::
+::res://Assets/Art/Menu/Quit/::1703518078
+QuitFrame_1.png::CompressedTexture2D::7976151480948676764::1703517374::1703517384::1::::<><>::
+QuitFrame_2.png::CompressedTexture2D::2603813411180243329::1703517382::1703517384::1::::<><>::
+QuitFrame_selected_1.png::CompressedTexture2D::4724314125667442632::1703517981::1703518006::1::::<><>::
+QuitFrame_selected_2.png::CompressedTexture2D::2189265803372886969::1703518001::1703518006::1::::<><>::
+QuitFrame_unselected_1.png::CompressedTexture2D::5742603958718075605::1703517972::1703518006::1::::<><>::
+QuitFrame_unselected_2.png::CompressedTexture2D::2628207534128720165::1703517991::1703518006::1::::<><>::
+Untitled_Artwork-1.png::CompressedTexture2D::3290719605269574570::1703516915::1703517038::1::::<><>::
+Untitled_Artwork-2.png::CompressedTexture2D::8376574267015294038::1703516915::1703517038::1::::<><>::
 ::res://Assets/Art/Splash Art/::1703512862
 background.png::CompressedTexture2D::6358557592602478265::1703508097::1703508089::1::::<><>::
 blackScreen.png::CompressedTexture2D::2684643024626958457::1703504361::1703505169::1::::<><>::
 heart.png::CompressedTexture2D::1340416944454630651::1703507866::1703507881::1::::<><>::
-::res://Assets/Art/Splash Art/Logo/::1703437084
+::res://Assets/Art/Splash Art/Logo/::1703513469
 SpriteFrame_1.png::CompressedTexture2D::8214578937918542034::1703436710::1703437084::1::::<><>::
 SpriteFrame_2.png::CompressedTexture2D::8130062426021476705::1703436710::1703437084::1::::<><>::
 ::res://Assets/Art/Splash Art/Portraits/::1703437084
 SpriteFrame_1.png::CompressedTexture2D::3751326941279488554::1703435230::1703437084::1::::<><>::
 SpriteFrame_2.png::CompressedTexture2D::5109314714110152412::1703435230::1703437084::1::::<><>::
 ::res://Assets/Art/Splash Art/Usernames/::1703437001
-::res://Assets/Art/Splash Art/Usernames/Bollsachs/::1703512940
+::res://Assets/Art/Splash Art/Usernames/Bollsachs/::1703513510
 SpriteFrameBorder_1.png::CompressedTexture2D::4135788286906853945::1703512940::1703512945::1::::<><>::
 SpriteFrameBorder_2.png::CompressedTexture2D::2043866516996728759::1703512821::1703512945::1::::<><>::
 SpriteFrame_1.png::CompressedTexture2D::3177729701158849034::1703436827::1703512870::1::::<><>::
 SpriteFrame_2.png::CompressedTexture2D::8700999350405928265::1703436827::1703512870::1::::<><>::
-::res://Assets/Art/Splash Art/Usernames/Xenntric/::1703512870
+::res://Assets/Art/Splash Art/Usernames/Xenntric/::1703513477
 SpriteFrameBorder_1.png::CompressedTexture2D::7554190766907917691::1703512601::1703512870::1::::<><>::
 SpriteFrameBorder_2.png::CompressedTexture2D::6702808695683817195::1703512587::1703512870::1::::<><>::
 SpriteFrame_1.png::CompressedTexture2D::1192213123433539172::1703436868::1703512870::1::::<><>::
 SpriteFrame_2.png::CompressedTexture2D::4732180689888082699::1703436869::1703512870::1::::<><>::
-::res://Assets/Scenes/::1703512907
-main_dressup.tscn::PackedScene::7198641740776767480::1703512907::0::1::::<><>::res://Assets/Scripts/MouseNode.cs<>uid://ca22x7ja7vc77::::res://Assets/Art/Characters/character.PNG<>res://Assets/Scripts/FolderGenerator.cs<>uid://2vwjc21e0fnr::::res://Assets/Art/Characters/J.png<>uid://dsvrwlfhok34x::::res://Assets/Art/Characters/M.png<>uid://dyk25frymlkjw::::res://Assets/Art/Clothes/Shoes/shoe_wellington.png<>uid://na7mb7k7g4t2::::res://Assets/Art/Clothes/Hats/top hat.png
-splash_scene.tscn::PackedScene::667410729315769538::1703512907::0::1::::<><>::uid://btpf2oqpvghbm::::res://Assets/Art/Splash Art/Portraits/SpriteFrame_1.png<>uid://cwuerq3acdchl::::res://Assets/Art/Splash Art/background.png<>uid://ce18ww5kud14c::::res://Assets/Art/Splash Art/Portraits/SpriteFrame_2.png<>uid://by6n3gextcqvp::::res://Assets/Art/Splash Art/Usernames/Bollsachs/SpriteFrameBorder_1.png<>uid://4ecghptwke0f::::res://Assets/Art/Splash Art/Usernames/Bollsachs/SpriteFrameBorder_2.png<>uid://dpbg6dw5veksw::::res://Assets/Art/Splash Art/Logo/SpriteFrame_1.png<>uid://dfvkohq5ncy48::::res://Assets/Art/Splash Art/Usernames/Xenntric/SpriteFrameBorder_1.png<>uid://c2q5jrugi8etn::::res://Assets/Art/Splash Art/Usernames/Xenntric/SpriteFrameBorder_2.png<>uid://dn3i68bdv4xmv::::res://Assets/Art/Splash Art/Logo/SpriteFrame_2.png<>uid://beipxchhovxhh::::res://Assets/Art/Splash Art/blackScreen.png<>uid://tdkqa0sbknsd::::res://Assets/Art/Splash Art/heart.png
-::res://Assets/Scripts/::1703506694
-FolderGenerator.cs::CSharpScript::-1::1703506694::0::1::::<>Node2D<>::
+::res://Assets/Scenes/::1703516432
+main_dressup.tscn::PackedScene::7198641740776767480::1703516432::0::1::::<><>::res://Assets/Scripts/MouseNode.cs<>uid://ca22x7ja7vc77::::res://Assets/Art/Characters/character.PNG<>res://Assets/Scripts/FolderGenerator.cs<>uid://2vwjc21e0fnr::::res://Assets/Art/Characters/J.png<>uid://dsvrwlfhok34x::::res://Assets/Art/Characters/M.png<>uid://dyk25frymlkjw::::res://Assets/Art/Clothes/Shoes/shoe_wellington.png<>uid://na7mb7k7g4t2::::res://Assets/Art/Clothes/Hats/top hat.png
+splash_scene.tscn::PackedScene::667410729315769538::1703516432::0::1::::<><>::uid://btpf2oqpvghbm::::res://Assets/Art/Splash Art/Portraits/SpriteFrame_1.png<>uid://cwuerq3acdchl::::res://Assets/Art/Splash Art/background.png<>uid://ce18ww5kud14c::::res://Assets/Art/Splash Art/Portraits/SpriteFrame_2.png<>uid://by6n3gextcqvp::::res://Assets/Art/Splash Art/Usernames/Bollsachs/SpriteFrameBorder_1.png<>uid://4ecghptwke0f::::res://Assets/Art/Splash Art/Usernames/Bollsachs/SpriteFrameBorder_2.png<>uid://dpbg6dw5veksw::::res://Assets/Art/Splash Art/Logo/SpriteFrame_1.png<>uid://dfvkohq5ncy48::::res://Assets/Art/Splash Art/Usernames/Xenntric/SpriteFrameBorder_1.png<>uid://c2q5jrugi8etn::::res://Assets/Art/Splash Art/Usernames/Xenntric/SpriteFrameBorder_2.png<>uid://dn3i68bdv4xmv::::res://Assets/Art/Splash Art/Logo/SpriteFrame_2.png<>uid://beipxchhovxhh::::res://Assets/Art/Splash Art/blackScreen.png<>uid://tdkqa0sbknsd::::res://Assets/Art/Splash Art/heart.png
+::res://Assets/Scripts/::1703516432
+FolderGenerator.cs::CSharpScript::-1::1703516432::0::1::::<>Node2D<>::
 Items.cs::CSharpScript::-1::1703360763::0::1::::<><>::
 loadItems.cs::CSharpScript::-1::1703360763::0::1::::<><>::
 MouseNode.cs::CSharpScript::-1::1703360800::0::1::::<>Node<>::

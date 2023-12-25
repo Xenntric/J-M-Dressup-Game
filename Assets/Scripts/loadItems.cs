@@ -18,7 +18,8 @@ public struct loadItems
     public List<Items> Construct_Hats(string kind_of_clothes)
     {
         List<Items> Hats = new List<Items>();
-        var address = System.IO.Path.Combine(@"Assets/Clothes/",kind_of_clothes);
+        var address = System.IO.Path.Combine(@"Assets/Art/Clothes/",kind_of_clothes);
+        //address = System.IO.Path.Combine(address,"/");
         GD.Print("Getting clothes @ " + address);
         string[] hats_address = Directory.GetFiles(address , "*.png");
 
