@@ -1,0 +1,296 @@
+[gd_scene load_steps=22 format=3 uid="uid://jrkflywtdx4e"]
+
+[ext_resource type="Texture2D" uid="uid://btpf2oqpvghbm" path="res://Assets/Art/Splash Art/Portraits/SpriteFrame_1.png" id="1_fpdbn"]
+[ext_resource type="Texture2D" uid="uid://cwuerq3acdchl" path="res://Assets/Art/Splash Art/background.png" id="1_woctu"]
+[ext_resource type="Texture2D" uid="uid://ce18ww5kud14c" path="res://Assets/Art/Splash Art/Portraits/SpriteFrame_2.png" id="2_ufrph"]
+[ext_resource type="Texture2D" uid="uid://by6n3gextcqvp" path="res://Assets/Art/Splash Art/Usernames/Bollsachs/SpriteFrameBorder_1.png" id="5_gi0x4"]
+[ext_resource type="Texture2D" uid="uid://4ecghptwke0f" path="res://Assets/Art/Splash Art/Usernames/Bollsachs/SpriteFrameBorder_2.png" id="6_uftrk"]
+[ext_resource type="Texture2D" uid="uid://dpbg6dw5veksw" path="res://Assets/Art/Splash Art/Logo/SpriteFrame_1.png" id="7_e272b"]
+[ext_resource type="Texture2D" uid="uid://dfvkohq5ncy48" path="res://Assets/Art/Splash Art/Usernames/Xenntric/SpriteFrameBorder_1.png" id="7_us6cq"]
+[ext_resource type="Texture2D" uid="uid://c2q5jrugi8etn" path="res://Assets/Art/Splash Art/Usernames/Xenntric/SpriteFrameBorder_2.png" id="8_kinfn"]
+[ext_resource type="Texture2D" uid="uid://dn3i68bdv4xmv" path="res://Assets/Art/Splash Art/Logo/SpriteFrame_2.png" id="8_pmhre"]
+[ext_resource type="Texture2D" uid="uid://beipxchhovxhh" path="res://Assets/Art/Splash Art/blackScreen.png" id="9_86jgh"]
+[ext_resource type="Texture2D" uid="uid://tdkqa0sbknsd" path="res://Assets/Art/Splash Art/heart.png" id="11_sn8v0"]
+
+[sub_resource type="Animation" id="Animation_kdcyd"]
+resource_name = "heart_slide"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../NinePatchRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-24, -72), Vector2(-24, -46)]
+}
+
+[sub_resource type="Animation" id="Animation_43n6u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../NinePatchRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-24, -72)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qwflm"]
+_data = {
+"RESET": SubResource("Animation_43n6u"),
+"heart_slide": SubResource("Animation_kdcyd")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xqfjg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fpdbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ufrph")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3tm6u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_gi0x4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uftrk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wmcls"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_us6cq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kinfn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3718d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_e272b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pmhre")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="Animation" id="Animation_yr6fi"]
+length = 4.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Logoslide:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 4),
+"transitions": PackedFloat32Array(0.1, 1),
+"update": 0,
+"values": [Vector2(13099.6, 16865.6), Vector2(13099.6, 11301.7)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Usernames:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 4.5),
+"transitions": PackedFloat32Array(0.175, 1),
+"update": 0,
+"values": [Vector2(12925, 15300.7), Vector2(12925, 9389.08)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlackScreen:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lpwt5"]
+resource_name = "Username_Slide"
+length = 4.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Logoslide:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.4, 4.5),
+"transitions": PackedFloat32Array(0.1, 1),
+"update": 0,
+"values": [Vector2(13099.6, 16865.6), Vector2(13099.6, 11301.7)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Usernames:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.4, 4.5),
+"transitions": PackedFloat32Array(0.15, 1),
+"update": 0,
+"values": [Vector2(12925, 15300.7), Vector2(13099.6, 9736.82)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7kc5o"]
+_data = {
+"RESET": SubResource("Animation_yr6fi"),
+"Username_Slide": SubResource("Animation_lpwt5")
+}
+
+[node name="SplashScene" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(577.875, 326.375)
+scale = Vector2(1164.25, 659.25)
+texture = ExtResource("1_woctu")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.145098)
+texture_filter = 1
+offset_left = -24.0
+offset_top = -72.0
+offset_right = 879.0
+offset_bottom = 556.0
+scale = Vector2(1.33754, 1.14983)
+texture = ExtResource("11_sn8v0")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NinePatchRect"]
+root_node = NodePath("../../Heart")
+libraries = {
+"": SubResource("AnimationLibrary_qwflm")
+}
+autoplay = "heart_slide"
+
+[node name="Splash Art" type="Node2D" parent="."]
+scale = Vector2(0.0458028, 0.0460109)
+
+[node name="Portraits" type="AnimatedSprite2D" parent="Splash Art"]
+texture_filter = 1
+position = Vector2(12401, 5390.03)
+scale = Vector2(7.81157, 7.788)
+sprite_frames = SubResource("SpriteFrames_xqfjg")
+autoplay = "default"
+
+[node name="Usernames" type="Node2D" parent="Splash Art"]
+position = Vector2(12925, 15300.7)
+
+[node name="bollsachs" type="AnimatedSprite2D" parent="Splash Art/Usernames"]
+texture_filter = 1
+position = Vector2(8558.43, 173.866)
+scale = Vector2(28.198, 28.198)
+sprite_frames = SubResource("SpriteFrames_3tm6u")
+autoplay = "default"
+frame_progress = 0.0240518
+
+[node name="xenntric" type="AnimatedSprite2D" parent="Splash Art/Usernames"]
+texture_filter = 1
+position = Vector2(-8733.11, 173.866)
+scale = Vector2(29.0023, 29.0023)
+sprite_frames = SubResource("SpriteFrames_wmcls")
+autoplay = "default"
+frame_progress = 0.873045
+
+[node name="Logoslide" type="Node2D" parent="Splash Art"]
+position = Vector2(13099.6, 16865.6)
+
+[node name="Logo" type="AnimatedSprite2D" parent="Splash Art/Logoslide"]
+texture_filter = 1
+scale = Vector2(23.0119, 22.9772)
+sprite_frames = SubResource("SpriteFrames_3718d")
+autoplay = "default"
+frame_progress = 0.695564
+
+[node name="BlackScreen" type="Sprite2D" parent="Splash Art"]
+position = Vector2(12575.7, 7041.81)
+scale = Vector2(25500.6, 14431.4)
+texture = ExtResource("9_86jgh")
+
+[node name="Control" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchor_right = 0.493
+anchor_bottom = 0.938
+offset_left = 528.0
+offset_top = 24.0
+offset_right = 528.0
+offset_bottom = 24.0
+
+[node name="Main Button" type="Button" parent="Control"]
+visible = false
+layout_mode = 0
+offset_right = 97.0
+offset_bottom = 31.0
+text = "Main Game"
+
+[node name="Exit Button" type="Button" parent="Control"]
+visible = false
+layout_mode = 0
+offset_top = 32.0
+offset_right = 97.0
+offset_bottom = 63.0
+text = "Exit"
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+visible = false
+texture_repeat = 2
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 64.0
+texture = ExtResource("11_sn8v0")
+
+[node name="AnimateSlideIn" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Splash Art")
+libraries = {
+"": SubResource("AnimationLibrary_7kc5o")
+}
+autoplay = "RESET"
+
+[node name="Heart" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(80, 56)
+scale = Vector2(1.54348, 1.54348)
+texture = ExtResource("11_sn8v0")

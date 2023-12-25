@@ -48,48 +48,48 @@ public partial class MouseNode : Node
 		if(Items_nodes.Count > 0)
 		{
 			if(nodeToGrab != null){nodeSprite.Material = new CanvasItemMaterial();}
-            //GD.Print("NUMB OF NODES UNDER " + Items_nodes.Count);
+			//GD.Print("NUMB OF NODES UNDER " + Items_nodes.Count);
 
-            if (Items_nodes.Count > 1)
-            {
-                for (int i = 1; i < Items_nodes.Count; i++)
-                {
-                    if (Items_nodes[i].ZIndex > Items_nodes[i - 1].ZIndex && !handsFull)
-                    {
-                        nodeToGrab = Items_nodes[i];
-                    }
+			if (Items_nodes.Count > 1)
+			{
+				for (int i = 1; i < Items_nodes.Count; i++)
+				{
+					if (Items_nodes[i].ZIndex > Items_nodes[i - 1].ZIndex && !handsFull)
+					{
+						nodeToGrab = Items_nodes[i];
+					}
 				}
-            }
-            else { nodeToGrab = Items_nodes[0]; }
+			}
+			else { nodeToGrab = Items_nodes[0]; }
 			highlightNode();
 
-            if (clicked)
-            {
-                handsFull = true;
-                GD.Print("YA GOT FULL HANDS");
-                if (nodeToGrab != null)
-                {
-                    /** SET GRABBED OBJECT TO GREATEST Z VALUE**/
-                    for (int i = 0; i < Zindex.Count; i++)
-                    {
-                        if (Zindex[i] == nodeToGrab)
-                        {
-                            var nodeToPop = Zindex[i];
-                            Zindex.Remove(Zindex[i]);
-                            Zindex.Add(nodeToPop);
-                            for (int j = 0; j < Zindex.Count; j++)
-                            {
-                                Zindex[j].ZIndex = j;
-                            }
-                        }
-                    }
-                }
-                var folderParent = nodeToGrab.GetParent<Object>() as Node2D;
-                //var originalPos = folderParent.Position + Items_nodes[0].Position;
-                nodeToGrab.Position = GetViewport().GetMousePosition() - folderParent.Position;
-            }
-        } else {if(nodeToGrab != null){nodeSprite.Material = new CanvasItemMaterial();} }
-    }
+			if (clicked)
+			{
+				handsFull = true;
+				GD.Print("YA GOT FULL HANDS");
+				if (nodeToGrab != null)
+				{
+					/** SET GRABBED OBJECT TO GREATEST Z VALUE**/
+					for (int i = 0; i < Zindex.Count; i++)
+					{
+						if (Zindex[i] == nodeToGrab)
+						{
+							var nodeToPop = Zindex[i];
+							Zindex.Remove(Zindex[i]);
+							Zindex.Add(nodeToPop);
+							for (int j = 0; j < Zindex.Count; j++)
+							{
+								Zindex[j].ZIndex = j;
+							}
+						}
+					}
+				}
+				var folderParent = nodeToGrab.GetParent<Object>() as Node2D;
+				//var originalPos = folderParent.Position + Items_nodes[0].Position;
+				nodeToGrab.Position = GetViewport().GetMousePosition() - folderParent.Position;
+			}
+		} else {if(nodeToGrab != null){nodeSprite.Material = new CanvasItemMaterial();} }
+	}
 
 	public void identifyNode(string nodePath)
 	{

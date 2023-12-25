@@ -18,7 +18,6 @@
 /home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/.godot/mono/temp/bin/Debug/Dressup.deps.json
 /home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/.godot/mono/temp/bin/Debug/Dressup.runtimeconfig.json
 /home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/.godot/mono/temp/bin/Debug/Dressup.dll
-/home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/.godot/mono/temp/bin/Debug/ref/Dressup.dll
 /home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/.godot/mono/temp/bin/Debug/Dressup.pdb
 /home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/.godot/mono/temp/bin/Debug/GodotSharp.dll
 /home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/.godot/mono/temp/bin/Debug/GodotSharpEditor.dll
@@ -49,3 +48,5 @@
 /run/media/xenntric/workHDD/Personal Projects/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/ref/Dressup.dll
 /run/media/xenntric/workHDD/Personal Projects/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/Dressup.pdb
 /run/media/xenntric/workHDD/Personal Projects/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/Dressup.genruntimeconfig.cache
+/home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/Dressup.sourcelink.json
+/home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/refint/Dressup.dll

@@ -2,67 +2,78 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Godot.SourceGenerators/4.0.0-rc.2": {
+      "Godot.SourceGenerators/4.2.1": {
         "type": "package",
         "build": {
           "build/Godot.SourceGenerators.props": {}
         }
       },
-      "GodotSharp/4.0.0-rc.2": {
+      "GodotSharp/4.2.1": {
         "type": "package",
         "compile": {
-          "lib/net6.0/GodotSharp.dll": {}
+          "lib/net6.0/GodotSharp.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net6.0/GodotSharp.dll": {}
+          "lib/net6.0/GodotSharp.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "GodotSharpEditor/4.0.0-rc.2": {
+      "GodotSharpEditor/4.2.1": {
         "type": "package",
         "dependencies": {
-          "GodotSharp": "4.0.0-rc.2"
+          "GodotSharp": "4.2.1"
         },
         "compile": {
-          "lib/net6.0/GodotSharpEditor.dll": {}
+          "lib/net6.0/GodotSharpEditor.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net6.0/GodotSharpEditor.dll": {}
+          "lib/net6.0/GodotSharpEditor.dll": {
+            "related": ".xml"
+          }
         }
       }
     }
   },
   "libraries": {
-    "Godot.SourceGenerators/4.0.0-rc.2": {
-      "sha512": "qe4gmtKEhio5CPNGm+TuoQz6wLdTuTfjx8Tw6UhDwuns7060oaev8TcctJg4kPOsHaDcnksgV2amUB4X71RwXQ==",
+    "Godot.SourceGenerators/4.2.1": {
+      "sha512": "MdLFzDZEMUbXRLH4bLX8o9Blk76M7Op76RyobZ1zyKgcIkgPqG+p53jgLFLSHpBGFKKaW3kB0w6om+wYauwHbw==",
       "type": "package",
-      "path": "godot.sourcegenerators/4.0.0-rc.2",
+      "path": "godot.sourcegenerators/4.2.1",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "analyzers/dotnet/cs/Godot.SourceGenerators.dll",
         "build/Godot.SourceGenerators.props",
-        "godot.sourcegenerators.4.0.0-rc.2.nupkg.sha512",
+        "godot.sourcegenerators.4.2.1.nupkg.sha512",
         "godot.sourcegenerators.nuspec"
       ]
     },
-    "GodotSharp/4.0.0-rc.2": {
-      "sha512": "ITi0eI2Aoy4a3vDrYR5Br0YWawK7foHXMz/BurNVki2LD0eVIJgE9cAC5zDJKl4bnpfkUfQK09WDUTlW/8NlMA==",
+    "GodotSharp/4.2.1": {
+      "sha512": "6a/GML0jXcwT6LxDBtRx+hpPBUFGAmK7GVb/ehKP53nx0AHA+Yc//B7anXY4U4WCMB+ckgsouWpd8rAeupNfbw==",
       "type": "package",
-      "path": "godotsharp/4.0.0-rc.2",
+      "path": "godotsharp/4.2.1",
       "files": [
         ".nupkg.metadata",
-        "godotsharp.4.0.0-rc.2.nupkg.sha512",
+        ".signature.p7s",
+        "godotsharp.4.2.1.nupkg.sha512",
         "godotsharp.nuspec",
         "lib/net6.0/GodotSharp.dll",
         "lib/net6.0/GodotSharp.xml"
       ]
     },
-    "GodotSharpEditor/4.0.0-rc.2": {
-      "sha512": "70G+snPninLlWitcP7tqsqUsoPjApY24ayF326AwK93A7Mq1CDYeUEJxpManUEmYBrfP9Wi2i63f6r/CZpqZVg==",
+    "GodotSharpEditor/4.2.1": {
+      "sha512": "wibPQq4Gj43T/zlhwogJRnRSxfvfIqGCvnPEz1nSp6aPx4CTu1gZW7gDYx/MRQ9LX2SwKh4N6QXkFp7PhB33Tw==",
       "type": "package",
-      "path": "godotsharpeditor/4.0.0-rc.2",
+      "path": "godotsharpeditor/4.2.1",
       "files": [
         ".nupkg.metadata",
-        "godotsharpeditor.4.0.0-rc.2.nupkg.sha512",
+        ".signature.p7s",
+        "godotsharpeditor.4.2.1.nupkg.sha512",
         "godotsharpeditor.nuspec",
         "lib/net6.0/GodotSharpEditor.dll",
         "lib/net6.0/GodotSharpEditor.xml"
@@ -71,30 +82,25 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Godot.SourceGenerators >= 4.0.0-rc.2",
-      "GodotSharp >= 4.0.0-rc.2",
-      "GodotSharpEditor >= 4.0.0-rc.2"
+      "Godot.SourceGenerators >= 4.2.1",
+      "GodotSharp >= 4.2.1",
+      "GodotSharpEditor >= 4.2.1"
     ]
   },
   "packageFolders": {
-    "/home/xenntric/.nuget/packages/": {},
-    "/home/xenntric/.local/share/godot/mono/GodotNuGetFallbackFolder": {}
+    "/home/xenntric/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/run/media/xenntric/workHDD/Personal Projects/J-M-Dressup-Game/Dressup.csproj",
+      "projectUniqueName": "/home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/Dressup.csproj",
       "projectName": "Dressup",
-      "projectPath": "/run/media/xenntric/workHDD/Personal Projects/J-M-Dressup-Game/Dressup.csproj",
+      "projectPath": "/home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/Dressup.csproj",
       "packagesPath": "/home/xenntric/.nuget/packages/",
-      "outputPath": "/run/media/xenntric/workHDD/Personal Projects/J-M-Dressup-Game/.godot/mono/temp/obj/",
+      "outputPath": "/home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/.godot/mono/temp/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/home/xenntric/.local/share/godot/mono/GodotNuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "/home/xenntric/.nuget/NuGet/NuGet.Config",
-        "/home/xenntric/.nuget/NuGet/config/Godot.Offline.Config"
+        "/home/xenntric/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -120,15 +126,15 @@
         "dependencies": {
           "Godot.SourceGenerators": {
             "target": "Package",
-            "version": "[4.0.0-rc.2, )"
+            "version": "[4.2.1, )"
           },
           "GodotSharp": {
             "target": "Package",
-            "version": "[4.0.0-rc.2, )"
+            "version": "[4.2.1, )"
           },
           "GodotSharpEditor": {
             "target": "Package",
-            "version": "[4.0.0-rc.2, )"
+            "version": "[4.2.1, )"
           }
         },
         "imports": [
@@ -137,14 +143,19 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.13, 6.0.13]"
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
           }
         ],
         "frameworkReferences": {
@@ -152,7 +163,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }

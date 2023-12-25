@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "j1NbGMjbNAYqp1lyTcJki7BIReRa6VjuNFrLHQPfRQI/+sqpSISS39gdIK5abd0Z/RVlbVKY+BqG6Nj8Rx8Qrg==",
+  "dgSpecHash": "Nop1cC8kcbjtLY57D+CBKqMH9zvnMG5cOYyWX6sG1zVOS3cO9XvuuGhzXpLXmgBlXGJs1PnAt+fdGqUkpzuubw==",
   "success": true,
-  "projectFilePath": "/run/media/xenntric/workHDD/Personal Projects/J-M-Dressup-Game/Dressup.csproj",
+  "projectFilePath": "/home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/Dressup.csproj",
   "expectedPackageFiles": [
-    "/home/xenntric/.local/share/godot/mono/GodotNuGetFallbackFolder/godot.sourcegenerators/4.0.0-rc.2/godot.sourcegenerators.4.0.0-rc.2.nupkg.sha512",
-    "/home/xenntric/.local/share/godot/mono/GodotNuGetFallbackFolder/godotsharp/4.0.0-rc.2/godotsharp.4.0.0-rc.2.nupkg.sha512",
-    "/home/xenntric/.local/share/godot/mono/GodotNuGetFallbackFolder/godotsharpeditor/4.0.0-rc.2/godotsharpeditor.4.0.0-rc.2.nupkg.sha512",
-    "/home/xenntric/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.13/microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512"
+    "/home/xenntric/.nuget/packages/godot.sourcegenerators/4.2.1/godot.sourcegenerators.4.2.1.nupkg.sha512",
+    "/home/xenntric/.nuget/packages/godotsharp/4.2.1/godotsharp.4.2.1.nupkg.sha512",
+    "/home/xenntric/.nuget/packages/godotsharpeditor/4.2.1/godotsharpeditor.4.2.1.nupkg.sha512",
+    "/home/xenntric/.nuget/packages/microsoft.netcore.app.ref/6.0.25/microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "/home/xenntric/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.25/microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512"
   ],
   "logs": []
 }

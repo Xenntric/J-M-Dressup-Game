@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://datctv4lilhv1"]
+[gd_scene load_steps=10 format=3 uid="uid://datctv4lilhv1"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/MouseNode.cs" id="1_787kk"]
-[ext_resource type="Texture2D" uid="uid://ca22x7ja7vc77" path="res://Assets/Characters/character.PNG" id="1_xe8ly"]
+[ext_resource type="Texture2D" uid="uid://ca22x7ja7vc77" path="res://Assets/Art/Characters/character.PNG" id="1_xe8ly"]
 [ext_resource type="Script" path="res://Assets/Scripts/FolderGenerator.cs" id="2_wdook"]
-[ext_resource type="Texture2D" uid="uid://2vwjc21e0fnr" path="res://Assets/Characters/J.png" id="3_gbgc1"]
-[ext_resource type="Texture2D" uid="uid://dsvrwlfhok34x" path="res://Assets/Characters/M.png" id="4_nv3ic"]
+[ext_resource type="Texture2D" uid="uid://2vwjc21e0fnr" path="res://Assets/Art/Characters/J.png" id="3_gbgc1"]
+[ext_resource type="Texture2D" uid="uid://dsvrwlfhok34x" path="res://Assets/Art/Characters/M.png" id="4_nv3ic"]
+[ext_resource type="Texture2D" uid="uid://dyk25frymlkjw" path="res://Assets/Art/Clothes/Shoes/shoe_wellington.png" id="6_ll7jb"]
+[ext_resource type="Texture2D" uid="uid://na7mb7k7g4t2" path="res://Assets/Art/Clothes/Hats/top hat.png" id="7_ibpdm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhmjx"]
 size = Vector2(228, 275)
@@ -21,15 +23,14 @@ position = Vector2(357, 341)
 scale = Vector2(0.33, 0.33)
 
 [node name="J" type="Sprite2D" parent="Characters"]
-visible = false
 texture = ExtResource("3_gbgc1")
 
 [node name="M" type="Sprite2D" parent="Characters"]
-visible = false
 position = Vector2(1357.58, 9.09119)
 texture = ExtResource("4_nv3ic")
 
 [node name="folder" type="Node2D" parent="."]
+visible = false
 
 [node name="Area2D" type="Area2D" parent="folder"]
 position = Vector2(579, 381)
@@ -50,3 +51,55 @@ script = ExtResource("2_wdook")
 position = Vector2(356, 68)
 script = ExtResource("2_wdook")
 clothesField = 3
+
+[node name="Control" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 45.0
+offset_top = 143.0
+offset_right = 85.0
+offset_bottom = 183.0
+
+[node name="VScrollBar" type="VScrollBar" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="ItemList" type="ItemList" parent="Control/VScrollBar"]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 286.0
+offset_right = 1073.0
+offset_bottom = 650.0
+auto_height = true
+item_count = 2
+max_columns = 2
+item_0/text = ""
+item_0/icon = ExtResource("6_ll7jb")
+item_1/text = ""
+item_1/icon = ExtResource("7_ibpdm")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+visible = false
+offset_left = 782.0
+offset_top = 87.0
+offset_right = 1118.0
+offset_bottom = 398.0
+tab_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer"]
+layout_mode = 2
+vertical_scroll_mode = 2
+
+[node name="VSplitContainer" type="VSplitContainer" parent="TabContainer/ScrollContainer"]
+layout_mode = 2
+split_offset = -265
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/ScrollContainer/VSplitContainer"]
+layout_mode = 2
+texture = ExtResource("1_xe8ly")
+
+[node name="TextureRect2" type="TextureRect" parent="TabContainer/ScrollContainer/VSplitContainer"]
+layout_mode = 2
+texture = ExtResource("1_xe8ly")

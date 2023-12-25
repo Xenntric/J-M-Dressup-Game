@@ -1,2 +1,6 @@
 res://Assets/Scenes/main_dressup.tscn
 res://Assets/Scripts/FolderGenerator.cs
+res://Assets/Scenes/splash_scene.tscn
+res://Assets/Scripts/MouseNode.cs
+res://Assets/Scripts/SignalScript.cs
+res://Assets/Scripts/SplashScreen/ArtTweenIn.cs
