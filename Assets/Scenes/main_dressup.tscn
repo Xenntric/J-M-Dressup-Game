@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://datctv4lilhv1"]
+[gd_scene load_steps=15 format=3 uid="uid://datctv4lilhv1"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/MouseNode.cs" id="1_787kk"]
 [ext_resource type="Texture2D" uid="uid://ca22x7ja7vc77" path="res://Assets/Art/Characters/character.PNG" id="1_xe8ly"]
@@ -8,11 +8,48 @@
 [ext_resource type="Texture2D" uid="uid://dsvrwlfhok34x" path="res://Assets/Art/Characters/M.png" id="4_nv3ic"]
 [ext_resource type="Texture2D" uid="uid://dyk25frymlkjw" path="res://Assets/Art/Clothes/Shoes/shoe_wellington.png" id="6_ll7jb"]
 [ext_resource type="Texture2D" uid="uid://na7mb7k7g4t2" path="res://Assets/Art/Clothes/Hats/top hat.png" id="7_ibpdm"]
+[ext_resource type="Texture2D" uid="uid://tdkqa0sbknsd" path="res://Assets/Art/Splash Art/heart.png" id="9_cn02w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhmjx"]
 size = Vector2(228, 275)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ldeyx"]
+
+[sub_resource type="Animation" id="Animation_6qvgg"]
+resource_name = "Play_Transtiion"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-24, 47.9999), Vector2(-24, 728)]
+}
+
+[sub_resource type="Animation" id="Animation_1m2oe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-24, 47.9999)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nfu2l"]
+_data = {
+"Play_Transtiion": SubResource("Animation_6qvgg"),
+"RESET": SubResource("Animation_1m2oe")
+}
 
 [node name="DressUpScene" type="Node2D"]
 texture_filter = 1
@@ -112,3 +149,41 @@ texture = ExtResource("1_xe8ly")
 [node name="TextureRect2" type="TextureRect" parent="TabContainer/ScrollContainer/VSplitContainer"]
 layout_mode = 2
 texture = ExtResource("1_xe8ly")
+
+[node name="PlayTransition" type="Node2D" parent="."]
+top_level = true
+z_index = 100
+position = Vector2(-24, 47.9999)
+scale = Vector2(1.33754, 1.14983)
+
+[node name="HeartCurtainBacker" type="Sprite2D" parent="PlayTransition"]
+modulate = Color(0.356863, 0, 0.552941, 1)
+position = Vector2(446.996, 243.514)
+scale = Vector2(924.271, 570.519)
+texture = ExtResource("2_di5s5")
+
+[node name="HeartCurtainBackground" type="NinePatchRect" parent="PlayTransition"]
+modulate = Color(1, 0, 1, 1)
+offset_left = -12.0
+offset_top = -49.0
+offset_right = 668.0
+offset_bottom = 459.0
+scale = Vector2(1.33754, 1.14983)
+texture = ExtResource("9_cn02w")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="HeartCurtainForeground" type="NinePatchRect" parent="PlayTransition"]
+offset_top = -42.0
+offset_right = 679.0
+offset_bottom = 466.0
+scale = Vector2(1.33754, 1.14983)
+texture = ExtResource("9_cn02w")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="EnterTransition" type="AnimationPlayer" parent="PlayTransition"]
+libraries = {
+"": SubResource("AnimationLibrary_nfu2l")
+}
+autoplay = "Play_Transtiion"

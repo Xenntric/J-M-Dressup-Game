@@ -1,6 +1,6 @@
-[gd_scene load_steps=37 format=3 uid="uid://jrkflywtdx4e"]
+[gd_scene load_steps=38 format=3 uid="uid://jrkflywtdx4e"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/SplashScreen/MenuScript.cs" id="1_7cnoy"]
+[ext_resource type="Script" path="res://Assets/Scripts/SplashandMenu/MenuScript.cs" id="1_7cnoy"]
 [ext_resource type="Texture2D" uid="uid://btpf2oqpvghbm" path="res://Assets/Art/Splash Art/Portraits/SpriteFrame_1.png" id="1_fpdbn"]
 [ext_resource type="Texture2D" uid="uid://cwuerq3acdchl" path="res://Assets/Art/Splash Art/background.png" id="1_woctu"]
 [ext_resource type="PackedScene" uid="uid://datctv4lilhv1" path="res://Assets/Scenes/main_dressup.tscn" id="2_pchsh"]
@@ -116,6 +116,47 @@ animations = [{
 "speed": 4.0
 }]
 
+[sub_resource type="Animation" id="Animation_1gbt2"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Control:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tltqa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../PlayTransition:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-24, -640)]
+}
+
 [sub_resource type="Animation" id="Animation_yr6fi"]
 resource_name = "Splash_Animation"
 length = 6.0
@@ -168,38 +209,39 @@ tracks/3/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_1gbt2"]
+[sub_resource type="Animation" id="Animation_7p8ln"]
+resource_name = "Play_Transition"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../Control:modulate")
+tracks/0/path = NodePath("../PlayTransition:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Vector2(-24, -640), Vector2(-24, 47.9999)]
 }
-
-[sub_resource type="Animation" id="Animation_tltqa"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("BlackScreen:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [{
+"args": [],
+"method": &"_on_animate_play_transition_finished"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7kc5o"]
 _data = {
 "Menu_Animation": SubResource("Animation_1gbt2"),
+"Play_Transition": SubResource("Animation_7p8ln"),
 "RESET": SubResource("Animation_tltqa"),
 "Splash_Animation": SubResource("Animation_yr6fi")
 }
@@ -244,7 +286,7 @@ position = Vector2(577.875, 326.375)
 scale = Vector2(1164.25, 659.25)
 texture = ExtResource("1_woctu")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
+[node name="ScrollingHearts" type="NinePatchRect" parent="."]
 self_modulate = Color(1, 1, 1, 0.145098)
 offset_left = -14.0
 offset_top = -66.0
@@ -255,14 +297,13 @@ texture = ExtResource("11_sn8v0")
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 
-[node name="AnimateHearts" type="AnimationPlayer" parent="NinePatchRect"]
+[node name="AnimateHearts" type="AnimationPlayer" parent="ScrollingHearts"]
 libraries = {
 "": SubResource("AnimationLibrary_qwflm")
 }
 autoplay = "heart_slide"
 
 [node name="Splash Art" type="Node2D" parent="."]
-modulate = Color(1, 1, 1, 1)
 scale = Vector2(0.0458028, 0.0460109)
 
 [node name="Portraits" type="AnimatedSprite2D" parent="Splash Art"]
@@ -316,31 +357,58 @@ offset_left = 528.0
 offset_top = 24.0
 offset_right = 528.0
 offset_bottom = 24.0
-mouse_default_cursor_shape = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Play" type="TextureButton" parent="Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 layout_mode = 0
-offset_left = -456.0
+offset_left = -440.0
 offset_top = 208.0
-offset_right = 3907.0
-offset_bottom = 2294.0
-scale = Vector2(0.0448679, 0.0448679)
-mouse_default_cursor_shape = 2
+offset_right = -279.0
+offset_bottom = 366.0
+alignment = 1
+
+[node name="Play" type="TextureButton" parent="Control/VBoxContainer"]
+layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_ry1in")
 texture_hover = SubResource("AnimatedTexture_6t8hu")
 stretch_mode = 0
 
-[node name="Quit" type="TextureButton" parent="Control"]
-layout_mode = 0
-offset_left = -440.0
-offset_top = 312.0
-offset_right = -279.0
-offset_bottom = 389.0
-mouse_default_cursor_shape = 2
+[node name="Quit" type="TextureButton" parent="Control/VBoxContainer"]
+layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_nnwea")
 texture_hover = SubResource("AnimatedTexture_y28gp")
 stretch_mode = 0
 
-[connection signal="pressed" from="Control/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Control/Quit" to="." method="_on_quit_pressed"]
+[node name="PlayTransition" type="Node2D" parent="."]
+position = Vector2(-24, -640)
+scale = Vector2(1.33754, 1.14983)
+
+[node name="HeartCurtainBacker" type="Sprite2D" parent="PlayTransition"]
+modulate = Color(0.356863, 0, 0.552941, 1)
+position = Vector2(446.996, 240.036)
+scale = Vector2(924.271, 577.477)
+texture = ExtResource("1_woctu")
+
+[node name="HeartCurtainBackground" type="NinePatchRect" parent="PlayTransition"]
+modulate = Color(1, 0, 1, 1)
+offset_left = -12.0
+offset_top = -49.0
+offset_right = 668.0
+offset_bottom = 459.0
+scale = Vector2(1.33754, 1.14983)
+texture = ExtResource("11_sn8v0")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="HeartCurtainForeground" type="NinePatchRect" parent="PlayTransition"]
+offset_top = -42.0
+offset_right = 679.0
+offset_bottom = 466.0
+scale = Vector2(1.33754, 1.14983)
+texture = ExtResource("11_sn8v0")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[connection signal="animation_finished" from="Splash Art/AnimateSplash" to="." method="_on_animation_finished"]
+[connection signal="pressed" from="Control/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

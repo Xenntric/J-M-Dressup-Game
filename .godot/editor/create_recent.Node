@@ -1,5 +1,6 @@
-Node2D
 AnimationPlayer
+Node2D
+VBoxContainer
 AnimationTree
 TextureButton
 TextureRect
@@ -11,4 +12,3 @@ Panel
 MenuBar
 Control
 AnimatedSprite2D
-VideoStreamPlayer
