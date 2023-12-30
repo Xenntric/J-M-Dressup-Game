@@ -5,6 +5,7 @@ using System.IO;
 public partial class MenuScript : Node2D
 {
 	[Export] public AnimationPlayer SplashAnimation; 
+	[Export] public AnimationPlayer MenuAnimation; 
 	[Export] public Control MenuControlNode; 
 	[Export] public PackedScene MainGame;
 
@@ -65,6 +66,11 @@ public partial class MenuScript : Node2D
 		var scene = ResourceLoader.Load<PackedScene>(MainGame.ResourcePath);
 		GetTree().ChangeSceneToPacked(scene);
 	}
+	public void _on_credits_pressed()
+	{
+
+	}
+
 	public void _on_quit_pressed()
 	{
 		if(MenuControlNode.Modulate.A >= .5f)

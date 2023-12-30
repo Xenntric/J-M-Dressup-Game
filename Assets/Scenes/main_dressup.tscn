@@ -1,22 +1,26 @@
-[gd_scene load_steps=15 format=3 uid="uid://datctv4lilhv1"]
+[gd_scene load_steps=17 format=3 uid="uid://datctv4lilhv1"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/MouseNode.cs" id="1_787kk"]
 [ext_resource type="Texture2D" uid="uid://ca22x7ja7vc77" path="res://Assets/Art/Characters/character.PNG" id="1_xe8ly"]
 [ext_resource type="Texture2D" uid="uid://cwuerq3acdchl" path="res://Assets/Art/Splash Art/background.png" id="2_di5s5"]
-[ext_resource type="Script" path="res://Assets/Scripts/FolderGenerator.cs" id="2_wdook"]
 [ext_resource type="Texture2D" uid="uid://2vwjc21e0fnr" path="res://Assets/Art/Characters/J.png" id="3_gbgc1"]
 [ext_resource type="Texture2D" uid="uid://dsvrwlfhok34x" path="res://Assets/Art/Characters/M.png" id="4_nv3ic"]
-[ext_resource type="Texture2D" uid="uid://dyk25frymlkjw" path="res://Assets/Art/Clothes/Shoes/shoe_wellington.png" id="6_ll7jb"]
-[ext_resource type="Texture2D" uid="uid://na7mb7k7g4t2" path="res://Assets/Art/Clothes/Hats/top hat.png" id="7_ibpdm"]
+[ext_resource type="Texture2D" uid="uid://bes5wtrrvjglb" path="res://Assets/Art/Characters/nakedbase_julus.png" id="5_otqbn"]
+[ext_resource type="Texture2D" uid="uid://dekmtv67j5bdh" path="res://Assets/Art/Characters/nakedbase_matt.png" id="6_dnktf"]
+[ext_resource type="Texture2D" uid="uid://eypogoj50kav" path="res://Assets/Art/Clothes/Hair/hair_1_julus.png" id="9_6bpxi"]
 [ext_resource type="Texture2D" uid="uid://tdkqa0sbknsd" path="res://Assets/Art/Splash Art/heart.png" id="9_cn02w"]
+[ext_resource type="Script" path="res://Assets/Scripts/MainGame/UI/PopulateItems.cs" id="9_m2bi8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhmjx"]
 size = Vector2(228, 275)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ldeyx"]
 
-[sub_resource type="Animation" id="Animation_6qvgg"]
-resource_name = "Play_Transtiion"
+[sub_resource type="Theme" id="Theme_l1bot"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eq4id"]
+
+[sub_resource type="Animation" id="Animation_8r3oa"]
+resource_name = "Play_Animation"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -24,10 +28,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.8),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-24, 47.9999), Vector2(-24, 728)]
+"values": [Vector2(-24, 47.9999), Vector2(-24, 748.139)]
 }
 
 [sub_resource type="Animation" id="Animation_1m2oe"]
@@ -47,15 +51,15 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nfu2l"]
 _data = {
-"Play_Transtiion": SubResource("Animation_6qvgg"),
+"Play_Animation": SubResource("Animation_8r3oa"),
 "RESET": SubResource("Animation_1m2oe")
 }
 
 [node name="DressUpScene" type="Node2D"]
 texture_filter = 1
+scale = Vector2(1.66814, 1.66814)
 
 [node name="MouseControlNode" type="Node" parent="."]
-script = ExtResource("1_787kk")
 
 [node name="BackgroundNode" type="Node2D" parent="."]
 
@@ -70,13 +74,24 @@ position = Vector2(357, 341)
 scale = Vector2(0.33, 0.33)
 
 [node name="J" type="Sprite2D" parent="Characters"]
+visible = false
 texture = ExtResource("3_gbgc1")
 
 [node name="M" type="Sprite2D" parent="Characters"]
+visible = false
 position = Vector2(1357.58, 9.09119)
 texture = ExtResource("4_nv3ic")
 
+[node name="NakedbaseJulus" type="Sprite2D" parent="Characters"]
+position = Vector2(300, 9.09091)
+texture = ExtResource("5_otqbn")
+
+[node name="NakedbaseMatt" type="Sprite2D" parent="Characters"]
+position = Vector2(1027.27, 9.09094)
+texture = ExtResource("6_dnktf")
+
 [node name="folder" type="Node2D" parent="."]
+visible = false
 
 [node name="Area2D" type="Area2D" parent="folder"]
 position = Vector2(579, 381)
@@ -90,76 +105,133 @@ material = SubResource("CanvasItemMaterial_ldeyx")
 texture = ExtResource("1_xe8ly")
 
 [node name="Hat Folder" type="Node2D" parent="." groups=["Folders"]]
+visible = false
 position = Vector2(583, 168)
-script = ExtResource("2_wdook")
 
 [node name="Shoes Folder" type="Node2D" parent="." groups=["Folders"]]
-position = Vector2(356, 68)
-script = ExtResource("2_wdook")
-clothesField = 3
-
-[node name="Control" type="Control" parent="."]
 visible = false
+position = Vector2(356, 68)
+
+[node name="JuliusClothing" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 45.0
 offset_top = 143.0
-offset_right = 85.0
-offset_bottom = 183.0
+offset_right = 45.0
+offset_bottom = 143.0
 
-[node name="VScrollBar" type="VScrollBar" parent="Control"]
+[node name="TabContainer" type="TabContainer" parent="JuliusClothing"]
+clip_contents = true
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = -35.4085
+offset_top = -61.4721
+offset_right = 219.592
+offset_bottom = 238.528
+clip_tabs = false
 
-[node name="ItemList" type="ItemList" parent="Control/VScrollBar"]
-layout_mode = 0
-offset_left = 750.0
-offset_top = 286.0
-offset_right = 1073.0
-offset_bottom = 650.0
-auto_height = true
-item_count = 2
-max_columns = 2
+[node name="Hair" type="ItemList" parent="JuliusClothing/TabContainer"]
+layout_direction = 1
+layout_mode = 2
+theme = SubResource("Theme_l1bot")
+theme_override_styles/selected = SubResource("StyleBoxEmpty_eq4id")
+item_count = 4
+max_columns = 3
+same_column_width = true
+fixed_column_width = 75
+fixed_icon_size = Vector2i(75, 90)
 item_0/text = ""
-item_0/icon = ExtResource("6_ll7jb")
+item_0/icon = ExtResource("9_6bpxi")
 item_1/text = ""
-item_1/icon = ExtResource("7_ibpdm")
+item_1/icon = ExtResource("9_6bpxi")
+item_2/text = ""
+item_2/icon = ExtResource("9_6bpxi")
+item_3/text = ""
 
-[node name="TabContainer" type="TabContainer" parent="."]
+[node name="Hats" type="ItemList" parent="JuliusClothing/TabContainer"]
 visible = false
-offset_left = 782.0
-offset_top = 87.0
-offset_right = 1118.0
-offset_bottom = 398.0
-tab_alignment = 1
-
-[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer"]
 layout_mode = 2
-vertical_scroll_mode = 2
+max_columns = 3
+fixed_column_width = 75
+fixed_icon_size = Vector2i(75, 90)
 
-[node name="VSplitContainer" type="VSplitContainer" parent="TabContainer/ScrollContainer"]
+[node name="Hair2" type="ItemList" parent="JuliusClothing/TabContainer"]
+visible = false
+layout_direction = 1
 layout_mode = 2
-split_offset = -265
+theme = SubResource("Theme_l1bot")
+theme_override_styles/selected = SubResource("StyleBoxEmpty_eq4id")
+item_count = 4
+max_columns = 3
+same_column_width = true
+fixed_column_width = 75
+fixed_icon_size = Vector2i(75, 90)
+item_0/text = ""
+item_0/icon = ExtResource("9_6bpxi")
+item_1/text = ""
+item_1/icon = ExtResource("9_6bpxi")
+item_2/text = ""
+item_2/icon = ExtResource("9_6bpxi")
+item_3/text = ""
 
-[node name="TextureRect" type="TextureRect" parent="TabContainer/ScrollContainer/VSplitContainer"]
+[node name="Hats2" type="ItemList" parent="JuliusClothing/TabContainer"]
+visible = false
 layout_mode = 2
-texture = ExtResource("1_xe8ly")
+max_columns = 3
+fixed_column_width = 75
+fixed_icon_size = Vector2i(75, 90)
 
-[node name="TextureRect2" type="TextureRect" parent="TabContainer/ScrollContainer/VSplitContainer"]
+[node name="Hair3" type="ItemList" parent="JuliusClothing/TabContainer"]
+visible = false
+layout_direction = 1
 layout_mode = 2
-texture = ExtResource("1_xe8ly")
+theme = SubResource("Theme_l1bot")
+theme_override_styles/selected = SubResource("StyleBoxEmpty_eq4id")
+item_count = 4
+max_columns = 3
+same_column_width = true
+fixed_column_width = 75
+fixed_icon_size = Vector2i(75, 90)
+item_0/text = ""
+item_0/icon = ExtResource("9_6bpxi")
+item_1/text = ""
+item_1/icon = ExtResource("9_6bpxi")
+item_2/text = ""
+item_2/icon = ExtResource("9_6bpxi")
+item_3/text = ""
+
+[node name="Hats3" type="ItemList" parent="JuliusClothing/TabContainer"]
+visible = false
+layout_mode = 2
+max_columns = 3
+fixed_column_width = 75
+fixed_icon_size = Vector2i(75, 90)
+
+[node name="MattClothing" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -33.5703
+offset_top = 67.1407
+offset_right = -33.5703
+offset_bottom = 67.1407
+script = ExtResource("9_m2bi8")
+
+[node name="TabContainer" type="TabContainer" parent="MattClothing"]
+layout_mode = 0
+offset_left = 837.42
+offset_top = -61.4721
+offset_right = 1092.42
+offset_bottom = 238.528
+clip_tabs = false
 
 [node name="PlayTransition" type="Node2D" parent="."]
-top_level = true
-z_index = 100
+visible = false
 position = Vector2(-24, 47.9999)
 scale = Vector2(1.33754, 1.14983)
 
 [node name="HeartCurtainBacker" type="Sprite2D" parent="PlayTransition"]
 modulate = Color(0.356863, 0, 0.552941, 1)
-position = Vector2(446.996, 243.514)
-scale = Vector2(924.271, 570.519)
+position = Vector2(446.996, 240.036)
+scale = Vector2(924.271, 577.477)
 texture = ExtResource("2_di5s5")
 
 [node name="HeartCurtainBackground" type="NinePatchRect" parent="PlayTransition"]
@@ -186,4 +258,4 @@ axis_stretch_vertical = 2
 libraries = {
 "": SubResource("AnimationLibrary_nfu2l")
 }
-autoplay = "Play_Transtiion"
+autoplay = "Play_Animation"

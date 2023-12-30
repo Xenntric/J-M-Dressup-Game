@@ -1,3 +1,6 @@
+ItemList
+TabContainer
+TabBar
 AnimationPlayer
 Node2D
 VBoxContainer
@@ -9,6 +12,3 @@ Button
 MenuButton
 PopupMenu
 Panel
-MenuBar
-Control
-AnimatedSprite2D
