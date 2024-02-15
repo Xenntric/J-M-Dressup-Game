@@ -43,17 +43,17 @@ size = Vector2(228, 275)
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_ynpdx"]
 frames = 2
-speed_scale = 4.0
+speed_scale = 2.0
 frame_0/texture = ExtResource("19_0lnjy")
 frame_1/texture = ExtResource("20_qggha")
 frame_1/duration = 1.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_yqwia"]
 frames = 2
+speed_scale = 2.0
 frame_0/texture = ExtResource("9_35tt3")
-frame_0/duration = 0.25
 frame_1/texture = ExtResource("10_5f3ex")
-frame_1/duration = 0.25
+frame_1/duration = 1.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_4vr7i"]
 frames = 2
@@ -85,7 +85,7 @@ frame_1/duration = 0.25
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_7j1f8"]
 frames = 2
-speed_scale = 4.0
+speed_scale = 2.0
 frame_0/texture = ExtResource("19_gbrv1")
 frame_1/texture = ExtResource("20_ud6j5")
 frame_1/duration = 1.0
@@ -332,6 +332,7 @@ offset_right = 1222.38
 offset_bottom = 485.141
 
 [node name="TabContainer" type="TabContainer" parent="MattClothing"]
+visible = false
 layout_mode = 0
 offset_left = 637.836
 offset_top = 57.5491

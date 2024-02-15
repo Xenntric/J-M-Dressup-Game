@@ -1,2 +1,2 @@
-﻿35083
-/opt/godot-mono-bin/godot/Godot_v4.2.1-stable_mono_linux.x86_64
+﻿39513
+/opt/godot-mono/bin/godot.linuxbsd.editor.x86_64.mono
