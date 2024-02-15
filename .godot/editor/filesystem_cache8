@@ -1,118 +1,120 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1707682802
-icon.svg::CompressedTexture2D::813288404080885267::1706392396::1706392396::1::::<><>::
-README.md::TextFile::-1::1706392396::0::1::::<><>::
-::res://Assets/::1706392396
-::res://Assets/Art/::1706394308
-::res://Assets/Art/Characters/::1706392396
-character.PNG::CompressedTexture2D::4830261693504359120::1706392396::1706392396::1::::<><>::
-J.png::CompressedTexture2D::1939802704992210663::1706392396::1706392396::1::::<><>::
-M.png::CompressedTexture2D::8467085231560135729::1706392396::1706392396::1::::<><>::
-nakedbase_julus.png::CompressedTexture2D::2706196680073362311::1706392396::1706392396::1::::<><>::
-nakedbase_matt.png::CompressedTexture2D::7461424889515851953::1706392396::1706392396::1::::<><>::
-::res://Assets/Art/Clothes/::1706392396
-::res://Assets/Art/Clothes/Accessories/::1706392396
-hand_1_julus.png::CompressedTexture2D::4565144435488085223::1706392396::1706392396::1::::<><>::
-hand_1_matt.png::CompressedTexture2D::4738538842467329931::1706392396::1706392396::1::::<><>::
-::res://Assets/Art/Clothes/Dress/::1706392396
-dress_1_julus.png::CompressedTexture2D::3944099712935702193::1706392396::1706392396::1::::<><>::
-dress_1_matt.png::CompressedTexture2D::1672016486582840093::1706392396::1706392396::1::::<><>::
-::res://Assets/Art/Clothes/Hair/::1706392396
-hair_1_julus.png::CompressedTexture2D::331236533873095429::1706392396::1706392396::1::::<><>::
-hair_1_matt.png::CompressedTexture2D::203941495078423746::1706392396::1706392396::1::::<><>::
-::res://Assets/Art/Clothes/Hats/::1706392396
-top hat.png::CompressedTexture2D::914419443044285061::1706392396::1706392396::1::::<><>::
-::res://Assets/Art/Clothes/Shoes/::1706392396
-headshot.png::CompressedTexture2D::4785989734212734375::1706392396::1706392396::1::::<><>::
-shoe_wellington.png::CompressedTexture2D::8866131298539875784::1706392396::1706392396::1::::<><>::
-::res://Assets/Art/Clothes Menu/::1707682588
-::res://Assets/Art/Clothes Menu/Asset Menu/::1707682802
-MenuFrame_1.png::CompressedTexture2D::5722700884661124533::1707682596::1707682791::1::::<><>::
-MenuFrame_2.png::CompressedTexture2D::5774537525467490571::1707682596::1707682802::1::::<><>::
-::res://Assets/Art/Clothes Menu/Selection Menu/::1707682546
-DressFrame_1.png::CompressedTexture2D::6816876230355650169::1706394089::1707682546::1::::<><>::
-DressFrame_2.png::CompressedTexture2D::7543025120143154499::1706394089::1707682546::1::::<><>::
-HatFrame_1.png::CompressedTexture2D::3311835254340374727::1706394089::1707682546::1::::<><>::
-HatFrame_2.png::CompressedTexture2D::5378174478523593649::1706394089::1707682546::1::::<><>::
-OutlineFrame_1.png::CompressedTexture2D::5865442067329560806::1706404170::1707682546::1::::<><>::
-OutlineFrame_2.png::CompressedTexture2D::3160290372994407407::1706404211::1707682546::1::::<><>::
-shirtandtrousersFrame_1.png::CompressedTexture2D::4961278009041570482::1706394089::1707682546::1::::<><>::
-shirtandtrousersFrame_2.png::CompressedTexture2D::806152226704887406::1706394089::1707682546::1::::<><>::
-ShoesFrame_1.png::CompressedTexture2D::3114467756756070706::1706394089::1707682546::1::::<><>::
-ShoesFrame_2.png::CompressedTexture2D::8899091499714525657::1706394089::1707682546::1::::<><>::
-Untitled_Artwork-1 4.png::CompressedTexture2D::1164249628470463048::1706401445::1707682546::1::::<><>::
-::res://Assets/Art/Main Menu/::1706392396
-::res://Assets/Art/Main Menu/Credits/::1706392396
-CreditFrame_selected_1.png::CompressedTexture2D::2960929648131157063::1706392396::1706392396::1::::<><>::
-CreditFrame_selected_2.png::CompressedTexture2D::6254641178723413989::1706392396::1706392396::1::::<><>::
-CreditFrame_unselected_1.png::CompressedTexture2D::5605593279829859688::1706392396::1706392396::1::::<><>::
-CreditFrame_unselected_2.png::CompressedTexture2D::2687115325760588467::1706392396::1706392396::1::::<><>::
-::res://Assets/Art/Main Menu/Play/::1706392396
-PlayFrame_selected_1.png::CompressedTexture2D::1629491925641661655::1706392396::1706392396::1::::<><>::
-PlayFrame_selected_2.png::CompressedTexture2D::2876212314718791279::1706392396::1706392396::1::::<><>::
-PlayFrame_unselected_1.png::CompressedTexture2D::3590595397293251507::1706392396::1706392396::1::::<><>::
-PlayFrame_unselected_2.png::CompressedTexture2D::6155073967065992188::1706392396::1706392396::1::::<><>::
-::res://Assets/Art/Main Menu/Quit/::1706392396
-QuitFrame_1.png::CompressedTexture2D::7976151480948676764::1706392396::1706392396::1::::<><>::
-QuitFrame_2.png::CompressedTexture2D::2603813411180243329::1706392396::1706392396::1::::<><>::
-QuitFrame_selected_1.png::CompressedTexture2D::4724314125667442632::1706392396::1706392396::1::::<><>::
-QuitFrame_selected_2.png::CompressedTexture2D::2189265803372886969::1706392396::1706392396::1::::<><>::
-QuitFrame_unselected_1.png::CompressedTexture2D::5742603958718075605::1706392396::1706392396::1::::<><>::
-QuitFrame_unselected_2.png::CompressedTexture2D::2628207534128720165::1706392396::1706392396::1::::<><>::
-::res://Assets/Art/Menu Bar/::1706394291
-::res://Assets/Art/Menu Bar/Cog/::1706392396
-CogFrame_1.png::CompressedTexture2D::7459586027693010739::1706392396::1706392396::1::::<><>::
-CogFrame_2.png::CompressedTexture2D::8054519787657729158::1706392396::1706392396::1::::<><>::
-::res://Assets/Art/Menu Bar/Disabled/::1706394501
-DisabledFrame_1.png::CompressedTexture2D::4539906682201484819::1706392396::1706394501::1::::<><>::
-DisabledFrame_2.png::CompressedTexture2D::1931098067094169384::1706392396::1706394501::1::::<><>::
-::res://Assets/Art/Menu Bar/Frame/::1706404301
-OptionBackground.png::CompressedTexture2D::4975913375759223138::1706392396::1706394501::1::::<><>::
-OutlineFrame_1.png::CompressedTexture2D::8205207274381813552::1706404270::1706404301::1::::<><>::
-OutlineFrame_2.png::CompressedTexture2D::8823380677198875792::1706404280::1706404301::1::::<><>::
-::res://Assets/Art/Menu Bar/Home/::1706392396
-HomeFrame_1.png::CompressedTexture2D::3262473814511489214::1706392396::1706392396::1::::<><>::
-HomeFrame_2.png::CompressedTexture2D::8811061955178422723::1706392396::1706392396::1::::<><>::
-::res://Assets/Art/Menu Bar/Return/::1706392396
-ReturnFrame_1.png::CompressedTexture2D::424407978183248885::1706392396::1706392396::1::::<><>::
-ReturnFrame_2.png::CompressedTexture2D::2623464867433954210::1706392396::1706392396::1::::<><>::
-::res://Assets/Art/Menu Bar/Sound/::1707682115
-SoundFrame_1.png::CompressedTexture2D::6036698630163980611::1706392396::1706392396::1::::<><>::
-SoundFrame_2.png::CompressedTexture2D::1238583740461497972::1706392396::1706392396::1::::<><>::
-::res://Assets/Art/Splash Art/::1706392396
-background.png::CompressedTexture2D::6358557592602478265::1706392396::1706392396::1::::<><>::
-blackScreen.png::CompressedTexture2D::2684643024626958457::1706392396::1706392396::1::::<><>::
-heart.png::CompressedTexture2D::1340416944454630651::1706392396::1706392396::1::::<><>::
-::res://Assets/Art/Splash Art/Logo/::1706392396
-SpriteFrame_1.png::CompressedTexture2D::8214578937918542034::1706392396::1706392396::1::::<><>::
-SpriteFrame_2.png::CompressedTexture2D::8130062426021476705::1706392396::1706392396::1::::<><>::
-::res://Assets/Art/Splash Art/Portraits/::1706392396
-SpriteFrame_1.png::CompressedTexture2D::3751326941279488554::1706392396::1706392396::1::::<><>::
-SpriteFrame_2.png::CompressedTexture2D::5109314714110152412::1706392396::1706392396::1::::<><>::
-::res://Assets/Art/Splash Art/Usernames/::1706392396
-::res://Assets/Art/Splash Art/Usernames/Bollsachs/::1706392396
-SpriteFrameBorder_1.png::CompressedTexture2D::4135788286906853945::1706392396::1706392396::1::::<><>::
-SpriteFrameBorder_2.png::CompressedTexture2D::2043866516996728759::1706392396::1706392396::1::::<><>::
-SpriteFrame_1.png::CompressedTexture2D::3177729701158849034::1706392396::1706392396::1::::<><>::
-SpriteFrame_2.png::CompressedTexture2D::8700999350405928265::1706392396::1706392396::1::::<><>::
-::res://Assets/Art/Splash Art/Usernames/Xenntric/::1706392396
-SpriteFrameBorder_1.png::CompressedTexture2D::7554190766907917691::1706392396::1706392396::1::::<><>::
-SpriteFrameBorder_2.png::CompressedTexture2D::6702808695683817195::1706392396::1706392396::1::::<><>::
-SpriteFrame_1.png::CompressedTexture2D::1192213123433539172::1706392396::1706392396::1::::<><>::
-SpriteFrame_2.png::CompressedTexture2D::4732180689888082699::1706392396::1706392396::1::::<><>::
-::res://Assets/Scenes/::1707682551
-main_dressup.tscn::PackedScene::7198641740776767480::1707682551::0::1::::<><>::uid://ca22x7ja7vc77::::res://Assets/Art/Characters/character.PNG<>uid://cwuerq3acdchl::::res://Assets/Art/Splash Art/background.png<>uid://2vwjc21e0fnr::::res://Assets/Art/Characters/J.png<>uid://dsvrwlfhok34x::::res://Assets/Art/Characters/M.png<>uid://bes5wtrrvjglb::::res://Assets/Art/Characters/nakedbase_julus.png<>uid://dekmtv67j5bdh::::res://Assets/Art/Characters/nakedbase_matt.png<>uid://eypogoj50kav::::res://Assets/Art/Clothes/Hair/hair_1_julus.png<>uid://cpti8d3b080cg::::res://Assets/Art/Clothes Menu/Selection Menu/OutlineFrame_1.png<>uid://tdkqa0sbknsd::::res://Assets/Art/Splash Art/heart.png<>res://Assets/Scripts/MainGame/UI/PopulateItems.cs<>uid://bla4rx7ltjjsp::::res://Assets/Art/Clothes Menu/Selection Menu/OutlineFrame_2.png<>uid://bngjpb31tlehb::::res://Assets/Art/Clothes Menu/Selection Menu/HatFrame_1.png<>uid://civh0otp52sej::::res://Assets/Art/Clothes Menu/Selection Menu/HatFrame_2.png<>uid://c4ee7qvfym2gb::::res://Assets/Art/Clothes Menu/Selection Menu/DressFrame_1.png<>uid://dfp5r0ccombyp::::res://Assets/Art/Clothes Menu/Selection Menu/DressFrame_2.png<>uid://ccxjr2xu1gcp3::::res://Assets/Art/Clothes Menu/Selection Menu/shirtandtrousersFrame_1.png<>uid://lqrhecade5iw::::res://Assets/Art/Clothes Menu/Selection Menu/shirtandtrousersFrame_2.png<>uid://bkmw3gibo1xlq::::res://Assets/Art/Clothes Menu/Selection Menu/ShoesFrame_1.png<>uid://dy110b1iegju4::::res://Assets/Art/Clothes Menu/Selection Menu/ShoesFrame_2.png<>uid://do5wthfjucj0k::::res://Assets/Art/Menu Bar/Frame/OutlineFrame_1.png<>uid://dxyd148mt63jg::::res://Assets/Art/Menu Bar/Frame/OutlineFrame_2.png<>uid://dejqj6to00gjr::::res://Assets/Art/Menu Bar/Cog/CogFrame_1.png<>uid://dm0w08lcu151k::::res://Assets/Art/Menu Bar/Cog/CogFrame_2.png<>uid://bmqmp461u33mw::::res://Assets/Art/Menu Bar/Home/HomeFrame_1.png<>uid://dxse5x8bbsgx4::::res://Assets/Art/Menu Bar/Home/HomeFrame_2.png<>uid://csahsrnxv13id::::res://Assets/Art/Menu Bar/Sound/SoundFrame_1.png<>uid://rv8j780ixu5q::::res://Assets/Art/Menu Bar/Sound/SoundFrame_2.png<>uid://gbt64vlhe20h::::res://Assets/Art/Menu Bar/Return/ReturnFrame_1.png<>uid://bdm3c3bejj7ak::::res://Assets/Art/Menu Bar/Return/ReturnFrame_2.png
-splash_scene.tscn::PackedScene::667410729315769538::1707682551::0::1::::<><>::res://Assets/Scripts/SplashandMenu/MenuScript.cs<>uid://btpf2oqpvghbm::::res://Assets/Art/Splash Art/Portraits/SpriteFrame_1.png<>uid://cwuerq3acdchl::::res://Assets/Art/Splash Art/background.png<>uid://datctv4lilhv1::::res://Assets/Scenes/main_dressup.tscn<>uid://ce18ww5kud14c::::res://Assets/Art/Splash Art/Portraits/SpriteFrame_2.png<>uid://by6n3gextcqvp::::res://Assets/Art/Splash Art/Usernames/Bollsachs/SpriteFrameBorder_1.png<>uid://4ecghptwke0f::::res://Assets/Art/Splash Art/Usernames/Bollsachs/SpriteFrameBorder_2.png<>uid://dpbg6dw5veksw::::res://Assets/Art/Splash Art/Logo/SpriteFrame_1.png<>uid://dfvkohq5ncy48::::res://Assets/Art/Splash Art/Usernames/Xenntric/SpriteFrameBorder_1.png<>uid://c2q5jrugi8etn::::res://Assets/Art/Splash Art/Usernames/Xenntric/SpriteFrameBorder_2.png<>uid://dn3i68bdv4xmv::::res://Assets/Art/Splash Art/Logo/SpriteFrame_2.png<>uid://beipxchhovxhh::::res://Assets/Art/Splash Art/blackScreen.png<>uid://tdkqa0sbknsd::::res://Assets/Art/Splash Art/heart.png<>uid://brfkt1lif80bv::::res://Assets/Art/Main Menu/Play/PlayFrame_unselected_1.png<>uid://ctxtf0lgyk3nc::::res://Assets/Art/Main Menu/Play/PlayFrame_unselected_2.png<>uid://xhlq187tpwp0::::res://Assets/Art/Main Menu/Play/PlayFrame_selected_1.png<>uid://bg8i2c4x8u160::::res://Assets/Art/Main Menu/Play/PlayFrame_selected_2.png<>uid://cn2033rpygsuv::::res://Assets/Art/Main Menu/Quit/QuitFrame_unselected_1.png<>uid://bdpegum7nejtl::::res://Assets/Art/Main Menu/Quit/QuitFrame_unselected_2.png<>uid://b8kq07robme7i::::res://Assets/Art/Main Menu/Quit/QuitFrame_selected_1.png<>uid://cl4nkjq3j8oxk::::res://Assets/Art/Main Menu/Credits/CreditFrame_unselected_1.png<>uid://6gq5gpbh4pcb::::res://Assets/Art/Main Menu/Quit/QuitFrame_selected_2.png<>uid://bejwnqyyu3hhj::::res://Assets/Art/Main Menu/Credits/CreditFrame_unselected_2.png<>uid://bigkcw8rv62br::::res://Assets/Art/Main Menu/Credits/CreditFrame_selected_1.png<>uid://cvd2a5ruatuft::::res://Assets/Art/Main Menu/Credits/CreditFrame_selected_2.png
-::res://Assets/Scripts/::1706392396
-FolderGenerator.cs::CSharpScript::-1::1706392396::0::1::::<>Node2D<>::
-Items.cs::CSharpScript::-1::1706392396::0::1::::<><>::
-loadItems.cs::CSharpScript::-1::1706392396::0::1::::<><>::
-MouseNode.cs::CSharpScript::-1::1706392396::0::1::::<>Node<>::
-SignalScript.cs::CSharpScript::-1::1706392396::0::1::::<>Area2D<>::
-::res://Assets/Scripts/MainGame/::1706392396
-::res://Assets/Scripts/MainGame/UI/::1706392396
-Entity.cs::CSharpScript::-1::1706392396::0::1::::<><>::
-ItemSelect.cs::CSharpScript::-1::1706392396::0::1::::<>ItemList<>::
-PopulateItems.cs::CSharpScript::-1::1706395440::0::1::::<>Control<>::
-::res://Assets/Scripts/SplashandMenu/::1706392396
-MenuScript.cs::CSharpScript::-1::1706392396::0::1::::<>Node2D<>::
+::res://::1708015701
+icon.svg::CompressedTexture2D::813288404080885267::1703360763::1703360763::1::::<><>::
+README.md::TextFile::-1::1703360763::0::1::::<><>::
+::res://Assets/::1703434572
+::res://Assets/Art/::1708002526
+::res://Assets/Art/Characters/::1703612048
+character.PNG::CompressedTexture2D::4830261693504359120::1703360763::1703434572::1::::<><>::
+J.png::CompressedTexture2D::1939802704992210663::1703360763::1703434572::1::::<><>::
+M.png::CompressedTexture2D::8467085231560135729::1703360763::1703434572::1::::<><>::
+nakedbase_julus.png::CompressedTexture2D::2706196680073362311::1703612040::1703612048::1::::<><>::
+nakedbase_matt.png::CompressedTexture2D::7461424889515851953::1703612037::1703612048::1::::<><>::
+::res://Assets/Art/Clothes/::1703950807
+::res://Assets/Art/Clothes/Accessories/::1703950855
+hand_1_julus.png::CompressedTexture2D::4565144435488085223::1703950847::1703950855::1::::<><>::
+hand_1_matt.png::CompressedTexture2D::4738538842467329931::1703950848::1703950855::1::::<><>::
+::res://Assets/Art/Clothes/Dress/::1703770573
+dress_1_julus.png::CompressedTexture2D::3944099712935702193::1703612003::1703612048::1::::<><>::
+dress_1_matt.png::CompressedTexture2D::1672016486582840093::1703770336::1703770573::1::::<><>::
+::res://Assets/Art/Clothes/Hair/::1703612048
+hair_1_julus.png::CompressedTexture2D::331236533873095429::1703611985::1703612048::1::::<><>::
+hair_1_matt.png::CompressedTexture2D::203941495078423746::1703611988::1703612048::1::::<><>::
+::res://Assets/Art/Clothes/Hats/::1703527985
+top hat.png::CompressedTexture2D::914419443044285061::1703360763::1703434572::1::::<><>::
+::res://Assets/Art/Clothes/Shoes/::1703434572
+headshot.png::CompressedTexture2D::4785989734212734375::1703360763::1703434572::1::::<><>::
+shoe_wellington.png::CompressedTexture2D::8866131298539875784::1703360763::1703434572::1::::<><>::
+::res://Assets/Art/Clothes Menu/::1708002526
+::res://Assets/Art/Clothes Menu/Asset Menu/::1708004078
+MenuFrame_1.png::CompressedTexture2D::5722700884661124533::1708002526::1708002526::1::::<><>::
+MenuFrame_2.png::CompressedTexture2D::5774537525467490571::1708002526::1708002526::1::::<><>::
+MenuFrame_3.png::CompressedTexture2D::8664904403160486339::1708003981::1708004078::1::::<><>::
+MenuFrame_4.png::CompressedTexture2D::1258808682198616984::1708003981::1708004078::1::::<><>::
+::res://Assets/Art/Clothes Menu/Selection Menu/::1708002526
+DressFrame_1.png::CompressedTexture2D::6816876230355650169::1708002526::1708002526::1::::<><>::
+DressFrame_2.png::CompressedTexture2D::7543025120143154499::1708002526::1708002526::1::::<><>::
+HatFrame_1.png::CompressedTexture2D::3311835254340374727::1708002526::1708002526::1::::<><>::
+HatFrame_2.png::CompressedTexture2D::5378174478523593649::1708002526::1708002526::1::::<><>::
+OutlineFrame_1.png::CompressedTexture2D::5865442067329560806::1708002526::1708002526::1::::<><>::
+OutlineFrame_2.png::CompressedTexture2D::3160290372994407407::1708002526::1708002526::1::::<><>::
+shirtandtrousersFrame_1.png::CompressedTexture2D::4961278009041570482::1708002526::1708002526::1::::<><>::
+shirtandtrousersFrame_2.png::CompressedTexture2D::806152226704887406::1708002526::1708002526::1::::<><>::
+ShoesFrame_1.png::CompressedTexture2D::3114467756756070706::1708002526::1708002526::1::::<><>::
+ShoesFrame_2.png::CompressedTexture2D::8899091499714525657::1708002526::1708002526::1::::<><>::
+Untitled_Artwork-1 4.png::CompressedTexture2D::1164249628470463048::1708002526::1708002526::1::::<><>::
+::res://Assets/Art/Main Menu/::1703603897
+::res://Assets/Art/Main Menu/Credits/::1703616691
+CreditFrame_selected_1.png::CompressedTexture2D::2960929648131157063::1703604186::1703616691::1::::<><>::
+CreditFrame_selected_2.png::CompressedTexture2D::6254641178723413989::1703604252::1703616691::1::::<><>::
+CreditFrame_unselected_1.png::CompressedTexture2D::5605593279829859688::1703604173::1703616691::1::::<><>::
+CreditFrame_unselected_2.png::CompressedTexture2D::2687115325760588467::1703604241::1703616691::1::::<><>::
+::res://Assets/Art/Main Menu/Play/::1703616691
+PlayFrame_selected_1.png::CompressedTexture2D::1629491925641661655::1703517874::1703616691::1::::<><>::
+PlayFrame_selected_2.png::CompressedTexture2D::2876212314718791279::1703517927::1703616691::1::::<><>::
+PlayFrame_unselected_1.png::CompressedTexture2D::3590595397293251507::1703517863::1703616691::1::::<><>::
+PlayFrame_unselected_2.png::CompressedTexture2D::6155073967065992188::1703518071::1703616691::1::::<><>::
+::res://Assets/Art/Main Menu/Quit/::1703616691
+QuitFrame_1.png::CompressedTexture2D::7976151480948676764::1703517374::1703616691::1::::<><>::
+QuitFrame_2.png::CompressedTexture2D::2603813411180243329::1703517382::1703616691::1::::<><>::
+QuitFrame_selected_1.png::CompressedTexture2D::4724314125667442632::1703517981::1703616691::1::::<><>::
+QuitFrame_selected_2.png::CompressedTexture2D::2189265803372886969::1703518001::1703616691::1::::<><>::
+QuitFrame_unselected_1.png::CompressedTexture2D::5742603958718075605::1703517972::1703616691::1::::<><>::
+QuitFrame_unselected_2.png::CompressedTexture2D::2628207534128720165::1703517991::1703616691::1::::<><>::
+::res://Assets/Art/Menu Bar/::1708002526
+::res://Assets/Art/Menu Bar/Cog/::1703631132
+CogFrame_1.png::CompressedTexture2D::7459586027693010739::1703630489::1703631132::1::::<><>::
+CogFrame_2.png::CompressedTexture2D::8054519787657729158::1703630489::1703631132::1::::<><>::
+::res://Assets/Art/Menu Bar/Disabled/::1708002526
+DisabledFrame_1.png::CompressedTexture2D::4539906682201484819::1708002526::1708002526::1::::<><>::
+DisabledFrame_2.png::CompressedTexture2D::1931098067094169384::1708002526::1708002526::1::::<><>::
+::res://Assets/Art/Menu Bar/Frame/::1708002526
+OptionBackground.png::CompressedTexture2D::4975913375759223138::1708002526::1708002526::1::::<><>::
+OutlineFrame_1.png::CompressedTexture2D::8205207274381813552::1708002526::1708002526::1::::<><>::
+OutlineFrame_2.png::CompressedTexture2D::8823380677198875792::1708002526::1708002526::1::::<><>::
+::res://Assets/Art/Menu Bar/Home/::1703631132
+HomeFrame_1.png::CompressedTexture2D::3262473814511489214::1703630489::1703631132::1::::<><>::
+HomeFrame_2.png::CompressedTexture2D::8811061955178422723::1703630489::1703631132::1::::<><>::
+::res://Assets/Art/Menu Bar/Return/::1703631132
+ReturnFrame_1.png::CompressedTexture2D::424407978183248885::1703630489::1703631132::1::::<><>::
+ReturnFrame_2.png::CompressedTexture2D::2623464867433954210::1703630489::1703631132::1::::<><>::
+::res://Assets/Art/Menu Bar/Sound/::1703631132
+SoundFrame_1.png::CompressedTexture2D::6036698630163980611::1703630489::1703631132::1::::<><>::
+SoundFrame_2.png::CompressedTexture2D::1238583740461497972::1703630489::1703631132::1::::<><>::
+::res://Assets/Art/Splash Art/::1703533318
+background.png::CompressedTexture2D::6358557592602478265::1703508097::1703508089::1::::<><>::
+blackScreen.png::CompressedTexture2D::2684643024626958457::1703504361::1703505169::1::::<><>::
+heart.png::CompressedTexture2D::1340416944454630651::1703507866::1703507881::1::::<><>::
+::res://Assets/Art/Splash Art/Logo/::1703513469
+SpriteFrame_1.png::CompressedTexture2D::8214578937918542034::1703436710::1703437084::1::::<><>::
+SpriteFrame_2.png::CompressedTexture2D::8130062426021476705::1703436710::1703437084::1::::<><>::
+::res://Assets/Art/Splash Art/Portraits/::1703437084
+SpriteFrame_1.png::CompressedTexture2D::3751326941279488554::1703435230::1703437084::1::::<><>::
+SpriteFrame_2.png::CompressedTexture2D::5109314714110152412::1703435230::1703437084::1::::<><>::
+::res://Assets/Art/Splash Art/Usernames/::1703437001
+::res://Assets/Art/Splash Art/Usernames/Bollsachs/::1703513510
+SpriteFrameBorder_1.png::CompressedTexture2D::4135788286906853945::1703512940::1703512945::1::::<><>::
+SpriteFrameBorder_2.png::CompressedTexture2D::2043866516996728759::1703512821::1703512945::1::::<><>::
+SpriteFrame_1.png::CompressedTexture2D::3177729701158849034::1703436827::1703512870::1::::<><>::
+SpriteFrame_2.png::CompressedTexture2D::8700999350405928265::1703436827::1703512870::1::::<><>::
+::res://Assets/Art/Splash Art/Usernames/Xenntric/::1703513477
+SpriteFrameBorder_1.png::CompressedTexture2D::7554190766907917691::1703512601::1703512870::1::::<><>::
+SpriteFrameBorder_2.png::CompressedTexture2D::6702808695683817195::1703512587::1703512870::1::::<><>::
+SpriteFrame_1.png::CompressedTexture2D::1192213123433539172::1703436868::1703512870::1::::<><>::
+SpriteFrame_2.png::CompressedTexture2D::4732180689888082699::1703436869::1703512870::1::::<><>::
+::res://Assets/Scenes/::1708012910
+main_dressup.tscn::PackedScene::7198641740776767480::1708012909::0::1::::<><>::uid://ca22x7ja7vc77::::res://Assets/Art/Characters/character.PNG<>uid://cwuerq3acdchl::::res://Assets/Art/Splash Art/background.png<>uid://2vwjc21e0fnr::::res://Assets/Art/Characters/J.png<>uid://dsvrwlfhok34x::::res://Assets/Art/Characters/M.png<>uid://bes5wtrrvjglb::::res://Assets/Art/Characters/nakedbase_julus.png<>uid://dekmtv67j5bdh::::res://Assets/Art/Characters/nakedbase_matt.png<>uid://eypogoj50kav::::res://Assets/Art/Clothes/Hair/hair_1_julus.png<>uid://cpti8d3b080cg::::res://Assets/Art/Clothes Menu/Selection Menu/OutlineFrame_1.png<>uid://tdkqa0sbknsd::::res://Assets/Art/Splash Art/heart.png<>res://Assets/Scripts/MainGame/UI/PopulateItems.cs<>uid://bla4rx7ltjjsp::::res://Assets/Art/Clothes Menu/Selection Menu/OutlineFrame_2.png<>uid://bngjpb31tlehb::::res://Assets/Art/Clothes Menu/Selection Menu/HatFrame_1.png<>uid://civh0otp52sej::::res://Assets/Art/Clothes Menu/Selection Menu/HatFrame_2.png<>uid://c4ee7qvfym2gb::::res://Assets/Art/Clothes Menu/Selection Menu/DressFrame_1.png<>uid://dfp5r0ccombyp::::res://Assets/Art/Clothes Menu/Selection Menu/DressFrame_2.png<>uid://ccxjr2xu1gcp3::::res://Assets/Art/Clothes Menu/Selection Menu/shirtandtrousersFrame_1.png<>uid://lqrhecade5iw::::res://Assets/Art/Clothes Menu/Selection Menu/shirtandtrousersFrame_2.png<>uid://bkmw3gibo1xlq::::res://Assets/Art/Clothes Menu/Selection Menu/ShoesFrame_1.png<>uid://dy110b1iegju4::::res://Assets/Art/Clothes Menu/Selection Menu/ShoesFrame_2.png<>uid://dvplyeiu2vgcp::::res://Assets/Art/Clothes Menu/Asset Menu/MenuFrame_3.png<>uid://do5wthfjucj0k::::res://Assets/Art/Menu Bar/Frame/OutlineFrame_1.png<>uid://r61noyjyihim::::res://Assets/Art/Clothes Menu/Asset Menu/MenuFrame_4.png<>uid://dxyd148mt63jg::::res://Assets/Art/Menu Bar/Frame/OutlineFrame_2.png<>uid://dejqj6to00gjr::::res://Assets/Art/Menu Bar/Cog/CogFrame_1.png<>uid://dm0w08lcu151k::::res://Assets/Art/Menu Bar/Cog/CogFrame_2.png<>uid://bmqmp461u33mw::::res://Assets/Art/Menu Bar/Home/HomeFrame_1.png<>uid://dxse5x8bbsgx4::::res://Assets/Art/Menu Bar/Home/HomeFrame_2.png<>uid://csahsrnxv13id::::res://Assets/Art/Menu Bar/Sound/SoundFrame_1.png<>uid://rv8j780ixu5q::::res://Assets/Art/Menu Bar/Sound/SoundFrame_2.png<>uid://gbt64vlhe20h::::res://Assets/Art/Menu Bar/Return/ReturnFrame_1.png<>uid://bdm3c3bejj7ak::::res://Assets/Art/Menu Bar/Return/ReturnFrame_2.png
+splash_scene.tscn::PackedScene::667410729315769538::1708012910::0::1::::<><>::res://Assets/Scripts/SplashandMenu/MenuScript.cs<>uid://btpf2oqpvghbm::::res://Assets/Art/Splash Art/Portraits/SpriteFrame_1.png<>uid://cwuerq3acdchl::::res://Assets/Art/Splash Art/background.png<>uid://datctv4lilhv1::::res://Assets/Scenes/main_dressup.tscn<>uid://ce18ww5kud14c::::res://Assets/Art/Splash Art/Portraits/SpriteFrame_2.png<>uid://by6n3gextcqvp::::res://Assets/Art/Splash Art/Usernames/Bollsachs/SpriteFrameBorder_1.png<>uid://4ecghptwke0f::::res://Assets/Art/Splash Art/Usernames/Bollsachs/SpriteFrameBorder_2.png<>uid://dpbg6dw5veksw::::res://Assets/Art/Splash Art/Logo/SpriteFrame_1.png<>uid://dfvkohq5ncy48::::res://Assets/Art/Splash Art/Usernames/Xenntric/SpriteFrameBorder_1.png<>uid://c2q5jrugi8etn::::res://Assets/Art/Splash Art/Usernames/Xenntric/SpriteFrameBorder_2.png<>uid://dn3i68bdv4xmv::::res://Assets/Art/Splash Art/Logo/SpriteFrame_2.png<>uid://beipxchhovxhh::::res://Assets/Art/Splash Art/blackScreen.png<>uid://tdkqa0sbknsd::::res://Assets/Art/Splash Art/heart.png<>uid://brfkt1lif80bv::::res://Assets/Art/Main Menu/Play/PlayFrame_unselected_1.png<>uid://ctxtf0lgyk3nc::::res://Assets/Art/Main Menu/Play/PlayFrame_unselected_2.png<>uid://xhlq187tpwp0::::res://Assets/Art/Main Menu/Play/PlayFrame_selected_1.png<>uid://bg8i2c4x8u160::::res://Assets/Art/Main Menu/Play/PlayFrame_selected_2.png<>uid://cn2033rpygsuv::::res://Assets/Art/Main Menu/Quit/QuitFrame_unselected_1.png<>uid://bdpegum7nejtl::::res://Assets/Art/Main Menu/Quit/QuitFrame_unselected_2.png<>uid://b8kq07robme7i::::res://Assets/Art/Main Menu/Quit/QuitFrame_selected_1.png<>uid://cl4nkjq3j8oxk::::res://Assets/Art/Main Menu/Credits/CreditFrame_unselected_1.png<>uid://6gq5gpbh4pcb::::res://Assets/Art/Main Menu/Quit/QuitFrame_selected_2.png<>uid://bejwnqyyu3hhj::::res://Assets/Art/Main Menu/Credits/CreditFrame_unselected_2.png<>uid://bigkcw8rv62br::::res://Assets/Art/Main Menu/Credits/CreditFrame_selected_1.png<>uid://cvd2a5ruatuft::::res://Assets/Art/Main Menu/Credits/CreditFrame_selected_2.png
+::res://Assets/Scripts/::1703950764
+FolderGenerator.cs::CSharpScript::-1::1703950764::0::1::::<>Node2D<>::
+Items.cs::CSharpScript::-1::1703360763::0::1::::<><>::
+loadItems.cs::CSharpScript::-1::1703770704::0::1::::<><>::
+MouseNode.cs::CSharpScript::-1::1703360800::0::1::::<>Node<>::
+SignalScript.cs::CSharpScript::-1::1703360763::0::1::::<>Area2D<>::
+::res://Assets/Scripts/MainGame/::1703629947
+::res://Assets/Scripts/MainGame/UI/::1703954292
+Entity.cs::CSharpScript::-1::1703771877::0::1::::<><>::
+ItemSelect.cs::CSharpScript::-1::1703957372::0::1::::<>ItemList<>::
+PopulateItems.cs::CSharpScript::-1::1708013123::0::1::::<>Control<>::
+::res://Assets/Scripts/SplashandMenu/::1703526646
+MenuScript.cs::CSharpScript::-1::1703604669::0::1::::<>Node2D<>::

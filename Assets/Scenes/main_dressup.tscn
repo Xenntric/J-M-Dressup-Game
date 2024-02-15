@@ -19,9 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://lqrhecade5iw" path="res://Assets/Art/Clothes Menu/Selection Menu/shirtandtrousersFrame_2.png" id="16_0syop"]
 [ext_resource type="Texture2D" uid="uid://bkmw3gibo1xlq" path="res://Assets/Art/Clothes Menu/Selection Menu/ShoesFrame_1.png" id="17_2bx2e"]
 [ext_resource type="Texture2D" uid="uid://dy110b1iegju4" path="res://Assets/Art/Clothes Menu/Selection Menu/ShoesFrame_2.png" id="18_qlld8"]
+[ext_resource type="Texture2D" uid="uid://dvplyeiu2vgcp" path="res://Assets/Art/Clothes Menu/Asset Menu/MenuFrame_3.png" id="19_0lnjy"]
 [ext_resource type="Texture2D" uid="uid://do5wthfjucj0k" path="res://Assets/Art/Menu Bar/Frame/OutlineFrame_1.png" id="19_gbrv1"]
-[ext_resource type="Texture2D" uid="uid://cnsebu45j1kqn" path="res://Assets/Art/Clothes Menu/Asset Menu/MenuFrame_1.png" id="19_ok606"]
-[ext_resource type="Texture2D" uid="uid://cojh13rs3rb68" path="res://Assets/Art/Clothes Menu/Asset Menu/MenuFrame_2.png" id="20_tn7qa"]
+[ext_resource type="Texture2D" uid="uid://r61noyjyihim" path="res://Assets/Art/Clothes Menu/Asset Menu/MenuFrame_4.png" id="20_qggha"]
 [ext_resource type="Texture2D" uid="uid://dxyd148mt63jg" path="res://Assets/Art/Menu Bar/Frame/OutlineFrame_2.png" id="20_ud6j5"]
 [ext_resource type="Texture2D" uid="uid://dejqj6to00gjr" path="res://Assets/Art/Menu Bar/Cog/CogFrame_1.png" id="22_nuy8t"]
 [ext_resource type="Texture2D" uid="uid://dm0w08lcu151k" path="res://Assets/Art/Menu Bar/Cog/CogFrame_2.png" id="23_cx7g0"]
@@ -40,6 +40,13 @@ size = Vector2(228, 275)
 [sub_resource type="Theme" id="Theme_l1bot"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eq4id"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_ynpdx"]
+frames = 2
+speed_scale = 4.0
+frame_0/texture = ExtResource("19_0lnjy")
+frame_1/texture = ExtResource("20_qggha")
+frame_1/duration = 1.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_yqwia"]
 frames = 2
@@ -75,13 +82,6 @@ frame_0/texture = ExtResource("17_2bx2e")
 frame_0/duration = 0.25
 frame_1/texture = ExtResource("18_qlld8")
 frame_1/duration = 0.25
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_a4oss"]
-frames = 2
-speed_scale = 2.0
-frame_0/texture = ExtResource("19_ok606")
-frame_1/texture = ExtResource("20_tn7qa")
-frame_1/duration = 1.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_7j1f8"]
 frames = 2
@@ -169,7 +169,7 @@ scale = Vector2(1168, 664)
 texture = ExtResource("2_di5s5")
 
 [node name="Characters" type="Node2D" parent="."]
-position = Vector2(357, 341)
+position = Vector2(211.013, 341)
 scale = Vector2(0.33, 0.33)
 
 [node name="J" type="Sprite2D" parent="Characters"]
@@ -309,17 +309,33 @@ fixed_icon_size = Vector2i(75, 90)
 [node name="MattClothing" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -33.5703
+offset_left = -91.1194
 offset_top = 67.1407
-offset_right = -33.5703
+offset_right = -91.1194
 offset_bottom = 67.1407
 script = ExtResource("9_m2bi8")
 
+[node name="TextureRect" type="TextureRect" parent="MattClothing"]
+layout_mode = 2
+offset_left = 930.378
+offset_top = 67.1406
+offset_right = 1222.38
+offset_bottom = 485.141
+texture = SubResource("AnimatedTexture_ynpdx")
+
+[node name="PanelContainer" type="PanelContainer" parent="MattClothing"]
+visible = false
+layout_mode = 2
+offset_left = 930.378
+offset_top = 67.1406
+offset_right = 1222.38
+offset_bottom = 485.141
+
 [node name="TabContainer" type="TabContainer" parent="MattClothing"]
 layout_mode = 0
-offset_left = 930.378
+offset_left = 637.836
 offset_top = 57.5491
-offset_right = 1185.38
+offset_right = 892.838
 offset_bottom = 357.549
 clip_tabs = false
 
@@ -333,9 +349,9 @@ offset_bottom = 364.345
 [node name="VBoxContainer" type="VBoxContainer" parent="MattClothing"]
 layout_mode = 2
 offset_left = 872.828
-offset_top = 100.711
+offset_top = 163.056
 offset_right = 972.828
-offset_bottom = 512.711
+offset_bottom = 575.056
 scale = Vector2(0.479628, 0.479628)
 
 [node name="Hat Button" type="TextureButton" parent="MattClothing/VBoxContainer"]
@@ -385,20 +401,6 @@ offset_top = -5.07135
 offset_right = 100.0
 offset_bottom = 94.9286
 texture = SubResource("AnimatedTexture_1xx8i")
-
-[node name="PanelContainer" type="PanelContainer" parent="MattClothing"]
-layout_mode = 0
-offset_left = 930.378
-offset_top = 67.1406
-offset_right = 1212.38
-offset_bottom = 352.141
-scale = Vector2(0.894372, 0.894372)
-
-[node name="TextureRect" type="TextureRect" parent="MattClothing/PanelContainer"]
-layout_mode = 2
-texture = SubResource("AnimatedTexture_a4oss")
-flip_h = true
-flip_v = true
 
 [node name="Options Menu" type="Control" parent="."]
 texture_filter = 1
