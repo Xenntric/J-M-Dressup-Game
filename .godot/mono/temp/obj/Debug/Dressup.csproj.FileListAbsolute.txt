@@ -50,3 +50,21 @@
 /run/media/xenntric/workHDD/Personal Projects/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/Dressup.genruntimeconfig.cache
 /home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/Dressup.sourcelink.json
 /home/xenntric/Documents/Godot Projects/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/refint/Dressup.dll
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/bin/Debug/Dressup.deps.json
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/bin/Debug/Dressup.runtimeconfig.json
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/bin/Debug/Dressup.dll
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/bin/Debug/Dressup.pdb
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/bin/Debug/GodotSharp.dll
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/bin/Debug/GodotSharpEditor.dll
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/Dressup.csproj.AssemblyReference.cache
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/Dressup.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/Dressup.AssemblyInfoInputs.cache
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/Dressup.AssemblyInfo.cs
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/Dressup.csproj.CoreCompileInputs.cache
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/Dressup.sourcelink.json
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/Dressup.csproj.CopyComplete
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/Dressup.dll
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/refint/Dressup.dll
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/Dressup.pdb
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/Dressup.genruntimeconfig.cache
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/obj/Debug/ref/Dressup.dll
