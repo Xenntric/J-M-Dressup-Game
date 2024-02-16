@@ -313,41 +313,17 @@ offset_left = -91.1194
 offset_top = 67.1407
 offset_right = -91.1194
 offset_bottom = 67.1407
-script = ExtResource("9_m2bi8")
 
-[node name="TextureRect" type="TextureRect" parent="MattClothing"]
+[node name="Menu Panel" type="TextureRect" parent="MattClothing"]
 layout_mode = 2
 offset_left = 930.378
 offset_top = 67.1406
 offset_right = 1222.38
 offset_bottom = 485.141
 texture = SubResource("AnimatedTexture_ynpdx")
+script = ExtResource("9_m2bi8")
 
-[node name="PanelContainer" type="PanelContainer" parent="MattClothing"]
-visible = false
-layout_mode = 2
-offset_left = 930.378
-offset_top = 67.1406
-offset_right = 1222.38
-offset_bottom = 485.141
-
-[node name="TabContainer" type="TabContainer" parent="MattClothing"]
-visible = false
-layout_mode = 0
-offset_left = 637.836
-offset_top = 57.5491
-offset_right = 892.838
-offset_bottom = 357.549
-clip_tabs = false
-
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="MattClothing"]
-layout_mode = 0
-offset_left = 829.667
-offset_top = 62.3448
-offset_right = 929.667
-offset_bottom = 364.345
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MattClothing"]
+[node name="Clothes Selector" type="VBoxContainer" parent="MattClothing"]
 layout_mode = 2
 offset_left = 872.828
 offset_top = 163.056
@@ -355,34 +331,34 @@ offset_right = 972.828
 offset_bottom = 575.056
 scale = Vector2(0.479628, 0.479628)
 
-[node name="Hat Button" type="TextureButton" parent="MattClothing/VBoxContainer"]
+[node name="Hat Button" type="TextureButton" parent="MattClothing/Clothes Selector"]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_yqwia")
 stretch_mode = 0
 
-[node name="TextureRect" type="TextureRect" parent="MattClothing/VBoxContainer/Hat Button"]
+[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Hat Button"]
 layout_mode = 0
 offset_right = 100.0
 offset_bottom = 100.0
 texture = SubResource("AnimatedTexture_4vr7i")
 
-[node name="Dress Button" type="TextureButton" parent="MattClothing/VBoxContainer"]
+[node name="Dress Button" type="TextureButton" parent="MattClothing/Clothes Selector"]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_yqwia")
 stretch_mode = 0
 
-[node name="TextureRect" type="TextureRect" parent="MattClothing/VBoxContainer/Dress Button"]
+[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Dress Button"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = SubResource("AnimatedTexture_tb5et")
 
-[node name="Shirt and Trousers Button" type="TextureButton" parent="MattClothing/VBoxContainer"]
+[node name="Shirt and Trousers Button" type="TextureButton" parent="MattClothing/Clothes Selector"]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_yqwia")
 stretch_mode = 0
 
-[node name="TextureRect" type="TextureRect" parent="MattClothing/VBoxContainer/Shirt and Trousers Button"]
+[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Shirt and Trousers Button"]
 layout_mode = 0
 offset_left = 7.31775e-05
 offset_top = -1.78231
@@ -390,12 +366,12 @@ offset_right = 100.0
 offset_bottom = 98.2177
 texture = SubResource("AnimatedTexture_iy3ap")
 
-[node name="Shoes Button" type="TextureButton" parent="MattClothing/VBoxContainer"]
+[node name="Shoes Button" type="TextureButton" parent="MattClothing/Clothes Selector"]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_yqwia")
 stretch_mode = 0
 
-[node name="TextureRect" type="TextureRect" parent="MattClothing/VBoxContainer/Shoes Button"]
+[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Shoes Button"]
 layout_mode = 0
 offset_left = 7.31775e-05
 offset_top = -5.07135
