@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://datctv4lilhv1"]
+[gd_scene load_steps=57 format=3 uid="uid://datctv4lilhv1"]
 
 [ext_resource type="Texture2D" uid="uid://ca22x7ja7vc77" path="res://Assets/Art/Characters/character.PNG" id="1_xe8ly"]
 [ext_resource type="Texture2D" uid="uid://cwuerq3acdchl" path="res://Assets/Art/Splash Art/background.png" id="2_di5s5"]
@@ -16,16 +16,20 @@
 [ext_resource type="Texture2D" uid="uid://civh0otp52sej" path="res://Assets/Art/Clothes Menu/Selection Menu/HatFrame_2.png" id="12_0blpu"]
 [ext_resource type="Texture2D" uid="uid://c4ee7qvfym2gb" path="res://Assets/Art/Clothes Menu/Selection Menu/DressFrame_1.png" id="13_0377m"]
 [ext_resource type="Texture2D" uid="uid://dfp5r0ccombyp" path="res://Assets/Art/Clothes Menu/Selection Menu/DressFrame_2.png" id="14_becbw"]
-[ext_resource type="Texture2D" uid="uid://ccxjr2xu1gcp3" path="res://Assets/Art/Clothes Menu/Selection Menu/shirtandtrousersFrame_1.png" id="15_eh0re"]
-[ext_resource type="Texture2D" uid="uid://lqrhecade5iw" path="res://Assets/Art/Clothes Menu/Selection Menu/shirtandtrousersFrame_2.png" id="16_0syop"]
+[ext_resource type="Texture2D" uid="uid://cw64g1jrawfi3" path="res://Assets/Art/Clothes Menu/Selection Menu/CloseFrame_1.png" id="14_llwud"]
+[ext_resource type="Texture2D" uid="uid://bix3olp5qqqqk" path="res://Assets/Art/Clothes Menu/Selection Menu/CloseFrame_2.png" id="15_obiq0"]
 [ext_resource type="Texture2D" uid="uid://bkmw3gibo1xlq" path="res://Assets/Art/Clothes Menu/Selection Menu/ShoesFrame_1.png" id="17_2bx2e"]
+[ext_resource type="Texture2D" uid="uid://ef8octrcxl2c" path="res://Assets/Art/Clothes Menu/Selection Menu/CostumeFrame_1.png" id="18_bjdhm"]
 [ext_resource type="Texture2D" uid="uid://dy110b1iegju4" path="res://Assets/Art/Clothes Menu/Selection Menu/ShoesFrame_2.png" id="18_qlld8"]
 [ext_resource type="Texture2D" uid="uid://dvplyeiu2vgcp" path="res://Assets/Art/Clothes Menu/Asset Menu/MenuFrame_3.png" id="19_0lnjy"]
 [ext_resource type="Texture2D" uid="uid://do5wthfjucj0k" path="res://Assets/Art/Menu Bar/Frame/OutlineFrame_1.png" id="19_gbrv1"]
+[ext_resource type="Texture2D" uid="uid://bnlh1twem1ddk" path="res://Assets/Art/Clothes Menu/Selection Menu/CostumeFrame_2.png" id="19_gcxww"]
 [ext_resource type="Texture2D" uid="uid://r61noyjyihim" path="res://Assets/Art/Clothes Menu/Asset Menu/MenuFrame_4.png" id="20_qggha"]
 [ext_resource type="Texture2D" uid="uid://dxyd148mt63jg" path="res://Assets/Art/Menu Bar/Frame/OutlineFrame_2.png" id="20_ud6j5"]
 [ext_resource type="Texture2D" uid="uid://dejqj6to00gjr" path="res://Assets/Art/Menu Bar/Cog/CogFrame_1.png" id="22_nuy8t"]
+[ext_resource type="Texture2D" uid="uid://0i87jd8lgeey" path="res://Assets/Art/Clothes Menu/Selection Menu/AccessoriesFrame_1.png" id="22_w6plf"]
 [ext_resource type="Texture2D" uid="uid://dm0w08lcu151k" path="res://Assets/Art/Menu Bar/Cog/CogFrame_2.png" id="23_cx7g0"]
+[ext_resource type="Texture2D" uid="uid://pkhmpbwdul7e" path="res://Assets/Art/Clothes Menu/Selection Menu/AccessoriesFrame_2.png" id="23_todk8"]
 [ext_resource type="Texture2D" uid="uid://bmqmp461u33mw" path="res://Assets/Art/Menu Bar/Home/HomeFrame_1.png" id="24_vqeak"]
 [ext_resource type="Texture2D" uid="uid://dxse5x8bbsgx4" path="res://Assets/Art/Menu Bar/Home/HomeFrame_2.png" id="25_e0yl6"]
 [ext_resource type="Texture2D" uid="uid://csahsrnxv13id" path="res://Assets/Art/Menu Bar/Sound/SoundFrame_1.png" id="26_oapn3"]
@@ -56,33 +60,47 @@ frame_0/texture = ExtResource("9_35tt3")
 frame_1/texture = ExtResource("10_5f3ex")
 frame_1/duration = 1.0
 
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_05la5"]
+frames = 2
+speed_scale = 2.0
+frame_0/texture = ExtResource("14_llwud")
+frame_1/texture = ExtResource("15_obiq0")
+frame_1/duration = 1.0
+
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_4vr7i"]
 frames = 2
+speed_scale = 2.0
 frame_0/texture = ExtResource("11_y6vrc")
-frame_0/duration = 0.25
 frame_1/texture = ExtResource("12_0blpu")
-frame_1/duration = 0.25
+frame_1/duration = 1.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_tb5et"]
 frames = 2
+speed_scale = 2.0
 frame_0/texture = ExtResource("13_0377m")
-frame_0/duration = 0.25
 frame_1/texture = ExtResource("14_becbw")
-frame_1/duration = 0.25
+frame_1/duration = 1.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_iy3ap"]
 frames = 2
-frame_0/texture = ExtResource("15_eh0re")
-frame_0/duration = 0.25
-frame_1/texture = ExtResource("16_0syop")
-frame_1/duration = 0.25
+speed_scale = 2.0
+frame_0/texture = ExtResource("18_bjdhm")
+frame_1/texture = ExtResource("19_gcxww")
+frame_1/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_niek7"]
+frames = 2
+speed_scale = 2.0
+frame_0/texture = ExtResource("22_w6plf")
+frame_1/texture = ExtResource("23_todk8")
+frame_1/duration = 1.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_1xx8i"]
 frames = 2
+speed_scale = 2.0
 frame_0/texture = ExtResource("17_2bx2e")
-frame_0/duration = 0.25
 frame_1/texture = ExtResource("18_qlld8")
-frame_1/duration = 0.25
+frame_1/duration = 1.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_7j1f8"]
 frames = 2
@@ -165,7 +183,7 @@ scale = Vector2(1.66814, 1.66814)
 
 [node name="Background" type="Sprite2D" parent="BackgroundNode"]
 modulate = Color(0.411765, 0.223529, 0.647059, 1)
-position = Vector2(576, 324)
+position = Vector2(585.083, 330.907)
 scale = Vector2(1168, 664)
 texture = ExtResource("2_di5s5")
 
@@ -327,15 +345,30 @@ script = ExtResource("9_m2bi8")
 [node name="Clothes Selector" type="VBoxContainer" parent="MattClothing" node_paths=PackedStringArray("FolderParent")]
 layout_mode = 2
 offset_left = 872.828
-offset_top = 163.056
+offset_top = 139.077
 offset_right = 972.828
-offset_bottom = 575.056
+offset_bottom = 723.077
 scale = Vector2(0.479628, 0.479628)
 script = ExtResource("11_w2sx4")
 FolderParent = NodePath("../Menu Panel")
 
+[node name="Close" type="TextureButton" parent="MattClothing/Clothes Selector"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AnimatedTexture_yqwia")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Close"]
+layout_mode = 0
+offset_left = 2.50037
+offset_top = -0.000430107
+offset_right = 99.5004
+offset_bottom = 96.9996
+texture = SubResource("AnimatedTexture_05la5")
+
 [node name="Hats" type="TextureButton" parent="MattClothing/Clothes Selector"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = SubResource("AnimatedTexture_yqwia")
 stretch_mode = 0
 
@@ -347,6 +380,7 @@ texture = SubResource("AnimatedTexture_4vr7i")
 
 [node name="Dress" type="TextureButton" parent="MattClothing/Clothes Selector"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = SubResource("AnimatedTexture_yqwia")
 stretch_mode = 0
 
@@ -358,19 +392,34 @@ texture = SubResource("AnimatedTexture_tb5et")
 
 [node name="Costumes" type="TextureButton" parent="MattClothing/Clothes Selector"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = SubResource("AnimatedTexture_yqwia")
 stretch_mode = 0
 
 [node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Costumes"]
 layout_mode = 0
-offset_left = 7.31775e-05
-offset_top = -1.78231
-offset_right = 100.0
-offset_bottom = 98.2177
+offset_left = 1.25056
+offset_top = -4.77109
+offset_right = 101.251
+offset_bottom = 95.2289
 texture = SubResource("AnimatedTexture_iy3ap")
+
+[node name="Accessories" type="TextureButton" parent="MattClothing/Clothes Selector"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AnimatedTexture_yqwia")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Accessories"]
+layout_mode = 0
+offset_top = -2.24988
+offset_right = 97.0
+offset_bottom = 94.7501
+texture = SubResource("AnimatedTexture_niek7")
 
 [node name="Shoes" type="TextureButton" parent="MattClothing/Clothes Selector"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = SubResource("AnimatedTexture_yqwia")
 stretch_mode = 0
 
