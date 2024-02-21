@@ -13,10 +13,6 @@ public partial class PopulateItems : TextureRect
     private Container FolderContainer;
     private HBoxContainer Rows;
     private VBoxContainer Columns;
-    private List<ItemList> ItemLists;
-    private List<Texture> clothes;
-
-    private Entity entity;
     [Export] public int AmountOfRows = 3;
 
     private int foldersScanned;
@@ -25,10 +21,10 @@ public partial class PopulateItems : TextureRect
     {
         ProcessPriority = 0;
         MasterContainer = GetNode<TextureRect>(GetPath());
-        createFolders();
+        CreateFolders();
     }
 
-    public void createFolders()
+    public void CreateFolders()
     {
         foreach (var folder in Directory.GetDirectories(@"Assets/Art/Clothes/"))
         {
@@ -82,11 +78,6 @@ public partial class PopulateItems : TextureRect
                 }
             }
         }
-    }
-
-    private void populateFolders()
-    {
-
     }
 }
 

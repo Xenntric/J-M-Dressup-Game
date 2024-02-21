@@ -1,16 +1,17 @@
-[gd_scene load_steps=50 format=3 uid="uid://datctv4lilhv1"]
+[gd_scene load_steps=51 format=3 uid="uid://datctv4lilhv1"]
 
 [ext_resource type="Texture2D" uid="uid://ca22x7ja7vc77" path="res://Assets/Art/Characters/character.PNG" id="1_xe8ly"]
 [ext_resource type="Texture2D" uid="uid://cwuerq3acdchl" path="res://Assets/Art/Splash Art/background.png" id="2_di5s5"]
 [ext_resource type="Texture2D" uid="uid://2vwjc21e0fnr" path="res://Assets/Art/Characters/J.png" id="3_gbgc1"]
+[ext_resource type="Texture2D" uid="uid://d4jae7ec73a5q" path="res://Assets/Art/Characters/new_nakedbase_julus.png" id="4_nlub7"]
 [ext_resource type="Texture2D" uid="uid://dsvrwlfhok34x" path="res://Assets/Art/Characters/M.png" id="4_nv3ic"]
-[ext_resource type="Texture2D" uid="uid://bes5wtrrvjglb" path="res://Assets/Art/Characters/nakedbase_julus.png" id="5_otqbn"]
-[ext_resource type="Texture2D" uid="uid://dekmtv67j5bdh" path="res://Assets/Art/Characters/nakedbase_matt.png" id="6_dnktf"]
+[ext_resource type="Texture2D" uid="uid://cphwxycvk46ae" path="res://Assets/Art/Characters/new_nakedbase_matt.png" id="5_pdjoi"]
 [ext_resource type="Texture2D" uid="uid://eypogoj50kav" path="res://Assets/Art/Clothes/Hair/hair_1_julus.png" id="9_6bpxi"]
 [ext_resource type="Texture2D" uid="uid://cpti8d3b080cg" path="res://Assets/Art/Clothes Menu/Selection Menu/OutlineFrame_1.png" id="9_35tt3"]
 [ext_resource type="Texture2D" uid="uid://tdkqa0sbknsd" path="res://Assets/Art/Splash Art/heart.png" id="9_cn02w"]
 [ext_resource type="Script" path="res://Assets/Scripts/MainGame/UI/PopulateItems.cs" id="9_m2bi8"]
 [ext_resource type="Texture2D" uid="uid://bla4rx7ltjjsp" path="res://Assets/Art/Clothes Menu/Selection Menu/OutlineFrame_2.png" id="10_5f3ex"]
+[ext_resource type="Script" path="res://Assets/Scripts/MainGame/UI/FolderSelect.cs" id="11_w2sx4"]
 [ext_resource type="Texture2D" uid="uid://bngjpb31tlehb" path="res://Assets/Art/Clothes Menu/Selection Menu/HatFrame_1.png" id="11_y6vrc"]
 [ext_resource type="Texture2D" uid="uid://civh0otp52sej" path="res://Assets/Art/Clothes Menu/Selection Menu/HatFrame_2.png" id="12_0blpu"]
 [ext_resource type="Texture2D" uid="uid://c4ee7qvfym2gb" path="res://Assets/Art/Clothes Menu/Selection Menu/DressFrame_1.png" id="13_0377m"]
@@ -183,11 +184,11 @@ texture = ExtResource("4_nv3ic")
 
 [node name="NakedbaseJulus" type="Sprite2D" parent="Characters"]
 position = Vector2(300, 9.09091)
-texture = ExtResource("5_otqbn")
+texture = ExtResource("4_nlub7")
 
 [node name="NakedbaseMatt" type="Sprite2D" parent="Characters"]
 position = Vector2(1027.27, 9.09094)
-texture = ExtResource("6_dnktf")
+texture = ExtResource("5_pdjoi")
 
 [node name="folder" type="Node2D" parent="."]
 visible = false
@@ -323,42 +324,44 @@ offset_bottom = 485.141
 texture = SubResource("AnimatedTexture_ynpdx")
 script = ExtResource("9_m2bi8")
 
-[node name="Clothes Selector" type="VBoxContainer" parent="MattClothing"]
+[node name="Clothes Selector" type="VBoxContainer" parent="MattClothing" node_paths=PackedStringArray("FolderParent")]
 layout_mode = 2
 offset_left = 872.828
 offset_top = 163.056
 offset_right = 972.828
 offset_bottom = 575.056
 scale = Vector2(0.479628, 0.479628)
+script = ExtResource("11_w2sx4")
+FolderParent = NodePath("../Menu Panel")
 
-[node name="Hat Button" type="TextureButton" parent="MattClothing/Clothes Selector"]
+[node name="Hats" type="TextureButton" parent="MattClothing/Clothes Selector"]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_yqwia")
 stretch_mode = 0
 
-[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Hat Button"]
+[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Hats"]
 layout_mode = 0
 offset_right = 100.0
 offset_bottom = 100.0
 texture = SubResource("AnimatedTexture_4vr7i")
 
-[node name="Dress Button" type="TextureButton" parent="MattClothing/Clothes Selector"]
+[node name="Dress" type="TextureButton" parent="MattClothing/Clothes Selector"]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_yqwia")
 stretch_mode = 0
 
-[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Dress Button"]
+[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Dress"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = SubResource("AnimatedTexture_tb5et")
 
-[node name="Shirt and Trousers Button" type="TextureButton" parent="MattClothing/Clothes Selector"]
+[node name="Costumes" type="TextureButton" parent="MattClothing/Clothes Selector"]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_yqwia")
 stretch_mode = 0
 
-[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Shirt and Trousers Button"]
+[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Costumes"]
 layout_mode = 0
 offset_left = 7.31775e-05
 offset_top = -1.78231
@@ -366,12 +369,12 @@ offset_right = 100.0
 offset_bottom = 98.2177
 texture = SubResource("AnimatedTexture_iy3ap")
 
-[node name="Shoes Button" type="TextureButton" parent="MattClothing/Clothes Selector"]
+[node name="Shoes" type="TextureButton" parent="MattClothing/Clothes Selector"]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_yqwia")
 stretch_mode = 0
 
-[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Shoes Button"]
+[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Shoes"]
 layout_mode = 0
 offset_left = 7.31775e-05
 offset_top = -5.07135
