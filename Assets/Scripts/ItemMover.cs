@@ -4,8 +4,6 @@ using System;
 public partial class ItemMover : TextureButton
 {
 	private Vector2 PosAtGrab;
-
-    // Called when the node enters the scene tree for the first time.
     
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -15,14 +13,14 @@ public partial class ItemMover : TextureButton
 
 	private void AttachAndMove()
 	{
-		PosAtGrab = this.GetViewport().GetMousePosition() - this.GetParent<Node2D>().GlobalPosition;
+		PosAtGrab = this.GetViewport().GetMousePosition() - this.GlobalPosition;
 	}
 	public override void _Process(double delta)
 	{
 		if(this.ButtonPressed)
 		{
 			var offset = PosAtGrab;
-			this.GetParent<Node2D>().GlobalPosition = this.GetViewport().GetMousePosition() - offset;//this.GetViewport().GetMousePosition() - WidthHeight;
+			GlobalPosition = this.GetViewport().GetMousePosition() - offset;
 		}
 	}
 

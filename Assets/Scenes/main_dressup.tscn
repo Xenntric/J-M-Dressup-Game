@@ -232,7 +232,6 @@ position = Vector2(356, 68)
 
 [node name="ItemLayer" type="Node2D" parent="."]
 position = Vector2(426.823, 187.035)
-scale = Vector2(1, 1)
 
 [node name="JuliusClothing" type="Control" parent="."]
 visible = false

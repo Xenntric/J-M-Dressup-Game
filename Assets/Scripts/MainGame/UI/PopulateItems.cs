@@ -96,10 +96,7 @@ public partial class PopulateItems : TextureRect
     {
 
         var texture = textureButton.TextureNormal;
-        var item_parent = new Node2D();
-
         var item = new TextureButton();
-        item_parent.AddChild(item);
         item.TextureNormal = texture;
         item.Scale = new Vector2(.33f,.33f);
         item.ActionMode = BaseButton.ActionModeEnum.Press;
@@ -109,7 +106,7 @@ public partial class PopulateItems : TextureRect
         item.SetScript(ResourceLoader.Load("Assets/Scripts/ItemMover.cs"));
         item = InstanceFromId(objId) as TextureButton;
 
-        InteractableItemLayer.AddChild(item_parent);
+        InteractableItemLayer.AddChild(item);
     }
 }
 
