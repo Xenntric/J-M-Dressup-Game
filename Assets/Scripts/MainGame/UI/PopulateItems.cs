@@ -15,6 +15,7 @@ public partial class PopulateItems : TextureRect
     private VBoxContainer Columns;
     [Export] public int AmountOfRows = 3;
 
+    [Export] public Node2D InteractableItemLayer;
     private int foldersScanned;
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -70,14 +71,45 @@ public partial class PopulateItems : TextureRect
                             TextureNormal = itemInFolder.ElementAt(itemScanned),
                             StretchMode = TextureButton.StretchModeEnum.KeepAspect,
                             IgnoreTextureSize = true,
-                            CustomMinimumSize = new Vector2(70, 70)
+                            CustomMinimumSize = new Vector2(70, 70),
+                            MouseDefaultCursorShape = CursorShape.PointingHand,
                         };
+                        itemButton.Pressed += () => OnPressed(itemButton);
                         Rows.AddChild(itemButton);
                         itemScanned++;
                     }
                 }
             }
         }
+    }
+
+    private void OnPressed(TextureButton item)
+    {
+        if (item.Visible)
+        {
+            CreateItem(item);
+            //InteractableItemLayer.AddChild();
+        }
+    }
+
+    private void CreateItem(TextureButton textureButton)
+    {
+
+        var texture = textureButton.TextureNormal;
+        var item_parent = new Node2D();
+
+        var item = new TextureButton();
+        item_parent.AddChild(item);
+        item.TextureNormal = texture;
+        item.Scale = new Vector2(.33f,.33f);
+        item.ActionMode = BaseButton.ActionModeEnum.Press;
+
+        ulong objId = item.GetInstanceId();
+        GD.Print(objId);
+        item.SetScript(ResourceLoader.Load("Assets/Scripts/ItemMover.cs"));
+        item = InstanceFromId(objId) as TextureButton;
+
+        InteractableItemLayer.AddChild(item_parent);
     }
 }
 

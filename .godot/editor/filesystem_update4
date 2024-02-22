@@ -7,3 +7,4 @@ res://Assets/Scripts/MainGame/UI/PopulateItems.cs
 res://Assets/Scripts/MouseNode.cs
 res://Assets/Scripts/SignalScript.cs
 res://Assets/Scripts/SplashandMenu/MenuScript.cs
+res://Assets/Scripts/ItemMover.cs

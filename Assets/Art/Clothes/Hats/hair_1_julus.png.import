@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c515e7ashrbe"
-path="res://.godot/imported/hair_1_matt.png-4f2ee06edaadc6fae3dc73067a37bfdf.ctex"
+uid="uid://eypogoj50kav"
+path="res://.godot/imported/hair_1_julus.png-264ca346f56b081276d791f1dc32d19d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Clothes/Hair/hair_1_matt.png"
-dest_files=["res://.godot/imported/hair_1_matt.png-4f2ee06edaadc6fae3dc73067a37bfdf.ctex"]
+source_file="res://Assets/Art/Clothes/Hats/hair_1_julus.png"
+dest_files=["res://.godot/imported/hair_1_julus.png-264ca346f56b081276d791f1dc32d19d.ctex"]
 
 [params]
 

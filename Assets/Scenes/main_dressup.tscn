@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d4jae7ec73a5q" path="res://Assets/Art/Characters/new_nakedbase_julus.png" id="4_nlub7"]
 [ext_resource type="Texture2D" uid="uid://dsvrwlfhok34x" path="res://Assets/Art/Characters/M.png" id="4_nv3ic"]
 [ext_resource type="Texture2D" uid="uid://cphwxycvk46ae" path="res://Assets/Art/Characters/new_nakedbase_matt.png" id="5_pdjoi"]
-[ext_resource type="Texture2D" uid="uid://eypogoj50kav" path="res://Assets/Art/Clothes/Hair/hair_1_julus.png" id="9_6bpxi"]
+[ext_resource type="Texture2D" uid="uid://eypogoj50kav" path="res://Assets/Art/Clothes/Hats/hair_1_julus.png" id="7_7252p"]
 [ext_resource type="Texture2D" uid="uid://cpti8d3b080cg" path="res://Assets/Art/Clothes Menu/Selection Menu/OutlineFrame_1.png" id="9_35tt3"]
 [ext_resource type="Texture2D" uid="uid://tdkqa0sbknsd" path="res://Assets/Art/Splash Art/heart.png" id="9_cn02w"]
 [ext_resource type="Script" path="res://Assets/Scripts/MainGame/UI/PopulateItems.cs" id="9_m2bi8"]
@@ -230,6 +230,10 @@ position = Vector2(583, 168)
 visible = false
 position = Vector2(356, 68)
 
+[node name="ItemLayer" type="Node2D" parent="."]
+position = Vector2(426.823, 187.035)
+scale = Vector2(1, 1)
+
 [node name="JuliusClothing" type="Control" parent="."]
 visible = false
 layout_mode = 3
@@ -259,11 +263,11 @@ same_column_width = true
 fixed_column_width = 75
 fixed_icon_size = Vector2i(75, 90)
 item_0/text = ""
-item_0/icon = ExtResource("9_6bpxi")
+item_0/icon = ExtResource("7_7252p")
 item_1/text = ""
-item_1/icon = ExtResource("9_6bpxi")
+item_1/icon = ExtResource("7_7252p")
 item_2/text = ""
-item_2/icon = ExtResource("9_6bpxi")
+item_2/icon = ExtResource("7_7252p")
 item_3/text = ""
 
 [node name="Hats" type="ItemList" parent="JuliusClothing/TabContainer"]
@@ -285,11 +289,11 @@ same_column_width = true
 fixed_column_width = 75
 fixed_icon_size = Vector2i(75, 90)
 item_0/text = ""
-item_0/icon = ExtResource("9_6bpxi")
+item_0/icon = ExtResource("7_7252p")
 item_1/text = ""
-item_1/icon = ExtResource("9_6bpxi")
+item_1/icon = ExtResource("7_7252p")
 item_2/text = ""
-item_2/icon = ExtResource("9_6bpxi")
+item_2/icon = ExtResource("7_7252p")
 item_3/text = ""
 
 [node name="Hats2" type="ItemList" parent="JuliusClothing/TabContainer"]
@@ -311,11 +315,11 @@ same_column_width = true
 fixed_column_width = 75
 fixed_icon_size = Vector2i(75, 90)
 item_0/text = ""
-item_0/icon = ExtResource("9_6bpxi")
+item_0/icon = ExtResource("7_7252p")
 item_1/text = ""
-item_1/icon = ExtResource("9_6bpxi")
+item_1/icon = ExtResource("7_7252p")
 item_2/text = ""
-item_2/icon = ExtResource("9_6bpxi")
+item_2/icon = ExtResource("7_7252p")
 item_3/text = ""
 
 [node name="Hats3" type="ItemList" parent="JuliusClothing/TabContainer"]
@@ -333,7 +337,7 @@ offset_top = 67.1407
 offset_right = -91.1194
 offset_bottom = 67.1407
 
-[node name="Menu Panel" type="TextureRect" parent="MattClothing"]
+[node name="Menu Panel" type="TextureRect" parent="MattClothing" node_paths=PackedStringArray("InteractableItemLayer")]
 layout_mode = 2
 offset_left = 930.378
 offset_top = 67.1406
@@ -341,6 +345,7 @@ offset_right = 1222.38
 offset_bottom = 485.141
 texture = SubResource("AnimatedTexture_ynpdx")
 script = ExtResource("9_m2bi8")
+InteractableItemLayer = NodePath("../../ItemLayer")
 
 [node name="Clothes Selector" type="VBoxContainer" parent="MattClothing" node_paths=PackedStringArray("FolderParent")]
 layout_mode = 2

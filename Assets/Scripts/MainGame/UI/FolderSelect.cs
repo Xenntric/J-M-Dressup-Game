@@ -6,16 +6,14 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 public partial class FolderSelect : Control
 {
-	private List<TextureButton> buttons;
-	
 	[Export] public Control FolderParent;
 	private List<Container> folders;
 	private Callable clicked;
+	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		ProcessPriority = 1;
-		buttons = new List<TextureButton>();
 		folders = new List<Container>();
 
 		foreach (var child in FolderParent.GetChildren())
@@ -27,11 +25,11 @@ public partial class FolderSelect : Control
 		{
 			GD.Print(child.Name);
 
-			child.Pressed += () => pressedButton(child);
+			child.Pressed += () => PressedButton(child);
 		}
 	}
 
-	private void pressedButton(TextureButton button)
+	private void PressedButton(TextureButton button)
 	{
 		GD.Print("pressed " + button.Name);
 		foreach (var item in folders)
