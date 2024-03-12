@@ -14,6 +14,7 @@ public partial class FolderSelect : Control
 	public override void _Ready()
 	{
 		ProcessPriority = 1;
+		GD.Print("Folder Select");
 		folders = new List<Container>();
 
 		foreach (var child in FolderParent.GetChildren())

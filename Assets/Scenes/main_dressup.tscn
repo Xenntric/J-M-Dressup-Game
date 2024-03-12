@@ -1,5 +1,6 @@
-[gd_scene load_steps=57 format=3 uid="uid://datctv4lilhv1"]
+[gd_scene load_steps=60 format=3 uid="uid://datctv4lilhv1"]
 
+[ext_resource type="Script" path="res://Assets/Scenes/Globals.cs" id="1_nirnd"]
 [ext_resource type="Texture2D" uid="uid://ca22x7ja7vc77" path="res://Assets/Art/Characters/character.PNG" id="1_xe8ly"]
 [ext_resource type="Texture2D" uid="uid://cwuerq3acdchl" path="res://Assets/Art/Splash Art/background.png" id="2_di5s5"]
 [ext_resource type="Texture2D" uid="uid://2vwjc21e0fnr" path="res://Assets/Art/Characters/J.png" id="3_gbgc1"]
@@ -36,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://rv8j780ixu5q" path="res://Assets/Art/Menu Bar/Sound/SoundFrame_2.png" id="27_d8e70"]
 [ext_resource type="Texture2D" uid="uid://gbt64vlhe20h" path="res://Assets/Art/Menu Bar/Return/ReturnFrame_1.png" id="28_gsi1b"]
 [ext_resource type="Texture2D" uid="uid://bdm3c3bejj7ak" path="res://Assets/Art/Menu Bar/Return/ReturnFrame_2.png" id="29_1nrh2"]
+[ext_resource type="Texture2D" uid="uid://b6bni5y2buylb" path="res://Assets/Art/Clothes/Accessories/hand_1_julus.png" id="37_qjmpl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhmjx"]
 size = Vector2(228, 275)
@@ -45,6 +47,41 @@ size = Vector2(228, 275)
 [sub_resource type="Theme" id="Theme_l1bot"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eq4id"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_7j1f8"]
+frames = 2
+speed_scale = 2.0
+frame_0/texture = ExtResource("19_gbrv1")
+frame_1/texture = ExtResource("20_ud6j5")
+frame_1/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_0qrst"]
+frames = 2
+speed_scale = 4.0
+frame_0/texture = ExtResource("22_nuy8t")
+frame_1/texture = ExtResource("23_cx7g0")
+frame_1/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_edvgv"]
+frames = 2
+speed_scale = 4.0
+frame_0/texture = ExtResource("24_vqeak")
+frame_1/texture = ExtResource("25_e0yl6")
+frame_1/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_uwno0"]
+frames = 2
+speed_scale = 4.0
+frame_0/texture = ExtResource("28_gsi1b")
+frame_1/texture = ExtResource("29_1nrh2")
+frame_1/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_8ojr2"]
+frames = 2
+speed_scale = 4.0
+frame_0/texture = ExtResource("26_oapn3")
+frame_1/texture = ExtResource("27_d8e70")
+frame_1/duration = 1.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_ynpdx"]
 frames = 2
@@ -102,40 +139,8 @@ frame_0/texture = ExtResource("17_2bx2e")
 frame_1/texture = ExtResource("18_qlld8")
 frame_1/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_7j1f8"]
-frames = 2
-speed_scale = 2.0
-frame_0/texture = ExtResource("19_gbrv1")
-frame_1/texture = ExtResource("20_ud6j5")
-frame_1/duration = 1.0
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_0qrst"]
-frames = 2
-speed_scale = 4.0
-frame_0/texture = ExtResource("22_nuy8t")
-frame_1/texture = ExtResource("23_cx7g0")
-frame_1/duration = 1.0
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_edvgv"]
-frames = 2
-speed_scale = 4.0
-frame_0/texture = ExtResource("24_vqeak")
-frame_1/texture = ExtResource("25_e0yl6")
-frame_1/duration = 1.0
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_uwno0"]
-frames = 2
-speed_scale = 4.0
-frame_0/texture = ExtResource("28_gsi1b")
-frame_1/texture = ExtResource("29_1nrh2")
-frame_1/duration = 1.0
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_8ojr2"]
-frames = 2
-speed_scale = 4.0
-frame_0/texture = ExtResource("26_oapn3")
-frame_1/texture = ExtResource("27_d8e70")
-frame_1/duration = 1.0
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_4583u"]
+frame_0/texture = ExtResource("37_qjmpl")
 
 [sub_resource type="Animation" id="Animation_8r3oa"]
 resource_name = "Play_Animation"
@@ -146,7 +151,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.65),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-24, 47.9999), Vector2(-24, 748.139)]
@@ -176,6 +181,7 @@ _data = {
 [node name="DressUpScene" type="Node2D"]
 texture_filter = 1
 scale = Vector2(1.66814, 1.66814)
+script = ExtResource("1_nirnd")
 
 [node name="MouseControlNode" type="Node" parent="."]
 
@@ -229,9 +235,6 @@ position = Vector2(583, 168)
 [node name="Shoes Folder" type="Node2D" parent="." groups=["Folders"]]
 visible = false
 position = Vector2(356, 68)
-
-[node name="ItemLayer" type="Node2D" parent="."]
-position = Vector2(426.823, 187.035)
 
 [node name="JuliusClothing" type="Control" parent="."]
 visible = false
@@ -328,114 +331,13 @@ max_columns = 3
 fixed_column_width = 75
 fixed_icon_size = Vector2i(75, 90)
 
-[node name="MattClothing" type="Control" parent="."]
+[node name="ClothesControl" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -91.1194
-offset_top = 67.1407
-offset_right = -91.1194
-offset_bottom = 67.1407
+offset_left = -0.59947
+offset_right = -0.59947
 
-[node name="Menu Panel" type="TextureRect" parent="MattClothing" node_paths=PackedStringArray("InteractableItemLayer")]
-layout_mode = 2
-offset_left = 930.378
-offset_top = 67.1406
-offset_right = 1222.38
-offset_bottom = 485.141
-texture = SubResource("AnimatedTexture_ynpdx")
-script = ExtResource("9_m2bi8")
-InteractableItemLayer = NodePath("../../ItemLayer")
-
-[node name="Clothes Selector" type="VBoxContainer" parent="MattClothing" node_paths=PackedStringArray("FolderParent")]
-layout_mode = 2
-offset_left = 872.828
-offset_top = 139.077
-offset_right = 972.828
-offset_bottom = 723.077
-scale = Vector2(0.479628, 0.479628)
-script = ExtResource("11_w2sx4")
-FolderParent = NodePath("../Menu Panel")
-
-[node name="Close" type="TextureButton" parent="MattClothing/Clothes Selector"]
-layout_mode = 2
-mouse_default_cursor_shape = 2
-texture_normal = SubResource("AnimatedTexture_yqwia")
-stretch_mode = 0
-
-[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Close"]
-layout_mode = 0
-offset_left = 2.50037
-offset_top = -0.000430107
-offset_right = 99.5004
-offset_bottom = 96.9996
-texture = SubResource("AnimatedTexture_05la5")
-
-[node name="Hats" type="TextureButton" parent="MattClothing/Clothes Selector"]
-layout_mode = 2
-mouse_default_cursor_shape = 2
-texture_normal = SubResource("AnimatedTexture_yqwia")
-stretch_mode = 0
-
-[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Hats"]
-layout_mode = 0
-offset_right = 100.0
-offset_bottom = 100.0
-texture = SubResource("AnimatedTexture_4vr7i")
-
-[node name="Dress" type="TextureButton" parent="MattClothing/Clothes Selector"]
-layout_mode = 2
-mouse_default_cursor_shape = 2
-texture_normal = SubResource("AnimatedTexture_yqwia")
-stretch_mode = 0
-
-[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Dress"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = SubResource("AnimatedTexture_tb5et")
-
-[node name="Costumes" type="TextureButton" parent="MattClothing/Clothes Selector"]
-layout_mode = 2
-mouse_default_cursor_shape = 2
-texture_normal = SubResource("AnimatedTexture_yqwia")
-stretch_mode = 0
-
-[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Costumes"]
-layout_mode = 0
-offset_left = 1.25056
-offset_top = -4.77109
-offset_right = 101.251
-offset_bottom = 95.2289
-texture = SubResource("AnimatedTexture_iy3ap")
-
-[node name="Accessories" type="TextureButton" parent="MattClothing/Clothes Selector"]
-layout_mode = 2
-mouse_default_cursor_shape = 2
-texture_normal = SubResource("AnimatedTexture_yqwia")
-stretch_mode = 0
-
-[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Accessories"]
-layout_mode = 0
-offset_top = -2.24988
-offset_right = 97.0
-offset_bottom = 94.7501
-texture = SubResource("AnimatedTexture_niek7")
-
-[node name="Shoes" type="TextureButton" parent="MattClothing/Clothes Selector"]
-layout_mode = 2
-mouse_default_cursor_shape = 2
-texture_normal = SubResource("AnimatedTexture_yqwia")
-stretch_mode = 0
-
-[node name="TextureRect" type="TextureRect" parent="MattClothing/Clothes Selector/Shoes"]
-layout_mode = 0
-offset_left = 7.31775e-05
-offset_top = -5.07135
-offset_right = 100.0
-offset_bottom = 94.9286
-texture = SubResource("AnimatedTexture_1xx8i")
-
-[node name="Options Menu" type="Control" parent="."]
+[node name="Options Menu" type="Control" parent="ClothesControl"]
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
@@ -445,51 +347,197 @@ offset_right = 965.582
 offset_bottom = 54.3873
 scale = Vector2(0.510694, 0.510694)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Options Menu"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ClothesControl/Options Menu"]
 layout_mode = 0
 offset_left = 2.34766
 offset_right = 414.348
 offset_bottom = 100.0
 
-[node name="TextureButton" type="TextureButton" parent="Options Menu/HBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="ClothesControl/Options Menu/HBoxContainer"]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_7j1f8")
 
-[node name="TextureRect" type="TextureRect" parent="Options Menu/HBoxContainer/TextureButton"]
+[node name="TextureRect" type="TextureRect" parent="ClothesControl/Options Menu/HBoxContainer/TextureButton"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = SubResource("AnimatedTexture_0qrst")
 
-[node name="TextureButton2" type="TextureButton" parent="Options Menu/HBoxContainer"]
+[node name="TextureButton2" type="TextureButton" parent="ClothesControl/Options Menu/HBoxContainer"]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_7j1f8")
 
-[node name="TextureRect" type="TextureRect" parent="Options Menu/HBoxContainer/TextureButton2"]
+[node name="TextureRect" type="TextureRect" parent="ClothesControl/Options Menu/HBoxContainer/TextureButton2"]
 layout_mode = 0
 offset_right = 1.0
 offset_bottom = 1.0
 texture = SubResource("AnimatedTexture_edvgv")
 
-[node name="TextureButton3" type="TextureButton" parent="Options Menu/HBoxContainer"]
+[node name="TextureButton3" type="TextureButton" parent="ClothesControl/Options Menu/HBoxContainer"]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_7j1f8")
 
-[node name="TextureRect" type="TextureRect" parent="Options Menu/HBoxContainer/TextureButton3"]
+[node name="TextureRect" type="TextureRect" parent="ClothesControl/Options Menu/HBoxContainer/TextureButton3"]
 layout_mode = 0
 offset_right = 1.0
 offset_bottom = 1.0
 texture = SubResource("AnimatedTexture_uwno0")
 
-[node name="TextureButton4" type="TextureButton" parent="Options Menu/HBoxContainer"]
+[node name="TextureButton4" type="TextureButton" parent="ClothesControl/Options Menu/HBoxContainer"]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_7j1f8")
 
-[node name="TextureRect" type="TextureRect" parent="Options Menu/HBoxContainer/TextureButton4"]
+[node name="TextureRect" type="TextureRect" parent="ClothesControl/Options Menu/HBoxContainer/TextureButton4"]
 layout_mode = 0
 offset_right = 1.0
 offset_bottom = 1.0
 texture = SubResource("AnimatedTexture_8ojr2")
+
+[node name="Menu Panel" type="TextureRect" parent="ClothesControl" node_paths=PackedStringArray("InteractableItemLayer")]
+layout_mode = 2
+offset_left = 834.463
+offset_top = 143.873
+offset_right = 1126.47
+offset_bottom = 561.873
+texture = SubResource("AnimatedTexture_ynpdx")
+script = ExtResource("9_m2bi8")
+InteractableItemLayer = NodePath("../ItemControl")
+
+[node name="Clothes Selector" type="VBoxContainer" parent="ClothesControl" node_paths=PackedStringArray("FolderParent")]
+layout_mode = 2
+offset_left = 776.913
+offset_top = 215.809
+offset_right = 876.913
+offset_bottom = 799.809
+scale = Vector2(0.479628, 0.479628)
+script = ExtResource("11_w2sx4")
+FolderParent = NodePath("../Menu Panel")
+
+[node name="Close" type="TextureButton" parent="ClothesControl/Clothes Selector"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AnimatedTexture_yqwia")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="ClothesControl/Clothes Selector/Close"]
+layout_mode = 0
+offset_left = 2.50037
+offset_top = -0.000430107
+offset_right = 99.5004
+offset_bottom = 96.9996
+texture = SubResource("AnimatedTexture_05la5")
+
+[node name="Hats" type="TextureButton" parent="ClothesControl/Clothes Selector"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AnimatedTexture_yqwia")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="ClothesControl/Clothes Selector/Hats"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+texture = SubResource("AnimatedTexture_4vr7i")
+
+[node name="Dress" type="TextureButton" parent="ClothesControl/Clothes Selector"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AnimatedTexture_yqwia")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="ClothesControl/Clothes Selector/Dress"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AnimatedTexture_tb5et")
+
+[node name="Costumes" type="TextureButton" parent="ClothesControl/Clothes Selector"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AnimatedTexture_yqwia")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="ClothesControl/Clothes Selector/Costumes"]
+layout_mode = 0
+offset_left = 1.25056
+offset_top = -4.77109
+offset_right = 101.251
+offset_bottom = 95.2289
+texture = SubResource("AnimatedTexture_iy3ap")
+
+[node name="Accessories" type="TextureButton" parent="ClothesControl/Clothes Selector"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AnimatedTexture_yqwia")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="ClothesControl/Clothes Selector/Accessories"]
+layout_mode = 0
+offset_top = -2.24988
+offset_right = 97.0
+offset_bottom = 94.7501
+texture = SubResource("AnimatedTexture_niek7")
+
+[node name="Shoes" type="TextureButton" parent="ClothesControl/Clothes Selector"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AnimatedTexture_yqwia")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="ClothesControl/Clothes Selector/Shoes"]
+layout_mode = 0
+offset_left = 7.31775e-05
+offset_top = -5.07135
+offset_right = 100.0
+offset_bottom = 94.9286
+texture = SubResource("AnimatedTexture_1xx8i")
+
+[node name="ItemControl" type="Control" parent="ClothesControl"]
+anchors_preset = 0
+offset_left = 7.31775e-05
+offset_right = 7.31775e-05
+
+[node name="GridContainer" type="GridContainer" parent="ClothesControl"]
+layout_mode = 0
+offset_left = -1227.12
+offset_top = -532.329
+offset_right = -461.115
+offset_bottom = 145.671
+columns = 2
+
+[node name="TextureButton2" type="TextureButton" parent="ClothesControl/GridContainer"]
+layout_mode = 2
+texture_normal = SubResource("AnimatedTexture_4583u")
+stretch_mode = 5
+
+[node name="TextureButton3" type="TextureButton" parent="ClothesControl/GridContainer"]
+layout_mode = 2
+texture_normal = SubResource("AnimatedTexture_4583u")
+stretch_mode = 5
+
+[node name="TextureButton4" type="TextureButton" parent="ClothesControl/GridContainer"]
+layout_mode = 2
+texture_normal = SubResource("AnimatedTexture_4583u")
+stretch_mode = 5
+
+[node name="TextureButton5" type="TextureButton" parent="ClothesControl/GridContainer"]
+layout_mode = 2
+texture_normal = SubResource("AnimatedTexture_4583u")
+stretch_mode = 5
+
+[node name="HFlowContainer" type="HFlowContainer" parent="ClothesControl"]
+layout_mode = 0
+offset_left = -196.027
+offset_top = -517.942
+offset_right = 184.973
+offset_bottom = -180.942
+
+[node name="TextureButton" type="TextureButton" parent="ClothesControl/HFlowContainer"]
+layout_mode = 2
+texture_normal = SubResource("AnimatedTexture_4583u")
+stretch_mode = 5
+
+[node name="ItemLayer" type="Node2D" parent="."]
 
 [node name="PlayTransition" type="Node2D" parent="."]
 visible = false

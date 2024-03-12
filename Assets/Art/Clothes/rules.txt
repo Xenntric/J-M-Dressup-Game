@@ -1,0 +1,11 @@
+Art workflow rules
+
+Julius will probably give me some beautiful art assets that have canvases that dont
+always meet the bounds of the asset, so i will need to crop it down to the edges
+then increase canvas sizes by lets say 20px? I think thats fine, and will allow me
+to create a 'selected' version with a border around the whole asset
+
+Get asset -> crop -> resize canvas -> create alt versions
+
+could probably use a texturepacker instead to maximise efficiency but i can think
+about that after ive made the actual assets

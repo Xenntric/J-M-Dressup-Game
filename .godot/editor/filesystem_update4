@@ -2,5 +2,7 @@ res://Assets/Scenes/main_dressup.tscn
 res://Assets/Scripts/MainGame/UI/PopulateItems.cs
 res://Assets/Scripts/MainGame/UI/FolderSelect.cs
 res://Assets/Scenes/splash_scene.tscn
-res://Assets/Scripts/ItemMover.cs
+res://Assets/Scenes/Globals.cs
+res://Assets/Scripts/MainGame/UI/Entity.cs
+res://Assets/Scripts/MainGame/UI/ItemMover.cs
 res://Assets/Scripts/SplashandMenu/MenuScript.cs

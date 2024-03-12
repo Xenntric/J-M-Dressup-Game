@@ -10,17 +10,20 @@ public partial class PopulateItems : TextureRect
 {
     //private TextureRect ItemContainer;
     private TextureRect MasterContainer;
-    private Container FolderContainer;
+    public Container FolderContainer;
     private HBoxContainer Rows;
     private VBoxContainer Columns;
     [Export] public int AmountOfRows = 3;
 
-    [Export] public Node2D InteractableItemLayer;
+    [Export] public Control InteractableItemLayer;
+    [Export] public Area2D MenuArea;
     private int foldersScanned;
+
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
         ProcessPriority = 0;
+		GD.Print("Populate Items");
         MasterContainer = GetNode<TextureRect>(GetPath());
         CreateFolders();
     }
@@ -41,8 +44,17 @@ public partial class PopulateItems : TextureRect
             FolderContainer = new Container
             {
                 Name = Path.GetFileNameWithoutExtension(folder),
-                Size = MasterContainer.Size
+                Size = MasterContainer.Size - new Vector2(30,35),
+                Position = new Vector2(15,15)
             };
+            // var FolderArea = new Area2D
+            // {
+            //     Name = FolderContainer.Name + " Area",
+            //      = FolderContainer.Size
+            // };
+
+            //MenuArea.MouseEntered += () => mouseExitedMenu();
+            FolderContainer.MouseEntered += mouseExitedMenu;
             
 			foldersScanned++;
 
@@ -54,7 +66,7 @@ public partial class PopulateItems : TextureRect
             MasterContainer.AddChild(FolderContainer);
 
             Columns = new VBoxContainer();
-            Columns.SetPosition(new Vector2(25, 25));
+            Columns.SetPosition(new Vector2(5, 5));
             FolderContainer.AddChild(Columns);
 
             for (int i = 0; i < AmountOfRows; i++)
@@ -66,15 +78,9 @@ public partial class PopulateItems : TextureRect
                 {
                     if (itemScanned < itemInFolder.Count)
                     {
-                        var itemButton = new TextureButton
-                        {
-                            TextureNormal = itemInFolder.ElementAt(itemScanned),
-                            StretchMode = TextureButton.StretchModeEnum.KeepAspect,
-                            IgnoreTextureSize = true,
-                            CustomMinimumSize = new Vector2(70, 70),
-                            MouseDefaultCursorShape = CursorShape.PointingHand,
-                        };
-                        itemButton.Pressed += () => OnPressed(itemButton);
+                        
+                        var itemButton = Entity.InitEntity(itemInFolder.ElementAt<Texture2D>(itemScanned));
+                        itemButton.ButtonDown += () => OnPressed(itemButton);
                         Rows.AddChild(itemButton);
                         itemScanned++;
                     }
@@ -87,26 +93,35 @@ public partial class PopulateItems : TextureRect
     {
         if (item.Visible)
         {
-            CreateItem(item);
-            //InteractableItemLayer.AddChild();
+            //CreateItem(item);
         }
+    }
+    private void mouseExitedMenu()
+    {
+        GD.Print("entered");
     }
 
     private void CreateItem(TextureButton textureButton)
     {
-
         var texture = textureButton.TextureNormal;
-        var item = new TextureButton();
-        item.TextureNormal = texture;
-        item.Scale = new Vector2(.33f,.33f);
-        item.ActionMode = BaseButton.ActionModeEnum.Press;
+        var item = new TextureButton
+        {
+            TextureNormal = texture,
+            Scale = new Vector2(.33f,.33f),
+            ActionMode = BaseButton.ActionModeEnum.Press,
+            MouseFilter = MouseFilterEnum.Pass,
+            ButtonPressed = true,
+            Size = new Vector2(100,100),
+        };
+        
+        item = Utils.AttachScript<TextureButton>(item, "Assets/Scripts/MainGame/UI/ItemMover.cs");
 
-        ulong objId = item.GetInstanceId();
-        GD.Print(objId);
-        item.SetScript(ResourceLoader.Load("Assets/Scripts/ItemMover.cs"));
-        item = InstanceFromId(objId) as TextureButton;
+        item.ButtonPressed = true;
 
-        InteractableItemLayer.AddChild(item);
+        this.AddChild(item);
+        item.ZIndex = 1;
+        item.GlobalPosition = textureButton.GlobalPosition;
+        //item.Scale = textureButton.GetGlobalTransform().Scale;
     }
 }
 
