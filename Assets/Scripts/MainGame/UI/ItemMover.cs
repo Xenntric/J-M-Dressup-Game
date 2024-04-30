@@ -14,8 +14,8 @@ public partial class ItemMover : Entity
 
 	public override void _EnterTree()
 	{
-		FolderContainer = GetNode<Container>("/root/DressUpScene/ClothesControl/Menu Panel/Accessories");
-		InteractableItemLayer = GetNode<Control>("/root/DressUpScene/ClothesControl/ItemControl");
+		// FolderContainer = GetNode<Container>("/root/DressUpScene/ClothesControl/Menu Panel/Accessories");
+		// InteractableItemLayer = GetNode<Control>("/root/DressUpScene/ClothesControl/ItemControl");
 	}
 
 	public override void _Ready()
@@ -42,13 +42,13 @@ public partial class ItemMover : Entity
 			var offset = PosAtGrab;
 			GlobalPosition = currentMousePos - offset;
 			
-			if(!FolderContainer.GetRect().HasPoint(FolderContainer.GetLocalMousePosition()))
-			{
-				this.setNewSize();
-				// GD.Print("feck");
-				// this.ButtonPressed = true;
-				// this.Reparent(InteractableItemLayer);
-			}
+			// if(!FolderContainer.GetRect().HasPoint(FolderContainer.GetLocalMousePosition()))
+			// {
+			// 	this.setNewSize();
+			// 	// GD.Print("feck");
+			// 	// this.ButtonPressed = true;
+			// 	// this.Reparent(InteractableItemLayer);
+			// }
 			// if(exited)
 			// {
 			// 	this.Scale = new Vector2(.33f, .33f);

@@ -91,6 +91,8 @@ public partial class PopulateItems : TextureRect
 
     private void OnPressed(TextureButton item)
     {
+                GD.Print("Pressed");
+
         if (item.Visible)
         {
             //CreateItem(item);
@@ -103,6 +105,7 @@ public partial class PopulateItems : TextureRect
 
     private void CreateItem(TextureButton textureButton)
     {
+        GD.Print("CreateItem");
         var texture = textureButton.TextureNormal;
         var item = new TextureButton
         {

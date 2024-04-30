@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://datctv4lilhv1"]
+[gd_scene load_steps=78 format=3 uid="uid://datctv4lilhv1"]
 
 [ext_resource type="Script" path="res://Assets/Scenes/Globals.cs" id="1_nirnd"]
 [ext_resource type="Texture2D" uid="uid://ca22x7ja7vc77" path="res://Assets/Art/Characters/character.PNG" id="1_xe8ly"]
@@ -37,8 +37,13 @@
 [ext_resource type="Texture2D" uid="uid://rv8j780ixu5q" path="res://Assets/Art/Menu Bar/Sound/SoundFrame_2.png" id="27_d8e70"]
 [ext_resource type="Texture2D" uid="uid://gbt64vlhe20h" path="res://Assets/Art/Menu Bar/Return/ReturnFrame_1.png" id="28_gsi1b"]
 [ext_resource type="Texture2D" uid="uid://bdm3c3bejj7ak" path="res://Assets/Art/Menu Bar/Return/ReturnFrame_2.png" id="29_1nrh2"]
+[ext_resource type="Script" path="res://Assets/Scripts/MainGame/UI/AnimateButton.cs" id="37_1cfus"]
+[ext_resource type="Texture2D" uid="uid://b7bvc5yd8gcnv" path="res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-1 18.png" id="37_ssbm1"]
+[ext_resource type="Texture2D" uid="uid://c243ju6jut0sx" path="res://Assets/Art/Menu Bar/Open.png" id="37_xv45l"]
+[ext_resource type="Texture2D" uid="uid://cm5cohg7bjmhh" path="res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-2 14.png" id="38_vmes8"]
 [ext_resource type="Texture2D" uid="uid://yh1i6hledm2p" path="res://Assets/Art/Clothes Menu/Selection Menu/Untitled_Artwork-1 17.png" id="39_xnbbi"]
-[ext_resource type="Texture2D" uid="uid://cojh13rs3rb68" path="res://Assets/Art/Clothes Menu/Asset Menu/MenuFrame_2.png" id="40_b5g4u"]
+[ext_resource type="Texture2D" uid="uid://cl4bv106r7pry" path="res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-3 5.png" id="40_e8di0"]
+[ext_resource type="Script" path="res://Assets/Scripts/MainGame/UI/ItemMover.cs" id="41_if4x8"]
 
 [sub_resource type="Animation" id="Animation_kkxxc"]
 resource_name = "Move_for_Menu"
@@ -275,7 +280,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0.1, 2.6, 6.6, 11.5, 15.1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"transitions": PackedFloat32Array(-2, -2, -2, -2, 1),
 "update": 0,
 "values": [Vector2(291.138, 112.089), Vector2(276.233, 89.7323), Vector2(291.138, 112.089), Vector2(276.233, 89.7323), Vector2(291.138, 112.089)]
 }
@@ -287,7 +292,7 @@ tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0.5, 3, 7, 11.9, 15.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"transitions": PackedFloat32Array(-2, -2, -2, -2, 1),
 "update": 0,
 "values": [Vector2(447.635, 37.5666), Vector2(440.183, 15.2099), Vector2(447.635, 37.5666), Vector2(440.183, 15.2099), Vector2(447.635, 37.5666)]
 }
@@ -296,6 +301,185 @@ tracks/2/keys = {
 _data = {
 "RESET": SubResource("Animation_yj85j"),
 "spin": SubResource("Animation_pgx5d")
+}
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_ky0hd"]
+frames = 2
+speed_scale = 2.0
+frame_0/texture = ExtResource("9_35tt3")
+frame_1/texture = ExtResource("10_5f3ex")
+frame_1/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_pseom"]
+frames = 2
+frame_0/texture = ExtResource("37_xv45l")
+frame_1/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_jtuke"]
+frames = 2
+speed_scale = 2.0
+frame_0/texture = ExtResource("28_gsi1b")
+frame_1/texture = ExtResource("29_1nrh2")
+frame_1/duration = 1.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v7odv"]
+
+[sub_resource type="Animation" id="Animation_ovmqh"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1185.15, -14.3873)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Characters:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(388.457, 330.907)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../NewUI/Menu/MenuBody/ReturnButton:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(20.3828, -55.1512)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../NewUI/Menu/OpenButton:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1216.32, 297.337)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../NewUI/Menu/OpenButton:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../NewUI/Menu:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1209.81, -9.59122)]
+}
+
+[sub_resource type="Animation" id="Animation_w23pr"]
+resource_name = "slide"
+length = 1.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.4, 1.3, 1.4),
+"transitions": PackedFloat32Array(-2, 1, 1),
+"update": 0,
+"values": [Vector2(-1185.83, -14.387), Vector2(-810.484, -14.3873), Vector2(-815.279, -14.3873)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Characters:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 1.3, 1.4),
+"transitions": PackedFloat32Array(-2, 1, 1),
+"update": 0,
+"values": [Vector2(388.457, 330.907), Vector2(647.428, 330.907), Vector2(642.632, 330.907)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../NewUI/Menu/MenuBody/ReturnButton:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.2, 1.6, 1.7),
+"transitions": PackedFloat32Array(-2, 1, 1),
+"update": 0,
+"values": [Vector2(20.3828, -55.1512), Vector2(19.183, 17.9841), Vector2(19.183, 14.3873)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../NewUI/Menu/OpenButton:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.0001, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1216.32, 297.337), Vector2(1216.32, 297.337), Vector2(1223.52, 297.337), Vector2(1134.8, 297.337)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../NewUI/Menu/OpenButton:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [0.0, 3.14159]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../NewUI/Menu:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.4, 1.3, 1.4),
+"transitions": PackedFloat32Array(-2, 1, 1),
+"update": 0,
+"values": [Vector2(-1209.81, -9.59122), Vector2(-848.25, -9.59122), Vector2(-850.648, -9.59122)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oyona"]
+_data = {
+"RESET": SubResource("Animation_ovmqh"),
+"slide": SubResource("Animation_w23pr")
 }
 
 [node name="DressUpScene" type="Node2D"]
@@ -456,10 +640,10 @@ fixed_icon_size = Vector2i(75, 90)
 [node name="ClothesControl" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -824.871
-offset_top = -4.79576
-offset_right = -824.871
-offset_bottom = -4.79576
+offset_left = -1185.15
+offset_top = -14.3873
+offset_right = -1185.15
+offset_bottom = -14.3873
 
 [node name="Options Menu" type="Control" parent="ClothesControl"]
 visible = false
@@ -519,6 +703,7 @@ offset_bottom = 1.0
 texture = SubResource("AnimatedTexture_8ojr2")
 
 [node name="Menu Panel" type="TextureRect" parent="ClothesControl" node_paths=PackedStringArray("InteractableItemLayer")]
+visible = false
 layout_mode = 2
 offset_left = 834.463
 offset_top = 143.873
@@ -529,12 +714,14 @@ script = ExtResource("9_m2bi8")
 InteractableItemLayer = NodePath("../ItemControl")
 
 [node name="Clothes Selector" type="VBoxContainer" parent="ClothesControl" node_paths=PackedStringArray("FolderParent")]
+visible = false
 layout_mode = 2
-offset_left = 1491.48
+offset_left = 1122.21
 offset_top = 206.218
-offset_right = 1591.48
+offset_right = 1222.21
 offset_bottom = 790.218
 scale = Vector2(0.479628, 0.479628)
+mouse_default_cursor_shape = 2
 script = ExtResource("11_w2sx4")
 FolderParent = NodePath("../Menu Panel")
 
@@ -668,6 +855,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1170.0
 offset_bottom = 662.0
+mouse_filter = 2
 
 [node name="Circle" type="TextureRect" parent="NewUI"]
 layout_mode = 0
@@ -700,8 +888,8 @@ scale = Vector2(0.643532, 0.643532)
 layout_mode = 2
 offset_left = 440.183
 offset_top = 15.2099
-offset_right = 540.232
-offset_bottom = 115.212
+offset_right = 540.24
+offset_bottom = 115.21
 texture_normal = SubResource("AnimatedTexture_7j1f8")
 
 [node name="TextureRect" type="TextureRect" parent="NewUI/Options Menu/Settings Button"]
@@ -754,6 +942,261 @@ offset_right = 1.0
 offset_bottom = 1.0
 texture = SubResource("AnimatedTexture_8ojr2")
 
-[node name="MenuFrame2" type="Sprite2D" parent="."]
-position = Vector2(-282.95, 364.478)
-texture = ExtResource("40_b5g4u")
+[node name="Menu" type="Control" parent="NewUI"]
+anchors_preset = 0
+offset_left = -1209.81
+offset_top = -9.59122
+offset_right = -1169.81
+offset_bottom = 30.4088
+mouse_filter = 2
+
+[node name="OpenButton" type="TextureButton" parent="NewUI/Menu" node_paths=PackedStringArray("AnimationPlayer")]
+layout_mode = 0
+offset_left = 1216.32
+offset_top = 297.337
+offset_right = 1276.32
+offset_bottom = 357.337
+pivot_offset = Vector2(30, 30)
+texture_normal = SubResource("AnimatedTexture_ky0hd")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("37_1cfus")
+AnimationPlayer = NodePath("../AnimationPlayer")
+Animation = &"UI/slide"
+
+[node name="OpenTexture" type="TextureRect" parent="NewUI/Menu/OpenButton"]
+layout_mode = 0
+offset_left = 16.1857
+offset_top = 14.9867
+offset_right = 41.1857
+offset_bottom = 39.9868
+scale = Vector2(1.15, 1.15)
+texture = SubResource("AnimatedTexture_pseom")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MenuBody" type="TextureRect" parent="NewUI/Menu"]
+clip_children = 2
+visibility_layer = 2
+layout_mode = 0
+offset_left = 871.029
+offset_top = 114.499
+offset_right = 1205.74
+offset_bottom = 568.039
+mouse_filter = 2
+texture = ExtResource("38_vmes8")
+expand_mode = 1
+
+[node name="ReturnButton" type="TextureButton" parent="NewUI/Menu/MenuBody" node_paths=PackedStringArray("AnimationPlayer")]
+layout_mode = 0
+offset_left = 20.3828
+offset_top = -55.1512
+offset_right = 70.383
+offset_bottom = -5.1513
+texture_normal = SubResource("AnimatedTexture_ky0hd")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("37_1cfus")
+AnimationPlayer = NodePath("../../AnimationPlayer")
+Animation = &"UI/slide"
+Reversed = true
+
+[node name="ReturnTexture" type="TextureRect" parent="NewUI/Menu/MenuBody/ReturnButton"]
+layout_mode = 0
+offset_left = 2.39785
+offset_top = 0.59947
+offset_right = 42.3979
+offset_bottom = 40.5995
+scale = Vector2(1.15, 1.15)
+texture = SubResource("AnimatedTexture_jtuke")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MainMenuGrid" type="GridContainer" parent="NewUI/Menu/MenuBody"]
+layout_mode = 2
+offset_left = 64.7428
+offset_top = 67.1406
+offset_right = 309.743
+offset_bottom = 442.141
+scale = Vector2(0.79743, 0.79743)
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+columns = 2
+
+[node name="HatButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MainMenuGrid"]
+custom_minimum_size = Vector2(115, 115)
+layout_mode = 2
+texture_normal = ExtResource("40_e8di0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="NewUI/Menu/MenuBody/MainMenuGrid/HatButton"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+scale = Vector2(1.15, 1.15)
+texture = SubResource("AnimatedTexture_4vr7i")
+stretch_mode = 5
+
+[node name="OutfitButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MainMenuGrid"]
+custom_minimum_size = Vector2(115, 115)
+layout_mode = 2
+texture_normal = ExtResource("40_e8di0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect2" type="TextureRect" parent="NewUI/Menu/MenuBody/MainMenuGrid/OutfitButton"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+scale = Vector2(1.15, 1.15)
+texture = SubResource("AnimatedTexture_iy3ap")
+
+[node name="AccessoriesButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MainMenuGrid"]
+custom_minimum_size = Vector2(115, 115)
+layout_mode = 2
+texture_normal = ExtResource("40_e8di0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect2" type="TextureRect" parent="NewUI/Menu/MenuBody/MainMenuGrid/AccessoriesButton"]
+layout_mode = 0
+offset_right = 97.0
+offset_bottom = 97.0
+scale = Vector2(1.15, 1.15)
+texture = SubResource("AnimatedTexture_niek7")
+
+[node name="ShoesButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MainMenuGrid"]
+custom_minimum_size = Vector2(115, 115)
+layout_mode = 2
+texture_normal = ExtResource("40_e8di0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect3" type="TextureRect" parent="NewUI/Menu/MenuBody/MainMenuGrid/ShoesButton"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+scale = Vector2(1.15, 1.15)
+texture = SubResource("AnimatedTexture_1xx8i")
+
+[node name="DressButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MainMenuGrid"]
+custom_minimum_size = Vector2(115, 115)
+layout_mode = 2
+texture_normal = ExtResource("40_e8di0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect4" type="TextureRect" parent="NewUI/Menu/MenuBody/MainMenuGrid/DressButton"]
+layout_mode = 2
+offset_right = 100.0
+offset_bottom = 100.0
+scale = Vector2(1.15, 1.15)
+texture = SubResource("AnimatedTexture_tb5et")
+
+[node name="HatsGrid" type="GridContainer" parent="NewUI/Menu/MenuBody"]
+visibility_layer = 0
+layout_mode = 2
+offset_left = 415.431
+offset_top = 67.1406
+offset_right = 660.431
+offset_bottom = 442.141
+scale = Vector2(0.79743, 0.79743)
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+columns = 2
+
+[node name="HatButton" type="TextureButton" parent="NewUI/Menu/MenuBody/HatsGrid"]
+custom_minimum_size = Vector2(115, 115)
+layout_mode = 2
+texture_normal = ExtResource("40_e8di0")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("41_if4x8")
+
+[node name="TextureRect" type="TextureRect" parent="NewUI/Menu/MenuBody/HatsGrid/HatButton"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+scale = Vector2(1.15, 1.15)
+texture = SubResource("AnimatedTexture_4vr7i")
+stretch_mode = 5
+
+[node name="OutfitButton" type="TextureButton" parent="NewUI/Menu/MenuBody/HatsGrid"]
+custom_minimum_size = Vector2(115, 115)
+layout_mode = 2
+texture_normal = ExtResource("40_e8di0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect2" type="TextureRect" parent="NewUI/Menu/MenuBody/HatsGrid/OutfitButton"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+scale = Vector2(1.15, 1.15)
+texture = SubResource("AnimatedTexture_iy3ap")
+
+[node name="AccessoriesButton" type="TextureButton" parent="NewUI/Menu/MenuBody/HatsGrid"]
+custom_minimum_size = Vector2(115, 115)
+layout_mode = 2
+texture_normal = ExtResource("40_e8di0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect2" type="TextureRect" parent="NewUI/Menu/MenuBody/HatsGrid/AccessoriesButton"]
+layout_mode = 0
+offset_right = 97.0
+offset_bottom = 97.0
+scale = Vector2(1.15, 1.15)
+texture = SubResource("AnimatedTexture_niek7")
+
+[node name="ShoesButton" type="TextureButton" parent="NewUI/Menu/MenuBody/HatsGrid"]
+custom_minimum_size = Vector2(115, 115)
+layout_mode = 2
+texture_normal = ExtResource("40_e8di0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect3" type="TextureRect" parent="NewUI/Menu/MenuBody/HatsGrid/ShoesButton"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+scale = Vector2(1.15, 1.15)
+texture = SubResource("AnimatedTexture_1xx8i")
+
+[node name="DressButton" type="TextureButton" parent="NewUI/Menu/MenuBody/HatsGrid"]
+custom_minimum_size = Vector2(115, 115)
+layout_mode = 2
+texture_normal = ExtResource("40_e8di0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect4" type="TextureRect" parent="NewUI/Menu/MenuBody/HatsGrid/DressButton"]
+layout_mode = 2
+offset_right = 100.0
+offset_bottom = 100.0
+scale = Vector2(1.15, 1.15)
+texture = SubResource("AnimatedTexture_tb5et")
+
+[node name="Button" type="TextureButton" parent="NewUI/Menu/MenuBody/HatsGrid"]
+custom_minimum_size = Vector2(115, 115)
+layout_mode = 2
+texture_normal = ExtResource("40_e8di0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MenuOutline" type="TextureRect" parent="NewUI/Menu"]
+offset_left = 871.029
+offset_top = 114.499
+offset_right = 1205.74
+offset_bottom = 568.039
+mouse_filter = 2
+texture = ExtResource("37_ssbm1")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NewUI/Menu"]
+root_node = NodePath("../../../ClothesControl")
+libraries = {
+"": SubResource("AnimationLibrary_v7odv"),
+"UI": SubResource("AnimationLibrary_oyona")
+}

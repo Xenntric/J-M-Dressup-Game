@@ -24,7 +24,7 @@ public partial class FolderSelect : Control
 
 		foreach (TextureButton child in GetChildren().Cast<TextureButton>())
 		{
-			GD.Print(child.Name);
+			GD.Print("Binding event for " + child.Name);
 
 			child.Pressed += () => PressedButton(child);
 		}
