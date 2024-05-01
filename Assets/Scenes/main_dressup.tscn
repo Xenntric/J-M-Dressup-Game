@@ -515,6 +515,20 @@ texture = ExtResource("4_nlub7")
 position = Vector2(366.337, 9.09094)
 texture = ExtResource("5_pdjoi")
 
+[node name="NakedbaseJulus2" type="Sprite2D" parent="Characters"]
+modulate = Color(0, 0, 0, 0.490196)
+show_behind_parent = true
+position = Vector2(-351.853, 16.4756)
+scale = Vector2(1, 1)
+texture = ExtResource("4_nlub7")
+
+[node name="NakedbaseMatt2" type="Sprite2D" parent="Characters"]
+modulate = Color(0, 0, 0, 0.490196)
+show_behind_parent = true
+position = Vector2(375.417, 16.4757)
+scale = Vector2(1, 1)
+texture = ExtResource("5_pdjoi")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Characters"]
 libraries = {
 "": SubResource("AnimationLibrary_wosof")
@@ -828,6 +842,7 @@ libraries = {
 autoplay = "Play_Animation"
 
 [node name="NewUI" type="Control" parent="."]
+z_index = 20
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1170.0
@@ -841,6 +856,18 @@ offset_top = 268.563
 offset_right = 1577.46
 offset_bottom = 1000.56
 scale = Vector2(0.870344, 0.848865)
+pivot_offset = Vector2(368.746, 376.247)
+texture = ExtResource("39_xnbbi")
+stretch_mode = 5
+
+[node name="Circle2" type="TextureRect" parent="NewUI/Circle"]
+modulate = Color(0, 0, 0, 0.32549)
+show_behind_parent = true
+visibility_layer = 2
+layout_mode = 0
+offset_right = 743.0
+offset_bottom = 732.0
+scale = Vector2(0.965, 0.965)
 pivot_offset = Vector2(368.746, 376.247)
 texture = ExtResource("39_xnbbi")
 stretch_mode = 5
@@ -989,130 +1016,20 @@ texture = SubResource("AnimatedTexture_jtuke")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="MainMenuGrid" type="GridContainer" parent="NewUI/Menu/MenuBody"]
-visible = false
-clip_contents = true
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -122.5
-offset_top = -187.5
-offset_right = 122.5
-offset_bottom = 187.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/h_separation = 15
-theme_override_constants/v_separation = 15
-columns = 2
-
-[node name="HatButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MainMenuGrid"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = ExtResource("40_e8di0")
-ignore_texture_size = true
-stretch_mode = 5
-
-[node name="TextureRect" type="TextureRect" parent="NewUI/Menu/MenuBody/MainMenuGrid/HatButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("AnimatedTexture_4vr7i")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="OutfitButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MainMenuGrid"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = ExtResource("40_e8di0")
-ignore_texture_size = true
-stretch_mode = 5
-
-[node name="TextureRect2" type="TextureRect" parent="NewUI/Menu/MenuBody/MainMenuGrid/OutfitButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("AnimatedTexture_iy3ap")
-expand_mode = 2
-stretch_mode = 5
-
-[node name="AccessoriesButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MainMenuGrid"]
-custom_minimum_size = Vector2(115, 115)
-layout_mode = 2
-texture_normal = ExtResource("40_e8di0")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="TextureRect2" type="TextureRect" parent="NewUI/Menu/MenuBody/MainMenuGrid/AccessoriesButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("AnimatedTexture_niek7")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="ShoesButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MainMenuGrid"]
-custom_minimum_size = Vector2(115, 115)
-layout_mode = 2
-texture_normal = ExtResource("40_e8di0")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="TextureRect3" type="TextureRect" parent="NewUI/Menu/MenuBody/MainMenuGrid/ShoesButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("AnimatedTexture_1xx8i")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="DressButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MainMenuGrid"]
-custom_minimum_size = Vector2(115, 115)
-layout_mode = 2
-texture_normal = ExtResource("40_e8di0")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="TextureRect4" type="TextureRect" parent="NewUI/Menu/MenuBody/MainMenuGrid/DressButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("AnimatedTexture_tb5et")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="StrictGridContainer" type="Container" parent="NewUI/Menu/MenuBody" node_paths=PackedStringArray("Children")]
+[node name="MenuMain" type="Container" parent="NewUI/Menu/MenuBody"]
 visible = false
 layout_mode = 0
-offset_left = 20.9814
-offset_top = 20.9819
-offset_right = 20.9814
-offset_bottom = 206.982
+offset_left = 52.1539
+offset_top = 58.1491
+offset_right = 275.154
+offset_bottom = 395.149
 script = ExtResource("43_rxod3")
 Columns = 2
-CellSize = Vector2i(90, 93)
-Children = [NodePath("HatButton"), NodePath("OutfitButton"), NodePath("AccessoriesButton"), NodePath("ShoesButton"), NodePath("DressButton")]
+CellSize = Vector2(109, 109)
+RatioCellSize = true
+CellSpacing = Vector2(5, 5)
 
-[node name="HatButton" type="TextureButton" parent="NewUI/Menu/MenuBody/StrictGridContainer"]
+[node name="HatButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuMain"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -1120,7 +1037,7 @@ texture_normal = ExtResource("40_e8di0")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureRect" type="TextureRect" parent="NewUI/Menu/MenuBody/StrictGridContainer/HatButton"]
+[node name="TextureRect" type="TextureRect" parent="NewUI/Menu/MenuBody/MenuMain/HatButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1131,7 +1048,7 @@ texture = SubResource("AnimatedTexture_4vr7i")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="OutfitButton" type="TextureButton" parent="NewUI/Menu/MenuBody/StrictGridContainer"]
+[node name="OutfitButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuMain"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -1139,7 +1056,7 @@ texture_normal = ExtResource("40_e8di0")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="NewUI/Menu/MenuBody/StrictGridContainer/OutfitButton"]
+[node name="TextureRect2" type="TextureRect" parent="NewUI/Menu/MenuBody/MenuMain/OutfitButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1150,13 +1067,13 @@ texture = SubResource("AnimatedTexture_iy3ap")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="AccessoriesButton" type="TextureButton" parent="NewUI/Menu/MenuBody/StrictGridContainer"]
+[node name="AccessoriesButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuMain"]
 layout_mode = 2
 texture_normal = ExtResource("40_e8di0")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="NewUI/Menu/MenuBody/StrictGridContainer/AccessoriesButton"]
+[node name="TextureRect2" type="TextureRect" parent="NewUI/Menu/MenuBody/MenuMain/AccessoriesButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1167,13 +1084,13 @@ texture = SubResource("AnimatedTexture_niek7")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="ShoesButton" type="TextureButton" parent="NewUI/Menu/MenuBody/StrictGridContainer"]
+[node name="ShoesButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuMain"]
 layout_mode = 2
 texture_normal = ExtResource("40_e8di0")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureRect3" type="TextureRect" parent="NewUI/Menu/MenuBody/StrictGridContainer/ShoesButton"]
+[node name="TextureRect3" type="TextureRect" parent="NewUI/Menu/MenuBody/MenuMain/ShoesButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1184,13 +1101,13 @@ texture = SubResource("AnimatedTexture_1xx8i")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="DressButton" type="TextureButton" parent="NewUI/Menu/MenuBody/StrictGridContainer"]
+[node name="DressButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuMain"]
 layout_mode = 2
 texture_normal = ExtResource("40_e8di0")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureRect4" type="TextureRect" parent="NewUI/Menu/MenuBody/StrictGridContainer/DressButton"]
+[node name="TextureRect4" type="TextureRect" parent="NewUI/Menu/MenuBody/MenuMain/DressButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1201,20 +1118,29 @@ texture = SubResource("AnimatedTexture_tb5et")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Shadow Container" type="Container" parent="NewUI/Menu/MenuBody" node_paths=PackedStringArray("Children")]
-layout_mode = 0
-offset_left = 21.5809
-offset_top = 90.5204
-offset_right = 171.581
-offset_bottom = 240.52
+[node name="MenuDress" type="Control" parent="NewUI/Menu/MenuBody"]
+custom_minimum_size = Vector2(312.805, 354.33)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 11.9894
+offset_top = 105.507
+offset_right = 324.794
+offset_bottom = 459.837
+
+[node name="Shadow Container" type="Container" parent="NewUI/Menu/MenuBody/MenuDress"]
+visible = false
+modulate = Color(0, 0, 0, 0.309804)
+layout_mode = 2
+offset_left = 6.59418
+offset_top = -40.7765
+offset_right = 306.594
+offset_bottom = 259.223
 script = ExtResource("43_rxod3")
 Columns = 2
-CellSize = Vector2i(150, 150)
+CellSize = Vector2(150, 150)
 RatioCellSize = true
-Children = [NodePath("TextureRect"), NodePath("TextureRect2"), NodePath("TextureRect3"), NodePath("TextureRect4")]
 
-[node name="TextureRect" type="TextureRect" parent="NewUI/Menu/MenuBody/Shadow Container"]
-modulate = Color(0, 0, 0, 1)
+[node name="TextureRect" type="TextureRect" parent="NewUI/Menu/MenuBody/MenuDress/Shadow Container"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -1222,8 +1148,7 @@ texture = ExtResource("44_nt3x5")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="NewUI/Menu/MenuBody/Shadow Container"]
-modulate = Color(0, 0, 0, 1)
+[node name="TextureRect2" type="TextureRect" parent="NewUI/Menu/MenuBody/MenuDress/Shadow Container"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -1231,8 +1156,7 @@ texture = ExtResource("45_jvmv4")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect3" type="TextureRect" parent="NewUI/Menu/MenuBody/Shadow Container"]
-modulate = Color(0, 0, 0, 1)
+[node name="TextureRect3" type="TextureRect" parent="NewUI/Menu/MenuBody/MenuDress/Shadow Container"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -1240,8 +1164,7 @@ texture = ExtResource("45_6qi3o")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect4" type="TextureRect" parent="NewUI/Menu/MenuBody/Shadow Container"]
-modulate = Color(0, 0, 0, 1)
+[node name="TextureRect4" type="TextureRect" parent="NewUI/Menu/MenuBody/MenuDress/Shadow Container"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
@@ -1249,19 +1172,19 @@ texture = ExtResource("46_4pi6x")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Clothes container" type="Container" parent="NewUI/Menu/MenuBody" node_paths=PackedStringArray("Children")]
-layout_mode = 0
-offset_left = 19.7825
-offset_top = 89.3215
-offset_right = 169.783
-offset_bottom = 239.322
+[node name="Clothes container" type="Container" parent="NewUI/Menu/MenuBody/MenuDress"]
+clip_contents = true
+layout_mode = 2
+offset_left = 14.3873
+offset_top = -47.9576
+offset_right = 294.387
+offset_bottom = 652.042
 script = ExtResource("43_rxod3")
 Columns = 2
-CellSize = Vector2i(150, 150)
+CellSize = Vector2(140, 140)
 RatioCellSize = true
-Children = [NodePath("TextureButton"), NodePath("TextureButton2"), NodePath("TextureButton3"), NodePath("TextureButton4")]
 
-[node name="TextureButton" type="TextureButton" parent="NewUI/Menu/MenuBody/Clothes container"]
+[node name="Dress1Button" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuDress/Clothes container"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -1270,7 +1193,7 @@ ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("44_r1jw6")
 
-[node name="TextureButton2" type="TextureButton" parent="NewUI/Menu/MenuBody/Clothes container"]
+[node name="Dress2Button" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuDress/Clothes container"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -1278,7 +1201,7 @@ texture_normal = ExtResource("45_jvmv4")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureButton3" type="TextureButton" parent="NewUI/Menu/MenuBody/Clothes container"]
+[node name="Smoke1Button" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuDress/Clothes container"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -1286,7 +1209,7 @@ texture_normal = ExtResource("45_6qi3o")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureButton4" type="TextureButton" parent="NewUI/Menu/MenuBody/Clothes container"]
+[node name="Smoke2Button" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuDress/Clothes container"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -1294,12 +1217,57 @@ texture_normal = ExtResource("46_4pi6x")
 ignore_texture_size = true
 stretch_mode = 5
 
+[node name="Dress1Button2" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuDress/Clothes container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("44_nt3x5")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("44_r1jw6")
+
+[node name="Dress1Button3" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuDress/Clothes container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("44_nt3x5")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("44_r1jw6")
+
+[node name="Dress1Button4" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuDress/Clothes container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("44_nt3x5")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("44_r1jw6")
+
+[node name="Dress1Button5" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuDress/Clothes container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("44_nt3x5")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("44_r1jw6")
+
+[node name="Dress1Button6" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuDress/Clothes container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("44_nt3x5")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("44_r1jw6")
+
 [node name="MenuOutline" type="TextureRect" parent="NewUI/Menu"]
 layout_mode = 0
-offset_left = 870.51
-offset_top = 114.498
-offset_right = 1205.22
-offset_bottom = 568.039
+offset_left = 872.0
+offset_top = 114.0
+offset_right = 1207.0
+offset_bottom = 569.0
 mouse_filter = 2
 texture = ExtResource("37_ssbm1")
 expand_mode = 1

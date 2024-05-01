@@ -1,3 +1,8 @@
+ScrollContainer
+VScrollBar
+Control
+AnimationPlayer
+ItemList
 TextureButton
 StrictGridContainer
 TextureRect
@@ -5,10 +10,5 @@ Button
 AspectRatioContainer
 Container
 HFlowContainer
-Control
 GridContainer
-AnimationPlayer
 AnimationTree
-CollisionShape2D
-Area2D
-Node2D
