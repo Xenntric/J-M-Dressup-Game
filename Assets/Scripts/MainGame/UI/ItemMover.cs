@@ -4,7 +4,7 @@ using System.Reflection;
 
 public partial class ItemMover : Entity
 {
-	private Vector2 PosAtGrab;
+	private Vector2 PosOffset;
 	private Container FolderContainer;
 	private Vector2 oldMousePos;
     [Export] public Control InteractableItemLayer;
@@ -22,27 +22,26 @@ public partial class ItemMover : Entity
 	{
 		this.ProcessPriority = 1;
 		GD.Print("ItemMover");
-		this.Pressed += () => AttachAndMove();
+		this.ButtonDown += () => AttachAndMove();
 	}
 
 	private void AttachAndMove()
 	{
-		PosAtGrab = this.GetViewport().GetMousePosition() - this.GlobalPosition;
+		PosOffset = this.GetViewport().GetMousePosition() - this.GlobalPosition;
 	}
 	
 	public override void _Process(double delta)
 	{
 		var currentMousePos = this.GetViewport().GetMousePosition();
-		mouseMoving = (oldMousePos != currentMousePos);
+		mouseMoving = oldMousePos != currentMousePos;
 		oldMousePos = currentMousePos;
 		
-		if(this.ButtonPressed && mouseMoving)
+		if(ButtonPressed && mouseMoving)
 		{
-			var OldPos = currentMousePos;
-			var offset = PosAtGrab;
-			GlobalPosition = currentMousePos - offset;
+			GlobalPosition = currentMousePos - PosOffset;
 			
-			// if(!FolderContainer.GetRect().HasPoint(FolderContainer.GetLocalMousePosition()))
+			//GD.Print ("mousepos: " + currentMousePos + "\n" + "itempos: " + this.GlobalPosition);
+			// if(!FolderContainer.GetRect().HasPoint(FolderContainer.GetLocalMousePosition()));
 			// {
 			// 	this.setNewSize();
 			// 	// GD.Print("feck");
