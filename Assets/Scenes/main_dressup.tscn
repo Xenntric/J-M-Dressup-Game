@@ -519,14 +519,12 @@ texture = ExtResource("5_pdjoi")
 modulate = Color(0, 0, 0, 0.490196)
 show_behind_parent = true
 position = Vector2(-351.853, 16.4756)
-scale = Vector2(1, 1)
 texture = ExtResource("4_nlub7")
 
 [node name="NakedbaseMatt2" type="Sprite2D" parent="Characters"]
 modulate = Color(0, 0, 0, 0.490196)
 show_behind_parent = true
 position = Vector2(375.417, 16.4757)
-scale = Vector2(1, 1)
 texture = ExtResource("5_pdjoi")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Characters"]
@@ -991,33 +989,9 @@ mouse_filter = 2
 texture = ExtResource("38_vmes8")
 expand_mode = 1
 
-[node name="ReturnButton" type="TextureButton" parent="NewUI/Menu/MenuBody" node_paths=PackedStringArray("AnimationPlayer")]
-layout_mode = 0
-offset_left = 20.3828
-offset_top = -55.1512
-offset_right = 70.383
-offset_bottom = -5.1513
-texture_normal = SubResource("AnimatedTexture_ky0hd")
-ignore_texture_size = true
-stretch_mode = 5
-script = ExtResource("37_1cfus")
-AnimationPlayer = NodePath("../../AnimationPlayer")
-Animation = &"UI/slide"
-Reversed = true
-
-[node name="ReturnTexture" type="TextureRect" parent="NewUI/Menu/MenuBody/ReturnButton"]
-layout_mode = 0
-offset_left = 2.39785
-offset_top = 0.59947
-offset_right = 42.3979
-offset_bottom = 40.5995
-scale = Vector2(1.15, 1.15)
-texture = SubResource("AnimatedTexture_jtuke")
-expand_mode = 1
-stretch_mode = 5
-
 [node name="MenuMain" type="Container" parent="NewUI/Menu/MenuBody"]
 visible = false
+clip_children = 1
 layout_mode = 0
 offset_left = 52.1539
 offset_top = 58.1491
@@ -1119,22 +1093,22 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="MenuDress" type="Control" parent="NewUI/Menu/MenuBody"]
-custom_minimum_size = Vector2(312.805, 354.33)
 layout_mode = 3
 anchors_preset = 0
-offset_left = 11.9894
-offset_top = 105.507
-offset_right = 324.794
-offset_bottom = 459.837
+offset_left = 13.1883
+offset_top = 53.3533
+offset_right = 323.388
+offset_bottom = 438.408
 
 [node name="Shadow Container" type="Container" parent="NewUI/Menu/MenuBody/MenuDress"]
 visible = false
 modulate = Color(0, 0, 0, 0.309804)
+clip_children = 1
 layout_mode = 2
 offset_left = 6.59418
 offset_top = -40.7765
 offset_right = 306.594
-offset_bottom = 259.223
+offset_bottom = 259.224
 script = ExtResource("43_rxod3")
 Columns = 2
 CellSize = Vector2(150, 150)
@@ -1175,14 +1149,42 @@ stretch_mode = 5
 [node name="Clothes container" type="Container" parent="NewUI/Menu/MenuBody/MenuDress"]
 clip_contents = true
 layout_mode = 2
-offset_left = 14.3873
-offset_top = -47.9576
-offset_right = 294.387
-offset_bottom = 652.042
+offset_left = 20.382
+offset_top = -26.3767
+offset_right = 300.382
+offset_bottom = 368.403
 script = ExtResource("43_rxod3")
 Columns = 2
-CellSize = Vector2(140, 140)
+CellSize = Vector2(130, 130)
 RatioCellSize = true
+ScrollingMode = true
+
+[node name="Dress1Button3" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuDress/Clothes container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("44_nt3x5")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("44_r1jw6")
+
+[node name="Dress1Button4" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuDress/Clothes container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("44_nt3x5")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("44_r1jw6")
+
+[node name="Dress1Button5" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuDress/Clothes container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("44_nt3x5")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("44_r1jw6")
 
 [node name="Dress1Button" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuDress/Clothes container"]
 layout_mode = 2
@@ -1217,50 +1219,30 @@ texture_normal = ExtResource("46_4pi6x")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Dress1Button2" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuDress/Clothes container"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource("44_nt3x5")
+[node name="ReturnButton" type="TextureButton" parent="NewUI/Menu/MenuBody" node_paths=PackedStringArray("AnimationPlayer")]
+layout_mode = 0
+offset_left = 20.3828
+offset_top = -55.1512
+offset_right = 70.383
+offset_bottom = -5.15129
+texture_normal = SubResource("AnimatedTexture_ky0hd")
 ignore_texture_size = true
 stretch_mode = 5
-script = ExtResource("44_r1jw6")
+script = ExtResource("37_1cfus")
+AnimationPlayer = NodePath("../../AnimationPlayer")
+Animation = &"UI/slide"
+Reversed = true
 
-[node name="Dress1Button3" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuDress/Clothes container"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource("44_nt3x5")
-ignore_texture_size = true
+[node name="ReturnTexture" type="TextureRect" parent="NewUI/Menu/MenuBody/ReturnButton"]
+layout_mode = 0
+offset_left = 2.39785
+offset_top = 0.59947
+offset_right = 42.3979
+offset_bottom = 40.5995
+scale = Vector2(1.15, 1.15)
+texture = SubResource("AnimatedTexture_jtuke")
+expand_mode = 1
 stretch_mode = 5
-script = ExtResource("44_r1jw6")
-
-[node name="Dress1Button4" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuDress/Clothes container"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource("44_nt3x5")
-ignore_texture_size = true
-stretch_mode = 5
-script = ExtResource("44_r1jw6")
-
-[node name="Dress1Button5" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuDress/Clothes container"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource("44_nt3x5")
-ignore_texture_size = true
-stretch_mode = 5
-script = ExtResource("44_r1jw6")
-
-[node name="Dress1Button6" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuDress/Clothes container"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource("44_nt3x5")
-ignore_texture_size = true
-stretch_mode = 5
-script = ExtResource("44_r1jw6")
 
 [node name="MenuOutline" type="TextureRect" parent="NewUI/Menu"]
 layout_mode = 0
