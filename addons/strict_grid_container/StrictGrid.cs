@@ -18,6 +18,8 @@ public partial class StrictGrid : Container
     private ScrollBar scrollBar;
     private bool hasScrollBar;
     private bool scrolling;
+    public bool Reorder;
+
 	
     public override void _EnterTree()
     {

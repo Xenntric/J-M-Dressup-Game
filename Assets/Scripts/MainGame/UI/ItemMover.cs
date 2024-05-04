@@ -1,15 +1,22 @@
 using Godot;
+using Godot.NativeInterop;
 using System;
 using System.Reflection;
+using System.Security.Cryptography.X509Certificates;
 
 public partial class ItemMover : Entity
 {
 	private Vector2 PosOffset;
-	private Container FolderContainer;
+	[Export] private Control FolderContainer;
 	private Vector2 oldMousePos;
     [Export] public Control InteractableItemLayer;
 
+    [Export] public Node ReparentTest;
 	private bool mouseMoving;
+
+	private Vector2	OGSize;
+
+	private bool grabbed;
 	// Called when the node enters the scene tree for the first time.
 
 	public override void _EnterTree()
@@ -21,13 +28,30 @@ public partial class ItemMover : Entity
 	public override void _Ready()
 	{
 		this.ProcessPriority = 1;
+		this.OGSize = this.TextureNormal.GetSize();
 		GD.Print("ItemMover");
-		this.ButtonDown += () => AttachAndMove();
+
+		this.ButtonDown += AttachAndMove;
 	}
 
 	private void AttachAndMove()
-	{
+	{		
+		var menusize = Size;
 		PosOffset = this.GetViewport().GetMousePosition() - this.GlobalPosition;
+
+		if(GetParent() != ReparentTest)
+		{
+			this.Reparent(ReparentTest);
+			this.Size = OGSize;
+			this.Position = new Vector2(Position.X - menusize.X, Position.Y - menusize.Y);
+			GlobalPosition = GetViewport().GetMousePosition() - PosOffset;
+			ToggleMode = true;
+			this.ButtonPressed = true;
+			grabbed = true;
+			GD.Print(ButtonPressed);
+		}
+		
+		// this.Position = PosOffset;
 	}
 	
 	public override void _Process(double delta)
@@ -35,19 +59,22 @@ public partial class ItemMover : Entity
 		var currentMousePos = this.GetViewport().GetMousePosition();
 		mouseMoving = oldMousePos != currentMousePos;
 		oldMousePos = currentMousePos;
-		
 		if(ButtonPressed && mouseMoving)
 		{
 			GlobalPosition = currentMousePos - PosOffset;
 			
-			//GD.Print ("mousepos: " + currentMousePos + "\n" + "itempos: " + this.GlobalPosition);
-			// if(!FolderContainer.GetRect().HasPoint(FolderContainer.GetLocalMousePosition()));
-			// {
-			// 	this.setNewSize();
-			// 	// GD.Print("feck");
-			// 	// this.ButtonPressed = true;
-			// 	// this.Reparent(InteractableItemLayer);
-			// }
+			// GD.Print ("mousepos: " + currentMousePos + "\n" + "itempos: " + this.GlobalPosition);
+			if(!FolderContainer.GetGlobalRect().HasPoint(currentMousePos))
+			{
+
+				 GD.Print("Out!");
+				// this.setNewSize();
+				// GD.Print("feck");
+				// this.ButtonPressed = true;
+				// this.Reparent(InteractableItemLayer);
+			}
+
+			
 			// if(exited)
 			// {
 			// 	this.Scale = new Vector2(.33f, .33f);
@@ -57,4 +84,24 @@ public partial class ItemMover : Entity
 			// }
 		}
 	}
+    public override void _Pressed()
+    {
+        base._Pressed();
+		// while(ButtonPressed)
+		// {
+		// 	GD.Print("BEEP!");
+		// };
+    }
+
+    public override void _Input(InputEvent @event)
+    {
+        base._Input(@event);
+		if(@event.IsActionReleased("Grab") && grabbed)
+		{
+			grabbed = false;
+			GD.Print("dorp");
+			ToggleMode = false;
+
+		}
+    }
 }
