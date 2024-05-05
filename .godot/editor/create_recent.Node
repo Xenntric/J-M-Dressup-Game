@@ -1,10 +1,10 @@
+TextureButton
+StrictGridContainer
+AnimationPlayer
 Control
 VScrollBar
 ScrollContainer
-AnimationPlayer
 ItemList
-TextureButton
-StrictGridContainer
 TextureRect
 Button
 AspectRatioContainer

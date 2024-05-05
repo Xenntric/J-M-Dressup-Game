@@ -9,14 +9,11 @@ public partial class ItemMover : Entity
 	private Vector2 PosOffset;
 	[Export] private Control FolderContainer;
 	private Vector2 oldMousePos;
-    [Export] public Control InteractableItemLayer;
-
-    [Export] public Node ReparentTest;
+    [Export] public Node ItemLayerNode;
 	private bool mouseMoving;
-
-	private Vector2	OGSize;
-
+	private Vector2	TextureSize;
 	private bool grabbed;
+	
 	// Called when the node enters the scene tree for the first time.
 
 	public override void _EnterTree()
@@ -28,7 +25,7 @@ public partial class ItemMover : Entity
 	public override void _Ready()
 	{
 		this.ProcessPriority = 1;
-		this.OGSize = this.TextureNormal.GetSize();
+		this.TextureSize = this.TextureNormal.GetSize();
 		GD.Print("ItemMover");
 
 		this.ButtonDown += AttachAndMove;
@@ -39,10 +36,11 @@ public partial class ItemMover : Entity
 		var menusize = Size;
 		PosOffset = this.GetViewport().GetMousePosition() - this.GlobalPosition;
 
-		if(GetParent() != ReparentTest)
+		if(GetParent() != ItemLayerNode)
 		{
-			this.Reparent(ReparentTest);
-			this.Size = OGSize;
+			this.Reparent(ItemLayerNode);
+			SetZIndex();
+			this.Size = TextureSize;
 			this.Position = new Vector2(Position.X - menusize.X, Position.Y - menusize.Y);
 			GlobalPosition = GetViewport().GetMousePosition() - PosOffset;
 			ToggleMode = true;

@@ -1,16 +1,30 @@
 using Godot;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Net.NetworkInformation;
-using System.Numerics;
-using System.Reflection;
-using System.Reflection.Metadata.Ecma335;
 
 public partial class Entity : TextureButton
 {
+    private enum ItemType {
+        Shoes,
+        Socks,
+        Trousers,
+        Dress,
+        Outfit,
+        Shirt,
+        Hair,
+        Hat,
+        Accessory,
+    };
+    [Export] ItemType itemType;
+
+    public override void _EnterTree()
+    {
+        base._EnterTree();
+    }
+    public void SetZIndex()
+    {
+        ZIndex = (int)itemType;
+    }
+
     private static Tuple<int,Godot.Vector2> inMenuScaleSize = new(1, new Godot.Vector2(70,70));
     public static TextureButton InitEntity(Texture2D itemTexture)
     {
