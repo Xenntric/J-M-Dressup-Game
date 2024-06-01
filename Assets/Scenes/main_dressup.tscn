@@ -1,6 +1,5 @@
-[gd_scene load_steps=68 format=3 uid="uid://datctv4lilhv1"]
+[gd_scene load_steps=71 format=3 uid="uid://datctv4lilhv1"]
 
-[ext_resource type="Script" path="res://Assets/Scenes/Globals.cs" id="1_nirnd"]
 [ext_resource type="Texture2D" uid="uid://cwuerq3acdchl" path="res://Assets/Art/Splash Art/background.png" id="2_di5s5"]
 [ext_resource type="Texture2D" uid="uid://2vwjc21e0fnr" path="res://Assets/Art/Characters/J.png" id="3_gbgc1"]
 [ext_resource type="Texture2D" uid="uid://d4jae7ec73a5q" path="res://Assets/Art/Characters/new_nakedbase_julus.png" id="4_nlub7"]
@@ -10,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://cpti8d3b080cg" path="res://Assets/Art/Clothes Menu/Selection Menu/OutlineFrame_1.png" id="9_35tt3"]
 [ext_resource type="Texture2D" uid="uid://tdkqa0sbknsd" path="res://Assets/Art/Splash Art/heart.png" id="9_cn02w"]
 [ext_resource type="Texture2D" uid="uid://bla4rx7ltjjsp" path="res://Assets/Art/Clothes Menu/Selection Menu/OutlineFrame_2.png" id="10_5f3ex"]
+[ext_resource type="Script" path="res://Assets/Scripts/MainGame/UI/MenuController.cs" id="15_vmklf"]
+[ext_resource type="Script" path="res://Assets/Scripts/Util/AnimateButton.cs" id="17_qyu6a"]
 [ext_resource type="Texture2D" uid="uid://do5wthfjucj0k" path="res://Assets/Art/Menu Bar/Frame/OutlineFrame_1.png" id="19_gbrv1"]
 [ext_resource type="Texture2D" uid="uid://dxyd148mt63jg" path="res://Assets/Art/Menu Bar/Frame/OutlineFrame_2.png" id="20_ud6j5"]
 [ext_resource type="Texture2D" uid="uid://dejqj6to00gjr" path="res://Assets/Art/Menu Bar/Cog/CogFrame_1.png" id="22_nuy8t"]
@@ -23,12 +24,13 @@
 [ext_resource type="Texture2D" uid="uid://na7mb7k7g4t2" path="res://Assets/Art/Clothes/Hats/top hat.png" id="28_4xvd2"]
 [ext_resource type="Texture2D" uid="uid://gbt64vlhe20h" path="res://Assets/Art/Menu Bar/Return/ReturnFrame_1.png" id="28_gsi1b"]
 [ext_resource type="Texture2D" uid="uid://bdm3c3bejj7ak" path="res://Assets/Art/Menu Bar/Return/ReturnFrame_2.png" id="29_1nrh2"]
+[ext_resource type="Script" path="res://Assets/Scripts/MainGame/UI/AnimateReturnButton.cs" id="32_cqbeu"]
 [ext_resource type="Texture2D" uid="uid://bujft8t40nnu3" path="res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-1 13.png" id="32_mwaay"]
 [ext_resource type="Texture2D" uid="uid://cl4bv106r7pry" path="res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-3 5.png" id="33_4dasf"]
+[ext_resource type="Script" path="res://Assets/Scripts/MainGame/UI/AnimateMenuButton.cs" id="33_d1kvk"]
 [ext_resource type="Texture2D" uid="uid://bngjpb31tlehb" path="res://Assets/Art/Clothes Menu/Selection Menu/HatFrame_1.png" id="34_jbwk2"]
 [ext_resource type="Texture2D" uid="uid://civh0otp52sej" path="res://Assets/Art/Clothes Menu/Selection Menu/HatFrame_2.png" id="35_6nwkt"]
 [ext_resource type="Texture2D" uid="uid://bkmw3gibo1xlq" path="res://Assets/Art/Clothes Menu/Selection Menu/ShoesFrame_1.png" id="36_b242a"]
-[ext_resource type="Script" path="res://Assets/Scripts/MainGame/UI/AnimateButton.cs" id="37_1cfus"]
 [ext_resource type="Texture2D" uid="uid://dy110b1iegju4" path="res://Assets/Art/Clothes Menu/Selection Menu/ShoesFrame_2.png" id="37_2n4cj"]
 [ext_resource type="Texture2D" uid="uid://b7bvc5yd8gcnv" path="res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-1 18.png" id="37_ssbm1"]
 [ext_resource type="Texture2D" uid="uid://c243ju6jut0sx" path="res://Assets/Art/Menu Bar/Open.png" id="37_xv45l"]
@@ -222,69 +224,40 @@ frame_0/texture = ExtResource("28_gsi1b")
 frame_1/texture = ExtResource("29_1nrh2")
 frame_1/duration = 1.0
 
-[sub_resource type="Animation" id="Animation_lwhr0"]
-resource_name = "menu_open"
-length = 1.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("OpenButton:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.1, 0.3, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(350.091, 186.435), Vector2(363.379, 186.435), Vector2(264.467, 186.435)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("OpenButton:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.1, 0.6),
-"transitions": PackedFloat32Array(-2, 1),
-"update": 0,
-"values": [0.0, 3.14159]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("MenuBody/ReturnButton:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.8, 1.4, 1.6),
-"transitions": PackedFloat32Array(-2, -2, 1),
-"update": 0,
-"values": [Vector2(20.3828, -55.1512), Vector2(20.383, 20.022), Vector2(20.3828, 16.2972)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0.4, 1.4, 1.5),
-"transitions": PackedFloat32Array(-2, 1, 1),
-"update": 0,
-"values": [Vector2(-340, 100), Vector2(37.1671, 100), Vector2(31.7719, 100)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../../Characters:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.4, 1.4, 1.5),
-"transitions": PackedFloat32Array(-2, 1, 1),
-"update": 0,
-"values": [Vector2(429.221, 330.907), Vector2(670.208, 330.907), Vector2(664.812, 330.907)]
-}
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_lwubn"]
+frames = 2
+speed_scale = 2.0
+frame_0/texture = ExtResource("32_mwaay")
+frame_1/texture = ExtResource("33_4dasf")
+frame_1/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_o0px6"]
+frames = 2
+speed_scale = 2.0
+frame_0/texture = ExtResource("34_jbwk2")
+frame_1/texture = ExtResource("35_6nwkt")
+frame_1/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_yl46r"]
+frames = 2
+speed_scale = 2.0
+frame_0/texture = ExtResource("36_b242a")
+frame_1/texture = ExtResource("37_2n4cj")
+frame_1/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_dlyvr"]
+frames = 2
+speed_scale = 2.0
+frame_0/texture = ExtResource("38_xai07")
+frame_1/texture = ExtResource("39_unris")
+frame_1/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_ffrpt"]
+frames = 2
+speed_scale = 2.0
+frame_0/texture = ExtResource("40_uqejs")
+frame_1/texture = ExtResource("41_jo4xn")
+frame_1/duration = 1.0
 
 [sub_resource type="Animation" id="Animation_ojmkv"]
 length = 0.001
@@ -339,61 +312,202 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../../Characters:position")
+tracks/4/path = NodePath("MenuBody/MenuClothes:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(429.221, 330.907)]
+"values": [Vector2(381.363, 53.3533)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MenuBody/StrictGridContainer:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(56.4507, 59.459)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../Characters:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../Characters/NakedbaseMatt:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1620.95, 1042.84)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../Characters/NakedbaseJulus:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(945.183, 1042.84)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../Characters/ItemLayer:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lwhr0"]
+resource_name = "menu_open"
+length = 1.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OpenButton:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(350.091, 186.435), Vector2(363.379, 186.435), Vector2(264.467, 186.435)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OpenButton:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.6),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [0.0, 3.14159]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MenuBody/ReturnButton:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8, 1.4, 1.6),
+"transitions": PackedFloat32Array(-2, -2, 1),
+"update": 0,
+"values": [Vector2(20.3828, -55.1512), Vector2(20.383, 20.022), Vector2(20.3828, 16.2972)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.4, 1.4, 1.5),
+"transitions": PackedFloat32Array(-2, 1, 1),
+"update": 0,
+"values": [Vector2(-340, 100), Vector2(37.1671, 100), Vector2(31.7719, 100)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../Characters/NakedbaseMatt:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.4, 1.4, 1.5),
+"transitions": PackedFloat32Array(-2, 1, 1),
+"update": 0,
+"values": [Vector2(1620.95, 1042.84), Vector2(2269.47, 1042.84), Vector2(2253.12, 1042.84)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../Characters/NakedbaseJulus:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.4, 1.4, 1.5),
+"transitions": PackedFloat32Array(-2, 1, 1),
+"update": 0,
+"values": [Vector2(945.183, 1042.84), Vector2(1593.7, 1042.84), Vector2(1577.35, 1042.84)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../Characters/ItemLayer:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.4, 1.4, 1.5),
+"transitions": PackedFloat32Array(-2, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(648.52, 0), Vector2(632.17, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4yfvj"]
+resource_name = "show_clothes"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MenuBody/MenuClothes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(381.363, 53.3533), Vector2(13.1884, 53.3533)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuBody/StrictGridContainer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Vector2(56.4507, 59.459), Vector2(-278.154, 59.459)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ykktq"]
 _data = {
 "RESET": SubResource("Animation_ojmkv"),
-"menu_open": SubResource("Animation_lwhr0")
+"menu_open": SubResource("Animation_lwhr0"),
+"show_clothes": SubResource("Animation_4yfvj")
 }
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_lwubn"]
-frames = 2
-speed_scale = 2.0
-frame_0/texture = ExtResource("32_mwaay")
-frame_1/texture = ExtResource("33_4dasf")
-frame_1/duration = 1.0
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_o0px6"]
-frames = 2
-speed_scale = 2.0
-frame_0/texture = ExtResource("34_jbwk2")
-frame_1/texture = ExtResource("35_6nwkt")
-frame_1/duration = 1.0
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_yl46r"]
-frames = 2
-speed_scale = 2.0
-frame_0/texture = ExtResource("36_b242a")
-frame_1/texture = ExtResource("37_2n4cj")
-frame_1/duration = 1.0
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_dlyvr"]
-frames = 2
-speed_scale = 2.0
-frame_0/texture = ExtResource("38_xai07")
-frame_1/texture = ExtResource("39_unris")
-frame_1/duration = 1.0
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_ffrpt"]
-frames = 2
-speed_scale = 2.0
-frame_0/texture = ExtResource("40_uqejs")
-frame_1/texture = ExtResource("41_jo4xn")
-frame_1/duration = 1.0
 
 [node name="DressUpScene" type="Node2D"]
 texture_filter = 1
 scale = Vector2(1.66814, 1.66814)
-script = ExtResource("1_nirnd")
 
 [node name="BackgroundNode" type="Node2D" parent="."]
 
@@ -551,8 +665,9 @@ offset_top = 100.0
 offset_right = 70.0
 offset_bottom = 555.0
 mouse_filter = 2
+script = ExtResource("15_vmklf")
 
-[node name="OpenButton" type="TextureButton" parent="NewUI/Menu" node_paths=PackedStringArray("AnimationPlayer")]
+[node name="OpenButton" type="TextureButton" parent="NewUI/Menu" node_paths=PackedStringArray("menuController", "AnimationPlayer")]
 layout_mode = 0
 offset_left = 350.091
 offset_top = 186.435
@@ -562,9 +677,10 @@ pivot_offset = Vector2(30, 30)
 texture_normal = SubResource("AnimatedTexture_ky0hd")
 ignore_texture_size = true
 stretch_mode = 5
-script = ExtResource("37_1cfus")
+script = ExtResource("17_qyu6a")
+menuController = NodePath("..")
 AnimationPlayer = NodePath("../MenuAnimations")
-Animation = &"menu_open"
+Animation = Array[StringName]([&"menu_open"])
 
 [node name="OpenTexture" type="TextureRect" parent="NewUI/Menu/OpenButton"]
 layout_mode = 0
@@ -588,20 +704,21 @@ texture = ExtResource("38_vmes8")
 expand_mode = 1
 
 [node name="MenuClothes" type="Control" parent="NewUI/Menu/MenuBody"]
-visible = false
 layout_mode = 3
 anchors_preset = 0
-offset_left = 13.1883
+offset_left = 381.363
 offset_top = 53.3533
-offset_right = 323.388
+offset_right = 691.563
 offset_bottom = 438.408
+mouse_filter = 2
 
 [node name="Dress container" type="Container" parent="NewUI/Menu/MenuBody/MenuClothes"]
+visible = false
 layout_mode = 2
 offset_left = 20.382
-offset_top = -26.3767
+offset_top = 12.6999
 offset_right = 280.382
-offset_bottom = 103.623
+offset_bottom = 142.7
 script = ExtResource("43_rxod3")
 Columns = 2
 CellSize = Vector2(130, 130)
@@ -632,11 +749,12 @@ ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 itemType = 3
 
 [node name="Shoes container" type="Container" parent="NewUI/Menu/MenuBody/MenuClothes"]
+visible = false
 layout_mode = 2
 offset_left = 20.382
-offset_top = -26.3767
+offset_top = 12.6999
 offset_right = 280.382
-offset_bottom = 103.623
+offset_bottom = 142.7
 script = ExtResource("43_rxod3")
 Columns = 2
 CellSize = Vector2(130, 130)
@@ -667,11 +785,12 @@ ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 itemType = 3
 
 [node name="Outfits container" type="Container" parent="NewUI/Menu/MenuBody/MenuClothes"]
+visible = false
 layout_mode = 2
 offset_left = 20.382
-offset_top = -26.3767
+offset_top = 12.6999
 offset_right = 280.382
-offset_bottom = 103.623
+offset_bottom = 142.7
 script = ExtResource("43_rxod3")
 Columns = 2
 CellSize = Vector2(130, 130)
@@ -702,11 +821,12 @@ ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 itemType = 3
 
 [node name="Headwear container" type="Container" parent="NewUI/Menu/MenuBody/MenuClothes"]
+visible = false
 layout_mode = 2
 offset_left = 20.382
-offset_top = -26.3767
+offset_top = 12.6999
 offset_right = 280.382
-offset_bottom = 233.623
+offset_bottom = 272.7
 script = ExtResource("43_rxod3")
 Columns = 2
 CellSize = Vector2(130, 130)
@@ -749,11 +869,12 @@ ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 itemType = 3
 
 [node name="Accessories container" type="Container" parent="NewUI/Menu/MenuBody/MenuClothes"]
+visible = false
 layout_mode = 2
 offset_left = 20.382
-offset_top = -26.3767
+offset_top = 12.6999
 offset_right = 280.382
-offset_bottom = 103.623
+offset_bottom = 142.7
 script = ExtResource("43_rxod3")
 Columns = 2
 CellSize = Vector2(130, 130)
@@ -783,19 +904,20 @@ FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 itemType = 3
 
-[node name="ReturnButton" type="TextureButton" parent="NewUI/Menu/MenuBody" node_paths=PackedStringArray("AnimationPlayer")]
+[node name="ReturnButton" type="TextureButton" parent="NewUI/Menu/MenuBody" node_paths=PackedStringArray("MenuBody", "menuController", "AnimationPlayer")]
 layout_mode = 0
 offset_left = 20.3828
 offset_top = -55.1512
-offset_right = 70.3753
+offset_right = 70.3739
 offset_bottom = -5.15118
 texture_normal = SubResource("AnimatedTexture_ky0hd")
 ignore_texture_size = true
 stretch_mode = 5
-script = ExtResource("37_1cfus")
+script = ExtResource("32_cqbeu")
+MenuBody = NodePath("../MenuClothes")
+menuController = NodePath("../..")
 AnimationPlayer = NodePath("../../MenuAnimations")
-Animation = &"menu_open"
-Reversed = true
+Animation = Array[StringName]([&"menu_open", &"show_clothes"])
 
 [node name="ReturnTexture" type="TextureRect" parent="NewUI/Menu/MenuBody/ReturnButton"]
 layout_mode = 0
@@ -808,38 +930,29 @@ texture = SubResource("AnimatedTexture_jtuke")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="MenuOutline" type="TextureRect" parent="NewUI/Menu"]
+[node name="StrictGridContainer" type="Container" parent="NewUI/Menu/MenuBody"]
 layout_mode = 0
-offset_right = 335.0
-offset_bottom = 455.0
-mouse_filter = 2
-texture = ExtResource("37_ssbm1")
-expand_mode = 1
-flip_h = true
-
-[node name="MenuAnimations" type="AnimationPlayer" parent="NewUI/Menu"]
-libraries = {
-"": SubResource("AnimationLibrary_ykktq")
-}
-
-[node name="StrictGridContainer" type="Container" parent="NewUI/Menu"]
-layout_mode = 0
-offset_left = 64.8432
-offset_top = 79.2415
-offset_right = 270.843
-offset_bottom = 381.242
+offset_left = 56.4507
+offset_top = 59.459
+offset_right = 262.451
+offset_bottom = 361.459
 script = ExtResource("43_rxod3")
 Columns = 2
 CellSize = Vector2(95, 90)
 CellSpacing = Vector2(16, 16)
 
-[node name="HatButton" type="TextureButton" parent="NewUI/Menu/StrictGridContainer"]
+[node name="HatButton" type="TextureButton" parent="NewUI/Menu/MenuBody/StrictGridContainer" node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_lwubn")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("33_d1kvk")
+Clothes = NodePath("../../MenuClothes/Headwear container")
+menuController = NodePath("../../..")
+AnimationPlayer = NodePath("../../../MenuAnimations")
+Animation = Array[StringName]([&"show_clothes"])
 
-[node name="OpenTexture" type="TextureRect" parent="NewUI/Menu/StrictGridContainer/HatButton"]
+[node name="OpenTexture" type="TextureRect" parent="NewUI/Menu/MenuBody/StrictGridContainer/HatButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -855,13 +968,18 @@ grow_vertical = 2
 texture = SubResource("AnimatedTexture_o0px6")
 stretch_mode = 5
 
-[node name="ShoesButton" type="TextureButton" parent="NewUI/Menu/StrictGridContainer"]
+[node name="ShoesButton" type="TextureButton" parent="NewUI/Menu/MenuBody/StrictGridContainer" node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_lwubn")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("33_d1kvk")
+Clothes = NodePath("../../MenuClothes/Shoes container")
+menuController = NodePath("../../..")
+AnimationPlayer = NodePath("../../../MenuAnimations")
+Animation = Array[StringName]([&"show_clothes"])
 
-[node name="OpenTexture" type="TextureRect" parent="NewUI/Menu/StrictGridContainer/ShoesButton"]
+[node name="OpenTexture" type="TextureRect" parent="NewUI/Menu/MenuBody/StrictGridContainer/ShoesButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -877,13 +995,18 @@ grow_vertical = 2
 texture = SubResource("AnimatedTexture_yl46r")
 stretch_mode = 5
 
-[node name="OutfitsButton" type="TextureButton" parent="NewUI/Menu/StrictGridContainer"]
+[node name="OutfitsButton" type="TextureButton" parent="NewUI/Menu/MenuBody/StrictGridContainer" node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_lwubn")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("33_d1kvk")
+Clothes = NodePath("../../MenuClothes/Outfits container")
+menuController = NodePath("../../..")
+AnimationPlayer = NodePath("../../../MenuAnimations")
+Animation = Array[StringName]([&"show_clothes"])
 
-[node name="OpenTexture" type="TextureRect" parent="NewUI/Menu/StrictGridContainer/OutfitsButton"]
+[node name="OpenTexture" type="TextureRect" parent="NewUI/Menu/MenuBody/StrictGridContainer/OutfitsButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -899,13 +1022,18 @@ grow_vertical = 2
 texture = SubResource("AnimatedTexture_dlyvr")
 stretch_mode = 5
 
-[node name="AccessoriesButton" type="TextureButton" parent="NewUI/Menu/StrictGridContainer"]
+[node name="AccessoriesButton" type="TextureButton" parent="NewUI/Menu/MenuBody/StrictGridContainer" node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_lwubn")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("33_d1kvk")
+Clothes = NodePath("../../MenuClothes/Accessories container")
+menuController = NodePath("../../..")
+AnimationPlayer = NodePath("../../../MenuAnimations")
+Animation = Array[StringName]([&"show_clothes"])
 
-[node name="OpenTexture" type="TextureRect" parent="NewUI/Menu/StrictGridContainer/AccessoriesButton"]
+[node name="OpenTexture" type="TextureRect" parent="NewUI/Menu/MenuBody/StrictGridContainer/AccessoriesButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -921,20 +1049,33 @@ grow_vertical = 2
 texture = SubResource("AnimatedTexture_ffrpt")
 stretch_mode = 5
 
-[node name="TextureButton5" type="TextureButton" parent="NewUI/Menu/StrictGridContainer"]
+[node name="TextureButton5" type="TextureButton" parent="NewUI/Menu/MenuBody/StrictGridContainer"]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_lwubn")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton6" type="TextureButton" parent="NewUI/Menu/StrictGridContainer"]
+[node name="TextureButton6" type="TextureButton" parent="NewUI/Menu/MenuBody/StrictGridContainer"]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_lwubn")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="MenuOutline" type="TextureRect" parent="NewUI/Menu"]
+layout_mode = 0
+offset_right = 335.0
+offset_bottom = 455.0
+mouse_filter = 2
+texture = ExtResource("37_ssbm1")
+expand_mode = 1
+flip_h = true
+
+[node name="MenuAnimations" type="AnimationPlayer" parent="NewUI/Menu"]
+libraries = {
+"": SubResource("AnimationLibrary_ykktq")
+}
 
 [node name="Characters" type="Node2D" parent="."]
-position = Vector2(429.221, 330.907)
 scale = Vector2(0.33, 0.33)
 
 [node name="J" type="Sprite2D" parent="Characters"]
@@ -947,11 +1088,11 @@ position = Vector2(1357.58, 9.09119)
 texture = ExtResource("4_nv3ic")
 
 [node name="NakedbaseJulus" type="Sprite2D" parent="Characters"]
-position = Vector2(-360.933, 9.09091)
+position = Vector2(945.183, 1042.84)
 texture = ExtResource("4_nlub7")
 
 [node name="NakedbaseMatt" type="Sprite2D" parent="Characters"]
-position = Vector2(366.337, 9.09094)
+position = Vector2(1620.95, 1042.84)
 texture = ExtResource("5_pdjoi")
 
 [node name="NakedbaseJulus2" type="Sprite2D" parent="Characters"]

@@ -1,6 +1,7 @@
 using Godot;
 using Godot.NativeInterop;
 using System;
+using System.Diagnostics;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 
@@ -14,12 +15,9 @@ public partial class ItemMover : Entity
 	private Vector2	TextureSize;
 	private bool grabbed;
 	
-	// Called when the node enters the scene tree for the first time.
-
 	public override void _EnterTree()
 	{
-		// FolderContainer = GetNode<Container>("/root/DressUpScene/ClothesControl/Menu Panel/Accessories");
-		// InteractableItemLayer = GetNode<Control>("/root/DressUpScene/ClothesControl/ItemControl");
+
 	}
 
 	public override void _Ready()
@@ -34,17 +32,46 @@ public partial class ItemMover : Entity
 	private void AttachAndMove()
 	{		
 		var menusize = Size;
+		
 		PosOffset = this.GetViewport().GetMousePosition() - this.GlobalPosition;
-
+		GD.Print(GlobalPosition);
 		if(GetParent() != ItemLayerNode)
 		{
-			this.Reparent(ItemLayerNode);
+			var menumidpoint = this.GlobalPosition + (this.Size/2);
+			var oldsize = Size;
+			Reparent(ItemLayerNode);
 			SetZIndex();
-			this.Size = TextureSize;
-			this.Position = new Vector2(Position.X - menusize.X, Position.Y - menusize.Y);
-			GlobalPosition = GetViewport().GetMousePosition() - PosOffset;
+			Size = TextureSize;
+
+			if(TextureSize *.33f < menusize)
+			{
+				GD.Print("smaller");
+				GD.Print(menumidpoint);
+				
+				var grabbedmidpoint = menumidpoint;
+				// DrawRect(new Rect2(menumidpoint,new Vector2(1,1)),Godot.Colors.Black, true);
+				SetGlobalPosition(grabbedmidpoint - (Size*.33f)/2);
+				GD.Print(GlobalPosition);
+			}
+
+			if(TextureSize *.33f > menusize)
+			{
+				GD.Print("bigger");
+				var grabbedmidpoint = menumidpoint - (Size*.33F)/2;
+				SetGlobalPosition(grabbedmidpoint);
+
+				// this.GlobalPosition += grabbedmidpoint - menumidpoint;
+			}
+
+			PosOffset = this.GetViewport().GetMousePosition() - this.GlobalPosition;
+			// Position = new Vector2(Position.X - TextureSize.X *.33f, Position.Y - TextureSize.X *.33f);
+
+			// PosOffset -= ((TextureSize * .33f));
+			// GD.Print(PosOffset);
+
+			// GlobalPosition = GetViewport().GetMousePosition() - PosOffset;
 			ToggleMode = true;
-			this.ButtonPressed = true;
+			ButtonPressed = true;
 			grabbed = true;
 			GD.Print(ButtonPressed);
 		}
