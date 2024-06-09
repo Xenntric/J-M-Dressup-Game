@@ -2,6 +2,7 @@ using Godot;
 using Godot.NativeInterop;
 using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 
@@ -37,39 +38,24 @@ public partial class ItemMover : Entity
 		GD.Print(GlobalPosition);
 		if(GetParent() != ItemLayerNode)
 		{
-			var menumidpoint = this.GlobalPosition + (this.Size/2);
-			var oldsize = Size;
-			Reparent(ItemLayerNode);
+			var menumidpoint = this.Position + Size/2;
 			SetZIndex();
-			Size = TextureSize;
-
 			if(TextureSize *.33f < menusize)
 			{
-				GD.Print("smaller");
-				GD.Print(menumidpoint);
-				
-				var grabbedmidpoint = menumidpoint;
-				// DrawRect(new Rect2(menumidpoint,new Vector2(1,1)),Godot.Colors.Black, true);
-				SetGlobalPosition(grabbedmidpoint - (Size*.33f)/2);
-				GD.Print(GlobalPosition);
+				GD.Print("Smaller");
+				Position = menumidpoint - TextureSize*.33f/2;	
 			}
-
-			if(TextureSize *.33f > menusize)
+			else
 			{
-				GD.Print("bigger");
-				var grabbedmidpoint = menumidpoint - (Size*.33F)/2;
-				SetGlobalPosition(grabbedmidpoint);
-
-				// this.GlobalPosition += grabbedmidpoint - menumidpoint;
+				GD.Print("Bigger");
+				Position = menumidpoint - TextureSize*.33f/2;		
 			}
+
+			SetSize(TextureSize);
+			Reparent(ItemLayerNode);
 
 			PosOffset = this.GetViewport().GetMousePosition() - this.GlobalPosition;
-			// Position = new Vector2(Position.X - TextureSize.X *.33f, Position.Y - TextureSize.X *.33f);
 
-			// PosOffset -= ((TextureSize * .33f));
-			// GD.Print(PosOffset);
-
-			// GlobalPosition = GetViewport().GetMousePosition() - PosOffset;
 			ToggleMode = true;
 			ButtonPressed = true;
 			grabbed = true;

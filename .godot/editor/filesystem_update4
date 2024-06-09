@@ -1,5 +1,4 @@
 res://Assets/Scenes/main_dressup.tscn
-res://Assets/Scripts/MainGame/UI/PopulateItems.cs
 res://Assets/Scenes/splash_scene.tscn
 res://addons/strict_grid_container/StrictGridContainer.cs
 res://Assets/Scripts/Util/AnimateButton.cs
@@ -11,4 +10,5 @@ res://addons/strict_grid_container/StrictGrid.cs
 res://Assets/Scripts/MainGame/UI/AnimateReturnButton.cs
 res://Assets/Scripts/MainGame/UI/AnimateMenuButton.cs
 res://Assets/Scripts/MainGame/UI/ItemMover.cs
+res://Assets/Scripts/MainGame/UI/PopulateItems.cs
 res://Assets/Scripts/MainGame/UI/Entity.cs

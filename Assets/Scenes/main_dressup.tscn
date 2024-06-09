@@ -507,7 +507,7 @@ _data = {
 
 [node name="DressUpScene" type="Node2D"]
 texture_filter = 1
-scale = Vector2(1.66814, 1.66814)
+scale = Vector2(1.65, 1.65)
 
 [node name="BackgroundNode" type="Node2D" parent="."]
 
@@ -770,7 +770,6 @@ stretch_mode = 5
 script = ExtResource("44_r1jw6")
 FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
-itemType = 3
 
 [node name="M_Shoes" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Shoes container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
 layout_mode = 2
@@ -782,7 +781,6 @@ stretch_mode = 5
 script = ExtResource("44_r1jw6")
 FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
-itemType = 3
 
 [node name="Outfits container" type="Container" parent="NewUI/Menu/MenuBody/MenuClothes"]
 visible = false
@@ -806,7 +804,7 @@ stretch_mode = 5
 script = ExtResource("44_r1jw6")
 FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
-itemType = 3
+itemType = 4
 
 [node name="M_Outfit" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Outfits container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
 layout_mode = 2
@@ -818,7 +816,7 @@ stretch_mode = 5
 script = ExtResource("44_r1jw6")
 FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
-itemType = 3
+itemType = 4
 
 [node name="Headwear container" type="Container" parent="NewUI/Menu/MenuBody/MenuClothes"]
 visible = false
@@ -842,7 +840,7 @@ stretch_mode = 5
 script = ExtResource("44_r1jw6")
 FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
-itemType = 3
+itemType = 6
 
 [node name="M_Hair" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
 layout_mode = 2
@@ -854,7 +852,7 @@ stretch_mode = 5
 script = ExtResource("44_r1jw6")
 FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
-itemType = 3
+itemType = 6
 
 [node name="M_Hat1" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
 layout_mode = 2
@@ -866,7 +864,7 @@ stretch_mode = 5
 script = ExtResource("44_r1jw6")
 FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
-itemType = 3
+itemType = 6
 
 [node name="Accessories container" type="Container" parent="NewUI/Menu/MenuBody/MenuClothes"]
 visible = false
@@ -902,7 +900,7 @@ stretch_mode = 5
 script = ExtResource("44_r1jw6")
 FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
-itemType = 3
+itemType = 8
 
 [node name="ReturnButton" type="TextureButton" parent="NewUI/Menu/MenuBody" node_paths=PackedStringArray("MenuBody", "menuController", "AnimationPlayer")]
 layout_mode = 0
