@@ -2,50 +2,52 @@ using System;
 using Godot;
 using Godot.Collections;
 
-public partial class AnimateReturnButton : AnimateButton
+namespace DressupUI
 {
-	[Export] public Control MenuBody;
-
-    public override void _Ready()
-    {
-        base._Ready();
-    }
-    public override void CallAnimation(StringName animation)
+	public partial class AnimateReturnButton : Utils.AnimateButton
 	{
-		if(AnimationPlayer.IsPlaying())
+		[Export] public Control MenuBody;
+
+		public override void _Ready()
 		{
-			return;
+			base._Ready();
 		}
-		switch(menuController.MenuDepth)
+		public override void CallAnimation(StringName animation)
 		{
-			case MenuController.MenuDepthEnum.main:
+			if(AnimationPlayer.IsPlaying())
 			{
-				AnimationPlayer.PlayBackwards(Animation[0]);
-				break;
-			};
-			case MenuController.MenuDepthEnum.clothes:
-			{
-				AnimationPlayer.AnimationFinished += HideClothes;
-				AnimationPlayer.PlayBackwards(Animation[1]);
-				break;
+				return;
 			}
+			switch(menuController.MenuDepth)
+			{
+				case MenuController.MenuDepthEnum.main:
+				{
+					AnimationPlayer.PlayBackwards(Animation[0]);
+					break;
+				};
+				case MenuController.MenuDepthEnum.clothes:
+				{
+					AnimationPlayer.AnimationFinished += HideClothes;
+					AnimationPlayer.PlayBackwards(Animation[1]);
+					break;
+				}
+			}
+			
 		}
 		
-	}
-	
-	private void HideClothes(StringName animName)
-    {
-		GD.Print("Hide");
-		if(animName == Animation[1])
+		private void HideClothes(StringName animName)
 		{
-			foreach (StrictGrid child in MenuBody.GetChildren())
+			GD.Print("Hide");
+			if(animName == Animation[1])
 			{
-				child.Visible = false;
+				foreach (StrictGrid child in MenuBody.GetChildren())
+				{
+					child.Visible = false;
+				}
+				menuController.MenuDepth = MenuController.MenuDepthEnum.main;
+				AnimationPlayer.AnimationFinished -= HideClothes;
+
 			}
-			menuController.MenuDepth = MenuController.MenuDepthEnum.main;
-			AnimationPlayer.AnimationFinished -= HideClothes;
-
 		}
-    }
+	}
 }
-

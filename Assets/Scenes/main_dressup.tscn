@@ -1091,6 +1091,33 @@ texture = ExtResource("4_nv3ic")
 position = Vector2(945.183, 1042.84)
 texture = ExtResource("4_nlub7")
 
+[node name="OutfitArea2D" type="Area2D" parent="Characters/NakedbaseJulus"]
+position = Vector2(127.361, -58.4506)
+scale = Vector2(1, 1)
+
+[node name="OutfitCollisionPolygon2D" type="CollisionPolygon2D" parent="Characters/NakedbaseJulus/OutfitArea2D"]
+position = Vector2(29.3847, -73.4619)
+scale = Vector2(1.15, 1.15)
+polygon = PackedVector2Array(-352.617, -279.155, 0, -367.31, 191.001, -161.616, 235.078, 191.001, 14.6924, 631.772, -426.079, 617.08, -499.541, 396.694, -337.925, 235.078, -411.387, 73.4619)
+
+[node name="HairArea2D2" type="Area2D" parent="Characters/NakedbaseJulus"]
+position = Vector2(127.361, -58.4506)
+scale = Vector2(1, 1)
+
+[node name="HairCollisionPolygon2D2" type="CollisionPolygon2D" parent="Characters/NakedbaseJulus/HairArea2D2"]
+position = Vector2(29.3847, 132.231)
+scale = Vector2(1.4468, 1.4468)
+polygon = PackedVector2Array(-220.386, -396.694, -146.924, -499.541, 44.0771, -499.541, 117.539, -382.002, 117.539, -205.693, 29.3848, -161.616, -117.539, -161.616, -205.693, -220.386)
+
+[node name="AccessoryArea2D2" type="Area2D" parent="Characters/NakedbaseJulus"]
+position = Vector2(127.361, -58.4506)
+scale = Vector2(1, 1)
+
+[node name="AccessoryCollisionPolygon2D3" type="CollisionPolygon2D" parent="Characters/NakedbaseJulus/AccessoryArea2D2"]
+position = Vector2(176.309, 690.542)
+scale = Vector2(1.60197, 1.60197)
+polygon = PackedVector2Array(-431.057, -458.571, -476.914, -586.971, -366.857, -761.228, -18.343, -752.057, 18.3428, -495.257, -155.914, -385.2)
+
 [node name="NakedbaseMatt" type="Sprite2D" parent="Characters"]
 position = Vector2(1620.95, 1042.84)
 texture = ExtResource("5_pdjoi")

@@ -133,7 +133,6 @@ public partial class StrictGrid : Container
         {
             if(item is ScrollBar)
             {
-                //scrollBar = item as ScrollBar;
                 break;
             }
 

@@ -4,44 +4,47 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
-public partial class FolderSelect : Control
+namespace DressupUI
 {
-	[Export] public Control FolderParent;
-	private List<Container> folders;
-	private Callable clicked;
-	
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
+	public partial class FolderSelect : Control
 	{
-		ProcessPriority = 1;
-		GD.Print("Folder Select");
-		folders = new List<Container>();
-
-		foreach (var child in FolderParent.GetChildren())
+		[Export] public Control FolderParent;
+		private List<Container> folders;
+		private Callable clicked;
+		
+		// Called when the node enters the scene tree for the first time.
+		public override void _Ready()
 		{
-			folders.Add(child as Container);
-		}
+			ProcessPriority = 1;
+			GD.Print("Folder Select");
+			folders = new List<Container>();
 
-		foreach (TextureButton child in GetChildren().Cast<TextureButton>())
-		{
-			GD.Print("Binding event for " + child.Name);
-
-			child.Pressed += () => PressedButton(child);
-		}
-	}
-
-	private void PressedButton(TextureButton button)
-	{
-		GD.Print("pressed " + button.Name);
-		foreach (var item in folders)
-		{
-			if(item.Name != button.Name)
+			foreach (var child in FolderParent.GetChildren())
 			{
-				item.Visible = false;
+				folders.Add(child as Container);
 			}
-			else
+
+			foreach (TextureButton child in GetChildren().Cast<TextureButton>())
 			{
-				item.Visible = true;
+				GD.Print("Binding event for " + child.Name);
+
+				child.Pressed += () => PressedButton(child);
+			}
+		}
+
+		private void PressedButton(TextureButton button)
+		{
+			GD.Print("pressed " + button.Name);
+			foreach (var item in folders)
+			{
+				if(item.Name != button.Name)
+				{
+					item.Visible = false;
+				}
+				else
+				{
+					item.Visible = true;
+				}
 			}
 		}
 	}

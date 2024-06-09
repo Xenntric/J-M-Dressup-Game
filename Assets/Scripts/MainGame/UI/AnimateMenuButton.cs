@@ -1,18 +1,21 @@
 using Godot;
 using Godot.Collections;
 
-public partial class AnimateMenuButton : AnimateButton
+namespace DressupUI
 {
-	[Export] public StrictGrid Clothes;
-	
-	public override void CallAnimation(StringName animation)
+	public partial class AnimateMenuButton : Utils.AnimateButton
 	{
-		if(AnimationPlayer.IsPlaying())
+		[Export] public StrictGrid Clothes;
+		
+		public override void CallAnimation(StringName animation)
 		{
-			return;
+			if(AnimationPlayer.IsPlaying())
+			{
+				return;
+			}
+			this.AnimationPlayer.Play(animation);
+			Clothes.Visible = true;
+			menuController.MenuDepth = MenuController.MenuDepthEnum.clothes;
 		}
-		this.AnimationPlayer.Play(animation);
-		Clothes.Visible = true;
-		menuController.MenuDepth = MenuController.MenuDepthEnum.clothes;
 	}
 }
