@@ -117,14 +117,13 @@ public partial class PopulateItems : TextureRect
             Size = new Vector2(100,100),
         };
         
-        item = Utils.AttachScript<TextureButton>(item, "Assets/Scripts/MainGame/UI/ItemMover.cs");
+        item = Utils.Scripts.AttachScript<TextureButton>(item, "Assets/Scripts/MainGame/UI/ItemMover.cs");
 
         item.ButtonPressed = true;
 
         this.AddChild(item);
         item.ZIndex = 1;
         item.GlobalPosition = textureButton.GlobalPosition;
-        //item.Scale = textureButton.GetGlobalTransform().Scale;
     }
 }
 

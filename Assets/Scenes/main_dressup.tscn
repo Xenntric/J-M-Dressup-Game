@@ -840,6 +840,7 @@ stretch_mode = 5
 script = ExtResource("44_r1jw6")
 FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
+magnetPosition = Vector2(896.201, 510.049)
 itemType = 6
 
 [node name="M_Hair" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
@@ -852,6 +853,7 @@ stretch_mode = 5
 script = ExtResource("44_r1jw6")
 FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
+magnetPosition = Vector2(1334.77, 543.385)
 itemType = 6
 
 [node name="M_Hat1" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]

@@ -15,11 +15,6 @@ public partial class Entity : TextureButton
         Accessory,
     };
     [Export] ItemType itemType;
-
-    public override void _EnterTree()
-    {
-        base._EnterTree();
-    }
     public void SetZIndex()
     {
         ZIndex = (int)itemType;
@@ -38,9 +33,11 @@ public partial class Entity : TextureButton
             ActionMode = ActionModeEnum.Press,
             MouseFilter = MouseFilterEnum.Pass,
         };
-        newItem = Utils.AttachScript(newItem, "Assets/Scripts/MainGame/UI/ItemMover.cs");
+        newItem = Utils.Scripts.AttachScript(newItem, "Assets/Scripts/MainGame/UI/ItemMover.cs");
         return newItem;
     }
+
+
 
     public void setNewSize(){
         this.Size = this.TextureNormal.GetSize();
