@@ -1,7 +1,9 @@
-[gd_scene load_steps=71 format=3 uid="uid://datctv4lilhv1"]
+[gd_scene load_steps=81 format=3 uid="uid://datctv4lilhv1"]
 
+[ext_resource type="Script" path="res://Assets/Scripts/MainGame/Globals.cs" id="1_djp2r"]
 [ext_resource type="Texture2D" uid="uid://cwuerq3acdchl" path="res://Assets/Art/Splash Art/background.png" id="2_di5s5"]
 [ext_resource type="Texture2D" uid="uid://2vwjc21e0fnr" path="res://Assets/Art/Characters/J.png" id="3_gbgc1"]
+[ext_resource type="Script" path="res://Assets/Scripts/MainGame/OptionsMenu.cs" id="4_5bos3"]
 [ext_resource type="Texture2D" uid="uid://d4jae7ec73a5q" path="res://Assets/Art/Characters/new_nakedbase_julus.png" id="4_nlub7"]
 [ext_resource type="Texture2D" uid="uid://dsvrwlfhok34x" path="res://Assets/Art/Characters/M.png" id="4_nv3ic"]
 [ext_resource type="Texture2D" uid="uid://cphwxycvk46ae" path="res://Assets/Art/Characters/new_nakedbase_matt.png" id="5_pdjoi"]
@@ -9,8 +11,13 @@
 [ext_resource type="Texture2D" uid="uid://cpti8d3b080cg" path="res://Assets/Art/Clothes Menu/Selection Menu/OutlineFrame_1.png" id="9_35tt3"]
 [ext_resource type="Texture2D" uid="uid://tdkqa0sbknsd" path="res://Assets/Art/Splash Art/heart.png" id="9_cn02w"]
 [ext_resource type="Texture2D" uid="uid://bla4rx7ltjjsp" path="res://Assets/Art/Clothes Menu/Selection Menu/OutlineFrame_2.png" id="10_5f3ex"]
+[ext_resource type="Texture2D" uid="uid://bc0n2mdemknji" path="res://Assets/Art/Menu Bar/Magnet/Untitled_Artwork-1 20.png" id="10_tsvbr"]
+[ext_resource type="Script" path="res://Assets/Scripts/MainGame/UI/MagnetiseScript.cs" id="11_14mak"]
+[ext_resource type="Texture2D" uid="uid://cxv7lwocay74i" path="res://Assets/Art/Menu Bar/Magnet/Untitled_Artwork-2 16.png" id="11_vrvpe"]
+[ext_resource type="Texture2D" uid="uid://b5xfunliqvok6" path="res://Assets/Art/Menu Bar/Disabled/DisabledFrame_1.png" id="12_xc7jf"]
+[ext_resource type="Texture2D" uid="uid://2ro5x5u62q6c" path="res://Assets/Art/Menu Bar/Disabled/DisabledFrame_2.png" id="13_63wt5"]
 [ext_resource type="Script" path="res://Assets/Scripts/MainGame/UI/MenuController.cs" id="15_vmklf"]
-[ext_resource type="Script" path="res://Assets/Scripts/Util/AnimateButton.cs" id="17_qyu6a"]
+[ext_resource type="Script" path="res://Assets/Scripts/Util/CallAnimateButton.cs" id="17_qyu6a"]
 [ext_resource type="Texture2D" uid="uid://do5wthfjucj0k" path="res://Assets/Art/Menu Bar/Frame/OutlineFrame_1.png" id="19_gbrv1"]
 [ext_resource type="Texture2D" uid="uid://dxyd148mt63jg" path="res://Assets/Art/Menu Bar/Frame/OutlineFrame_2.png" id="20_ud6j5"]
 [ext_resource type="Texture2D" uid="uid://dejqj6to00gjr" path="res://Assets/Art/Menu Bar/Cog/CogFrame_1.png" id="22_nuy8t"]
@@ -43,46 +50,11 @@
 [ext_resource type="Script" path="res://addons/strict_grid_container/StrictGrid.cs" id="43_rxod3"]
 [ext_resource type="Texture2D" uid="uid://g6moga5mby4b" path="res://Assets/Art/Clothes/Costumes/dress_2_julus.png" id="44_furvj"]
 [ext_resource type="Texture2D" uid="uid://bwgs0mobinjhx" path="res://Assets/Art/Clothes/Dress/dress_1_julus.png" id="44_nt3x5"]
-[ext_resource type="Script" path="res://Assets/Scripts/MainGame/UI/ItemMover.cs" id="44_r1jw6"]
+[ext_resource type="Script" path="res://Assets/Scripts/MainGame/ItemMover.cs" id="44_r1jw6"]
 [ext_resource type="Texture2D" uid="uid://b8rnbpbrys62j" path="res://Assets/Art/Clothes/Accessories/hand_1_matt.png" id="45_6qi3o"]
 [ext_resource type="Texture2D" uid="uid://x264qsmsdac8" path="res://Assets/Art/Clothes/Dress/dress_1_matt.png" id="45_jvmv4"]
 [ext_resource type="Texture2D" uid="uid://b6bni5y2buylb" path="res://Assets/Art/Clothes/Accessories/hand_1_julus.png" id="46_4pi6x"]
-
-[sub_resource type="Animation" id="Animation_8r3oa"]
-resource_name = "Play_Animation"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.65),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-24, 47.9999), Vector2(-24, 748.139)]
-}
-
-[sub_resource type="Animation" id="Animation_1m2oe"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-24, 47.9999)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_nfu2l"]
-_data = {
-"Play_Animation": SubResource("Animation_8r3oa"),
-"RESET": SubResource("Animation_1m2oe")
-}
+[ext_resource type="Script" path="res://Assets/Scripts/MainGame/Magnetism.cs" id="52_w7ajx"]
 
 [sub_resource type="Animation" id="Animation_yj85j"]
 length = 0.001
@@ -121,6 +93,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(440.183, 15.2099)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Options Menu/Magnetise Button:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(144.515, 233.089)]
 }
 
 [sub_resource type="Animation" id="Animation_pgx5d"]
@@ -163,6 +147,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector2(447.635, 37.5666), Vector2(440.183, 15.2099), Vector2(447.635, 37.5666), Vector2(440.183, 15.2099), Vector2(447.635, 37.5666)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Options Menu/Magnetise Button:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(-0.2, 0.1, 2.2, 6.2, 10.9, 15.1),
+"transitions": PackedFloat32Array(1, -2, -2, -2, -2, -2),
+"update": 0,
+"values": [Vector2(134.156, 230.263), Vector2(132.9, 229.635), Vector2(119.087, 222.729), Vector2(152.991, 243.448), Vector2(115.32, 215.195), Vector2(144.515, 233.089)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_33ahl"]
 _data = {
@@ -189,6 +185,20 @@ frames = 2
 speed_scale = 4.0
 frame_0/texture = ExtResource("24_vqeak")
 frame_1/texture = ExtResource("25_e0yl6")
+frame_1/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_mgifu"]
+frames = 2
+speed_scale = 4.0
+frame_0/texture = ExtResource("10_tsvbr")
+frame_1/texture = ExtResource("11_vrvpe")
+frame_1/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_u5oh7"]
+frames = 2
+speed_scale = 4.0
+frame_0/texture = ExtResource("12_xc7jf")
+frame_1/texture = ExtResource("13_63wt5")
 frame_1/duration = 1.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_uwno0"]
@@ -324,14 +334,14 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("MenuBody/StrictGridContainer:position")
+tracks/5/path = NodePath("MenuBody/MenuClothesButtons:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(56.4507, 59.459)]
+"values": [Vector2(56, 75)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -483,19 +493,19 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(-2, 1),
 "update": 0,
-"values": [Vector2(381.363, 53.3533), Vector2(13.1884, 53.3533)]
+"values": [Vector2(381.363, 53.3533), Vector2(35, 53.353)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("MenuBody/StrictGridContainer:position")
+tracks/1/path = NodePath("MenuBody/MenuClothesButtons:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(-2, 1),
 "update": 0,
-"values": [Vector2(56.4507, 59.459), Vector2(-278.154, 59.459)]
+"values": [Vector2(56, 75), Vector2(-278.154, 75)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ykktq"]
@@ -505,9 +515,46 @@ _data = {
 "show_clothes": SubResource("Animation_4yfvj")
 }
 
+[sub_resource type="Animation" id="Animation_8r3oa"]
+resource_name = "Play_Animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.65),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-24, 47.9999), Vector2(-24, 748.139)]
+}
+
+[sub_resource type="Animation" id="Animation_1m2oe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-24, 47.9999)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nfu2l"]
+_data = {
+"Play_Animation": SubResource("Animation_8r3oa"),
+"RESET": SubResource("Animation_1m2oe")
+}
+
 [node name="DressUpScene" type="Node2D"]
 texture_filter = 1
 scale = Vector2(1.65, 1.65)
+script = ExtResource("1_djp2r")
 
 [node name="BackgroundNode" type="Node2D" parent="."]
 
@@ -516,43 +563,6 @@ modulate = Color(0.411765, 0.223529, 0.647059, 1)
 position = Vector2(585.083, 330.907)
 scale = Vector2(1168, 664)
 texture = ExtResource("2_di5s5")
-
-[node name="PlayTransition" type="Node2D" parent="."]
-visible = false
-position = Vector2(-24, 47.9999)
-scale = Vector2(1.33754, 1.14983)
-
-[node name="HeartCurtainBacker" type="Sprite2D" parent="PlayTransition"]
-modulate = Color(0.356863, 0, 0.552941, 1)
-position = Vector2(446.996, 240.036)
-scale = Vector2(924.271, 577.477)
-texture = ExtResource("2_di5s5")
-
-[node name="HeartCurtainBackground" type="NinePatchRect" parent="PlayTransition"]
-modulate = Color(1, 0, 1, 1)
-offset_left = -12.0
-offset_top = -49.0
-offset_right = 668.0
-offset_bottom = 459.0
-scale = Vector2(1.33754, 1.14983)
-texture = ExtResource("9_cn02w")
-axis_stretch_horizontal = 2
-axis_stretch_vertical = 2
-
-[node name="HeartCurtainForeground" type="NinePatchRect" parent="PlayTransition"]
-offset_top = -42.0
-offset_right = 679.0
-offset_bottom = 466.0
-scale = Vector2(1.33754, 1.14983)
-texture = ExtResource("9_cn02w")
-axis_stretch_horizontal = 2
-axis_stretch_vertical = 2
-
-[node name="EnterTransition" type="AnimationPlayer" parent="PlayTransition"]
-libraries = {
-"": SubResource("AnimationLibrary_nfu2l")
-}
-autoplay = "Play_Animation"
 
 [node name="NewUI" type="Control" parent="."]
 layout_mode = 3
@@ -590,7 +600,7 @@ libraries = {
 }
 autoplay = "spin"
 
-[node name="Options Menu" type="Control" parent="NewUI"]
+[node name="Options Menu" type="Control" parent="NewUI" node_paths=PackedStringArray("Buttons")]
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
@@ -599,6 +609,8 @@ offset_top = 230.0
 offset_right = 1363.0
 offset_bottom = 886.0
 scale = Vector2(0.643532, 0.643532)
+script = ExtResource("4_5bos3")
+Buttons = [NodePath("Settings Button"), NodePath("Home Button"), NodePath("Magnetise Button"), NodePath("Return Button"), NodePath("Sound Button")]
 
 [node name="Settings Button" type="TextureButton" parent="NewUI/Options Menu"]
 layout_mode = 2
@@ -619,7 +631,7 @@ layout_mode = 2
 offset_left = 276.233
 offset_top = 89.7323
 offset_right = 376.233
-offset_bottom = 189.745
+offset_bottom = 189.744
 texture_normal = SubResource("AnimatedTexture_7j1f8")
 
 [node name="TextureRect" type="TextureRect" parent="NewUI/Options Menu/Home Button"]
@@ -628,8 +640,46 @@ offset_right = 1.0
 offset_bottom = 1.0
 texture = SubResource("AnimatedTexture_edvgv")
 
+[node name="Magnetise Button" type="TextureButton" parent="NewUI/Options Menu"]
+layout_mode = 2
+offset_left = 144.515
+offset_top = 233.089
+offset_right = 244.516
+offset_bottom = 333.102
+grow_horizontal = 2
+grow_vertical = 2
+keep_pressed_outside = true
+texture_normal = SubResource("AnimatedTexture_7j1f8")
+script = ExtResource("11_14mak")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="NewUI/Options Menu/Magnetise Button"]
+layout_mode = 0
+offset_left = 2.82532
+offset_top = 0.941772
+offset_right = 99.8253
+offset_bottom = 94.9418
+texture = SubResource("AnimatedTexture_mgifu")
+stretch_mode = 2
+
+[node name="DisabledTextureRect" type="TextureRect" parent="NewUI/Options Menu/Magnetise Button"]
+modulate = Color(0.94, 0.94, 0.94, 0.737255)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 50)
+texture = SubResource("AnimatedTexture_u5oh7")
+
 [node name="Return Button" type="TextureButton" parent="NewUI/Options Menu"]
-visible = false
 layout_mode = 2
 offset_left = 37.7612
 offset_top = 543.026
@@ -673,7 +723,7 @@ offset_left = 350.091
 offset_top = 186.435
 offset_right = 410.091
 offset_bottom = 246.435
-pivot_offset = Vector2(30, 30)
+pivot_offset = Vector2(0.212033, 0.231689)
 texture_normal = SubResource("AnimatedTexture_ky0hd")
 ignore_texture_size = true
 stretch_mode = 5
@@ -715,19 +765,19 @@ mouse_filter = 2
 [node name="Dress container" type="Container" parent="NewUI/Menu/MenuBody/MenuClothes"]
 visible = false
 layout_mode = 2
-offset_left = 20.382
-offset_top = 12.6999
-offset_right = 280.382
-offset_bottom = 142.7
+offset_right = 260.0
+offset_bottom = 130.0
+pivot_offset = Vector2(130, 65)
 script = ExtResource("43_rxod3")
 Columns = 2
 CellSize = Vector2(130, 130)
 RatioCellSize = true
 
-[node name="J_Dress" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Dress container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+[node name="J_Dress_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Dress container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 1
 texture_normal = ExtResource("44_nt3x5")
 ignore_texture_size = true
 stretch_mode = 5
@@ -736,10 +786,11 @@ FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 itemType = 3
 
-[node name="M_Dress" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Dress container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+[node name="M_Dress_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Dress container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 1
 texture_normal = ExtResource("45_jvmv4")
 ignore_texture_size = true
 stretch_mode = 5
@@ -751,19 +802,19 @@ itemType = 3
 [node name="Shoes container" type="Container" parent="NewUI/Menu/MenuBody/MenuClothes"]
 visible = false
 layout_mode = 2
-offset_left = 20.382
-offset_top = 12.6999
-offset_right = 280.382
-offset_bottom = 142.7
+offset_right = 260.0
+offset_bottom = 130.0
+pivot_offset = Vector2(130, 65)
 script = ExtResource("43_rxod3")
 Columns = 2
 CellSize = Vector2(130, 130)
 RatioCellSize = true
 
-[node name="J_Shoes" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Shoes container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+[node name="J_Shoes_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Shoes container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 1
 texture_normal = ExtResource("44_nt3x5")
 ignore_texture_size = true
 stretch_mode = 5
@@ -771,10 +822,11 @@ script = ExtResource("44_r1jw6")
 FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
-[node name="M_Shoes" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Shoes container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+[node name="M_Shoes_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Shoes container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 1
 texture_normal = ExtResource("45_jvmv4")
 ignore_texture_size = true
 stretch_mode = 5
@@ -785,55 +837,58 @@ ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 [node name="Outfits container" type="Container" parent="NewUI/Menu/MenuBody/MenuClothes"]
 visible = false
 layout_mode = 2
-offset_left = 20.382
-offset_top = 12.6999
-offset_right = 280.382
-offset_bottom = 142.7
+offset_right = 260.0
+offset_bottom = 130.0
+pivot_offset = Vector2(130, 65)
 script = ExtResource("43_rxod3")
 Columns = 2
 CellSize = Vector2(130, 130)
 RatioCellSize = true
 
-[node name="J_Outfit" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Outfits container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+[node name="J_Outfit_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Outfits container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 1
 texture_normal = ExtResource("44_furvj")
 ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("44_r1jw6")
 FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
+magnetPosition = Vector2(652.831, 735.237)
 itemType = 4
 
-[node name="M_Outfit" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Outfits container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+[node name="M_Outfit_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Outfits container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 1
 texture_normal = ExtResource("25_5hiy5")
 ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("44_r1jw6")
 FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
+magnetPosition = Vector2(1405.23, 704.227)
 itemType = 4
 
 [node name="Headwear container" type="Container" parent="NewUI/Menu/MenuBody/MenuClothes"]
 visible = false
 layout_mode = 2
-offset_left = 20.382
-offset_top = 12.6999
-offset_right = 280.382
-offset_bottom = 272.7
+offset_right = 260.0
+offset_bottom = 260.0
+pivot_offset = Vector2(130, 130)
 script = ExtResource("43_rxod3")
 Columns = 2
 CellSize = Vector2(130, 130)
 RatioCellSize = true
 
-[node name="J_Hair" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+[node name="J_Hair_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 1
 texture_normal = ExtResource("7_7252p")
 ignore_texture_size = true
 stretch_mode = 5
@@ -843,10 +898,11 @@ ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 magnetPosition = Vector2(896.201, 510.049)
 itemType = 6
 
-[node name="M_Hair" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+[node name="M_Hair_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 1
 texture_normal = ExtResource("27_ykmbf")
 ignore_texture_size = true
 stretch_mode = 5
@@ -856,10 +912,11 @@ ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 magnetPosition = Vector2(1334.77, 543.385)
 itemType = 6
 
-[node name="M_Hat1" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+[node name="Top_Hat" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 1
 texture_normal = ExtResource("28_4xvd2")
 ignore_texture_size = true
 stretch_mode = 5
@@ -871,38 +928,39 @@ itemType = 6
 [node name="Accessories container" type="Container" parent="NewUI/Menu/MenuBody/MenuClothes"]
 visible = false
 layout_mode = 2
-offset_left = 20.382
-offset_top = 12.6999
-offset_right = 280.382
-offset_bottom = 142.7
+offset_right = 260.0
+offset_bottom = 130.0
+pivot_offset = Vector2(130, 65)
 script = ExtResource("43_rxod3")
 Columns = 2
 CellSize = Vector2(130, 130)
 RatioCellSize = true
 
-[node name="J_Smoke" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Accessories container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+[node name="J_Smoke_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Accessories container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 1
 texture_normal = ExtResource("46_4pi6x")
 ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("44_r1jw6")
 FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
-itemType = 8
+itemType = 7
 
-[node name="M_Smoke" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Accessories container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+[node name="M_Smoke_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Accessories container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 1
 texture_normal = ExtResource("45_6qi3o")
 ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("44_r1jw6")
 FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
-itemType = 8
+itemType = 7
 
 [node name="ReturnButton" type="TextureButton" parent="NewUI/Menu/MenuBody" node_paths=PackedStringArray("MenuBody", "menuController", "AnimationPlayer")]
 layout_mode = 0
@@ -930,18 +988,19 @@ texture = SubResource("AnimatedTexture_jtuke")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="StrictGridContainer" type="Container" parent="NewUI/Menu/MenuBody"]
+[node name="MenuClothesButtons" type="Container" parent="NewUI/Menu/MenuBody"]
 layout_mode = 0
-offset_left = 56.4507
-offset_top = 59.459
-offset_right = 262.451
-offset_bottom = 361.459
+offset_left = 56.0
+offset_top = 75.0
+offset_right = 262.0
+offset_bottom = 377.0
+pivot_offset = Vector2(103, 151)
 script = ExtResource("43_rxod3")
 Columns = 2
 CellSize = Vector2(95, 90)
 CellSpacing = Vector2(16, 16)
 
-[node name="HatButton" type="TextureButton" parent="NewUI/Menu/MenuBody/StrictGridContainer" node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
+[node name="HatButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothesButtons" node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_lwubn")
 ignore_texture_size = true
@@ -952,7 +1011,7 @@ menuController = NodePath("../../..")
 AnimationPlayer = NodePath("../../../MenuAnimations")
 Animation = Array[StringName]([&"show_clothes"])
 
-[node name="OpenTexture" type="TextureRect" parent="NewUI/Menu/MenuBody/StrictGridContainer/HatButton"]
+[node name="OpenTexture" type="TextureRect" parent="NewUI/Menu/MenuBody/MenuClothesButtons/HatButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -968,18 +1027,20 @@ grow_vertical = 2
 texture = SubResource("AnimatedTexture_o0px6")
 stretch_mode = 5
 
-[node name="ShoesButton" type="TextureButton" parent="NewUI/Menu/MenuBody/StrictGridContainer" node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
+[node name="ShoesButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothesButtons" node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture_normal = SubResource("AnimatedTexture_lwubn")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("33_d1kvk")
-Clothes = NodePath("../../MenuClothes/Shoes container")
+Clothes = NodePath("../../MenuClothes/Dress container")
 menuController = NodePath("../../..")
 AnimationPlayer = NodePath("../../../MenuAnimations")
 Animation = Array[StringName]([&"show_clothes"])
 
-[node name="OpenTexture" type="TextureRect" parent="NewUI/Menu/MenuBody/StrictGridContainer/ShoesButton"]
+[node name="OpenTexture" type="TextureRect" parent="NewUI/Menu/MenuBody/MenuClothesButtons/ShoesButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -995,7 +1056,7 @@ grow_vertical = 2
 texture = SubResource("AnimatedTexture_yl46r")
 stretch_mode = 5
 
-[node name="OutfitsButton" type="TextureButton" parent="NewUI/Menu/MenuBody/StrictGridContainer" node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
+[node name="OutfitsButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothesButtons" node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_lwubn")
 ignore_texture_size = true
@@ -1006,7 +1067,7 @@ menuController = NodePath("../../..")
 AnimationPlayer = NodePath("../../../MenuAnimations")
 Animation = Array[StringName]([&"show_clothes"])
 
-[node name="OpenTexture" type="TextureRect" parent="NewUI/Menu/MenuBody/StrictGridContainer/OutfitsButton"]
+[node name="OpenTexture" type="TextureRect" parent="NewUI/Menu/MenuBody/MenuClothesButtons/OutfitsButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1022,7 +1083,7 @@ grow_vertical = 2
 texture = SubResource("AnimatedTexture_dlyvr")
 stretch_mode = 5
 
-[node name="AccessoriesButton" type="TextureButton" parent="NewUI/Menu/MenuBody/StrictGridContainer" node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
+[node name="AccessoriesButton" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothesButtons" node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_lwubn")
 ignore_texture_size = true
@@ -1033,7 +1094,7 @@ menuController = NodePath("../../..")
 AnimationPlayer = NodePath("../../../MenuAnimations")
 Animation = Array[StringName]([&"show_clothes"])
 
-[node name="OpenTexture" type="TextureRect" parent="NewUI/Menu/MenuBody/StrictGridContainer/AccessoriesButton"]
+[node name="OpenTexture" type="TextureRect" parent="NewUI/Menu/MenuBody/MenuClothesButtons/AccessoriesButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1049,13 +1110,13 @@ grow_vertical = 2
 texture = SubResource("AnimatedTexture_ffrpt")
 stretch_mode = 5
 
-[node name="TextureButton5" type="TextureButton" parent="NewUI/Menu/MenuBody/StrictGridContainer"]
+[node name="TextureButton5" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothesButtons"]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_lwubn")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton6" type="TextureButton" parent="NewUI/Menu/MenuBody/StrictGridContainer"]
+[node name="TextureButton6" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothesButtons"]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_lwubn")
 ignore_texture_size = true
@@ -1091,32 +1152,110 @@ texture = ExtResource("4_nv3ic")
 position = Vector2(945.183, 1042.84)
 texture = ExtResource("4_nlub7")
 
-[node name="OutfitArea2D" type="Area2D" parent="Characters/NakedbaseJulus"]
-position = Vector2(127.361, -58.4506)
-scale = Vector2(1, 1)
+[node name="TrousersSprites" type="Node2D" parent="Characters/NakedbaseJulus"]
+script = ExtResource("52_w7ajx")
+itemType = 2
 
-[node name="OutfitCollisionPolygon2D" type="CollisionPolygon2D" parent="Characters/NakedbaseJulus/OutfitArea2D"]
+[node name="TrousersArea2D" type="Area2D" parent="Characters/NakedbaseJulus/TrousersSprites"]
+position = Vector2(127.361, -58.4506)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Characters/NakedbaseJulus/TrousersSprites/TrousersArea2D"]
+polygon = PackedVector2Array(-275.482, -1.83655, -67.9526, -36.731, 178.145, -5.50964, 295.684, 135.904, 93.6636, 593.205, -372.819, 567.493, -505.051, 334.252)
+
+[node name="HeadwearSprites" type="Node2D" parent="Characters/NakedbaseJulus"]
+script = ExtResource("52_w7ajx")
+itemType = 6
+
+[node name="HeadwearArea2D2" type="Area2D" parent="Characters/NakedbaseJulus/HeadwearSprites"]
+position = Vector2(127.361, -58.4506)
+
+[node name="HairCollisionPolygon2D2" type="CollisionPolygon2D" parent="Characters/NakedbaseJulus/HeadwearSprites/HeadwearArea2D2"]
+position = Vector2(29.3845, 132.231)
+scale = Vector2(1.4468, 1.4468)
+polygon = PackedVector2Array(-149.788, -369.391, -99.0121, -416.359, 0, -422.705, 40.6204, -352.889, 25.3878, -285.612, -5.07751, -238.645, -81.2407, -238.645, -133.285, -285.612)
+
+[node name="J_Hair_0" type="Sprite2D" parent="Characters/NakedbaseJulus/HeadwearSprites"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-48.9478, -532.28)
+texture = ExtResource("7_7252p")
+centered = false
+
+[node name="Top_Hat" type="Sprite2D" parent="Characters/NakedbaseJulus/HeadwearSprites"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(28.1871, -556.155)
+texture = ExtResource("28_4xvd2")
+centered = false
+
+[node name="OutfitSprites" type="Node2D" parent="Characters/NakedbaseJulus"]
+script = ExtResource("52_w7ajx")
+itemType = 4
+
+[node name="OutfitArea2D" type="Area2D" parent="Characters/NakedbaseJulus/OutfitSprites"]
+position = Vector2(127.361, -58.4506)
+
+[node name="OutfitCollisionPolygon2D" type="CollisionPolygon2D" parent="Characters/NakedbaseJulus/OutfitSprites/OutfitArea2D"]
 position = Vector2(29.3847, -73.4619)
 scale = Vector2(1.15, 1.15)
 polygon = PackedVector2Array(-352.617, -279.155, 0, -367.31, 191.001, -161.616, 235.078, 191.001, 14.6924, 631.772, -426.079, 617.08, -499.541, 396.694, -337.925, 235.078, -411.387, 73.4619)
 
-[node name="HairArea2D2" type="Area2D" parent="Characters/NakedbaseJulus"]
+[node name="J_Outfit_0" type="Sprite2D" parent="Characters/NakedbaseJulus/OutfitSprites"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-291.372, -308.221)
+texture = ExtResource("44_furvj")
+centered = false
+
+[node name="Accessory Sprites" type="Node2D" parent="Characters/NakedbaseJulus"]
+script = ExtResource("52_w7ajx")
+itemType = 7
+
+[node name="AccessoryArea2D2" type="Area2D" parent="Characters/NakedbaseJulus/Accessory Sprites"]
 position = Vector2(127.361, -58.4506)
-scale = Vector2(1, 1)
 
-[node name="HairCollisionPolygon2D2" type="CollisionPolygon2D" parent="Characters/NakedbaseJulus/HairArea2D2"]
-position = Vector2(29.3847, 132.231)
-scale = Vector2(1.4468, 1.4468)
-polygon = PackedVector2Array(-220.386, -396.694, -146.924, -499.541, 44.0771, -499.541, 117.539, -382.002, 117.539, -205.693, 29.3848, -161.616, -117.539, -161.616, -205.693, -220.386)
-
-[node name="AccessoryArea2D2" type="Area2D" parent="Characters/NakedbaseJulus"]
-position = Vector2(127.361, -58.4506)
-scale = Vector2(1, 1)
-
-[node name="AccessoryCollisionPolygon2D3" type="CollisionPolygon2D" parent="Characters/NakedbaseJulus/AccessoryArea2D2"]
+[node name="AccessoryCollisionPolygon2D3" type="CollisionPolygon2D" parent="Characters/NakedbaseJulus/Accessory Sprites/AccessoryArea2D2"]
 position = Vector2(176.309, 690.542)
 scale = Vector2(1.60197, 1.60197)
 polygon = PackedVector2Array(-431.057, -458.571, -476.914, -586.971, -366.857, -761.228, -18.343, -752.057, 18.3428, -495.257, -155.914, -385.2)
+
+[node name="J_Smoke_0" type="Sprite2D" parent="Characters/NakedbaseJulus/Accessory Sprites"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-535.633, -506.568)
+texture = ExtResource("46_4pi6x")
+centered = false
+
+[node name="TopsSprites" type="Node2D" parent="Characters/NakedbaseJulus"]
+script = ExtResource("52_w7ajx")
+itemType = 5
+
+[node name="TopsArea2D" type="Area2D" parent="Characters/NakedbaseJulus/TopsSprites"]
+position = Vector2(254.722, -116.901)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Characters/NakedbaseJulus/TopsSprites/TopsArea2D"]
+polygon = PackedVector2Array(-349.584, -183.974, -175.112, -246.416, 58.13, -160.098, 118.736, 157.624, -121.852, 212.721, -283.468, 109.874)
+
+[node name="BootsSprites" type="Node2D" parent="Characters/NakedbaseJulus"]
+script = ExtResource("52_w7ajx")
+
+[node name="BootsArea2D" type="Area2D" parent="Characters/NakedbaseJulus/BootsSprites"]
+position = Vector2(254.722, -116.901)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Characters/NakedbaseJulus/BootsSprites/BootsArea2D"]
+polygon = PackedVector2Array(-674.652, 438.616, -588.335, 697.569, -79.6111, 712.262, 61.8031, 431.27, -77.7745, 273.327, -388.151, 216.394)
+
+[node name="DressSprites" type="Node2D" parent="Characters/NakedbaseJulus"]
+script = ExtResource("52_w7ajx")
+itemType = 3
+
+[node name="DressArea2D" type="Area2D" parent="Characters/NakedbaseJulus/DressSprites"]
+position = Vector2(254.722, -116.901)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Characters/NakedbaseJulus/DressSprites/DressArea2D"]
+polygon = PackedVector2Array(-349.584, -174.791, -173.275, -248.253, 61.8031, -156.425, 124.246, 163.134, 65.4762, 427.597, -266.939, 508.405, -560.786, 392.702)
+
+[node name="J_Dress_0" type="Sprite2D" parent="Characters/NakedbaseJulus/DressSprites"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-282.189, -299.038)
+texture = ExtResource("44_nt3x5")
+centered = false
 
 [node name="NakedbaseMatt" type="Sprite2D" parent="Characters"]
 position = Vector2(1620.95, 1042.84)
@@ -1138,3 +1277,40 @@ texture = ExtResource("5_pdjoi")
 
 [node name="ItemLayer" type="Node2D" parent="Characters"]
 z_index = 1
+
+[node name="PlayTransition" type="Node2D" parent="."]
+visible = false
+position = Vector2(-24, 47.9999)
+scale = Vector2(1.33754, 1.14983)
+
+[node name="HeartCurtainBacker" type="Sprite2D" parent="PlayTransition"]
+modulate = Color(0.356863, 0, 0.552941, 1)
+position = Vector2(446.996, 240.036)
+scale = Vector2(924.271, 577.477)
+texture = ExtResource("2_di5s5")
+
+[node name="HeartCurtainBackground" type="NinePatchRect" parent="PlayTransition"]
+modulate = Color(1, 0, 1, 1)
+offset_left = -12.0
+offset_top = -49.0
+offset_right = 668.0
+offset_bottom = 459.0
+scale = Vector2(1.33754, 1.14983)
+texture = ExtResource("9_cn02w")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="HeartCurtainForeground" type="NinePatchRect" parent="PlayTransition"]
+offset_top = -42.0
+offset_right = 679.0
+offset_bottom = 466.0
+scale = Vector2(1.33754, 1.14983)
+texture = ExtResource("9_cn02w")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="EnterTransition" type="AnimationPlayer" parent="PlayTransition"]
+libraries = {
+"": SubResource("AnimationLibrary_nfu2l")
+}
+autoplay = "Play_Animation"

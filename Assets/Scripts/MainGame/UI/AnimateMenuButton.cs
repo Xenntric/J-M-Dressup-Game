@@ -3,19 +3,21 @@ using Godot.Collections;
 
 namespace DressupUI
 {
-	public partial class AnimateMenuButton : Utils.AnimateButton
+	public partial class AnimateMenuButton : Utils.CallAnimateButton
 	{
 		[Export] public StrictGrid Clothes;
-		
-		public override void CallAnimation(StringName animation)
-		{
-			if(AnimationPlayer.IsPlaying())
-			{
-				return;
-			}
-			this.AnimationPlayer.Play(animation);
+
+        public override void _Ready()
+        {
+            base._Ready();
+            Pressed += () => CallAnimation(Animation[0]);
+
+        }
+        public override void CallAnimation(StringName animation)
+        {
+            base.CallAnimation(animation);
 			Clothes.Visible = true;
 			menuController.MenuDepth = MenuController.MenuDepthEnum.clothes;
-		}
+        }
 	}
 }

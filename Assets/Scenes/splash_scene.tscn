@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://jrkflywtdx4e"]
+[gd_scene load_steps=134 format=3 uid="uid://jrkflywtdx4e"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/SplashandMenu/MenuScript.cs" id="1_7cnoy"]
 [ext_resource type="Texture2D" uid="uid://btpf2oqpvghbm" path="res://Assets/Art/Splash Art/Portraits/SpriteFrame_1.png" id="1_fpdbn"]
@@ -25,6 +25,93 @@
 [ext_resource type="Texture2D" uid="uid://bejwnqyyu3hhj" path="res://Assets/Art/Main Menu/Credits/CreditFrame_unselected_2.png" id="19_qhcyy"]
 [ext_resource type="Texture2D" uid="uid://bigkcw8rv62br" path="res://Assets/Art/Main Menu/Credits/CreditFrame_selected_1.png" id="20_yesym"]
 [ext_resource type="Texture2D" uid="uid://cvd2a5ruatuft" path="res://Assets/Art/Main Menu/Credits/CreditFrame_selected_2.png" id="21_ti4ga"]
+[ext_resource type="Texture2D" uid="uid://coidweedfm4an" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_01.png" id="26_8h8x8"]
+[ext_resource type="Texture2D" uid="uid://2ccmrv1rt21k" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_02.png" id="27_m467u"]
+[ext_resource type="Texture2D" uid="uid://xd775bk5be7d" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_03.png" id="28_b4yqb"]
+[ext_resource type="Texture2D" uid="uid://x2srb5giwofj" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_04.png" id="29_0brib"]
+[ext_resource type="Texture2D" uid="uid://c6b4a1top261q" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_05.png" id="30_f34ur"]
+[ext_resource type="Texture2D" uid="uid://i2o4ln5oaqt1" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_06.png" id="31_dqhqc"]
+[ext_resource type="Texture2D" uid="uid://4hugulafqi63" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_07.png" id="32_v4y7p"]
+[ext_resource type="Texture2D" uid="uid://dika6n6rwiypw" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_08.png" id="33_aukpd"]
+[ext_resource type="Texture2D" uid="uid://cwvy16lfof51w" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_09.png" id="34_bn31o"]
+[ext_resource type="Texture2D" uid="uid://dq7y51auwtdd7" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_10.png" id="35_l27sl"]
+[ext_resource type="Texture2D" uid="uid://b3w1lppefuvc7" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_11.png" id="36_xrwle"]
+[ext_resource type="Texture2D" uid="uid://bquj42kx84vtw" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_12.png" id="37_vg7cd"]
+[ext_resource type="Texture2D" uid="uid://b6p8q41nxetgu" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_13.png" id="38_a80si"]
+[ext_resource type="Texture2D" uid="uid://dyucnd5jwvdhs" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_14.png" id="39_x0oyw"]
+[ext_resource type="Texture2D" uid="uid://bb7t1naneumkv" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_15.png" id="40_1d0gb"]
+[ext_resource type="Texture2D" uid="uid://c7s2r6nlr2eeu" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_16.png" id="41_cycxm"]
+[ext_resource type="Texture2D" uid="uid://8081mfcehthb" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_17.png" id="42_yodff"]
+[ext_resource type="Texture2D" uid="uid://dq8qyublqwntr" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_18.png" id="43_4selw"]
+[ext_resource type="Texture2D" uid="uid://b7jfmo0gd13ee" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_19.png" id="44_hxlry"]
+[ext_resource type="Texture2D" uid="uid://crs5gvn0vh6ek" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_20.png" id="45_mnjjr"]
+[ext_resource type="Texture2D" uid="uid://drixewo7sh8ay" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_21.png" id="46_m7nbn"]
+[ext_resource type="Texture2D" uid="uid://6lqko0khp651" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_22.png" id="47_afn1k"]
+[ext_resource type="Texture2D" uid="uid://0hsmtsk0wnnx" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_23.png" id="48_wsk51"]
+[ext_resource type="Texture2D" uid="uid://cjgo36366nw3u" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_24.png" id="49_55imf"]
+[ext_resource type="Texture2D" uid="uid://chuxnndoay076" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_25.png" id="50_8uuv2"]
+[ext_resource type="Texture2D" uid="uid://bc33e3yty53cm" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_26.png" id="51_hv4i2"]
+[ext_resource type="Texture2D" uid="uid://byicwcswwyv5l" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_27.png" id="52_r3urp"]
+[ext_resource type="Texture2D" uid="uid://i2dpdr6mqpwj" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_28.png" id="53_qx1w2"]
+[ext_resource type="Texture2D" uid="uid://dgqs2bh3ghfjq" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_29.png" id="54_nss3j"]
+[ext_resource type="Texture2D" uid="uid://dhaytngs3pp0m" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_30.png" id="55_6e1ih"]
+[ext_resource type="Texture2D" uid="uid://brw57g0yrfxsw" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_31.png" id="56_2l6oj"]
+[ext_resource type="Texture2D" uid="uid://b758352lxsoln" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_32.png" id="57_wtebp"]
+[ext_resource type="Texture2D" uid="uid://bfri3uiwt6x0l" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_33.png" id="58_n1plc"]
+[ext_resource type="Texture2D" uid="uid://ckrd1dh8spo4y" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_34.png" id="59_84xhf"]
+[ext_resource type="Texture2D" uid="uid://b0dwb6dy6fpkl" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_35.png" id="60_8ooar"]
+[ext_resource type="Texture2D" uid="uid://dgx44jytwljoa" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_36.png" id="61_38u8l"]
+[ext_resource type="Texture2D" uid="uid://6cx4ei8dnidh" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_37.png" id="62_xbnrd"]
+[ext_resource type="Texture2D" uid="uid://cny2ak65hks6l" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_38.png" id="63_8gbwp"]
+[ext_resource type="Texture2D" uid="uid://cc2geq7chvnp4" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_39.png" id="64_700bh"]
+[ext_resource type="Texture2D" uid="uid://cinh66mninawk" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_40.png" id="65_wynrq"]
+[ext_resource type="Texture2D" uid="uid://bhttga0hdw3uv" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_41.png" id="66_e0ibq"]
+[ext_resource type="Texture2D" uid="uid://bk0f1djooredf" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_42.png" id="67_hgf70"]
+[ext_resource type="Texture2D" uid="uid://dy3k7jbihskc8" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_43.png" id="68_tsr8b"]
+[ext_resource type="Texture2D" uid="uid://demfbivkamqlv" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_44.png" id="69_p754n"]
+[ext_resource type="Texture2D" uid="uid://c84v0jc8mkcxn" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_45.png" id="70_fceil"]
+[ext_resource type="Texture2D" uid="uid://bcmfp3214cbba" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_46.png" id="71_d73dt"]
+[ext_resource type="Texture2D" uid="uid://oil25huhmwtr" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_47.png" id="72_qyghi"]
+[ext_resource type="Texture2D" uid="uid://do7wcgggj8ayk" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_48.png" id="73_qoovk"]
+[ext_resource type="Texture2D" uid="uid://bnnxm48rihupv" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_49.png" id="74_jl36p"]
+[ext_resource type="Texture2D" uid="uid://dbly3fpfqo4t2" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_50.png" id="75_11g3k"]
+[ext_resource type="Texture2D" uid="uid://dwmfsrbdoyuid" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_51.png" id="76_wrxau"]
+[ext_resource type="Texture2D" uid="uid://c73ypf55ovfkv" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_52.png" id="77_bupmh"]
+[ext_resource type="Texture2D" uid="uid://bb8n0uw5m0b6e" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_53.png" id="78_by55w"]
+[ext_resource type="Texture2D" uid="uid://kukm0t64idq8" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_54.png" id="79_3og4g"]
+[ext_resource type="Texture2D" uid="uid://dmhnvl204yuot" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_55.png" id="80_3m8so"]
+[ext_resource type="Texture2D" uid="uid://3fcmln311pas" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_56.png" id="81_rml1p"]
+[ext_resource type="Texture2D" uid="uid://dysgilpkjdw52" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_57.png" id="82_75kbb"]
+[ext_resource type="Texture2D" uid="uid://cqtpfjaihipsx" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_58.png" id="83_v143q"]
+[ext_resource type="Texture2D" uid="uid://dbpu7sceypic7" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_59.png" id="84_gawc6"]
+[ext_resource type="Texture2D" uid="uid://csqxuqnhtmx2c" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_60.png" id="85_ke1oi"]
+[ext_resource type="Texture2D" uid="uid://bvadmdc7b3g5j" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_61.png" id="86_yij2a"]
+[ext_resource type="Texture2D" uid="uid://c0jowihyy8y1c" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_62.png" id="87_56l4k"]
+[ext_resource type="Texture2D" uid="uid://ddtc3ybqgrnjm" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_63.png" id="88_x7uo0"]
+[ext_resource type="Texture2D" uid="uid://et60ojnl2ej8" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_64.png" id="89_1mqjg"]
+[ext_resource type="Texture2D" uid="uid://bg3tn0n77tmap" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_65.png" id="90_gqrpu"]
+[ext_resource type="Texture2D" uid="uid://q4sdykd0ljkm" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_66.png" id="91_3odvf"]
+[ext_resource type="Texture2D" uid="uid://vip1g3sk2iro" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_67.png" id="92_p8m3d"]
+[ext_resource type="Texture2D" uid="uid://dis5gutavx3nn" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_68.png" id="93_s6hag"]
+[ext_resource type="Texture2D" uid="uid://cukr106bwvcgf" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_69.png" id="94_58qvq"]
+[ext_resource type="Texture2D" uid="uid://cmyftp5d6vsoe" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_70.png" id="95_pmq6w"]
+[ext_resource type="Texture2D" uid="uid://dj3ldj8d5krtx" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_71.png" id="96_rj8yl"]
+[ext_resource type="Texture2D" uid="uid://cy5o2kb738aqe" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_72.png" id="97_cyb1c"]
+[ext_resource type="Texture2D" uid="uid://cq3smkyxmti2s" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_73.png" id="98_1f76v"]
+[ext_resource type="Texture2D" uid="uid://c0qrbrv8yudqk" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_74.png" id="99_mhwpg"]
+[ext_resource type="Texture2D" uid="uid://b3f058yickx0h" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_75.png" id="100_jf42b"]
+[ext_resource type="Texture2D" uid="uid://b7acrf6khy63d" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_76.png" id="101_7we3i"]
+[ext_resource type="Texture2D" uid="uid://drro8hpiptg6n" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_77.png" id="102_mxguq"]
+[ext_resource type="Texture2D" uid="uid://tm7ndmkwtdqe" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_78.png" id="103_a88o0"]
+[ext_resource type="Texture2D" uid="uid://cjdyw5qp14mgf" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_79.png" id="104_rnbx7"]
+[ext_resource type="Texture2D" uid="uid://b0al8rbwfcmoi" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_80.png" id="105_6uf8n"]
+[ext_resource type="Texture2D" uid="uid://dsrjiw3b4bvte" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_81.png" id="106_fvwlh"]
+[ext_resource type="Texture2D" uid="uid://d0lunj4cqm1r3" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_82.png" id="107_ab1w0"]
+[ext_resource type="Texture2D" uid="uid://j8u2scoqf0db" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_83.png" id="108_o1vr5"]
+[ext_resource type="Texture2D" uid="uid://cgsjd5y6bf3tb" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_84.png" id="109_yknyt"]
+[ext_resource type="Texture2D" uid="uid://dl5dgjem8hu16" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_85.png" id="110_hwv75"]
+[ext_resource type="Texture2D" uid="uid://bvksdctsu0eyg" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_86.png" id="111_5nrk5"]
+[ext_resource type="Texture2D" uid="uid://c4spv2weeio4a" path="res://Assets/Art/Sprite Sheets/dog/dog_frame_87.png" id="112_nhb4n"]
 
 [sub_resource type="Animation" id="Animation_43n6u"]
 length = 0.001
@@ -312,6 +399,275 @@ _data = {
 "Menu_Animation": SubResource("Animation_eylgb")
 }
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_fkyts"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_8h8x8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_m467u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_b4yqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_0brib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_f34ur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_dqhqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_v4y7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_aukpd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_bn31o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_l27sl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_xrwle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_vg7cd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_a80si")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_x0oyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_1d0gb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_cycxm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_yodff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_4selw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_hxlry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_mnjjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_m7nbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_afn1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_wsk51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_55imf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_8uuv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_hv4i2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_r3urp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_qx1w2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_nss3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_6e1ih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_2l6oj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_wtebp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_n1plc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_84xhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_8ooar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_38u8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_xbnrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_8gbwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_700bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_wynrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_e0ibq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_hgf70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_tsr8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_p754n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_fceil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_d73dt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_qyghi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_qoovk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_jl36p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_11g3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_wrxau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_bupmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_by55w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_3og4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_3m8so")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_rml1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_75kbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_v143q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_gawc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_ke1oi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_yij2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_56l4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_x7uo0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_1mqjg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_gqrpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_3odvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_p8m3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_s6hag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_58qvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_pmq6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_rj8yl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_cyb1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_1f76v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_mhwpg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_jf42b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_7we3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_mxguq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_a88o0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_rnbx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_6uf8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_fvwlh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_ab1w0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_o1vr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_yknyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_hwv75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_5nrk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_nhb4n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
 [node name="SplashScene" type="Node2D" node_paths=PackedStringArray("SplashAnimation", "MenuControlNode")]
 texture_filter = 1
 scale = Vector2(1.66756, 1.66756)
@@ -429,6 +785,13 @@ stretch_mode = 3
 libraries = {
 "": SubResource("AnimationLibrary_ob14h")
 }
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(297.158, 326.212)
+scale = Vector2(0.274154, 0.274154)
+sprite_frames = SubResource("SpriteFrames_fkyts")
+autoplay = "default"
+frame_progress = 0.00737736
 
 [node name="PlayTransition" type="Node2D" parent="."]
 position = Vector2(-24, -640)

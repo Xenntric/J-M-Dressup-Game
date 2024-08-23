@@ -1,17 +1,17 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1717935787
+::res://::1724437396
 icon.svg::CompressedTexture2D::813288404080885267::1708540671::1708540671::1::::<><>::
 README.md::TextFile::-1::1708540671::0::1::::<><>::
 ::res://addons/::1714570545
 ::res://addons/strict_grid_container/::1716814476
 GridContainer.svg::CompressedTexture2D::5869103433932730803::1716237052::1716814476::1::::<><>::
 plugin.cfg::TextFile::-1::1714570545::0::1::::<><>::
-StrictGrid.cs::CSharpScript::-1::1714823742::0::1::::<>Container<>::
+StrictGrid.cs::CSharpScript::-1::1724358873::0::1::::<>Container<>::
 StrictGridContainer.cs::CSharpScript::-1::1714576352::0::1::::<>EditorPlugin<>::
 StrictGridContainer.svg::CompressedTexture2D::5878583431771528634::1714576295::1714576340::1::::<><>::
 ::res://Assets/::1716237530
 ::res://Assets/Animations/::1714942071
-::res://Assets/Art/::1716237553
+::res://Assets/Art/::1724010438
 ::res://Assets/Art/Characters/::1708540881
 character.PNG::CompressedTexture2D::4830261693504359120::1708540671::1708540671::1::::<><>::
 J.png::CompressedTexture2D::1939802704992210663::1708540671::1708540671::1::::<><>::
@@ -39,7 +39,7 @@ top hat.png::CompressedTexture2D::914419443044285061::1708540671::1708540671::1:
 ::res://Assets/Art/Clothes/Shoes/::1708540671
 headshot.png::CompressedTexture2D::4785989734212734375::1708540671::1708540671::1::::<><>::
 shoe_wellington.png::CompressedTexture2D::8866131298539875784::1708540671::1708540671::1::::<><>::
-::res://Assets/Art/Clothes Menu/::1708540671
+::res://Assets/Art/Clothes Menu/::1717949361
 ::res://Assets/Art/Clothes Menu/Asset Menu/::1714415999
 MenuFrame_1.png::CompressedTexture2D::5722700884661124533::1708540671::1708540671::1::::<><>::
 MenuFrame_2.png::CompressedTexture2D::5774537525467490571::1708540671::1708540671::1::::<><>::
@@ -87,7 +87,7 @@ QuitFrame_selected_1.png::CompressedTexture2D::4724314125667442632::1708540671::
 QuitFrame_selected_2.png::CompressedTexture2D::2189265803372886969::1708540671::1708540671::1::::<><>::
 QuitFrame_unselected_1.png::CompressedTexture2D::5742603958718075605::1708540671::1708540671::1::::<><>::
 QuitFrame_unselected_2.png::CompressedTexture2D::2628207534128720165::1708540671::1708540671::1::::<><>::
-::res://Assets/Art/Menu Bar/::1714425686
+::res://Assets/Art/Menu Bar/::1717953575
 Open.png::CompressedTexture2D::6729524347215776663::1714425669::1714425686::1::::<><>::
 ::res://Assets/Art/Menu Bar/Cog/::1708540671
 CogFrame_1.png::CompressedTexture2D::7459586027693010739::1708540671::1708540671::1::::<><>::
@@ -102,6 +102,9 @@ OutlineFrame_2.png::CompressedTexture2D::8823380677198875792::1708540671::170854
 ::res://Assets/Art/Menu Bar/Home/::1708540671
 HomeFrame_1.png::CompressedTexture2D::3262473814511489214::1708540671::1708540671::1::::<><>::
 HomeFrame_2.png::CompressedTexture2D::8811061955178422723::1708540671::1708540671::1::::<><>::
+::res://Assets/Art/Menu Bar/Magnet/::1717953575
+Untitled_Artwork-1 20.png::CompressedTexture2D::2579245987274857534::1717953572::1717953575::1::::<><>::
+Untitled_Artwork-2 16.png::CompressedTexture2D::6432500468630500066::1717953572::1717953575::1::::<><>::
 ::res://Assets/Art/Menu Bar/Return/::1714425678
 ReturnFrame_1.png::CompressedTexture2D::424407978183248885::1708540671::1708540671::1::::<><>::
 ReturnFrame_2.png::CompressedTexture2D::2623464867433954210::1708540671::1708540671::1::::<><>::
@@ -129,22 +132,114 @@ SpriteFrameBorder_1.png::CompressedTexture2D::7554190766907917691::1708540671::1
 SpriteFrameBorder_2.png::CompressedTexture2D::6702808695683817195::1708540671::1708540671::1::::<><>::
 SpriteFrame_1.png::CompressedTexture2D::1192213123433539172::1708540671::1708540671::1::::<><>::
 SpriteFrame_2.png::CompressedTexture2D::4732180689888082699::1708540671::1708540671::1::::<><>::
-::res://Assets/Scenes/::1717263679
-Globals.cs::CSharpScript::-1::1709401680::0::1::::<>Node2D<>::
-main_dressup.tscn::PackedScene::7198641740776767480::1717263679::0::1::::<><>::uid://cwuerq3acdchl::::res://Assets/Art/Splash Art/background.png<>uid://2vwjc21e0fnr::::res://Assets/Art/Characters/J.png<>uid://d4jae7ec73a5q::::res://Assets/Art/Characters/new_nakedbase_julus.png<>uid://dsvrwlfhok34x::::res://Assets/Art/Characters/M.png<>uid://cphwxycvk46ae::::res://Assets/Art/Characters/new_nakedbase_matt.png<>uid://eypogoj50kav::::res://Assets/Art/Clothes/Hats/hair_1_julus.png<>uid://cpti8d3b080cg::::res://Assets/Art/Clothes Menu/Selection Menu/OutlineFrame_1.png<>uid://tdkqa0sbknsd::::res://Assets/Art/Splash Art/heart.png<>uid://bla4rx7ltjjsp::::res://Assets/Art/Clothes Menu/Selection Menu/OutlineFrame_2.png<>res://Assets/Scripts/MainGame/UI/MenuController.cs<>res://Assets/Scripts/Util/AnimateButton.cs<>uid://do5wthfjucj0k::::res://Assets/Art/Menu Bar/Frame/OutlineFrame_1.png<>uid://dxyd148mt63jg::::res://Assets/Art/Menu Bar/Frame/OutlineFrame_2.png<>uid://dejqj6to00gjr::::res://Assets/Art/Menu Bar/Cog/CogFrame_1.png<>uid://dm0w08lcu151k::::res://Assets/Art/Menu Bar/Cog/CogFrame_2.png<>uid://bmqmp461u33mw::::res://Assets/Art/Menu Bar/Home/HomeFrame_1.png<>uid://dgx3rfuemyvjl::::res://Assets/Art/Clothes/Costumes/dress_2_matt.png<>uid://dxse5x8bbsgx4::::res://Assets/Art/Menu Bar/Home/HomeFrame_2.png<>uid://csahsrnxv13id::::res://Assets/Art/Menu Bar/Sound/SoundFrame_1.png<>uid://rv8j780ixu5q::::res://Assets/Art/Menu Bar/Sound/SoundFrame_2.png<>uid://c515e7ashrbe::::res://Assets/Art/Clothes/Hats/hair_1_matt.png<>uid://na7mb7k7g4t2::::res://Assets/Art/Clothes/Hats/top hat.png<>uid://gbt64vlhe20h::::res://Assets/Art/Menu Bar/Return/ReturnFrame_1.png<>uid://bdm3c3bejj7ak::::res://Assets/Art/Menu Bar/Return/ReturnFrame_2.png<>res://Assets/Scripts/MainGame/UI/AnimateReturnButton.cs<>uid://bujft8t40nnu3::::res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-1 13.png<>uid://cl4bv106r7pry::::res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-3 5.png<>res://Assets/Scripts/MainGame/UI/AnimateMenuButton.cs<>uid://bngjpb31tlehb::::res://Assets/Art/Clothes Menu/Selection Menu/HatFrame_1.png<>uid://civh0otp52sej::::res://Assets/Art/Clothes Menu/Selection Menu/HatFrame_2.png<>uid://bkmw3gibo1xlq::::res://Assets/Art/Clothes Menu/Selection Menu/ShoesFrame_1.png<>uid://dy110b1iegju4::::res://Assets/Art/Clothes Menu/Selection Menu/ShoesFrame_2.png<>uid://b7bvc5yd8gcnv::::res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-1 18.png<>uid://c243ju6jut0sx::::res://Assets/Art/Menu Bar/Open.png<>uid://cm5cohg7bjmhh::::res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-2 14.png<>uid://ef8octrcxl2c::::res://Assets/Art/Clothes Menu/Selection Menu/CostumeFrame_1.png<>uid://bnlh1twem1ddk::::res://Assets/Art/Clothes Menu/Selection Menu/CostumeFrame_2.png<>uid://yh1i6hledm2p::::res://Assets/Art/Clothes Menu/Selection Menu/Untitled_Artwork-1 17.png<>uid://0i87jd8lgeey::::res://Assets/Art/Clothes Menu/Selection Menu/AccessoriesFrame_1.png<>uid://pkhmpbwdul7e::::res://Assets/Art/Clothes Menu/Selection Menu/AccessoriesFrame_2.png<>res://addons/strict_grid_container/StrictGrid.cs<>uid://g6moga5mby4b::::res://Assets/Art/Clothes/Costumes/dress_2_julus.png<>uid://bwgs0mobinjhx::::res://Assets/Art/Clothes/Dress/dress_1_julus.png<>res://Assets/Scripts/MainGame/UI/ItemMover.cs<>uid://b8rnbpbrys62j::::res://Assets/Art/Clothes/Accessories/hand_1_matt.png<>uid://x264qsmsdac8::::res://Assets/Art/Clothes/Dress/dress_1_matt.png<>uid://b6bni5y2buylb::::res://Assets/Art/Clothes/Accessories/hand_1_julus.png
-splash_scene.tscn::PackedScene::667410729315769538::1717263679::0::1::::<><>::res://Assets/Scripts/SplashandMenu/MenuScript.cs<>uid://btpf2oqpvghbm::::res://Assets/Art/Splash Art/Portraits/SpriteFrame_1.png<>uid://cwuerq3acdchl::::res://Assets/Art/Splash Art/background.png<>uid://datctv4lilhv1::::res://Assets/Scenes/main_dressup.tscn<>uid://ce18ww5kud14c::::res://Assets/Art/Splash Art/Portraits/SpriteFrame_2.png<>uid://by6n3gextcqvp::::res://Assets/Art/Splash Art/Usernames/Bollsachs/SpriteFrameBorder_1.png<>uid://4ecghptwke0f::::res://Assets/Art/Splash Art/Usernames/Bollsachs/SpriteFrameBorder_2.png<>uid://dpbg6dw5veksw::::res://Assets/Art/Splash Art/Logo/SpriteFrame_1.png<>uid://dfvkohq5ncy48::::res://Assets/Art/Splash Art/Usernames/Xenntric/SpriteFrameBorder_1.png<>uid://c2q5jrugi8etn::::res://Assets/Art/Splash Art/Usernames/Xenntric/SpriteFrameBorder_2.png<>uid://dn3i68bdv4xmv::::res://Assets/Art/Splash Art/Logo/SpriteFrame_2.png<>uid://beipxchhovxhh::::res://Assets/Art/Splash Art/blackScreen.png<>uid://tdkqa0sbknsd::::res://Assets/Art/Splash Art/heart.png<>uid://brfkt1lif80bv::::res://Assets/Art/Main Menu/Play/PlayFrame_unselected_1.png<>uid://ctxtf0lgyk3nc::::res://Assets/Art/Main Menu/Play/PlayFrame_unselected_2.png<>uid://xhlq187tpwp0::::res://Assets/Art/Main Menu/Play/PlayFrame_selected_1.png<>uid://bg8i2c4x8u160::::res://Assets/Art/Main Menu/Play/PlayFrame_selected_2.png<>uid://cn2033rpygsuv::::res://Assets/Art/Main Menu/Quit/QuitFrame_unselected_1.png<>uid://bdpegum7nejtl::::res://Assets/Art/Main Menu/Quit/QuitFrame_unselected_2.png<>uid://b8kq07robme7i::::res://Assets/Art/Main Menu/Quit/QuitFrame_selected_1.png<>uid://cl4nkjq3j8oxk::::res://Assets/Art/Main Menu/Credits/CreditFrame_unselected_1.png<>uid://6gq5gpbh4pcb::::res://Assets/Art/Main Menu/Quit/QuitFrame_selected_2.png<>uid://bejwnqyyu3hhj::::res://Assets/Art/Main Menu/Credits/CreditFrame_unselected_2.png<>uid://bigkcw8rv62br::::res://Assets/Art/Main Menu/Credits/CreditFrame_selected_1.png<>uid://cvd2a5ruatuft::::res://Assets/Art/Main Menu/Credits/CreditFrame_selected_2.png
-::res://Assets/Scripts/::1713358659
-::res://Assets/Scripts/MainGame/::1708540671
-::res://Assets/Scripts/MainGame/UI/::1717250722
-AnimateMenuButton.cs::CSharpScript::-1::1715017920::0::1::::<>TextureButton<>::
-AnimateReturnButton.cs::CSharpScript::-1::1715006966::0::1::::<>TextureButton<>::
-Entity.cs::CSharpScript::-1::1714937674::0::1::::<>TextureButton<>::
-FolderSelect.cs::CSharpScript::-1::1714935278::0::1::::<>Control<>::
-ItemMover.cs::CSharpScript::-1::1717263661::0::1::::<>TextureButton<>::
-MenuController.cs::CSharpScript::-1::1715000432::0::1::::<>Control<>::
-PopulateItems.cs::CSharpScript::-1::1717250722::0::1::::<>TextureRect<>::
+::res://Assets/Art/Sprite Sheets/::1724256420
+puff_sprite_sheet.png::CompressedTexture2D::9040121298476418214::1724010366::1724010447::1::::<><>::
+::res://Assets/Art/Sprite Sheets/dog/::1724256427
+dog_frame_01.png::CompressedTexture2D::5772221855211452177::1724254330::1724256426::1::::<><>::
+dog_frame_02.png::CompressedTexture2D::1899371323790048402::1724254330::1724256426::1::::<><>::
+dog_frame_03.png::CompressedTexture2D::1622538203850205755::1724254330::1724256426::1::::<><>::
+dog_frame_04.png::CompressedTexture2D::1671204966552205275::1724254330::1724256426::1::::<><>::
+dog_frame_05.png::CompressedTexture2D::6952522086325119816::1724254330::1724256426::1::::<><>::
+dog_frame_06.png::CompressedTexture2D::618151373606945088::1724254330::1724256426::1::::<><>::
+dog_frame_07.png::CompressedTexture2D::2051153231867288554::1724254331::1724256426::1::::<><>::
+dog_frame_08.png::CompressedTexture2D::7741472668829844852::1724254331::1724256426::1::::<><>::
+dog_frame_09.png::CompressedTexture2D::6361853144188913258::1724254331::1724256426::1::::<><>::
+dog_frame_10.png::CompressedTexture2D::8349855785607238154::1724254331::1724256426::1::::<><>::
+dog_frame_11.png::CompressedTexture2D::4398723712903757032::1724254331::1724256426::1::::<><>::
+dog_frame_12.png::CompressedTexture2D::3551329412609731528::1724254331::1724256426::1::::<><>::
+dog_frame_13.png::CompressedTexture2D::4595274300210417884::1724254332::1724256426::1::::<><>::
+dog_frame_14.png::CompressedTexture2D::8885226707132902708::1724254332::1724256426::1::::<><>::
+dog_frame_15.png::CompressedTexture2D::2523870352365494425::1724254332::1724256426::1::::<><>::
+dog_frame_16.png::CompressedTexture2D::7057714529507277364::1724254332::1724256426::1::::<><>::
+dog_frame_17.png::CompressedTexture2D::2369892013410121011::1724254332::1724256426::1::::<><>::
+dog_frame_18.png::CompressedTexture2D::8351423398643633563::1724254332::1724256426::1::::<><>::
+dog_frame_19.png::CompressedTexture2D::4651368868612054780::1724254333::1724256426::1::::<><>::
+dog_frame_20.png::CompressedTexture2D::6005043857589322102::1724254333::1724256426::1::::<><>::
+dog_frame_21.png::CompressedTexture2D::8370392227586846068::1724254333::1724256426::1::::<><>::
+dog_frame_22.png::CompressedTexture2D::2199552412308321274::1724254333::1724256426::1::::<><>::
+dog_frame_23.png::CompressedTexture2D::1770287096864658181::1724254333::1724256427::1::::<><>::
+dog_frame_24.png::CompressedTexture2D::5417828939709759836::1724254333::1724256427::1::::<><>::
+dog_frame_25.png::CompressedTexture2D::5306871222163051011::1724254334::1724256427::1::::<><>::
+dog_frame_26.png::CompressedTexture2D::2586309675681586832::1724254334::1724256427::1::::<><>::
+dog_frame_27.png::CompressedTexture2D::4087628808372924219::1724254334::1724256427::1::::<><>::
+dog_frame_28.png::CompressedTexture2D::617458071607652497::1724254334::1724256427::1::::<><>::
+dog_frame_29.png::CompressedTexture2D::7614566343895154606::1724254334::1724256427::1::::<><>::
+dog_frame_30.png::CompressedTexture2D::7652075787384359186::1724254334::1724256427::1::::<><>::
+dog_frame_31.png::CompressedTexture2D::3626926346190520142::1724254335::1724256427::1::::<><>::
+dog_frame_32.png::CompressedTexture2D::4696450293664034011::1724254335::1724256427::1::::<><>::
+dog_frame_33.png::CompressedTexture2D::2772996125725401761::1724254335::1724256427::1::::<><>::
+dog_frame_34.png::CompressedTexture2D::5510052977113079970::1724254335::1724256427::1::::<><>::
+dog_frame_35.png::CompressedTexture2D::4148674101531215603::1724254335::1724256427::1::::<><>::
+dog_frame_36.png::CompressedTexture2D::7629688892742914712::1724254336::1724256427::1::::<><>::
+dog_frame_37.png::CompressedTexture2D::2181431411099728325::1724254336::1724256427::1::::<><>::
+dog_frame_38.png::CompressedTexture2D::5736481334078022577::1724254336::1724256427::1::::<><>::
+dog_frame_39.png::CompressedTexture2D::4969329589062508967::1724254336::1724256427::1::::<><>::
+dog_frame_40.png::CompressedTexture2D::5361671053217025662::1724254336::1724256427::1::::<><>::
+dog_frame_41.png::CompressedTexture2D::2918130143055520813::1724254337::1724256426::1::::<><>::
+dog_frame_42.png::CompressedTexture2D::3140268751659046627::1724254337::1724256426::1::::<><>::
+dog_frame_43.png::CompressedTexture2D::8902261665466888013::1724254337::1724256426::1::::<><>::
+dog_frame_44.png::CompressedTexture2D::7465095782520425899::1724254337::1724256426::1::::<><>::
+dog_frame_45.png::CompressedTexture2D::7150260341320283731::1724254337::1724256426::1::::<><>::
+dog_frame_46.png::CompressedTexture2D::2551902789473966726::1724254337::1724256425::1::::<><>::
+dog_frame_47.png::CompressedTexture2D::999876523753490687::1724254338::1724256426::1::::<><>::
+dog_frame_48.png::CompressedTexture2D::8209305620265206162::1724254338::1724256425::1::::<><>::
+dog_frame_49.png::CompressedTexture2D::3327132057089878139::1724254338::1724256425::1::::<><>::
+dog_frame_50.png::CompressedTexture2D::7253666546105685221::1724254338::1724256425::1::::<><>::
+dog_frame_51.png::CompressedTexture2D::8728525768016591907::1724254338::1724256425::1::::<><>::
+dog_frame_52.png::CompressedTexture2D::7078171245995366853::1724254338::1724256425::1::::<><>::
+dog_frame_53.png::CompressedTexture2D::2525569044801476078::1724254339::1724256425::1::::<><>::
+dog_frame_54.png::CompressedTexture2D::743805934798650621::1724254339::1724256425::1::::<><>::
+dog_frame_55.png::CompressedTexture2D::8016806262234254127::1724254339::1724256425::1::::<><>::
+dog_frame_56.png::CompressedTexture2D::1975752973294882174::1724254339::1724256425::1::::<><>::
+dog_frame_57.png::CompressedTexture2D::8881332287668437783::1724254339::1724256425::1::::<><>::
+dog_frame_58.png::CompressedTexture2D::5936006199866198887::1724254339::1724256425::1::::<><>::
+dog_frame_59.png::CompressedTexture2D::7261688995012842236::1724254340::1724256425::1::::<><>::
+dog_frame_60.png::CompressedTexture2D::6070703664447465252::1724254340::1724256425::1::::<><>::
+dog_frame_61.png::CompressedTexture2D::3860590142712976909::1724254340::1724256425::1::::<><>::
+dog_frame_62.png::CompressedTexture2D::6547031615612467870::1724254340::1724256425::1::::<><>::
+dog_frame_63.png::CompressedTexture2D::7409224458376282266::1724254340::1724256425::1::::<><>::
+dog_frame_64.png::CompressedTexture2D::321906173339216203::1724254340::1724256425::1::::<><>::
+dog_frame_65.png::CompressedTexture2D::2866534495481963543::1724254341::1724256425::1::::<><>::
+dog_frame_66.png::CompressedTexture2D::1183987992506368076::1724254341::1724256426::1::::<><>::
+dog_frame_67.png::CompressedTexture2D::1491438283191079080::1724254341::1724256426::1::::<><>::
+dog_frame_68.png::CompressedTexture2D::7759764904150348159::1724254341::1724256426::1::::<><>::
+dog_frame_69.png::CompressedTexture2D::6198341998254357953::1724254341::1724256426::1::::<><>::
+dog_frame_70.png::CompressedTexture2D::5664990906561014688::1724254341::1724256426::1::::<><>::
+dog_frame_71.png::CompressedTexture2D::7849437989102920881::1724254341::1724256426::1::::<><>::
+dog_frame_72.png::CompressedTexture2D::6520203729925889708::1724254342::1724256426::1::::<><>::
+dog_frame_73.png::CompressedTexture2D::5954780341475664256::1724254342::1724256426::1::::<><>::
+dog_frame_74.png::CompressedTexture2D::6561627403942979254::1724254342::1724256426::1::::<><>::
+dog_frame_75.png::CompressedTexture2D::4363603463677052453::1724254342::1724256426::1::::<><>::
+dog_frame_76.png::CompressedTexture2D::4632615783562429799::1724254342::1724256426::1::::<><>::
+dog_frame_77.png::CompressedTexture2D::8388476175062262411::1724254342::1724256426::1::::<><>::
+dog_frame_78.png::CompressedTexture2D::1360326897852830952::1724254343::1724256426::1::::<><>::
+dog_frame_79.png::CompressedTexture2D::5412232189817780713::1724254343::1724256426::1::::<><>::
+dog_frame_80.png::CompressedTexture2D::4141869488211314164::1724254343::1724256426::1::::<><>::
+dog_frame_81.png::CompressedTexture2D::8458317596521519830::1724254343::1724256426::1::::<><>::
+dog_frame_82.png::CompressedTexture2D::8937929370123097126::1724254343::1724256426::1::::<><>::
+dog_frame_83.png::CompressedTexture2D::701087564084639795::1724254343::1724256426::1::::<><>::
+dog_frame_84.png::CompressedTexture2D::5231686653289959567::1724254344::1724256426::1::::<><>::
+dog_frame_85.png::CompressedTexture2D::7993464008940173739::1724254344::1724256426::1::::<><>::
+dog_frame_86.png::CompressedTexture2D::3882128576127426510::1724254344::1724256426::1::::<><>::
+dog_frame_87.png::CompressedTexture2D::6846426341329286674::1724254344::1724256426::1::::<><>::
+::res://Assets/Scenes/::1724402582
+main_dressup.tscn::PackedScene::7198641740776767480::1724402582::0::1::::<><>::res://Assets/Scripts/MainGame/Globals.cs<>uid://cwuerq3acdchl::::res://Assets/Art/Splash Art/background.png<>uid://2vwjc21e0fnr::::res://Assets/Art/Characters/J.png<>res://Assets/Scripts/MainGame/OptionsMenu.cs<>uid://d4jae7ec73a5q::::res://Assets/Art/Characters/new_nakedbase_julus.png<>uid://dsvrwlfhok34x::::res://Assets/Art/Characters/M.png<>uid://cphwxycvk46ae::::res://Assets/Art/Characters/new_nakedbase_matt.png<>uid://eypogoj50kav::::res://Assets/Art/Clothes/Hats/hair_1_julus.png<>uid://cpti8d3b080cg::::res://Assets/Art/Clothes Menu/Selection Menu/OutlineFrame_1.png<>uid://tdkqa0sbknsd::::res://Assets/Art/Splash Art/heart.png<>uid://bla4rx7ltjjsp::::res://Assets/Art/Clothes Menu/Selection Menu/OutlineFrame_2.png<>uid://bc0n2mdemknji::::res://Assets/Art/Menu Bar/Magnet/Untitled_Artwork-1 20.png<>uid://cxv7lwocay74i::::res://Assets/Art/Menu Bar/Magnet/Untitled_Artwork-2 16.png<>uid://b5xfunliqvok6::::res://Assets/Art/Menu Bar/Disabled/DisabledFrame_1.png<>uid://2ro5x5u62q6c::::res://Assets/Art/Menu Bar/Disabled/DisabledFrame_2.png<>res://Assets/Scripts/MainGame/UI/MenuController.cs<>res://Assets/Scripts/Util/CallAnimateButton.cs<>uid://do5wthfjucj0k::::res://Assets/Art/Menu Bar/Frame/OutlineFrame_1.png<>uid://dxyd148mt63jg::::res://Assets/Art/Menu Bar/Frame/OutlineFrame_2.png<>uid://dejqj6to00gjr::::res://Assets/Art/Menu Bar/Cog/CogFrame_1.png<>uid://dm0w08lcu151k::::res://Assets/Art/Menu Bar/Cog/CogFrame_2.png<>uid://bmqmp461u33mw::::res://Assets/Art/Menu Bar/Home/HomeFrame_1.png<>uid://dgx3rfuemyvjl::::res://Assets/Art/Clothes/Costumes/dress_2_matt.png<>uid://dxse5x8bbsgx4::::res://Assets/Art/Menu Bar/Home/HomeFrame_2.png<>uid://csahsrnxv13id::::res://Assets/Art/Menu Bar/Sound/SoundFrame_1.png<>uid://rv8j780ixu5q::::res://Assets/Art/Menu Bar/Sound/SoundFrame_2.png<>uid://c515e7ashrbe::::res://Assets/Art/Clothes/Hats/hair_1_matt.png<>uid://na7mb7k7g4t2::::res://Assets/Art/Clothes/Hats/top hat.png<>uid://gbt64vlhe20h::::res://Assets/Art/Menu Bar/Return/ReturnFrame_1.png<>uid://bdm3c3bejj7ak::::res://Assets/Art/Menu Bar/Return/ReturnFrame_2.png<>res://Assets/Scripts/MainGame/UI/AnimateReturnButton.cs<>uid://bujft8t40nnu3::::res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-1 13.png<>uid://cl4bv106r7pry::::res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-3 5.png<>res://Assets/Scripts/MainGame/UI/AnimateMenuButton.cs<>uid://bngjpb31tlehb::::res://Assets/Art/Clothes Menu/Selection Menu/HatFrame_1.png<>uid://civh0otp52sej::::res://Assets/Art/Clothes Menu/Selection Menu/HatFrame_2.png<>uid://bkmw3gibo1xlq::::res://Assets/Art/Clothes Menu/Selection Menu/ShoesFrame_1.png<>uid://dy110b1iegju4::::res://Assets/Art/Clothes Menu/Selection Menu/ShoesFrame_2.png<>uid://b7bvc5yd8gcnv::::res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-1 18.png<>uid://c243ju6jut0sx::::res://Assets/Art/Menu Bar/Open.png<>uid://cm5cohg7bjmhh::::res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-2 14.png<>uid://ef8octrcxl2c::::res://Assets/Art/Clothes Menu/Selection Menu/CostumeFrame_1.png<>uid://bnlh1twem1ddk::::res://Assets/Art/Clothes Menu/Selection Menu/CostumeFrame_2.png<>uid://yh1i6hledm2p::::res://Assets/Art/Clothes Menu/Selection Menu/Untitled_Artwork-1 17.png<>uid://0i87jd8lgeey::::res://Assets/Art/Clothes Menu/Selection Menu/AccessoriesFrame_1.png<>uid://pkhmpbwdul7e::::res://Assets/Art/Clothes Menu/Selection Menu/AccessoriesFrame_2.png<>res://addons/strict_grid_container/StrictGrid.cs<>uid://g6moga5mby4b::::res://Assets/Art/Clothes/Costumes/dress_2_julus.png<>uid://bwgs0mobinjhx::::res://Assets/Art/Clothes/Dress/dress_1_julus.png<>res://Assets/Scripts/MainGame/ItemMover.cs<>uid://b8rnbpbrys62j::::res://Assets/Art/Clothes/Accessories/hand_1_matt.png<>uid://x264qsmsdac8::::res://Assets/Art/Clothes/Dress/dress_1_matt.png<>uid://b6bni5y2buylb::::res://Assets/Art/Clothes/Accessories/hand_1_julus.png<>res://Assets/Scripts/MainGame/Magnetism.cs
+splash_scene.tscn::PackedScene::667410729315769538::1724402582::0::1::::<><>::res://Assets/Scripts/SplashandMenu/MenuScript.cs<>uid://btpf2oqpvghbm::::res://Assets/Art/Splash Art/Portraits/SpriteFrame_1.png<>uid://cwuerq3acdchl::::res://Assets/Art/Splash Art/background.png<>uid://datctv4lilhv1::::res://Assets/Scenes/main_dressup.tscn<>uid://ce18ww5kud14c::::res://Assets/Art/Splash Art/Portraits/SpriteFrame_2.png<>uid://by6n3gextcqvp::::res://Assets/Art/Splash Art/Usernames/Bollsachs/SpriteFrameBorder_1.png<>uid://4ecghptwke0f::::res://Assets/Art/Splash Art/Usernames/Bollsachs/SpriteFrameBorder_2.png<>uid://dpbg6dw5veksw::::res://Assets/Art/Splash Art/Logo/SpriteFrame_1.png<>uid://dfvkohq5ncy48::::res://Assets/Art/Splash Art/Usernames/Xenntric/SpriteFrameBorder_1.png<>uid://c2q5jrugi8etn::::res://Assets/Art/Splash Art/Usernames/Xenntric/SpriteFrameBorder_2.png<>uid://dn3i68bdv4xmv::::res://Assets/Art/Splash Art/Logo/SpriteFrame_2.png<>uid://beipxchhovxhh::::res://Assets/Art/Splash Art/blackScreen.png<>uid://tdkqa0sbknsd::::res://Assets/Art/Splash Art/heart.png<>uid://brfkt1lif80bv::::res://Assets/Art/Main Menu/Play/PlayFrame_unselected_1.png<>uid://ctxtf0lgyk3nc::::res://Assets/Art/Main Menu/Play/PlayFrame_unselected_2.png<>uid://xhlq187tpwp0::::res://Assets/Art/Main Menu/Play/PlayFrame_selected_1.png<>uid://bg8i2c4x8u160::::res://Assets/Art/Main Menu/Play/PlayFrame_selected_2.png<>uid://cn2033rpygsuv::::res://Assets/Art/Main Menu/Quit/QuitFrame_unselected_1.png<>uid://bdpegum7nejtl::::res://Assets/Art/Main Menu/Quit/QuitFrame_unselected_2.png<>uid://b8kq07robme7i::::res://Assets/Art/Main Menu/Quit/QuitFrame_selected_1.png<>uid://cl4nkjq3j8oxk::::res://Assets/Art/Main Menu/Credits/CreditFrame_unselected_1.png<>uid://6gq5gpbh4pcb::::res://Assets/Art/Main Menu/Quit/QuitFrame_selected_2.png<>uid://bejwnqyyu3hhj::::res://Assets/Art/Main Menu/Credits/CreditFrame_unselected_2.png<>uid://bigkcw8rv62br::::res://Assets/Art/Main Menu/Credits/CreditFrame_selected_1.png<>uid://cvd2a5ruatuft::::res://Assets/Art/Main Menu/Credits/CreditFrame_selected_2.png<>uid://coidweedfm4an::::res://Assets/Art/Sprite Sheets/dog/dog_frame_01.png<>uid://2ccmrv1rt21k::::res://Assets/Art/Sprite Sheets/dog/dog_frame_02.png<>uid://xd775bk5be7d::::res://Assets/Art/Sprite Sheets/dog/dog_frame_03.png<>uid://x2srb5giwofj::::res://Assets/Art/Sprite Sheets/dog/dog_frame_04.png<>uid://c6b4a1top261q::::res://Assets/Art/Sprite Sheets/dog/dog_frame_05.png<>uid://i2o4ln5oaqt1::::res://Assets/Art/Sprite Sheets/dog/dog_frame_06.png<>uid://4hugulafqi63::::res://Assets/Art/Sprite Sheets/dog/dog_frame_07.png<>uid://dika6n6rwiypw::::res://Assets/Art/Sprite Sheets/dog/dog_frame_08.png<>uid://cwvy16lfof51w::::res://Assets/Art/Sprite Sheets/dog/dog_frame_09.png<>uid://dq7y51auwtdd7::::res://Assets/Art/Sprite Sheets/dog/dog_frame_10.png<>uid://b3w1lppefuvc7::::res://Assets/Art/Sprite Sheets/dog/dog_frame_11.png<>uid://bquj42kx84vtw::::res://Assets/Art/Sprite Sheets/dog/dog_frame_12.png<>uid://b6p8q41nxetgu::::res://Assets/Art/Sprite Sheets/dog/dog_frame_13.png<>uid://dyucnd5jwvdhs::::res://Assets/Art/Sprite Sheets/dog/dog_frame_14.png<>uid://bb7t1naneumkv::::res://Assets/Art/Sprite Sheets/dog/dog_frame_15.png<>uid://c7s2r6nlr2eeu::::res://Assets/Art/Sprite Sheets/dog/dog_frame_16.png<>uid://8081mfcehthb::::res://Assets/Art/Sprite Sheets/dog/dog_frame_17.png<>uid://dq8qyublqwntr::::res://Assets/Art/Sprite Sheets/dog/dog_frame_18.png<>uid://b7jfmo0gd13ee::::res://Assets/Art/Sprite Sheets/dog/dog_frame_19.png<>uid://crs5gvn0vh6ek::::res://Assets/Art/Sprite Sheets/dog/dog_frame_20.png<>uid://drixewo7sh8ay::::res://Assets/Art/Sprite Sheets/dog/dog_frame_21.png<>uid://6lqko0khp651::::res://Assets/Art/Sprite Sheets/dog/dog_frame_22.png<>uid://0hsmtsk0wnnx::::res://Assets/Art/Sprite Sheets/dog/dog_frame_23.png<>uid://cjgo36366nw3u::::res://Assets/Art/Sprite Sheets/dog/dog_frame_24.png<>uid://chuxnndoay076::::res://Assets/Art/Sprite Sheets/dog/dog_frame_25.png<>uid://bc33e3yty53cm::::res://Assets/Art/Sprite Sheets/dog/dog_frame_26.png<>uid://byicwcswwyv5l::::res://Assets/Art/Sprite Sheets/dog/dog_frame_27.png<>uid://i2dpdr6mqpwj::::res://Assets/Art/Sprite Sheets/dog/dog_frame_28.png<>uid://dgqs2bh3ghfjq::::res://Assets/Art/Sprite Sheets/dog/dog_frame_29.png<>uid://dhaytngs3pp0m::::res://Assets/Art/Sprite Sheets/dog/dog_frame_30.png<>uid://brw57g0yrfxsw::::res://Assets/Art/Sprite Sheets/dog/dog_frame_31.png<>uid://b758352lxsoln::::res://Assets/Art/Sprite Sheets/dog/dog_frame_32.png<>uid://bfri3uiwt6x0l::::res://Assets/Art/Sprite Sheets/dog/dog_frame_33.png<>uid://ckrd1dh8spo4y::::res://Assets/Art/Sprite Sheets/dog/dog_frame_34.png<>uid://b0dwb6dy6fpkl::::res://Assets/Art/Sprite Sheets/dog/dog_frame_35.png<>uid://dgx44jytwljoa::::res://Assets/Art/Sprite Sheets/dog/dog_frame_36.png<>uid://6cx4ei8dnidh::::res://Assets/Art/Sprite Sheets/dog/dog_frame_37.png<>uid://cny2ak65hks6l::::res://Assets/Art/Sprite Sheets/dog/dog_frame_38.png<>uid://cc2geq7chvnp4::::res://Assets/Art/Sprite Sheets/dog/dog_frame_39.png<>uid://cinh66mninawk::::res://Assets/Art/Sprite Sheets/dog/dog_frame_40.png<>uid://bhttga0hdw3uv::::res://Assets/Art/Sprite Sheets/dog/dog_frame_41.png<>uid://bk0f1djooredf::::res://Assets/Art/Sprite Sheets/dog/dog_frame_42.png<>uid://dy3k7jbihskc8::::res://Assets/Art/Sprite Sheets/dog/dog_frame_43.png<>uid://demfbivkamqlv::::res://Assets/Art/Sprite Sheets/dog/dog_frame_44.png<>uid://c84v0jc8mkcxn::::res://Assets/Art/Sprite Sheets/dog/dog_frame_45.png<>uid://bcmfp3214cbba::::res://Assets/Art/Sprite Sheets/dog/dog_frame_46.png<>uid://oil25huhmwtr::::res://Assets/Art/Sprite Sheets/dog/dog_frame_47.png<>uid://do7wcgggj8ayk::::res://Assets/Art/Sprite Sheets/dog/dog_frame_48.png<>uid://bnnxm48rihupv::::res://Assets/Art/Sprite Sheets/dog/dog_frame_49.png<>uid://dbly3fpfqo4t2::::res://Assets/Art/Sprite Sheets/dog/dog_frame_50.png<>uid://dwmfsrbdoyuid::::res://Assets/Art/Sprite Sheets/dog/dog_frame_51.png<>uid://c73ypf55ovfkv::::res://Assets/Art/Sprite Sheets/dog/dog_frame_52.png<>uid://bb8n0uw5m0b6e::::res://Assets/Art/Sprite Sheets/dog/dog_frame_53.png<>uid://kukm0t64idq8::::res://Assets/Art/Sprite Sheets/dog/dog_frame_54.png<>uid://dmhnvl204yuot::::res://Assets/Art/Sprite Sheets/dog/dog_frame_55.png<>uid://3fcmln311pas::::res://Assets/Art/Sprite Sheets/dog/dog_frame_56.png<>uid://dysgilpkjdw52::::res://Assets/Art/Sprite Sheets/dog/dog_frame_57.png<>uid://cqtpfjaihipsx::::res://Assets/Art/Sprite Sheets/dog/dog_frame_58.png<>uid://dbpu7sceypic7::::res://Assets/Art/Sprite Sheets/dog/dog_frame_59.png<>uid://csqxuqnhtmx2c::::res://Assets/Art/Sprite Sheets/dog/dog_frame_60.png<>uid://bvadmdc7b3g5j::::res://Assets/Art/Sprite Sheets/dog/dog_frame_61.png<>uid://c0jowihyy8y1c::::res://Assets/Art/Sprite Sheets/dog/dog_frame_62.png<>uid://ddtc3ybqgrnjm::::res://Assets/Art/Sprite Sheets/dog/dog_frame_63.png<>uid://et60ojnl2ej8::::res://Assets/Art/Sprite Sheets/dog/dog_frame_64.png<>uid://bg3tn0n77tmap::::res://Assets/Art/Sprite Sheets/dog/dog_frame_65.png<>uid://q4sdykd0ljkm::::res://Assets/Art/Sprite Sheets/dog/dog_frame_66.png<>uid://vip1g3sk2iro::::res://Assets/Art/Sprite Sheets/dog/dog_frame_67.png<>uid://dis5gutavx3nn::::res://Assets/Art/Sprite Sheets/dog/dog_frame_68.png<>uid://cukr106bwvcgf::::res://Assets/Art/Sprite Sheets/dog/dog_frame_69.png<>uid://cmyftp5d6vsoe::::res://Assets/Art/Sprite Sheets/dog/dog_frame_70.png<>uid://dj3ldj8d5krtx::::res://Assets/Art/Sprite Sheets/dog/dog_frame_71.png<>uid://cy5o2kb738aqe::::res://Assets/Art/Sprite Sheets/dog/dog_frame_72.png<>uid://cq3smkyxmti2s::::res://Assets/Art/Sprite Sheets/dog/dog_frame_73.png<>uid://c0qrbrv8yudqk::::res://Assets/Art/Sprite Sheets/dog/dog_frame_74.png<>uid://b3f058yickx0h::::res://Assets/Art/Sprite Sheets/dog/dog_frame_75.png<>uid://b7acrf6khy63d::::res://Assets/Art/Sprite Sheets/dog/dog_frame_76.png<>uid://drro8hpiptg6n::::res://Assets/Art/Sprite Sheets/dog/dog_frame_77.png<>uid://tm7ndmkwtdqe::::res://Assets/Art/Sprite Sheets/dog/dog_frame_78.png<>uid://cjdyw5qp14mgf::::res://Assets/Art/Sprite Sheets/dog/dog_frame_79.png<>uid://b0al8rbwfcmoi::::res://Assets/Art/Sprite Sheets/dog/dog_frame_80.png<>uid://dsrjiw3b4bvte::::res://Assets/Art/Sprite Sheets/dog/dog_frame_81.png<>uid://d0lunj4cqm1r3::::res://Assets/Art/Sprite Sheets/dog/dog_frame_82.png<>uid://j8u2scoqf0db::::res://Assets/Art/Sprite Sheets/dog/dog_frame_83.png<>uid://cgsjd5y6bf3tb::::res://Assets/Art/Sprite Sheets/dog/dog_frame_84.png<>uid://dl5dgjem8hu16::::res://Assets/Art/Sprite Sheets/dog/dog_frame_85.png<>uid://bvksdctsu0eyg::::res://Assets/Art/Sprite Sheets/dog/dog_frame_86.png<>uid://c4spv2weeio4a::::res://Assets/Art/Sprite Sheets/dog/dog_frame_87.png
+::res://Assets/Scripts/::1724365063
+::res://Assets/Scripts/MainGame/::1724365190
+Globals.cs::CSharpScript::-1::1724371130::0::1::::<>Node2D<>::
+ItemMover.cs::CSharpScript::-1::1724370650::0::1::::<>TextureButton<>::
+Magnetism.cs::CSharpScript::-1::1724372079::0::1::::<>Node<>::
+OptionsMenu.cs::CSharpScript::-1::1724280712::0::1::::<>Control<>::
+::res://Assets/Scripts/MainGame/UI/::1724279639
+AnimateMenuButton.cs::CSharpScript::-1::1724351987::0::1::::<>TextureButton<>::
+AnimateReturnButton.cs::CSharpScript::-1::1724351992::0::1::::<>TextureButton<>::
+Entity.cs::CSharpScript::-1::1724356889::0::1::::<>TextureButton<>::
+FolderSelect.cs::CSharpScript::-1::1717948623::0::1::::<>Control<>::
+MenuController.cs::CSharpScript::-1::1717948738::0::1::::<>Control<>::
+PopulateItems.cs::CSharpScript::-1::1717948732::0::1::::<>TextureRect<>::
 ::res://Assets/Scripts/SplashandMenu/::1708540671
 MenuScript.cs::CSharpScript::-1::1708540671::0::1::::<>Node2D<>::
-::res://Assets/Scripts/Util/::1715002125
-AnimateButton.cs::CSharpScript::-1::1715006722::0::1::::<>TextureButton<>::
-AttachScripts.cs::CSharpScript::-1::1713358989::0::1::::<><>::
+::res://Assets/Scripts/Util/::1724348050
+AttachScripts.cs::CSharpScript::-1::1717943318::0::1::::<><>::
+CallAnimateButton.cs::CSharpScript::-1::1724368215::0::1::::<>TextureButton<>::

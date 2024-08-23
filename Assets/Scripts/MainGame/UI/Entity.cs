@@ -5,24 +5,23 @@ namespace DressupUI
 {
     public partial class Entity : TextureButton
     {
-        private enum ItemType {
+        public enum ItemType {
             Shoes,
             Socks,
             Trousers,
             Dress,
             Outfit,
             Shirt,
-            Hair,
-            Hat,
+            Headwear,
             Accessory,
         };
-        [Export] ItemType itemType;
+        [Export] public ItemType itemType;
         public void SetZIndex()
         {
             ZIndex = (int)itemType;
         }
 
-        private static Tuple<int,Godot.Vector2> inMenuScaleSize = new(1, new Godot.Vector2(70,70));
+        private static readonly Tuple<int,Godot.Vector2> inMenuScaleSize = new(1, new Godot.Vector2(70,70));
         public static TextureButton InitEntity(Texture2D itemTexture)
         {
             var newItem = new Entity {
@@ -39,7 +38,15 @@ namespace DressupUI
             return newItem;
         }
 
-        public void setNewSize(){
+        public void SetNewSize()
+        {
+            // var tween = GetTree().CreateTween();
+            // tween.TweenProperty(GetNode(GetPath()), "size", TextureNormal.GetSize(), 0.15f)
+			// 	 	 .SetTrans(Tween.TransitionType.Linear);
+
+            // tween.Parallel().TweenProperty(GetNode(GetPath()), "scale", new Godot.Vector2(.33f,.33f), 0.15f)
+            //         .SetTrans(Tween.TransitionType.Back)
+            //         .SetEase(Tween.EaseType.In);
             this.Size = this.TextureNormal.GetSize();
             this.Scale = new Godot.Vector2(.33f,.33f);
         }

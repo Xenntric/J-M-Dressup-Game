@@ -6,7 +6,7 @@ using System.Linq;
 public partial class StrictGrid : Container
 {
 	[Export] int Columns;
-	[Export] Vector2 CellSize;
+	[Export] public Vector2 CellSize;
 	[Export] bool RatioCellSize;
 	[Export] Vector2 CellSpacing;
 	Godot.Collections.Array<Node> Children;
@@ -91,8 +91,7 @@ public partial class StrictGrid : Container
         Control prevChild;
         Columns = Math.Clamp(Columns, 1, Children.Count);
 
-        float yOffset = 0;
-        float xOffset = 0;
+        var offset = Vector2.Zero;
         int returns = 1;
 
         for (int i = 1; i < Children.Count; i++)
@@ -101,19 +100,23 @@ public partial class StrictGrid : Container
             Control child = Children[i] as Control;
             prevChild.Size = CellSize;
             child.Size = CellSize;
-            xOffset += CellSize.X + CellSpacing.X;
 
+            prevChild.PivotOffset = CellSize/2;
+            child.PivotOffset = CellSize/2;
+
+
+            offset.X += CellSize.X + CellSpacing.X;
             if (i % Columns == 0)
             {
-                xOffset = (0);
-                yOffset += CellSize.Y;
-                yOffset += CellSpacing.Y;
+                offset.X = 0;
+                offset.Y += CellSize.Y;
+                offset.Y += CellSpacing.Y;
                 returns += 1;
             }
 
             child.Position = new Vector2(
-                xOffset,
-                yOffset + ScrollPercentage);
+                offset.X,
+                offset.Y + ScrollPercentage);
 
             bounds = new Vector2((Children[Columns - 1] as Control).Position.X + CellSize.X, (Children[^1] as Control).Position.Y + CellSize.Y);
 

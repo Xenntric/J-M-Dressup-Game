@@ -102,7 +102,6 @@ namespace DressupUI
         }
         private void mouseExitedMenu()
         {
-            GD.Print("entered");
         }
 
         private void CreateItem(TextureButton textureButton)

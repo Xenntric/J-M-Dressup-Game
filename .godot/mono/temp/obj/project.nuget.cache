@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "HADnEhLGQtDQGEjO231xFMFcnE3aqjRJrBxOVfr6r9puorSF7bwSoX2t9tyGFRaY91gB2Aw0/d07tNE+BEsuEQ==",
+  "dgSpecHash": "lNVl6wFOnSIDJmg9fvGFNQKdHLxsdvfwxEbAmn8e2Y0BcqJ4ZwTcLLvyfSkjGAejb2g55qFIMA4Q7lC/cSb5Qg==",
   "success": true,
   "projectFilePath": "/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/Dressup.csproj",
   "expectedPackageFiles": [
-    "/home/slurry/.nuget/packages/godot.sourcegenerators/4.2.2/godot.sourcegenerators.4.2.2.nupkg.sha512",
-    "/home/slurry/.nuget/packages/godotsharp/4.2.2/godotsharp.4.2.2.nupkg.sha512",
-    "/home/slurry/.nuget/packages/godotsharpeditor/4.2.2/godotsharpeditor.4.2.2.nupkg.sha512",
-    "/home/slurry/.nuget/packages/microsoft.netcore.app.ref/6.0.30/microsoft.netcore.app.ref.6.0.30.nupkg.sha512",
-    "/home/slurry/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.30/microsoft.aspnetcore.app.ref.6.0.30.nupkg.sha512"
+    "/home/slurry/.nuget/packages/godot.sourcegenerators/4.3.0/godot.sourcegenerators.4.3.0.nupkg.sha512",
+    "/home/slurry/.nuget/packages/godotsharp/4.3.0/godotsharp.4.3.0.nupkg.sha512",
+    "/home/slurry/.nuget/packages/godotsharpeditor/4.3.0/godotsharpeditor.4.3.0.nupkg.sha512",
+    "/home/slurry/.nuget/packages/microsoft.netcore.app.ref/6.0.32/microsoft.netcore.app.ref.6.0.32.nupkg.sha512",
+    "/home/slurry/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.32/microsoft.aspnetcore.app.ref.6.0.32.nupkg.sha512"
   ],
   "logs": []
 }
