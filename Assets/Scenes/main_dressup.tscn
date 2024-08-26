@@ -552,6 +552,7 @@ _data = {
 }
 
 [node name="DressUpScene" type="Node2D"]
+process_priority = -1
 texture_filter = 1
 scale = Vector2(1.65, 1.65)
 script = ExtResource("1_djp2r")
@@ -774,6 +775,7 @@ CellSize = Vector2(130, 130)
 RatioCellSize = true
 
 [node name="J_Dress_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Dress container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+process_priority = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -787,6 +789,7 @@ ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 itemType = 3
 
 [node name="M_Dress_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Dress container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+process_priority = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -811,6 +814,7 @@ CellSize = Vector2(130, 130)
 RatioCellSize = true
 
 [node name="J_Shoes_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Shoes container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+process_priority = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -823,6 +827,7 @@ FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
 [node name="M_Shoes_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Shoes container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+process_priority = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -846,6 +851,7 @@ CellSize = Vector2(130, 130)
 RatioCellSize = true
 
 [node name="J_Outfit_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Outfits container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+process_priority = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -860,6 +866,7 @@ magnetPosition = Vector2(652.831, 735.237)
 itemType = 4
 
 [node name="M_Outfit_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Outfits container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+process_priority = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -885,6 +892,7 @@ CellSize = Vector2(130, 130)
 RatioCellSize = true
 
 [node name="J_Hair_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+process_priority = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -899,6 +907,7 @@ magnetPosition = Vector2(896.201, 510.049)
 itemType = 6
 
 [node name="M_Hair_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+process_priority = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -913,6 +922,7 @@ magnetPosition = Vector2(1334.77, 543.385)
 itemType = 6
 
 [node name="Top_Hat" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+process_priority = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -937,6 +947,7 @@ CellSize = Vector2(130, 130)
 RatioCellSize = true
 
 [node name="J_Smoke_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Accessories container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+process_priority = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -950,6 +961,7 @@ ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 itemType = 7
 
 [node name="M_Smoke_0" type="TextureButton" parent="NewUI/Menu/MenuBody/MenuClothes/Accessories container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+process_priority = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -1163,6 +1175,7 @@ position = Vector2(127.361, -58.4506)
 polygon = PackedVector2Array(-275.482, -1.83655, -67.9526, -36.731, 178.145, -5.50964, 295.684, 135.904, 93.6636, 593.205, -372.819, 567.493, -505.051, 334.252)
 
 [node name="HeadwearSprites" type="Node2D" parent="Characters/NakedbaseJulus"]
+process_priority = -1
 script = ExtResource("52_w7ajx")
 itemType = 6
 
@@ -1276,6 +1289,7 @@ position = Vector2(375.417, 16.4757)
 texture = ExtResource("5_pdjoi")
 
 [node name="ItemLayer" type="Node2D" parent="Characters"]
+process_priority = 1
 z_index = 1
 
 [node name="PlayTransition" type="Node2D" parent="."]

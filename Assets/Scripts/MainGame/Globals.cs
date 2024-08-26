@@ -11,21 +11,13 @@ namespace Dressup
 		[Export] public bool magnetise = false;
 
 		[Export] public TextureButton GrabbedItem {get;set;}
+		[Export] public TextureButton Magnetise {get;set;}
 
 		// Called when the node enters the scene tree for the first time.
 		public override void _EnterTree()
 		{
 			GrabbedItem = null;
 		}
-
-		public override void _Process(double delta)
-		{
-			if(GrabbedItem != null)
-			{
-				// GD.Print(GrabbedItem.Name);
-			}
-		}
-
 
 		public void HandleItemClicked()
 		{

@@ -27,12 +27,10 @@ namespace DressupUI
 			this.ProcessPriority = 1;
 			this.TextureSize = this.TextureNormal.GetSize();
 			this.ButtonDown += AttachAndMove;
-			// this.ButtonUp += HandleButtonUp;
 		}
 
 		private void AttachAndMove()
 		{
-			globals.GrabbedItem = this;
 			PosOffset = this.GetViewport().GetMousePosition() - this.GlobalPosition;
 			if(GetParent() != ItemLayerNode)
 			{
@@ -47,36 +45,22 @@ namespace DressupUI
 				PosOffset = this.GetViewport().GetMousePosition() - this.GlobalPosition;
 
 				ToggleMode = true;
-				grabbed = true;
-				// EmitSignal(Button.SignalName.ButtonUp);
 			}
+
+			globals.GrabbedItem = this;
 			ButtonPressed = true;
 		}
-		
-		private void HandleButtonUp()
-		{
-			// globals.GrabbedItem = null;
-		}
 
-		public override void _Pressed()
-		{
-			base._Pressed();
-			globals.GrabbedItem = this;
-		}
-
-		public override void _Input(InputEvent @event)
+		public override void _UnhandledInput(InputEvent @event)
 		{
 			base._Input(@event);
-			if(@event.IsActionReleased("Grab") && grabbed)
+			if(@event.IsActionReleased("Grab")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             )
 			{
-				grabbed = false;
 				ToggleMode = false;
-				// globals.GrabbedItem = null;
+				globals.GrabbedItem = null;
 			}
-
 			else if (@event is InputEventMouseMotion eventMouseMotion && ButtonPressed)
 			{
-				// GD.Print("Mouse Motion at: ", eventMouseMotion.Position);
 				GlobalPosition = eventMouseMotion.Position - PosOffset;
 			}
 		}
