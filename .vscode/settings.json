@@ -1,3 +1,6 @@
 {
-    "godot_tools.editor_path": "/usr/bin/godot-mono"
+    "godot_tools.editor_path": "/usr/bin/godot-mono",
+    "files.exclude": {
+        "**/*.uid": true
+    }
 }

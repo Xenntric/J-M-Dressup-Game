@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://crwj8gx1pusm6"]
+
+[ext_resource type="Texture2D" uid="uid://b6bni5y2buylb" path="res://Assets/Art/Clothes/Accessories/hand_1_julus.png" id="1_m8ohx"]
+[ext_resource type="Script" uid="uid://cf70tehjs6tpy" path="res://Assets/Scripts/MainGame/LiveItem.cs" id="2_3o0p7"]
+
+[node name="J_Smoke_0" type="TextureButton"]
+process_priority = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+texture_normal = ExtResource("1_m8ohx")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_3o0p7")
+itemType = 7
+magnetPosition = Vector2(-535.633, -506.568)

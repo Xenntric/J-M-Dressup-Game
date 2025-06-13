@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6p0ec6tcrbbb"]
+
+[ext_resource type="Texture2D" uid="uid://na7mb7k7g4t2" path="res://Assets/Art/Clothes/Hats/top hat.png" id="1_5fb6i"]
+[ext_resource type="Script" uid="uid://cf70tehjs6tpy" path="res://Assets/Scripts/MainGame/LiveItem.cs" id="2_sbkxn"]
+
+[node name="Top_Hat" type="TextureButton"]
+process_priority = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+texture_normal = ExtResource("1_5fb6i")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_sbkxn")
+itemType = 6

@@ -1,10 +1,5 @@
 using DressupUI;
 using Godot;
-using System;
-using System.Linq.Expressions;
-using System.Reflection.Metadata.Ecma335;
-using System.Security.AccessControl;
-using System.Security.Cryptography;
 
 namespace Dressup
 {
@@ -12,15 +7,10 @@ namespace Dressup
 	{
 		private Globals globals;
 		
-		protected enum ItemType {
-            Shoes,
-            Socks,
-            Trousers,
-            Dress,
-            Outfit,
-            Shirt,
-            Headwear,
-            Accessory,
+		protected enum ItemType { 
+			Shoes, Socks, Trousers, 
+			Dress, Outfit, Shirt, 
+			Headwear, Accessory,
         };
         [Export] ItemType itemType;
 		private Sprite2D MatchingSprite;
@@ -38,11 +28,11 @@ namespace Dressup
 
 		protected void HandleMouseEntered()
         {
+			if(!globals.magnetise) {return;}
 
-            if (!globals.magnetise || globals.GrabbedItem == null || (int)(globals.GrabbedItem as Entity).itemType != (int)itemType)
-            {
-                return;
-            }
+			inside = true;
+
+			if(globals.GrabbedItem == null || (int)(globals.GrabbedItem as LiveItem).itemType != (int)itemType){return;}
 
             CheckMatchingSprites();
         }
@@ -53,7 +43,6 @@ namespace Dressup
             {
                 if (GetChild<Sprite2D>(i).Name == globals.GrabbedItem.Name)
                 {
-                    inside = true;
                     MatchingSprite = GetChild<Sprite2D>(i);
                     tween = GetTree().CreateTween();
                     tween.SetLoops().TweenProperty(MatchingSprite, "modulate:a", .33f, 1.25f)
@@ -70,7 +59,6 @@ namespace Dressup
 
         protected void HandleMouseExited()
 		{
-			GD.Print("Magnetism - exited");
 			inside = false;
 			if(MatchingSprite == null)
 			{
@@ -82,7 +70,7 @@ namespace Dressup
 			MatchingSprite = null;
 		}
 
-		public override void _Input(InputEvent @event)
+		public override void _UnhandledInput(InputEvent @event)
 		{
 			if(!globals.magnetise)
 			{
@@ -90,13 +78,17 @@ namespace Dressup
 			}
 
 			base._Input(@event);
-
-			if(@event.IsActionReleased("Grab"))
+			if(@event.IsActionPressed("Grab"))
 			{
-				if(inside)
+				if(inside && globals.GrabbedItem != null)
 				{
-					GD.Print(globals.GrabbedItem.Name);
-					GD.Print(MatchingSprite.Name);
+					CheckMatchingSprites();
+				}
+			}
+			else if(@event.IsActionReleased("Grab"))
+			{
+				if(inside && globals.GrabbedItem != null && MatchingSprite != null)
+				{
 					var localTween = GetTree().CreateTween();
 					localTween.TweenProperty(globals.GrabbedItem, "global_position", MatchingSprite.GlobalPosition, .5f)
 								.SetTrans(Tween.TransitionType.Expo)

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2e4wvwovp5n6"]
+
+[ext_resource type="Texture2D" uid="uid://b8rnbpbrys62j" path="res://Assets/Art/Clothes/Accessories/hand_1_matt.png" id="1_oyb5h"]
+[ext_resource type="Script" uid="uid://cf70tehjs6tpy" path="res://Assets/Scripts/MainGame/LiveItem.cs" id="2_hr7sj"]
+
+[node name="M_Smoke_0" type="TextureButton"]
+process_priority = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+texture_normal = ExtResource("1_oyb5h")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_hr7sj")
+itemType = 7

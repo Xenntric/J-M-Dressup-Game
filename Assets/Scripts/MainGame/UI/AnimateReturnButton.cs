@@ -1,7 +1,5 @@
-using System;
 using System.Linq;
 using Godot;
-using Godot.Collections;
 
 namespace DressupUI
 {
@@ -29,10 +27,6 @@ namespace DressupUI
 				};
 				case MenuController.MenuDepthEnum.clothes:
 				{
-					// if(AnimationPlayer.IsConnected(AnimationPlayer.SignalName.AnimationFinished, Callable.From(() => HideClothes(null))))
-					// {
-					// 	return;
-					// }
 					AnimationPlayer.AnimationFinished += HideClothes;
 					AnimationPlayer.PlayBackwards(Animation[1]);
 					break;
@@ -42,7 +36,6 @@ namespace DressupUI
 		
 		private void HideClothes(StringName animName)
 		{
-			GD.Print("Hide");
 			if(animName == Animation[1])
 			{
 				foreach (StrictGrid child in MenuBody.GetChildren().Cast<StrictGrid>())

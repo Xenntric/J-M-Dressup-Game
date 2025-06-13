@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4yyfcsl5clsh"]
+
+[ext_resource type="Texture2D" uid="uid://g6moga5mby4b" path="res://Assets/Art/Clothes/Costumes/dress_2_julus.png" id="1_3cmyq"]
+[ext_resource type="Script" uid="uid://cf70tehjs6tpy" path="res://Assets/Scripts/MainGame/LiveItem.cs" id="2_3cmyq"]
+
+[node name="J_Outfit_0" type="TextureButton"]
+process_priority = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+texture_normal = ExtResource("1_3cmyq")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_3cmyq")
+itemType = 4
+magnetPosition = Vector2(652.831, 735.237)

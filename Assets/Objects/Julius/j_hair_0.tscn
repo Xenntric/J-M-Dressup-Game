@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvvnbrdbfoub7"]
+
+[ext_resource type="Texture2D" uid="uid://eypogoj50kav" path="res://Assets/Art/Clothes/Hats/hair_1_julus.png" id="1_rs6ko"]
+[ext_resource type="Script" uid="uid://cf70tehjs6tpy" path="res://Assets/Scripts/MainGame/LiveItem.cs" id="2_83hf8"]
+
+[node name="J_Hair_0" type="TextureButton"]
+process_priority = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+texture_normal = ExtResource("1_rs6ko")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_83hf8")
+itemType = 6

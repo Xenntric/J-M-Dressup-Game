@@ -1,2 +1,2 @@
-﻿36549
-/usr/lib/godot-mono/bin/godot.linuxbsd.editor.x86_64.mono
+﻿33815
+/usr/lib/godot-mono/godot.linuxbsd.editor.x86_64.mono

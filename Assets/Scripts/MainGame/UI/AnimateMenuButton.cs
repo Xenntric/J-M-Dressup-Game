@@ -1,6 +1,4 @@
 using Godot;
-using Godot.Collections;
-
 namespace DressupUI
 {
 	public partial class AnimateMenuButton : Utils.CallAnimateButton

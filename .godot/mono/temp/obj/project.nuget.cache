@@ -1,14 +1,24 @@
 {
   "version": 2,
-  "dgSpecHash": "lNVl6wFOnSIDJmg9fvGFNQKdHLxsdvfwxEbAmn8e2Y0BcqJ4ZwTcLLvyfSkjGAejb2g55qFIMA4Q7lC/cSb5Qg==",
+  "dgSpecHash": "gsQoP06HRlY=",
   "success": true,
   "projectFilePath": "/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/Dressup.csproj",
   "expectedPackageFiles": [
-    "/home/slurry/.nuget/packages/godot.sourcegenerators/4.3.0/godot.sourcegenerators.4.3.0.nupkg.sha512",
-    "/home/slurry/.nuget/packages/godotsharp/4.3.0/godotsharp.4.3.0.nupkg.sha512",
-    "/home/slurry/.nuget/packages/godotsharpeditor/4.3.0/godotsharpeditor.4.3.0.nupkg.sha512",
-    "/home/slurry/.nuget/packages/microsoft.netcore.app.ref/6.0.32/microsoft.netcore.app.ref.6.0.32.nupkg.sha512",
-    "/home/slurry/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.32/microsoft.aspnetcore.app.ref.6.0.32.nupkg.sha512"
+    "/home/slurry/.nuget/packages/godot.sourcegenerators/4.4.1/godot.sourcegenerators.4.4.1.nupkg.sha512",
+    "/home/slurry/.nuget/packages/godotsharp/4.4.1/godotsharp.4.4.1.nupkg.sha512",
+    "/home/slurry/.nuget/packages/godotsharpeditor/4.4.1/godotsharpeditor.4.4.1.nupkg.sha512",
+    "/home/slurry/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/home/slurry/.nuget/packages/nuget.common/6.12.1/nuget.common.6.12.1.nupkg.sha512",
+    "/home/slurry/.nuget/packages/nuget.configuration/6.12.1/nuget.configuration.6.12.1.nupkg.sha512",
+    "/home/slurry/.nuget/packages/nuget.frameworks/6.12.1/nuget.frameworks.6.12.1.nupkg.sha512",
+    "/home/slurry/.nuget/packages/nuget.packaging/6.12.1/nuget.packaging.6.12.1.nupkg.sha512",
+    "/home/slurry/.nuget/packages/nuget.protocol/6.12.1/nuget.protocol.6.12.1.nupkg.sha512",
+    "/home/slurry/.nuget/packages/nuget.versioning/6.12.1/nuget.versioning.6.12.1.nupkg.sha512",
+    "/home/slurry/.nuget/packages/system.formats.asn1/8.0.1/system.formats.asn1.8.0.1.nupkg.sha512",
+    "/home/slurry/.nuget/packages/system.security.cryptography.pkcs/6.0.4/system.security.cryptography.pkcs.6.0.4.nupkg.sha512",
+    "/home/slurry/.nuget/packages/system.security.cryptography.protecteddata/4.4.0/system.security.cryptography.protecteddata.4.4.0.nupkg.sha512",
+    "/home/slurry/.nuget/packages/microsoft.netcore.app.ref/8.0.15/microsoft.netcore.app.ref.8.0.15.nupkg.sha512",
+    "/home/slurry/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.15/microsoft.aspnetcore.app.ref.8.0.15.nupkg.sha512"
   ],
   "logs": []
 }

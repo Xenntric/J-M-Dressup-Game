@@ -1,6 +1,6 @@
 [gd_scene load_steps=134 format=3 uid="uid://jrkflywtdx4e"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/SplashandMenu/MenuScript.cs" id="1_7cnoy"]
+[ext_resource type="Script" uid="uid://dum34f8ieq3we" path="res://Assets/Scripts/SplashandMenu/MenuScript.cs" id="1_7cnoy"]
 [ext_resource type="Texture2D" uid="uid://btpf2oqpvghbm" path="res://Assets/Art/Splash Art/Portraits/SpriteFrame_1.png" id="1_fpdbn"]
 [ext_resource type="Texture2D" uid="uid://cwuerq3acdchl" path="res://Assets/Art/Splash Art/background.png" id="1_woctu"]
 [ext_resource type="PackedScene" uid="uid://datctv4lilhv1" path="res://Assets/Scenes/main_dressup.tscn" id="2_pchsh"]
@@ -147,8 +147,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qwflm"]
 _data = {
-"RESET": SubResource("Animation_43n6u"),
-"heart_slide": SubResource("Animation_kdcyd")
+&"RESET": SubResource("Animation_43n6u"),
+&"heart_slide": SubResource("Animation_kdcyd")
 }
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xqfjg"]
@@ -331,10 +331,10 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7kc5o"]
 _data = {
-"Menu_Animation": SubResource("Animation_1gbt2"),
-"Play_Transition": SubResource("Animation_7p8ln"),
-"RESET": SubResource("Animation_tltqa"),
-"Splash_Animation": SubResource("Animation_yr6fi")
+&"Menu_Animation": SubResource("Animation_1gbt2"),
+&"Play_Transition": SubResource("Animation_7p8ln"),
+&"RESET": SubResource("Animation_tltqa"),
+&"Splash_Animation": SubResource("Animation_yr6fi")
 }
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_ry1in"]
@@ -396,7 +396,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ob14h"]
 _data = {
-"Menu_Animation": SubResource("Animation_eylgb")
+&"Menu_Animation": SubResource("Animation_eylgb")
 }
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fkyts"]
@@ -694,7 +694,7 @@ axis_stretch_vertical = 2
 
 [node name="AnimateHearts" type="AnimationPlayer" parent="ScrollingHearts"]
 libraries = {
-"": SubResource("AnimationLibrary_qwflm")
+&"": SubResource("AnimationLibrary_qwflm")
 }
 autoplay = "heart_slide"
 
@@ -735,7 +735,7 @@ frame_progress = 0.695564
 
 [node name="AnimateSplash" type="AnimationPlayer" parent="Splash Art"]
 libraries = {
-"": SubResource("AnimationLibrary_7kc5o")
+&"": SubResource("AnimationLibrary_7kc5o")
 }
 
 [node name="BlackScreen" type="Sprite2D" parent="Splash Art"]
@@ -783,7 +783,7 @@ stretch_mode = 3
 
 [node name="AnimateMenu" type="AnimationPlayer" parent="Control"]
 libraries = {
-"": SubResource("AnimationLibrary_ob14h")
+&"": SubResource("AnimationLibrary_ob14h")
 }
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control"]

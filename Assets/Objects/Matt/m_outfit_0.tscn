@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1o83c20ippcq"]
+
+[ext_resource type="Texture2D" uid="uid://dgx3rfuemyvjl" path="res://Assets/Art/Clothes/Costumes/dress_2_matt.png" id="1_f5vdc"]
+[ext_resource type="Script" uid="uid://cf70tehjs6tpy" path="res://Assets/Scripts/MainGame/LiveItem.cs" id="2_f5vdc"]
+
+[node name="M_Outfit_0" type="TextureButton"]
+process_priority = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+texture_normal = ExtResource("1_f5vdc")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_f5vdc")
+itemType = 4
+magnetPosition = Vector2(1405.23, 704.227)

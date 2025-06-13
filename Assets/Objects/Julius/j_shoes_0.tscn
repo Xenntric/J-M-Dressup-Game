@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd5c4r3wxq51u"]
+
+[ext_resource type="Texture2D" uid="uid://bwgs0mobinjhx" path="res://Assets/Art/Clothes/Dress/dress_1_julus.png" id="1_712pu"]
+[ext_resource type="Script" uid="uid://cf70tehjs6tpy" path="res://Assets/Scripts/MainGame/LiveItem.cs" id="2_be06d"]
+
+[node name="J_Shoes_0" type="TextureButton"]
+process_priority = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+texture_normal = ExtResource("1_712pu")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_be06d")
