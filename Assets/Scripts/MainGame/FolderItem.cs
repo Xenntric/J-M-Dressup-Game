@@ -1,3 +1,4 @@
+// using System.Linq;
 using Dressup;
 using Godot;
 using Utils;
@@ -35,6 +36,7 @@ namespace DressupUI
         protected void SpawnNewObj()
         {
             CreateNewObj();
+            globals.OutFolderItems.Add(this);
             Shrink();
         }
 
@@ -52,6 +54,7 @@ namespace DressupUI
 
             GD.Print(copy, ItemLayerNode);
             ItemLayerNode.AddChild(copy);
+            copy.Name = Name;
             copy.FolderContainer = FolderContainer;
             copy.magnetPosition = magnetPosition;
             copy.itemType = itemType;

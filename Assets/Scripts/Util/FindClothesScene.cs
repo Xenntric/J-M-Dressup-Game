@@ -5,7 +5,7 @@ namespace Utils
 {
     public class Finder
     {
-        public static PackedScene FindClothesScene<T>(T node, Type type = null) where T : Node
+        public static PackedScene FindClothesScene<T>(T node) where T : Node
         {
             string name = node.Name;
             name = name.ToLower();

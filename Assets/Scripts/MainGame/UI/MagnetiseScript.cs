@@ -10,9 +10,9 @@ namespace Dressup
 		public override void _Ready()
 		{
 			base._Ready();
-			Pressed += tiggle;
+			Pressed += toggle;
 		}
-		private void tiggle()
+		private void toggle()
 		{
 			GD.Print(globals.magnetise);
 		}
