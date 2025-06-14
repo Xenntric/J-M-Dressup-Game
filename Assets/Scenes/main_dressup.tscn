@@ -236,13 +236,6 @@ frames = 2
 frame_0/texture = ExtResource("37_xv45l")
 frame_1/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_jtuke"]
-frames = 2
-speed_scale = 2.0
-frame_0/texture = ExtResource("28_gsi1b")
-frame_1/texture = ExtResource("29_1nrh2")
-frame_1/duration = 1.0
-
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_lwubn"]
 frames = 2
 speed_scale = 2.0
@@ -276,6 +269,13 @@ frames = 2
 speed_scale = 2.0
 frame_0/texture = ExtResource("40_uqejs")
 frame_1/texture = ExtResource("41_jo4xn")
+frame_1/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_jtuke"]
+frames = 2
+speed_scale = 2.0
+frame_0/texture = ExtResource("28_gsi1b")
+frame_1/texture = ExtResource("29_1nrh2")
 frame_1/duration = 1.0
 
 [sub_resource type="Animation" id="Animation_ojmkv"]
@@ -350,7 +350,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(56, 75)]
+"values": [Vector2(56, 0)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -514,7 +514,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(-2, 1),
 "update": 0,
-"values": [Vector2(56, 75), Vector2(-278.154, 75)]
+"values": [Vector2(56, 0), Vector2(-278.154, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ykktq"]
@@ -890,43 +890,17 @@ script = ExtResource("32_d60x8")
 FolderContainer = NodePath("../../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
-[node name="ReturnButton" type="TextureButton" parent="NewUI/Clothes Menu/MenuBody" node_paths=PackedStringArray("MenuBody", "menuController", "AnimationPlayer")]
-layout_mode = 0
-offset_left = 20.3828
-offset_top = -55.1512
-offset_right = 70.3739
-offset_bottom = -5.15118
-texture_normal = SubResource("AnimatedTexture_ky0hd")
-ignore_texture_size = true
-stretch_mode = 5
-script = ExtResource("32_cqbeu")
-MenuBody = NodePath("../MenuClothes")
-menuController = NodePath("../..")
-AnimationPlayer = NodePath("../../MenuAnimations")
-Animation = Array[StringName]([&"menu_open", &"show_clothes"])
-
-[node name="ReturnTexture" type="TextureRect" parent="NewUI/Clothes Menu/MenuBody/ReturnButton"]
-layout_mode = 0
-offset_left = 2.39785
-offset_top = 0.59947
-offset_right = 42.3979
-offset_bottom = 40.5995
-scale = Vector2(1.15, 1.15)
-texture = SubResource("AnimatedTexture_jtuke")
-expand_mode = 1
-stretch_mode = 5
-
 [node name="MenuClothesButtons" type="Container" parent="NewUI/Clothes Menu/MenuBody"]
 layout_mode = 0
 offset_left = 56.0
-offset_top = 75.0
-offset_right = 262.0
-offset_bottom = 377.0
-pivot_offset = Vector2(103, 151)
+offset_right = 251.0
+offset_bottom = 371.0
+pivot_offset = Vector2(1137.94, 21.2121)
 script = ExtResource("43_rxod3")
 Columns = 2
-CellSize = Vector2(95, 90)
-CellSpacing = Vector2(16, 16)
+CellSize = Vector2(95, 95)
+CellSpacing = Vector2(5, 5)
+CellPadding = Vector2(0, 76)
 
 [node name="HatButton" type="TextureButton" parent="NewUI/Clothes Menu/MenuBody/MenuClothesButtons" node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
 layout_mode = 2
@@ -1049,6 +1023,32 @@ layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_lwubn")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="ReturnButton" type="TextureButton" parent="NewUI/Clothes Menu/MenuBody" node_paths=PackedStringArray("MenuBody", "menuController", "AnimationPlayer")]
+layout_mode = 0
+offset_left = 20.3828
+offset_top = -55.1512
+offset_right = 70.3739
+offset_bottom = -5.15118
+texture_normal = SubResource("AnimatedTexture_ky0hd")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("32_cqbeu")
+MenuBody = NodePath("../MenuClothes")
+menuController = NodePath("../..")
+AnimationPlayer = NodePath("../../MenuAnimations")
+Animation = Array[StringName]([&"menu_open", &"show_clothes"])
+
+[node name="ReturnTexture" type="TextureRect" parent="NewUI/Clothes Menu/MenuBody/ReturnButton"]
+layout_mode = 0
+offset_left = 2.39785
+offset_top = 0.59947
+offset_right = 42.3979
+offset_bottom = 40.5995
+scale = Vector2(1.15, 1.15)
+texture = SubResource("AnimatedTexture_jtuke")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="MenuOutline" type="TextureRect" parent="NewUI/Clothes Menu"]
 layout_mode = 0
@@ -1316,7 +1316,6 @@ script = ExtResource("63_1rj3u")
 polygon = PackedVector2Array(892.727, 669.091, 896.364, 558.182, 950.303, 450.303, 1049.09, 368.485, 1157.58, 332.727, 1238.79, 328.485, 1237.58, 673.939)
 
 [node name="PlayTransition" type="Node2D" parent="."]
-visible = false
 position = Vector2(-24, 47.9999)
 scale = Vector2(1.33754, 1.14983)
 

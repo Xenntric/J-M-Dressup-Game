@@ -1,7 +1,5 @@
 using Godot;
 using System;
-using System.Linq;
-
 [Tool]
 public partial class StrictGrid : Container
 {
@@ -9,6 +7,7 @@ public partial class StrictGrid : Container
 	[Export] public Vector2 CellSize;
 	[Export] bool RatioCellSize;
 	[Export] Vector2 CellSpacing;
+    [Export] Vector2 CellPadding;
 	Godot.Collections.Array<Node> Children;
 	Vector2 bounds = new();
     [Export] bool ScrollingMode;
@@ -45,10 +44,10 @@ public partial class StrictGrid : Container
 			GenerateStrictGrid();
 		}
 
-        if(ScrollingMode)
+        if(ScrollingMode) /// This is stupid to be doing this all in processing. Move it to an event called when the bool is changed
         {
             
-            if (!hasScrollBar)
+            if (!hasScrollBar) 
             {
                 scrollBar ??= new VScrollBar();
                 scrollBar.MouseEntered += SBMouseEntered;
@@ -58,10 +57,10 @@ public partial class StrictGrid : Container
                 hasScrollBar = true;
             }
 
-            scrollBar.Size = new Vector2(20, Size.Y);
-            Size = new (bounds.X + scrollBar.Size.X,Size.Y);
-            scrollBar.Position = new Vector2(bounds.X + 5, 0);
-            
+            scrollBar.Size = new Vector2(15, Size.Y);
+            Size = new (bounds.X + 5 + scrollBar.Size.X,bounds.Y);
+            scrollBar.Position = new Vector2(bounds.X + 5, CellPadding.Y);
+             
             scrollBar.MaxValue = scrollBar.Size.Y;
             ScrollPercentage = -Convert.ToSingle(scrollBar.Value * scrollBar.MaxValue / 100  *.4);
         }
@@ -86,37 +85,33 @@ public partial class StrictGrid : Container
 
         Children = ReturnAcceptableChildren();
 
-        (Children[0] as Control).Position = new Vector2(0,0 + ScrollPercentage);
+        Control originalChild = Children[0] as Control;
+        originalChild.Position = new Vector2(0,0 + ScrollPercentage) + CellPadding;
+        originalChild.Size = CellSize;
+        originalChild.PivotOffset = CellSize/2;
 
-        Control prevChild;
         Columns = Math.Clamp(Columns, 1, Children.Count);
 
         var offset = Vector2.Zero;
-        int returns = 1;
+        int returns = 0;
+        var xMultiplier = 1;
 
         for (int i = 1; i < Children.Count; i++)
         {
-            prevChild = Children[i - 1] as Control;
             Control child = Children[i] as Control;
-            prevChild.Size = CellSize;
             child.Size = CellSize;
-
-            prevChild.PivotOffset = CellSize/2;
             child.PivotOffset = CellSize/2;
+            
+            if(xMultiplier >= Columns) { xMultiplier = 0; }
+            if((i % Columns) == 0) { returns += 1; }
+            
+            offset.X = originalChild.Position.X + ((CellSize.X + CellSpacing.X) * xMultiplier);
 
+            
+            offset.Y = originalChild.Position.Y + ((CellSize.Y + CellSpacing.Y) * returns) ;
 
-            offset.X += CellSize.X + CellSpacing.X;
-            if (i % Columns == 0)
-            {
-                offset.X = 0;
-                offset.Y += CellSize.Y;
-                offset.Y += CellSpacing.Y;
-                returns += 1;
-            }
-
-            child.Position = new Vector2(
-                offset.X,
-                offset.Y + ScrollPercentage);
+            child.Position = offset;
+            xMultiplier++;
 
             bounds = new Vector2((Children[Columns - 1] as Control).Position.X + CellSize.X, (Children[^1] as Control).Position.Y + CellSize.Y);
 
