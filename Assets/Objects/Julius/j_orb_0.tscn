@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://f23exv6iy3o2"]
+
+[ext_resource type="Texture2D" uid="uid://ckiaohev5j0rc" path="res://Assets/Art/Clothes/Accessories/hand_2_julus.png" id="1_iktjq"]
+[ext_resource type="Script" uid="uid://cf70tehjs6tpy" path="res://Assets/Scripts/MainGame/LiveItem.cs" id="2_iktjq"]
+
+[node name="J_Orb_0" type="TextureButton"]
+offset_right = 127.0
+offset_bottom = 127.0
+pivot_offset = Vector2(64, 64)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_iktjq")
+stretch_mode = 5
+script = ExtResource("2_iktjq")
+itemType = 7

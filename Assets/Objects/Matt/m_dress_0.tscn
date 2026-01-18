@@ -5,11 +5,13 @@
 
 [node name="M_Dress_0" type="TextureButton"]
 process_priority = 1
+offset_right = 467.0
+offset_bottom = 465.0
+pivot_offset = Vector2(214, 221)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
 texture_normal = ExtResource("1_yg7y1")
-ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("2_yg7y1")
 itemType = 3

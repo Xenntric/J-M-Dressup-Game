@@ -106,8 +106,6 @@ public partial class StrictGrid : Container
             if((i % Columns) == 0) { returns += 1; }
             
             offset.X = originalChild.Position.X + ((CellSize.X + CellSpacing.X) * xMultiplier);
-
-            
             offset.Y = originalChild.Position.Y + ((CellSize.Y + CellSpacing.Y) * returns) ;
 
             child.Position = offset;

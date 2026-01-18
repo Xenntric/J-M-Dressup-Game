@@ -6,24 +6,17 @@ namespace Dressup
 	public partial class Magnetism : Node
 	{
 		private Globals globals;
-		
-		protected enum ItemType { 
-			Shoes, Socks, Trousers, 
-			Dress, Outfit, Shirt, 
-			Headwear, Accessory,
-        };
-        [Export] ItemType itemType;
+        [Export] FolderItem.ItemType itemType;
 		private Sprite2D MatchingSprite;
 		private Tween tween;
 		private bool inside = false;
-
-		private float amplitude;
 		public override void _Ready()
 		{
 			globals = GetNode<Globals>(GetTree().Root.GetChild(0).GetPath());
-
-			GetChild<Area2D>(0).MouseEntered += HandleMouseEntered;
-			GetChild<Area2D>(0).MouseExited += HandleMouseExited;
+			
+			var area = GetChild<Area2D>(0);
+			area.MouseEntered += HandleMouseEntered;
+			area.MouseExited += HandleMouseExited;
 		}
 
 		protected void HandleMouseEntered()
@@ -60,7 +53,7 @@ namespace Dressup
         protected void HandleMouseExited()
 		{
 			inside = false;
-			if(MatchingSprite == null)
+			if (MatchingSprite == null)
 			{
 				return;
 			}
@@ -72,22 +65,19 @@ namespace Dressup
 
 		public override void _UnhandledInput(InputEvent @event)
 		{
-			if(!globals.magnetise)
-			{
-				return;
-			}
+			if (!globals.magnetise) { return; }
 
 			base._Input(@event);
-			if(@event.IsActionPressed("Grab"))
+			if (@event.IsActionPressed("Grab"))
 			{
-				if(inside && globals.GrabbedItem != null)
+				if (inside && globals.GrabbedItem != null)
 				{
 					CheckMatchingSprites();
 				}
 			}
-			else if(@event.IsActionReleased("Grab"))
+			else if (@event.IsActionReleased("Grab"))
 			{
-				if(inside && globals.GrabbedItem != null && MatchingSprite != null)
+				if (inside && globals.GrabbedItem != null && MatchingSprite != null)
 				{
 					var localTween = GetTree().CreateTween();
 					localTween.TweenProperty(globals.GrabbedItem, "global_position", MatchingSprite.GlobalPosition, .5f)

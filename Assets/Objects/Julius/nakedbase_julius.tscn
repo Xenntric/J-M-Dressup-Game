@@ -1,0 +1,126 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfhwss10o16mo"]
+
+[ext_resource type="Texture2D" uid="uid://d4jae7ec73a5q" path="res://Assets/Art/Characters/new_nakedbase_julus.png" id="1_h3nuq"]
+[ext_resource type="Script" uid="uid://dkpx1dpog5ku8" path="res://Assets/Scripts/MainGame/Magnetism.cs" id="2_cs4k2"]
+[ext_resource type="Texture2D" uid="uid://na7mb7k7g4t2" path="res://Assets/Art/Clothes/Hats/top hat.png" id="3_mvh2r"]
+[ext_resource type="Texture2D" uid="uid://eypogoj50kav" path="res://Assets/Art/Clothes/Hats/hair_1_julus.png" id="4_t2rth"]
+[ext_resource type="Texture2D" uid="uid://g6moga5mby4b" path="res://Assets/Art/Clothes/Costumes/dress_2_julus.png" id="5_bmslk"]
+[ext_resource type="Texture2D" uid="uid://b6bni5y2buylb" path="res://Assets/Art/Clothes/Accessories/hand_1_julus.png" id="6_sc4w2"]
+[ext_resource type="Texture2D" uid="uid://bwgs0mobinjhx" path="res://Assets/Art/Clothes/Dress/dress_1_julus.png" id="7_fx2d7"]
+
+[node name="NakedbaseJulius" type="Sprite2D"]
+texture = ExtResource("1_h3nuq")
+
+[node name="TrousersSprites" type="Node2D" parent="."]
+script = ExtResource("2_cs4k2")
+itemType = 2
+
+[node name="TrousersArea2D" type="Area2D" parent="TrousersSprites"]
+position = Vector2(127.361, -58.4506)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TrousersSprites/TrousersArea2D"]
+visible = false
+polygon = PackedVector2Array(-275.482, -1.83655, -67.9526, -36.731, 178.145, -5.50964, 295.684, 135.904, 93.6636, 593.205, -372.819, 567.493, -505.051, 334.252)
+
+[node name="HeadwearSprites" type="Node2D" parent="."]
+process_priority = -1
+script = ExtResource("2_cs4k2")
+itemType = 6
+
+[node name="HeadwearArea2D2" type="Area2D" parent="HeadwearSprites"]
+position = Vector2(127.361, -58.4506)
+
+[node name="HairCollisionPolygon2D2" type="CollisionPolygon2D" parent="HeadwearSprites/HeadwearArea2D2"]
+visible = false
+position = Vector2(29.3845, 132.231)
+scale = Vector2(1.4468, 1.4468)
+polygon = PackedVector2Array(-149.788, -369.391, -99.0121, -416.359, 0, -422.705, 40.6204, -352.889, 25.3878, -285.612, -5.07751, -238.645, -81.2407, -238.645, -133.285, -285.612)
+
+[node name="Top_Hat" type="Sprite2D" parent="HeadwearSprites"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(28.1871, -556.155)
+texture = ExtResource("3_mvh2r")
+centered = false
+
+[node name="J_Hair_0" type="Sprite2D" parent="HeadwearSprites"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-48.9478, -532.28)
+texture = ExtResource("4_t2rth")
+centered = false
+
+[node name="OutfitSprites" type="Node2D" parent="."]
+script = ExtResource("2_cs4k2")
+itemType = 4
+
+[node name="OutfitArea2D" type="Area2D" parent="OutfitSprites"]
+position = Vector2(127.361, -58.4506)
+
+[node name="OutfitCollisionPolygon2D" type="CollisionPolygon2D" parent="OutfitSprites/OutfitArea2D"]
+visible = false
+position = Vector2(29.3847, -73.4619)
+scale = Vector2(1.15, 1.15)
+polygon = PackedVector2Array(-352.617, -279.155, 0, -367.31, 191.001, -161.616, 235.078, 191.001, 14.6924, 631.772, -426.079, 617.08, -499.541, 396.694, -337.925, 235.078, -411.387, 73.4619)
+
+[node name="J_Outfit_0" type="Sprite2D" parent="OutfitSprites"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-293.209, -311.894)
+texture = ExtResource("5_bmslk")
+centered = false
+
+[node name="Accessory Sprites" type="Node2D" parent="."]
+script = ExtResource("2_cs4k2")
+itemType = 7
+
+[node name="AccessoryArea2D2" type="Area2D" parent="Accessory Sprites"]
+position = Vector2(127.361, -58.4506)
+
+[node name="AccessoryCollisionPolygon2D3" type="CollisionPolygon2D" parent="Accessory Sprites/AccessoryArea2D2"]
+visible = false
+position = Vector2(176.309, 690.542)
+scale = Vector2(1.60197, 1.60197)
+polygon = PackedVector2Array(-431.057, -458.571, -476.914, -586.971, -366.857, -761.228, -18.343, -752.057, 18.3428, -495.257, -155.914, -385.2)
+
+[node name="J_Smoke_0" type="Sprite2D" parent="Accessory Sprites"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-535.633, -506.568)
+texture = ExtResource("6_sc4w2")
+centered = false
+
+[node name="TopsSprites" type="Node2D" parent="."]
+script = ExtResource("2_cs4k2")
+itemType = 5
+
+[node name="TopsArea2D" type="Area2D" parent="TopsSprites"]
+position = Vector2(254.722, -116.901)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TopsSprites/TopsArea2D"]
+visible = false
+polygon = PackedVector2Array(-349.584, -183.974, -175.112, -246.416, 58.13, -160.098, 118.736, 157.624, -121.852, 212.721, -283.468, 109.874)
+
+[node name="BootsSprites" type="Node2D" parent="."]
+script = ExtResource("2_cs4k2")
+
+[node name="BootsArea2D" type="Area2D" parent="BootsSprites"]
+position = Vector2(254.722, -116.901)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BootsSprites/BootsArea2D"]
+visible = false
+polygon = PackedVector2Array(-674.652, 438.616, -588.335, 697.569, -79.6111, 712.262, 61.8031, 431.27, -77.7745, 273.327, -388.151, 216.394)
+
+[node name="DressSprites" type="Node2D" parent="."]
+script = ExtResource("2_cs4k2")
+itemType = 3
+
+[node name="DressArea2D" type="Area2D" parent="DressSprites"]
+position = Vector2(254.722, -116.901)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DressSprites/DressArea2D"]
+process_priority = 2
+visible = false
+polygon = PackedVector2Array(-349.584, -174.791, -173.275, -248.253, 61.8031, -156.425, 124.246, 163.134, 65.4762, 427.597, -266.939, 508.405, -560.786, 392.702)
+
+[node name="J_Dress_0" type="Sprite2D" parent="DressSprites"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-282.189, -299.038)
+texture = ExtResource("7_fx2d7")
+centered = false

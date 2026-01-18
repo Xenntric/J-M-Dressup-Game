@@ -5,11 +5,11 @@
 
 [node name="J_Outfit_0" type="TextureButton"]
 process_priority = 1
+pivot_offset = Vector2(347, 345)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
 texture_normal = ExtResource("1_3cmyq")
-ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("2_3cmyq")
 itemType = 4

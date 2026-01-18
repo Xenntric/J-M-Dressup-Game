@@ -9,13 +9,18 @@ namespace DressupUI
 		public Node ItemLayerNode {get;set;}
 		private Vector2	TextureSize;
 		private Globals globals;
-		private bool grabbed;
+        private bool grabbed;
+        public override void _EnterTree()
+        {
+            Size = new Vector2(0, 0);
+        }
 
-		public override void _Ready()
+        public override void _Ready()
 		{
 			globals = GetNode<Globals>(GetTree().Root.GetChild(0).GetPath());
 			ProcessPriority = 1;
-			TextureSize = this.TextureNormal.GetSize();
+            IgnoreTextureSize = true;
+            TextureSize = this.TextureNormal.GetSize();
 			this.ButtonDown += AttachAndMove;
 		}
 
@@ -24,17 +29,19 @@ namespace DressupUI
 			PosOffset = this.GetViewport().GetMousePosition() - this.GlobalPosition;
             globals.GrabbedItem = this;
 			ButtonPressed = true;
-		}
+            SetZIndex(true);
+        }
 
         public override void _UnhandledInput(InputEvent @event)
 		{
-			if(GetParent() is StrictGrid){return;}
+			if (GetParent() is StrictGrid){ return; }
 			base._Input(@event);
-			if(@event.IsActionReleased("Grab")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             )
+			if (@event.IsActionReleased("Grab")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             )
 			{
 				ToggleMode = false;
 				globals.GrabbedItem = null;
-			}
+                SetZIndex(false);
+            }
 			else if (@event is InputEventMouseMotion eventMouseMotion && ButtonPressed)
 			{
 				GlobalPosition = eventMouseMotion.Position - PosOffset;

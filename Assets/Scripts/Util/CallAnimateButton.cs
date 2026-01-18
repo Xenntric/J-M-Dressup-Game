@@ -1,3 +1,4 @@
+using System;
 using Dressup;
 using Godot;
 using Godot.Collections;
@@ -8,18 +9,18 @@ namespace Utils
 	{
 		[Export] public DressupUI.MenuController menuController;
 		[Export] public AnimationPlayer AnimationPlayer;
-		[Export] public Godot.Collections.Array<StringName> Animation;
+		[Export] public Array<StringName> Animation;
 		[Export] bool Reversed;
 		[Export] public Vector2 originPos;
-		protected Tween tween;
-
 		protected Globals globals;
+		protected Tween tween;
+		protected bool inside;
 		
 		public override void _Ready()
 		{
 			globals = GetNode<Globals>(GetTree().Root.GetChild(0).GetPath());
 
-			PivotOffset = new Vector2(Size.X/2, Size.Y/2);
+			PivotOffset = Size/2;
 			if(Animation != null)
 			{
 				Pressed += () => CallAnimation(Animation[0]);
@@ -40,32 +41,37 @@ namespace Utils
         
 		protected virtual void HandleMouseEntered()
 		{
+			inside = true;
 			CreateTween().TweenProperty(GetNode(GetPath()), "scale", Vector2.One * 1.1f, 0.15f)
 				 .SetTrans(Tween.TransitionType.Back)
 				 .SetEase(Tween.EaseType.In);
 		}
-		protected virtual  void HandleMouseExited()
+		protected virtual void HandleMouseExited()
 		{
-			tween.Kill();
+			inside = false;
+			tween?.Kill();
 			CreateTween().TweenProperty(GetNode(GetPath()), "scale", Vector2.One, 0.10f)
 				 .SetTrans(Tween.TransitionType.Back)
 				 .SetEase(Tween.EaseType.In);
 
 		}
-		protected virtual  void HandleButtonDown()
+		protected virtual void HandleButtonDown()
 		{
-			tween.Kill();
+			tween?.Kill();
 			CreateTween().TweenProperty(GetNode(GetPath()), "scale", Vector2.One * .9f, 0.15f)
 				 .SetTrans(Tween.TransitionType.Back)
 				 .SetEase(Tween.EaseType.Out);
 		}
-
+		protected virtual void HandleButtonUp()
+		{
+			tween?.Kill();
+			CreateTween().TweenProperty(GetNode(GetPath()), "scale", Vector2.One * .9f, 0.15f)
+				 .SetTrans(Tween.TransitionType.Back)
+				 .SetEase(Tween.EaseType.Out);
+		}
 		public virtual void CallAnimation(StringName animation)
 		{
-			if(AnimationPlayer.IsPlaying())
-			{
-				return;
-			}
+			if(AnimationPlayer.IsPlaying()) { return; }
 
 			if(Reversed)
 			{
@@ -79,9 +85,7 @@ namespace Utils
 
 		protected new Tween CreateTween()
 		{
-			// this.Disabled = true;
 			tween = GetTree().CreateTween();
-			// tween.Finished += ToggleDisabled;
 			return tween;
 		}
 

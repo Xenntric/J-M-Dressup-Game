@@ -5,11 +5,13 @@
 
 [node name="J_Hair_0" type="TextureButton"]
 process_priority = 1
+offset_right = 231.0
+offset_bottom = 204.0
+pivot_offset = Vector2(117, 119)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
 texture_normal = ExtResource("1_rs6ko")
-ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("2_83hf8")
 itemType = 6

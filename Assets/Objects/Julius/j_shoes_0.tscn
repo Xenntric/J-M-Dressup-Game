@@ -5,10 +5,12 @@
 
 [node name="J_Shoes_0" type="TextureButton"]
 process_priority = 1
+offset_right = 571.0
+offset_bottom = 587.0
+pivot_offset = Vector2(317, 303)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 1
 texture_normal = ExtResource("1_712pu")
-ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("2_be06d")

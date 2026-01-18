@@ -2,6 +2,7 @@ using Godot;
 
 namespace Dressup
 {
+	[Tool]
 	public partial class OptionsMenu : Control
 	{
 		// Called when the node enters the scene tree for the first time.
@@ -10,6 +11,7 @@ namespace Dressup
 		public override void _Ready()
 		{
 			globals = GetNode<Globals>(GetTree().Root.GetChild(0).GetPath());
+
 			Buttons[2].Pressed += HandleMagnetClick;
 		}
 

@@ -1,4 +1,6 @@
 // using System.Linq;
+using System;
+using System.Security.Cryptography;
 using Dressup;
 using Godot;
 using Utils;
@@ -8,17 +10,22 @@ namespace DressupUI
 	public partial class FolderItem : TextureButton
 	{
         public enum ItemType {
-            Shoes, Socks, Trousers,
-            Dress, Outfit, Shirt,
-            Headwear, Accessory,
+            Shoes, Socks, Trousers, Dress, Outfit, Shirt, Hair, Headwear,  Accessory
         };
         [Export] public ItemType itemType;
+        [Export] public int zIndexOverride;
+
 		[Export] private Control FolderContainer;
 		[Export] private Node ItemLayerNode;
 		[Export] private Vector2 magnetPosition;
 		protected Vector2 PosOffset;
 		private Vector2	TextureSize;
 		private Globals globals;
+        public override void _EnterTree()
+        {
+            Size = new Vector2(0, 0);
+            IgnoreTextureSize = true;
+        }
 
 		public override void _Ready()
 		{
@@ -28,9 +35,9 @@ namespace DressupUI
 			ButtonDown += SpawnNewObj;
 		}
 
-        public void SetZIndex()
+        public void SetZIndex(bool grabbed)
         {
-            ZIndex = (int)itemType;
+            ZIndex = globals.GrabbedItem == null ? (zIndexOverride != 0 ? zIndexOverride : (int)itemType) : (int)itemType;
         }
 
         protected void SpawnNewObj()
@@ -59,14 +66,14 @@ namespace DressupUI
             copy.magnetPosition = magnetPosition;
             copy.itemType = itemType;
             copy.globals = globals;
-            copy.SetZIndex();
             copy.SetSize(TextureSize);
 
-            copy.Position = menumidpoint - Size * .33f / 2;
-            copy.GlobalPosition = this.GlobalPosition - copy.Size*.33f/2 + Size/2;
+            // copy.Position = menumidpoint - Size * .33f / 2;
+            copy.GlobalPosition = this.GetViewport().GetMousePosition() - copy.PivotOffset * copy.GetGlobalTransformWithCanvas().Scale;// * .66f;//- copy.Size * .33f; //+ Size/2;//this.GlobalPosition - copy.Size*.33f/2 + Size/2;
             copy.PosOffset = this.GetViewport().GetMousePosition() - copy.GlobalPosition;
             copy.ToggleMode = true;
             globals.GrabbedItem = copy;
+            copy.SetZIndex(true);
             copy.ButtonPressed = true;
         }
     }

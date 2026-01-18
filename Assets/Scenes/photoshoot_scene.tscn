@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://g14utcaeq4km"]
+
+[ext_resource type="Texture2D" uid="uid://cwuerq3acdchl" path="res://Assets/Art/Splash Art/background.png" id="1_btj6y"]
+
+[node name="PhotoshootScene" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.411765, 0.223529, 0.647059, 1)
+position = Vector2(957, 551)
+scale = Vector2(1973.92, 1122.16)
+texture = ExtResource("1_btj6y")

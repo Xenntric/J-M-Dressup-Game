@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://clmdy6d56fklu"]
+
+[ext_resource type="Texture2D" uid="uid://cphwxycvk46ae" path="res://Assets/Art/Characters/new_nakedbase_matt.png" id="1_d6paw"]
+[ext_resource type="Script" uid="uid://dkpx1dpog5ku8" path="res://Assets/Scripts/MainGame/Magnetism.cs" id="2_03gmk"]
+[ext_resource type="Texture2D" uid="uid://na7mb7k7g4t2" path="res://Assets/Art/Clothes/Hats/top hat.png" id="3_lb8bf"]
+[ext_resource type="Texture2D" uid="uid://dgx3rfuemyvjl" path="res://Assets/Art/Clothes/Costumes/dress_2_matt.png" id="4_ulbe6"]
+[ext_resource type="Texture2D" uid="uid://b8rnbpbrys62j" path="res://Assets/Art/Clothes/Accessories/hand_1_matt.png" id="5_n622j"]
+[ext_resource type="Texture2D" uid="uid://x264qsmsdac8" path="res://Assets/Art/Clothes/Dress/dress_1_matt.png" id="6_xny14"]
+
+[node name="Matt" type="Node2D"]
+
+[node name="NakedbaseMatt" type="Sprite2D" parent="."]
+texture = ExtResource("1_d6paw")
+
+[node name="TrousersSprites" type="Node2D" parent="NakedbaseMatt"]
+script = ExtResource("2_03gmk")
+itemType = 2
+
+[node name="HairSprites" type="Node2D" parent="NakedbaseMatt"]
+script = ExtResource("2_03gmk")
+itemType = 6
+
+[node name="HeadwearSprites" type="Node2D" parent="NakedbaseMatt"]
+process_priority = -1
+script = ExtResource("2_03gmk")
+itemType = 6
+
+[node name="Top_Hat" type="Sprite2D" parent="NakedbaseMatt/HeadwearSprites"]
+position = Vector2(-190.28, -561.665)
+texture = ExtResource("3_lb8bf")
+centered = false
+
+[node name="OutfitSprites" type="Node2D" parent="NakedbaseMatt"]
+script = ExtResource("2_03gmk")
+itemType = 4
+
+[node name="M_Outfit_0" type="Sprite2D" parent="NakedbaseMatt/OutfitSprites"]
+position = Vector2(-215.991, -341.279)
+texture = ExtResource("4_ulbe6")
+centered = false
+
+[node name="Accessory Sprites" type="Node2D" parent="NakedbaseMatt"]
+script = ExtResource("2_03gmk")
+itemType = 7
+
+[node name="M_Smoke_0" type="Sprite2D" parent="NakedbaseMatt/Accessory Sprites"]
+position = Vector2(239.472, -524.934)
+texture = ExtResource("5_n622j")
+centered = false
+
+[node name="TopsSprites" type="Node2D" parent="NakedbaseMatt"]
+script = ExtResource("2_03gmk")
+itemType = 5
+
+[node name="BootsSprites" type="Node2D" parent="NakedbaseMatt"]
+script = ExtResource("2_03gmk")
+
+[node name="DressSprites" type="Node2D" parent="NakedbaseMatt"]
+script = ExtResource("2_03gmk")
+itemType = 3
+
+[node name="M_Dress_0" type="Sprite2D" parent="NakedbaseMatt/DressSprites"]
+position = Vector2(-289.453, -300.875)
+texture = ExtResource("6_xny14")
+centered = false
