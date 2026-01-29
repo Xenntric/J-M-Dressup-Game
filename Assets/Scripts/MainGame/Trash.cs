@@ -32,7 +32,7 @@ public partial class Trash : Node
         if(@event.IsActionReleased("Grab")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             )
         {
             LiveItem grabbedItem = globals.GrabbedItem;
-            grabbedItem.PivotOffset = grabbedItem.Size/2;
+            // grabbedItem.PivotOffset = grabbedItem.Size/2;
             Tween removalTween = CreateTween().SetParallel(true);
                 removalTween.TweenProperty(grabbedItem, "scale", Vector2.Zero, 0.5f)
 				 .SetTrans(Tween.TransitionType.Sine)

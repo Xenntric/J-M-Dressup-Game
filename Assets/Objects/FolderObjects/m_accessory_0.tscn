@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbkqec6f6ojxr"]
+
+[ext_resource type="Texture2D" uid="uid://b8rnbpbrys62j" path="res://Assets/Art/Clothes/Accessories/m_accessory_0.png" id="1_uc6ph"]
+[ext_resource type="Script" uid="uid://cijxvvt2cdocx" path="res://Assets/Scripts/MainGame/FolderItem.cs" id="2_47e1e"]
+
+[node name="m_accessory_0" type="TextureButton"]
+offset_right = 255.0
+offset_bottom = 477.0
+pivot_offset = Vector2(118, 259)
+texture_normal = ExtResource("1_uc6ph")
+stretch_mode = 5
+script = ExtResource("2_47e1e")
+itemType = 8

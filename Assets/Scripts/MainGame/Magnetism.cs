@@ -53,7 +53,7 @@ namespace Dressup
         protected void HandleMouseExited()
 		{
 			inside = false;
-			if (MatchingSprite == null)
+			if(MatchingSprite == null)
 			{
 				return;
 			}
@@ -65,19 +65,19 @@ namespace Dressup
 
 		public override void _UnhandledInput(InputEvent @event)
 		{
-			if (!globals.magnetise) { return; }
+			if(!globals.magnetise) { return; }
 
 			base._Input(@event);
-			if (@event.IsActionPressed("Grab"))
+			if(@event.IsActionPressed("Grab"))
 			{
-				if (inside && globals.GrabbedItem != null)
+				if(inside && globals.GrabbedItem != null)
 				{
 					CheckMatchingSprites();
 				}
 			}
-			else if (@event.IsActionReleased("Grab"))
+			else if(@event.IsActionReleased("Grab"))
 			{
-				if (inside && globals.GrabbedItem != null && MatchingSprite != null)
+				if(inside && globals.GrabbedItem != null && MatchingSprite != null)
 				{
 					var localTween = GetTree().CreateTween();
 					localTween.TweenProperty(globals.GrabbedItem, "global_position", MatchingSprite.GlobalPosition, .5f)

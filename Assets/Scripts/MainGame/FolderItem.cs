@@ -10,11 +10,10 @@ namespace DressupUI
 	public partial class FolderItem : TextureButton
 	{
         public enum ItemType {
-            Shoes, Socks, Trousers, Dress, Outfit, Shirt, Hair, Headwear,  Accessory
+            Shoes, Socks, Trousers, Dress, Outfit, Shirt, Hair, Headwear, Accessory
         };
         [Export] public ItemType itemType;
         [Export] public int zIndexOverride;
-
 		[Export] private Control FolderContainer;
 		[Export] private Node ItemLayerNode;
 		[Export] private Vector2 magnetPosition;
@@ -23,12 +22,14 @@ namespace DressupUI
 		private Globals globals;
         public override void _EnterTree()
         {
-            Size = new Vector2(0, 0);
+            // Size = new Vector2(0, 0);
             IgnoreTextureSize = true;
         }
 
 		public override void _Ready()
 		{
+            if (GetNode(GetPathTo(GetTree().Root)) != this) { runChecks(); }
+
 			globals = GetNode<Globals>(GetTree().Root.GetChild(0).GetPath());
 			ProcessPriority = 1;
 			TextureSize = this.TextureNormal.GetSize();
@@ -44,7 +45,7 @@ namespace DressupUI
         {
             CreateNewObj();
             globals.OutFolderItems.Add(this);
-            Shrink();
+            // Shrink();
         }
 
         private void Shrink()
@@ -61,20 +62,28 @@ namespace DressupUI
 
             GD.Print(copy, ItemLayerNode);
             ItemLayerNode.AddChild(copy);
+            GD.Print("spawning: ", copy.Name);
             copy.Name = Name;
             copy.FolderContainer = FolderContainer;
-            copy.magnetPosition = magnetPosition;
+            // copy.magnetPosition = magnetPosition;
             copy.itemType = itemType;
             copy.globals = globals;
-            copy.SetSize(TextureSize);
+            // copy.SetSize(TextureSize);
 
             // copy.Position = menumidpoint - Size * .33f / 2;
-            copy.GlobalPosition = this.GetViewport().GetMousePosition() - copy.PivotOffset * copy.GetGlobalTransformWithCanvas().Scale;// * .66f;//- copy.Size * .33f; //+ Size/2;//this.GlobalPosition - copy.Size*.33f/2 + Size/2;
+            copy.GlobalPosition = this.GetViewport().GetMousePosition() * copy.GetGlobalTransformWithCanvas().Scale;// * .66f;//- copy.Size * .33f; //+ Size/2;//this.GlobalPosition - copy.Size*.33f/2 + Size/2;
+            //- copy.PivotOffset *
             copy.PosOffset = this.GetViewport().GetMousePosition() - copy.GlobalPosition;
-            copy.ToggleMode = true;
+            // copy.ToggleMode = true;
             globals.GrabbedItem = copy;
-            copy.SetZIndex(true);
-            copy.ButtonPressed = true;
+            // copy.SetZIndex(true);
+            // copy.ButtonPressed = true;
+        }
+
+        private void runChecks()
+        {
+            if (this.FolderContainer == null) { GD.PushError("FolderContainer not found for " + GetNode<FolderItem>(GetPathTo(this)).Name); }
+            if (this.ItemLayerNode == null) { GD.PushError("ItemLayerNode not found for " + GetNode<FolderItem>(GetPathTo(this)).Name); }
         }
     }
 }

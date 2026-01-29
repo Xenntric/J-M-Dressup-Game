@@ -28,10 +28,9 @@ public partial class StrictGrid : Container
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-        if (GetChildren().Count > 0 )
-        {
-		    GenerateStrictGrid();
-        }
+        if (GetChildren().Count <= 0) { return; }
+        
+        GenerateStrictGrid();
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=3 uid="uid://datctv4lilhv1"]
+[gd_scene load_steps=78 format=3 uid="uid://datctv4lilhv1"]
 
 [ext_resource type="Script" uid="uid://dmovtwy5bcr68" path="res://Assets/Scripts/MainGame/Globals.cs" id="1_djp2r"]
 [ext_resource type="Texture2D" uid="uid://cwuerq3acdchl" path="res://Assets/Art/Splash Art/background.png" id="2_di5s5"]
@@ -20,32 +20,29 @@
 [ext_resource type="Texture2D" uid="uid://bmqmp461u33mw" path="res://Assets/Art/Menu Bar/Home/HomeFrame_1.png" id="24_vqeak"]
 [ext_resource type="Texture2D" uid="uid://dxse5x8bbsgx4" path="res://Assets/Art/Menu Bar/Home/HomeFrame_2.png" id="25_e0yl6"]
 [ext_resource type="Texture2D" uid="uid://csahsrnxv13id" path="res://Assets/Art/Menu Bar/Sound/SoundFrame_1.png" id="26_oapn3"]
-[ext_resource type="PackedScene" uid="uid://btglfnmg238qk" path="res://Assets/Objects/Julius/j_dress_0.tscn" id="27_2hbc0"]
 [ext_resource type="Texture2D" uid="uid://rv8j780ixu5q" path="res://Assets/Art/Menu Bar/Sound/SoundFrame_2.png" id="27_d8e70"]
-[ext_resource type="PackedScene" uid="uid://c3scfvv6is5i1" path="res://Assets/Objects/Matt/m_dress_0.tscn" id="28_5f468"]
+[ext_resource type="PackedScene" uid="uid://btglfnmg238qk" path="res://Assets/Objects/FolderObjects/j_dress_0.tscn" id="27_p0vt7"]
+[ext_resource type="PackedScene" uid="uid://c3scfvv6is5i1" path="res://Assets/Objects/FolderObjects/m_dress_0.tscn" id="28_gmpd3"]
 [ext_resource type="Texture2D" uid="uid://gbt64vlhe20h" path="res://Assets/Art/Menu Bar/Return/ReturnFrame_1.png" id="28_gsi1b"]
 [ext_resource type="Texture2D" uid="uid://bdm3c3bejj7ak" path="res://Assets/Art/Menu Bar/Return/ReturnFrame_2.png" id="29_1nrh2"]
-[ext_resource type="PackedScene" uid="uid://cd5c4r3wxq51u" path="res://Assets/Objects/Julius/j_shoes_0.tscn" id="29_m7j6i"]
-[ext_resource type="PackedScene" uid="uid://cxx42kcfbc38y" path="res://Assets/Objects/Matt/m_shoes_0.tscn" id="30_d60x8"]
-[ext_resource type="PackedScene" uid="uid://c4yyfcsl5clsh" path="res://Assets/Objects/Julius/j_outfit_0.tscn" id="32_5f468"]
+[ext_resource type="PackedScene" uid="uid://c4yyfcsl5clsh" path="res://Assets/Objects/FolderObjects/j_outfit_0.tscn" id="29_i1f81"]
+[ext_resource type="PackedScene" uid="uid://d1o83c20ippcq" path="res://Assets/Objects/FolderObjects/m_outfit_0.tscn" id="30_2hbc0"]
+[ext_resource type="PackedScene" uid="uid://bvvnbrdbfoub7" path="res://Assets/Objects/FolderObjects/j_hair_0.tscn" id="31_5f468"]
 [ext_resource type="Script" uid="uid://bs8arr6vnsjtq" path="res://Assets/Scripts/MainGame/UI/AnimateReturnButton.cs" id="32_cqbeu"]
-[ext_resource type="Script" uid="uid://cijxvvt2cdocx" path="res://Assets/Scripts/MainGame/FolderItem.cs" id="32_d60x8"]
 [ext_resource type="Texture2D" uid="uid://bujft8t40nnu3" path="res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-1 13.png" id="32_mwaay"]
+[ext_resource type="PackedScene" uid="uid://bvi56ihcs2jtu" path="res://Assets/Objects/FolderObjects/m_hair_0.tscn" id="32_ou4cb"]
 [ext_resource type="Texture2D" uid="uid://cl4bv106r7pry" path="res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-3 5.png" id="33_4dasf"]
 [ext_resource type="Script" uid="uid://c6omjwfw6oomd" path="res://Assets/Scripts/MainGame/UI/AnimateMenuButton.cs" id="33_d1kvk"]
-[ext_resource type="PackedScene" uid="uid://bvvnbrdbfoub7" path="res://Assets/Objects/Julius/j_hair_0.tscn" id="33_irn57"]
-[ext_resource type="PackedScene" uid="uid://d1o83c20ippcq" path="res://Assets/Objects/Matt/m_outfit_0.tscn" id="33_ou4cb"]
+[ext_resource type="PackedScene" uid="uid://crwj8gx1pusm6" path="res://Assets/Objects/FolderObjects/j_accessory_0.tscn" id="33_fk1bi"]
 [ext_resource type="Texture2D" uid="uid://bngjpb31tlehb" path="res://Assets/Art/Clothes Menu/Selection Menu/HatFrame_1.png" id="34_jbwk2"]
-[ext_resource type="PackedScene" uid="uid://bvi56ihcs2jtu" path="res://Assets/Objects/Matt/m_hair_0.tscn" id="34_xtmqo"]
+[ext_resource type="PackedScene" uid="uid://bbkqec6f6ojxr" path="res://Assets/Objects/FolderObjects/m_accessory_0.tscn" id="34_m7j6i"]
 [ext_resource type="Texture2D" uid="uid://civh0otp52sej" path="res://Assets/Art/Clothes Menu/Selection Menu/HatFrame_2.png" id="35_6nwkt"]
-[ext_resource type="PackedScene" uid="uid://b6p0ec6tcrbbb" path="res://Assets/Objects/top_hat.tscn" id="35_022gy"]
-[ext_resource type="PackedScene" uid="uid://crwj8gx1pusm6" path="res://Assets/Objects/Julius/j_smoke_0.tscn" id="36_1rj3u"]
-[ext_resource type="PackedScene" uid="uid://d2e4wvwovp5n6" path="res://Assets/Objects/Matt/m_smoke_0.tscn" id="37_jwtwa"]
+[ext_resource type="PackedScene" uid="uid://f23exv6iy3o2" path="res://Assets/Objects/FolderObjects/x_accessory_0.tscn" id="35_d60x8"]
+[ext_resource type="PackedScene" uid="uid://i8cq0d1alk88" path="res://Assets/Objects/FolderObjects/x_hat_0.tscn" id="36_irn57"]
 [ext_resource type="Texture2D" uid="uid://b7bvc5yd8gcnv" path="res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-1 18.png" id="37_ssbm1"]
 [ext_resource type="Texture2D" uid="uid://c243ju6jut0sx" path="res://Assets/Art/Menu Bar/Open.png" id="37_xv45l"]
 [ext_resource type="Texture2D" uid="uid://cm5cohg7bjmhh" path="res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-2 14.png" id="38_vmes8"]
 [ext_resource type="Texture2D" uid="uid://ef8octrcxl2c" path="res://Assets/Art/Clothes Menu/Selection Menu/CostumeFrame_1.png" id="38_xai07"]
-[ext_resource type="Texture2D" uid="uid://ckiaohev5j0rc" path="res://Assets/Art/Clothes/Accessories/hand_2_julus.png" id="39_5f468"]
 [ext_resource type="Texture2D" uid="uid://bnlh1twem1ddk" path="res://Assets/Art/Clothes Menu/Selection Menu/CostumeFrame_2.png" id="39_unris"]
 [ext_resource type="Texture2D" uid="uid://yh1i6hledm2p" path="res://Assets/Art/Clothes Menu/Selection Menu/Untitled_Artwork-1 17.png" id="39_xnbbi"]
 [ext_resource type="Texture2D" uid="uid://0i87jd8lgeey" path="res://Assets/Art/Clothes Menu/Selection Menu/AccessoriesFrame_1.png" id="40_uqejs"]
@@ -53,9 +50,8 @@
 [ext_resource type="Script" uid="uid://bqsw3lesjkgex" path="res://addons/strict_grid_container/StrictGrid.cs" id="43_rxod3"]
 [ext_resource type="Texture2D" uid="uid://c4ee7qvfym2gb" path="res://Assets/Art/Clothes Menu/Selection Menu/DressFrame_1.png" id="45_1rj3u"]
 [ext_resource type="Texture2D" uid="uid://dfp5r0ccombyp" path="res://Assets/Art/Clothes Menu/Selection Menu/DressFrame_2.png" id="46_jwtwa"]
-[ext_resource type="PackedScene" uid="uid://bfhwss10o16mo" path="res://Assets/Objects/Julius/nakedbase_julius.tscn" id="53_ou4cb"]
-[ext_resource type="PackedScene" uid="uid://deudord1g3sna" path="res://Assets/Objects/Matt/nakedbase_matt.tscn" id="59_irn57"]
-[ext_resource type="Script" uid="uid://safrkjuoes4c" path="res://Assets/Scripts/MainGame/Trash.cs" id="63_1rj3u"]
+[ext_resource type="PackedScene" uid="uid://bfhwss10o16mo" path="res://Assets/Objects/j_scene.tscn" id="53_ou4cb"]
+[ext_resource type="PackedScene" uid="uid://deudord1g3sna" path="res://Assets/Objects/m_scene.tscn" id="59_irn57"]
 
 [sub_resource type="Animation" id="Animation_yj85j"]
 length = 0.001
@@ -774,16 +770,14 @@ Columns = 2
 CellSize = Vector2(130, 130)
 RatioCellSize = true
 
-[node name="J_Dress_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Dress container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("27_2hbc0")]
+[node name="j_dress_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Dress container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("27_p0vt7")]
 layout_mode = 2
-script = ExtResource("32_d60x8")
-FolderContainer = NodePath("../../..")
+FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
-[node name="M_Dress_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Dress container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("28_5f468")]
+[node name="m_dress_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Dress container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("28_gmpd3")]
 layout_mode = 2
-script = ExtResource("32_d60x8")
-FolderContainer = NodePath("../../..")
+FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
 [node name="Shoes container" type="Container" parent="UI/Clothes Menu/MenuBody/MenuClothes"]
@@ -797,102 +791,77 @@ Columns = 2
 CellSize = Vector2(130, 130)
 RatioCellSize = true
 
-[node name="J_Shoes_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Shoes container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("29_m7j6i")]
-layout_mode = 2
-script = ExtResource("32_d60x8")
-FolderContainer = NodePath("../../..")
-ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
-
-[node name="M_Shoes_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Shoes container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("30_d60x8")]
-layout_mode = 2
-script = ExtResource("32_d60x8")
-FolderContainer = NodePath("../../..")
-ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
-
 [node name="Outfits container" type="Container" parent="UI/Clothes Menu/MenuBody/MenuClothes"]
 visible = false
 layout_mode = 0
-offset_right = 260.0
-offset_bottom = 130.0
+offset_right = 130.0
+offset_bottom = 260.0
 pivot_offset = Vector2(130, 65)
 script = ExtResource("43_rxod3")
-Columns = 2
+Columns = 1
 CellSize = Vector2(130, 130)
 RatioCellSize = true
 
-[node name="J_Outfit_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Outfits container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("32_5f468")]
+[node name="j_outfit_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Outfits container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("29_i1f81")]
 layout_mode = 2
-script = ExtResource("32_d60x8")
-FolderContainer = NodePath("../../..")
+FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
-[node name="M_Outfit_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Outfits container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("33_ou4cb")]
+[node name="m_outfit_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Outfits container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("30_2hbc0")]
 layout_mode = 2
-script = ExtResource("32_d60x8")
-FolderContainer = NodePath("../../..")
+FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
 [node name="Headwear container" type="Container" parent="UI/Clothes Menu/MenuBody/MenuClothes"]
 visible = false
 layout_mode = 0
-offset_right = 260.0
-offset_bottom = 260.0
+offset_right = 130.0
+offset_bottom = 390.0
 pivot_offset = Vector2(130, 130)
 script = ExtResource("43_rxod3")
-Columns = 2
+Columns = 1
 CellSize = Vector2(130, 130)
 RatioCellSize = true
 
-[node name="J_Hair_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("33_irn57")]
+[node name="j_hair_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("31_5f468")]
 layout_mode = 2
-script = ExtResource("32_d60x8")
-FolderContainer = NodePath("../../..")
+FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
-[node name="M_Hair_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("34_xtmqo")]
+[node name="m_hair_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("32_ou4cb")]
 layout_mode = 2
-script = ExtResource("32_d60x8")
-FolderContainer = NodePath("../../..")
+FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
-[node name="Top_Hat" parent="UI/Clothes Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("35_022gy")]
+[node name="x_hat_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("36_irn57")]
 layout_mode = 2
-script = ExtResource("32_d60x8")
-itemType = 7
-FolderContainer = NodePath("../../..")
+FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
 [node name="Accessories container" type="Container" parent="UI/Clothes Menu/MenuBody/MenuClothes"]
 visible = false
 layout_mode = 0
-offset_right = 260.0
-offset_bottom = 260.0
+offset_right = 130.0
+offset_bottom = 390.0
 pivot_offset = Vector2(130, 65)
 script = ExtResource("43_rxod3")
-Columns = 2
+Columns = 1
 CellSize = Vector2(130, 130)
 RatioCellSize = true
 
-[node name="J_Smoke_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Accessories container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("36_1rj3u")]
+[node name="j_accessory_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Accessories container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("33_fk1bi")]
 layout_mode = 2
-script = ExtResource("32_d60x8")
-itemType = 8
-FolderContainer = NodePath("../../..")
+FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
-[node name="M_Smoke_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Accessories container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("37_jwtwa")]
+[node name="m_accessory_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Accessories container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("34_m7j6i")]
 layout_mode = 2
-script = ExtResource("32_d60x8")
-itemType = 8
-FolderContainer = NodePath("../../..")
+FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
-[node name="J_Orb_0" type="TextureButton" parent="UI/Clothes Menu/MenuBody/MenuClothes/Accessories container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode")]
+[node name="x_accessory_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Accessories container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("35_d60x8")]
 layout_mode = 2
-texture_normal = ExtResource("39_5f468")
-script = ExtResource("32_d60x8")
-itemType = 8
-FolderContainer = NodePath("../../..")
+FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
 [node name="MenuClothesButtons" type="Container" parent="UI/Clothes Menu/MenuBody"]
@@ -1085,7 +1054,6 @@ position = Vector2(1620.95, 1042.84)
 
 [node name="Rubbish" type="Node2D" parent="."]
 visibility_layer = 2
-script = ExtResource("63_1rj3u")
 
 [node name="Area2D" type="Area2D" parent="Rubbish"]
 

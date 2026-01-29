@@ -9,9 +9,7 @@ namespace Utils
         {
             string name = node.Name;
             name = name.ToLower();
-            var path = "Assets/Objects/";
-            if(name.StartsWith('j')) { path += "Julius/"; }
-            if(name.StartsWith('m')) { path += "Matt/"; }
+            var path = "Assets/Objects/LiveObjects/";
             path += name;
             path += ".tscn";
  

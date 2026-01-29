@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1ty1xqmfsq7m"]
+
+[ext_resource type="Texture2D" uid="uid://x264qsmsdac8" path="res://Assets/Art/Clothes/Dress/m_dress_0.png" id="1_304lh"]
+[ext_resource type="Script" uid="uid://cf70tehjs6tpy" path="res://Assets/Scripts/MainGame/LiveItem.cs" id="2_k15od"]
+
+[node name="m_dress_0" type="Sprite2D"]
+texture = ExtResource("1_304lh")
+script = ExtResource("2_k15od")
+itemType = 3
+TestMode = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+visible = false
+polygon = PackedVector2Array(-104, 167, -112, 119, -100, 59, -114, -5, -180, -62, -210, -74, -236, -158, -220, -198, -164, -215, -41, -228, 23, -240, 65, -213, 96, -194, 110, -168, 81, -98, 38, -54, 38, -28, 87, -47, 196, -85, 243, -69, 230, -32, 176, 80, 133, 138, 86, 228, 44, 239, -19, 231)

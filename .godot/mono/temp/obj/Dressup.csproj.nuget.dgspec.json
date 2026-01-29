@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -46,17 +46,17 @@
           "dependencies": {
             "Godot.SourceGenerators": {
               "target": "Package",
-              "version": "[4.5.0, )",
+              "version": "[4.5.1, )",
               "autoReferenced": true
             },
             "GodotSharp": {
               "target": "Package",
-              "version": "[4.5.0, )",
+              "version": "[4.5.1, )",
               "autoReferenced": true
             },
             "GodotSharpEditor": {
               "target": "Package",
-              "version": "[4.5.0, )",
+              "version": "[4.5.1, )",
               "autoReferenced": true
             },
             "NuGet.Protocol": {
@@ -78,7 +78,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
+              "version": "[8.0.22, 8.0.22]"
             }
           ],
           "frameworkReferences": {
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.110/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm118tb70dp8f"]
+
+[ext_resource type="Texture2D" uid="uid://yhcrp1gai7dx" path="res://Assets/Art/Clothes/Hats/m_hat_0.png" id="1_uyvjs"]
+[ext_resource type="Script" uid="uid://cf70tehjs6tpy" path="res://Assets/Scripts/MainGame/LiveItem.cs" id="2_jwce1"]
+
+[node name="m_hat_0" type="Sprite2D"]
+texture = ExtResource("1_uyvjs")
+script = ExtResource("2_jwce1")
+itemType = 7
+TestMode = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+visible = false
+polygon = PackedVector2Array(-44, 101, -61, 90, -68, 14, -94, -35, -37, -46, 9, -35, 66, -65, 94, -31, 86, 15, 51, -9, 9, -3, -30, 27)
