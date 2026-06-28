@@ -1,51 +1,58 @@
+using System;
+using System.Linq;
 using Dressup;
+using DressupUI;
 using Godot;
 
-namespace DressupUI
+namespace Dressup
 {
-	public partial class LiveItem : FolderItem
+	public partial class LiveItem : Sprite2D
 	{
-		public Control FolderContainer {get;set;}
+        [Export] public FolderItem.ItemType itemType;
+        [Export] public bool TestMode = false;
+		public Globals globals {get;set;}
+        public Control FolderContainer {get;set;}
 		public Node ItemLayerNode {get;set;}
 		private Vector2	TextureSize;
-		private Globals globals;
+        public Vector2 PosOffset;
+        private Area2D area;
+        public bool inside;
         private bool grabbed;
+
+        public string genericName;
         public override void _EnterTree()
         {
-            Size = new Vector2(0, 0);
+            if (!TestMode)
+            {
+                Scale = new Vector2(0, 0);
+            }
+            this.ZIndex = (int)itemType;
         }
 
         public override void _Ready()
 		{
-			globals = GetNode<Globals>(GetTree().Root.GetChild(0).GetPath());
-			ProcessPriority = 1;
-            IgnoreTextureSize = true;
-            TextureSize = this.TextureNormal.GetSize();
-			this.ButtonDown += AttachAndMove;
-		}
-
-		private void AttachAndMove()
-		{
-			PosOffset = this.GetViewport().GetMousePosition() - this.GlobalPosition;
-            globals.GrabbedItem = this;
-			ButtonPressed = true;
-            SetZIndex(true);
-        }
-
-        public override void _UnhandledInput(InputEvent @event)
-		{
-			if (GetParent() is StrictGrid){ return; }
-			base._Input(@event);
-			if (@event.IsActionReleased("Grab")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             )
-			{
-				ToggleMode = false;
-				globals.GrabbedItem = null;
-                SetZIndex(false);
+            if (!TestMode)
+            {
+			    globals = GetNode<Globals>(GetTree().Root.GetChild(0).GetPath());
             }
-			else if (@event is InputEventMouseMotion eventMouseMotion && ButtonPressed)
-			{
-				GlobalPosition = eventMouseMotion.Position - PosOffset;
-			}
-		}
+
+			ProcessPriority = 0;
+            area = GetNode<Area2D>(GetChild(0).GetPath());
+            area.InputPickable = true;
+            area.MouseEntered += HandleMouseEntered;
+            area.MouseExited += HandleMouseExited;
+        }
+        private void HandleMouseEntered() 
+        {
+            if (TestMode) { return; }
+            inside = true;
+            globals.PushItem(this);
+        }
+		private void HandleMouseExited() 
+        {
+            if (TestMode) { return; }
+            inside = false;
+            globals.PopItem(this);
+        }
 	}
 }

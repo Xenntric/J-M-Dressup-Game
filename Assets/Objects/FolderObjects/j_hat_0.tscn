@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs2a0glsc7b7a"]
+
+[ext_resource type="Texture2D" uid="uid://oiywfe3op5w3" path="res://Assets/Art/Clothes/Hats/j_hat_0.png" id="1_3fjr4"]
+[ext_resource type="Script" uid="uid://cijxvvt2cdocx" path="res://Assets/Scripts/MainGame/FolderItem.cs" id="2_oy5op"]
+
+[node name="j_hat_0" type="TextureButton"]
+offset_right = 434.0
+offset_bottom = 316.0
+pivot_offset = Vector2(64, 64)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+texture_normal = ExtResource("1_3fjr4")
+stretch_mode = 5
+script = ExtResource("2_oy5op")
+itemType = 7

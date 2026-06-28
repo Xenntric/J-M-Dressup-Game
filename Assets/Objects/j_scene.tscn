@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://bfhwss10o16mo"]
+
+[ext_resource type="Script" uid="uid://dkpx1dpog5ku8" path="res://Assets/Scripts/MainGame/Magnetism.cs" id="1_vmrwj"]
+[ext_resource type="PackedScene" uid="uid://dus2sy7a55soo" path="res://Assets/Objects/LiveObjects/x_accessory_0.tscn" id="2_mnaqa"]
+[ext_resource type="Texture2D" uid="uid://d4jae7ec73a5q" path="res://Assets/Art/Characters/new_nakedbase_julus.png" id="3_ecop5"]
+[ext_resource type="PackedScene" uid="uid://c30j2ta7xjxbc" path="res://Assets/Objects/LiveObjects/j_hair_0.tscn" id="4_t2v2b"]
+[ext_resource type="PackedScene" uid="uid://cooh80rx7ta0v" path="res://Assets/Objects/LiveObjects/j_hat_0.tscn" id="5_bhj7l"]
+[ext_resource type="PackedScene" uid="uid://g7wooglx3jyl" path="res://Assets/Objects/LiveObjects/x_hat_0.tscn" id="6_g577h"]
+[ext_resource type="PackedScene" uid="uid://bpa18bxdfi6yi" path="res://Assets/Objects/LiveObjects/j_outfit_0.tscn" id="7_hx17a"]
+[ext_resource type="PackedScene" uid="uid://kbueomym6uvq" path="res://Assets/Objects/LiveObjects/j_dress_0.tscn" id="8_6hvvs"]
+[ext_resource type="PackedScene" uid="uid://fsmm4th7xt1a" path="res://Assets/Objects/LiveObjects/j_accessory_0.tscn" id="9_v11ev"]
+
+[node name="j_scene" type="Node2D" unique_id=13027756]
+
+[node name="Background Accessory Sprites" type="Node2D" parent="." unique_id=1104112149]
+z_index = -1
+script = ExtResource("1_vmrwj")
+itemType = 7
+
+[node name="AccessoryArea2D2" type="Area2D" parent="Background Accessory Sprites" unique_id=785306561]
+position = Vector2(127.361, -58.4506)
+
+[node name="AccessoryCollisionPolygon2D3" type="CollisionPolygon2D" parent="Background Accessory Sprites/AccessoryArea2D2" unique_id=640166734]
+visible = false
+position = Vector2(176.309, 690.542)
+scale = Vector2(1.60197, 1.60197)
+polygon = PackedVector2Array(-431.057, -458.571, -476.914, -586.971, -366.857, -761.228, -18.343, -752.057, 18.3428, -495.257, -155.914, -385.2)
+
+[node name="x_accessory_0" parent="Background Accessory Sprites" unique_id=1602582112 instance=ExtResource("2_mnaqa")]
+position = Vector2(-124, -246)
+
+[node name="NakedbaseJulius" type="Sprite2D" parent="." unique_id=453051035]
+texture = ExtResource("3_ecop5")
+
+[node name="TrousersSprites" type="Node2D" parent="NakedbaseJulius" unique_id=1290180606]
+script = ExtResource("1_vmrwj")
+itemType = 2
+
+[node name="TrousersArea2D" type="Area2D" parent="NakedbaseJulius/TrousersSprites" unique_id=66572040]
+position = Vector2(127.361, -58.4506)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NakedbaseJulius/TrousersSprites/TrousersArea2D" unique_id=1780849356]
+visible = false
+polygon = PackedVector2Array(-275.482, -1.83655, -67.9526, -36.731, 178.145, -5.50964, 295.684, 135.904, 93.6636, 593.205, -372.819, 567.493, -505.051, 334.252)
+
+[node name="HeadwearSprites" type="Node2D" parent="NakedbaseJulius" unique_id=551963588]
+process_priority = -1
+script = ExtResource("1_vmrwj")
+itemType = 6
+
+[node name="HeadwearArea2D2" type="Area2D" parent="NakedbaseJulius/HeadwearSprites" unique_id=1672647576]
+position = Vector2(127.361, -58.4506)
+
+[node name="HairCollisionPolygon2D2" type="CollisionPolygon2D" parent="NakedbaseJulius/HeadwearSprites/HeadwearArea2D2" unique_id=423577385]
+visible = false
+position = Vector2(29.3845, 132.231)
+scale = Vector2(1.4468, 1.4468)
+polygon = PackedVector2Array(-149.788, -369.391, -99.0121, -416.359, 0, -422.705, 40.6204, -352.889, 25.3878, -285.612, -5.07751, -238.645, -81.2407, -238.645, -133.285, -285.612)
+
+[node name="j_hair_0" parent="NakedbaseJulius/HeadwearSprites" unique_id=771811281 instance=ExtResource("4_t2v2b")]
+position = Vector2(66, -430)
+
+[node name="j_hat_0" parent="NakedbaseJulius/HeadwearSprites" unique_id=1907104107 instance=ExtResource("5_bhj7l")]
+position = Vector2(69, -463)
+itemType = 6
+
+[node name="x_hat_0" parent="NakedbaseJulius/HeadwearSprites" unique_id=2062693280 instance=ExtResource("6_g577h")]
+position = Vector2(78, -509)
+
+[node name="TopsSprites" type="Node2D" parent="NakedbaseJulius" unique_id=889443026]
+script = ExtResource("1_vmrwj")
+itemType = 5
+
+[node name="TopsArea2D" type="Area2D" parent="NakedbaseJulius/TopsSprites" unique_id=2055844200]
+position = Vector2(254.722, -116.901)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NakedbaseJulius/TopsSprites/TopsArea2D" unique_id=759902548]
+visible = false
+polygon = PackedVector2Array(-349.584, -183.974, -175.112, -246.416, 58.13, -160.098, 118.736, 157.624, -121.852, 212.721, -283.468, 109.874)
+
+[node name="OutfitSprites" type="Node2D" parent="NakedbaseJulius" unique_id=1484596936]
+script = ExtResource("1_vmrwj")
+itemType = 4
+
+[node name="OutfitArea2D" type="Area2D" parent="NakedbaseJulius/OutfitSprites" unique_id=458056019]
+position = Vector2(127.361, -58.4506)
+
+[node name="OutfitCollisionPolygon2D" type="CollisionPolygon2D" parent="NakedbaseJulius/OutfitSprites/OutfitArea2D" unique_id=1391242984]
+visible = false
+position = Vector2(29.3847, -73.4619)
+scale = Vector2(1.15, 1.15)
+polygon = PackedVector2Array(-352.617, -279.155, 0, -367.31, 191.001, -161.616, 235.078, 191.001, 14.6924, 631.772, -426.079, 617.08, -499.541, 396.694, -337.925, 235.078, -411.387, 73.4619)
+
+[node name="j_outfit_0" parent="NakedbaseJulius/OutfitSprites" unique_id=2105528988 instance=ExtResource("7_hx17a")]
+position = Vector2(75, 13)
+
+[node name="DressSprites" type="Node2D" parent="NakedbaseJulius" unique_id=998993065]
+script = ExtResource("1_vmrwj")
+itemType = 3
+
+[node name="DressArea2D" type="Area2D" parent="NakedbaseJulius/DressSprites" unique_id=606444592]
+position = Vector2(254.722, -116.901)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NakedbaseJulius/DressSprites/DressArea2D" unique_id=255218557]
+process_priority = 2
+visible = false
+polygon = PackedVector2Array(-349.584, -174.791, -173.275, -248.253, 61.8031, -156.425, 124.246, 163.134, 65.4762, 427.597, -266.939, 508.405, -560.786, 392.702)
+
+[node name="j_dress_0" parent="NakedbaseJulius/DressSprites" unique_id=554308618 instance=ExtResource("8_6hvvs")]
+position = Vector2(79, -22)
+
+[node name="BootsSprites" type="Node2D" parent="NakedbaseJulius" unique_id=946268078]
+script = ExtResource("1_vmrwj")
+
+[node name="BootsArea2D" type="Area2D" parent="NakedbaseJulius/BootsSprites" unique_id=404456798]
+position = Vector2(254.722, -116.901)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NakedbaseJulius/BootsSprites/BootsArea2D" unique_id=1493366318]
+visible = false
+polygon = PackedVector2Array(-674.652, 438.616, -588.335, 697.569, -79.6111, 712.262, 61.8031, 431.27, -77.7745, 273.327, -388.151, 216.394)
+
+[node name="Foreground Accessory Sprites" type="Node2D" parent="NakedbaseJulius" unique_id=1091528102]
+script = ExtResource("1_vmrwj")
+itemType = 8
+
+[node name="AccessoryArea2D2" type="Area2D" parent="NakedbaseJulius/Foreground Accessory Sprites" unique_id=1434335447]
+position = Vector2(127.361, -58.4506)
+
+[node name="AccessoryCollisionPolygon2D3" type="CollisionPolygon2D" parent="NakedbaseJulius/Foreground Accessory Sprites/AccessoryArea2D2" unique_id=1647174842]
+visible = false
+position = Vector2(176.309, 690.542)
+scale = Vector2(1.60197, 1.60197)
+polygon = PackedVector2Array(-431.057, -458.571, -476.914, -586.971, -366.857, -761.228, -18.343, -752.057, 18.3428, -495.257, -155.914, -385.2)
+
+[node name="j_accessory_0" parent="NakedbaseJulius/Foreground Accessory Sprites" unique_id=937335715 instance=ExtResource("9_v11ev")]
+position = Vector2(-260, -205)
+
+[node name="x_accessory_0" parent="NakedbaseJulius/Foreground Accessory Sprites" unique_id=1666701603 instance=ExtResource("2_mnaqa")]
+z_index = -4096
+position = Vector2(-124, -246)

@@ -15,6 +15,19 @@ namespace Dressup
 			Buttons[2].Pressed += HandleMagnetClick;
 		}
 
+        public void ToggleAllButtons(bool Enabled)
+        {
+            foreach (TextureButton button in this.GetChildren())
+            {
+                if (Enabled)
+                {
+                    button.MouseFilter = MouseFilterEnum.Stop;
+                    continue;
+                }
+                button.MouseFilter = MouseFilterEnum.Ignore;
+            }
+        }
+
 		private void HandleMagnetClick()
 		{
 			var magnetButton = Buttons[2];

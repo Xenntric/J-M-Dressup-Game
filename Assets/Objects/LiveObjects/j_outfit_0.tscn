@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpa18bxdfi6yi"]
+
+[ext_resource type="Texture2D" uid="uid://g6moga5mby4b" path="res://Assets/Art/Clothes/Outfits/j_outfit_0.png" id="1_n1rdx"]
+[ext_resource type="Script" uid="uid://cf70tehjs6tpy" path="res://Assets/Scripts/MainGame/LiveItem.cs" id="2_wwp53"]
+
+[node name="j_outfit_0" type="Sprite2D"]
+texture = ExtResource("1_n1rdx")
+offset = Vector2(-100, 92)
+script = ExtResource("2_wwp53")
+itemType = 4
+TestMode = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-98, 97)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+visible = false
+polygon = PackedVector2Array(-272, 285, -253, 261, -156, 290, -38, 109, -121, -58, 52, -186, -89, -240, -80, -316, 20, -312, 16, -425, 156, -420, 274, -382, 270, -50, 99, 112, 189, 210, 171, 347, 93, 396, 24, 384, 12, 294, -68, 430, -194, 406, -271, 350)

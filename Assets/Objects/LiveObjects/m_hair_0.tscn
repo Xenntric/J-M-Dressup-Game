@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b8jhrp27ts0ph"]
+
+[ext_resource type="Texture2D" uid="uid://c515e7ashrbe" path="res://Assets/Art/Clothes/Hair/m_hair_0.png" id="1_dca4k"]
+[ext_resource type="Script" uid="uid://cf70tehjs6tpy" path="res://Assets/Scripts/MainGame/LiveItem.cs" id="2_fuove"]
+
+[node name="m_hair_0" type="Sprite2D" unique_id=596872235]
+texture = ExtResource("1_dca4k")
+script = ExtResource("2_fuove")
+itemType = 6
+TestMode = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=787414685]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=58584305]
+visible = false
+polygon = PackedVector2Array(-112, 78, -109, 7, -43, -68, 69, -86, 116, -44, 25, -3, -20, 91)

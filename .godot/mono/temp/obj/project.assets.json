@@ -2,13 +2,13 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "Godot.SourceGenerators/4.5.0": {
+      "Godot.SourceGenerators/4.6.3": {
         "type": "package",
         "build": {
           "build/Godot.SourceGenerators.props": {}
         }
       },
-      "GodotSharp/4.5.0": {
+      "GodotSharp/4.6.3": {
         "type": "package",
         "compile": {
           "lib/net8.0/GodotSharp.dll": {
@@ -21,10 +21,10 @@
           }
         }
       },
-      "GodotSharpEditor/4.5.0": {
+      "GodotSharpEditor/4.6.3": {
         "type": "package",
         "dependencies": {
-          "GodotSharp": "4.5.0"
+          "GodotSharp": "4.6.3"
         },
         "compile": {
           "lib/net8.0/GodotSharpEditor.dll": {
@@ -206,40 +206,40 @@
     }
   },
   "libraries": {
-    "Godot.SourceGenerators/4.5.0": {
-      "sha512": "Q9yqw1fQN/gkXDhvJQs9KqNB3H/UZfpsxiY/BGVzz5OBQKNHb5OY8YvzwMwdAJrxin6Hgf9UCypYFBrCHYACsw==",
+    "Godot.SourceGenerators/4.6.3": {
+      "sha512": "tDEpdpIxCAGEFPCqBQmRIICHmU6RyNIdgBmAK8V1ZjJqvPNMsVAp+7aJXCSyrfXVCEywsd4GMkpgXIYc8JtNUw==",
       "type": "package",
-      "path": "godot.sourcegenerators/4.5.0",
+      "path": "godot.sourcegenerators/4.6.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/Godot.SourceGenerators.dll",
         "build/Godot.SourceGenerators.props",
-        "godot.sourcegenerators.4.5.0.nupkg.sha512",
+        "godot.sourcegenerators.4.6.3.nupkg.sha512",
         "godot.sourcegenerators.nuspec"
       ]
     },
-    "GodotSharp/4.5.0": {
-      "sha512": "OV8d+JWA8wewYmBUJkBEwmryhg5iIFUPadeUJPqrrlC11XeZvIdBKJpRuv2e7Y7ArIDc1JttUApEMewcWV8iJw==",
+    "GodotSharp/4.6.3": {
+      "sha512": "2gLsonAxGdDGm9/yYDy4A1U+db8JFGvlzt6ZuzX14cqrkCa7noikZDHcqtujcVAjXLOyxm+TuMdsmihYLZq1RA==",
       "type": "package",
-      "path": "godotsharp/4.5.0",
+      "path": "godotsharp/4.6.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "godotsharp.4.5.0.nupkg.sha512",
+        "godotsharp.4.6.3.nupkg.sha512",
         "godotsharp.nuspec",
         "lib/net8.0/GodotSharp.dll",
         "lib/net8.0/GodotSharp.xml"
       ]
     },
-    "GodotSharpEditor/4.5.0": {
-      "sha512": "nKDwV/8xgiB7K99GotuPmG0LEsf1Rwf51MmvA6qB1Qu57Ylq+Awqn1Wtd9/gH7qvk/E63jAPE/oDKIa5ulSdig==",
+    "GodotSharpEditor/4.6.3": {
+      "sha512": "ytyJqJVpB5/7ZXKO9ahKzK24wlengf1FdNFHoIopa72irgon/HpizIcuzh/9lfGytfZywKi97o/LIQF9j7eHNA==",
       "type": "package",
-      "path": "godotsharpeditor/4.5.0",
+      "path": "godotsharpeditor/4.6.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "godotsharpeditor.4.5.0.nupkg.sha512",
+        "godotsharpeditor.4.6.3.nupkg.sha512",
         "godotsharpeditor.nuspec",
         "lib/net8.0/GodotSharpEditor.dll",
         "lib/net8.0/GodotSharpEditor.xml"
@@ -491,9 +491,9 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Godot.SourceGenerators >= 4.5.0",
-      "GodotSharp >= 4.5.0",
-      "GodotSharpEditor >= 4.5.0",
+      "Godot.SourceGenerators >= 4.6.3",
+      "GodotSharp >= 4.6.3",
+      "GodotSharpEditor >= 4.6.3",
       "NuGet.Protocol >= 6.12.1"
     ]
   },
@@ -534,25 +534,26 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
           "Godot.SourceGenerators": {
+            "suppressParent": "All",
             "target": "Package",
-            "version": "[4.5.0, )",
+            "version": "[4.6.3, )",
             "autoReferenced": true
           },
           "GodotSharp": {
             "target": "Package",
-            "version": "[4.5.0, )",
+            "version": "[4.6.3, )",
             "autoReferenced": true
           },
           "GodotSharpEditor": {
             "target": "Package",
-            "version": "[4.5.0, )",
+            "version": "[4.6.3, )",
             "autoReferenced": true
           },
           "NuGet.Protocol": {
@@ -574,7 +575,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.20, 8.0.20]"
+            "version": "[8.0.27, 8.0.27]"
           }
         ],
         "frameworkReferences": {
@@ -582,8 +583,20 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.110/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.108/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1901",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'NuGet.Protocol' 6.12.1 has a known low severity vulnerability, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg",
+      "libraryId": "NuGet.Protocol",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://crwj8gx1pusm6"]
+
+[ext_resource type="Texture2D" uid="uid://b6bni5y2buylb" path="res://Assets/Art/Clothes/Accessories/j_accessory_0.png" id="1_m8ohx"]
+[ext_resource type="Script" uid="uid://cijxvvt2cdocx" path="res://Assets/Scripts/MainGame/FolderItem.cs" id="2_ws0t2"]
+
+[node name="j_accessory_0" type="TextureButton"]
+process_priority = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -579.0
+offset_bottom = -203.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(269, 292)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+texture_normal = ExtResource("1_m8ohx")
+stretch_mode = 5
+script = ExtResource("2_ws0t2")
+itemType = 8

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvi56ihcs2jtu"]
+
+[ext_resource type="Texture2D" uid="uid://c515e7ashrbe" path="res://Assets/Art/Clothes/Hair/m_hair_0.png" id="1_1gh2h"]
+[ext_resource type="Script" uid="uid://cijxvvt2cdocx" path="res://Assets/Scripts/MainGame/FolderItem.cs" id="2_amu3e"]
+
+[node name="m_hair_0" type="TextureButton"]
+process_priority = 1
+offset_right = 193.0
+offset_bottom = 141.0
+pivot_offset = Vector2(113, 73)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+texture_normal = ExtResource("1_1gh2h")
+stretch_mode = 5
+script = ExtResource("2_amu3e")
+itemType = 6
