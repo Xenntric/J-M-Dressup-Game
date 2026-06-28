@@ -8,6 +8,12 @@ export_presets.cfg
 .mono/
 data_*/
 
+
+# Godot Mono settings
+.Godot/
+editor/
+mono/
+
 # VS Code settings
 .vscode
 
