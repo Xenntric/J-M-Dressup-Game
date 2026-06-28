@@ -4,9 +4,9 @@ using Godot;
 
 public partial class Trash : Node
 {
-    private LiveItem liveItem;
     private Globals globals;
     private bool inside = false;
+    public bool Inside { get { return inside; } }
 
     public override void _Ready()
     {
@@ -19,28 +19,24 @@ public partial class Trash : Node
     protected void HandleMouseEntered()
     {
         inside = true;
+        GD.Print(inside);
     }
     protected void HandleMouseExited()
     {
         inside = false;
+        GD.Print(inside);
     }
 
-    public override void _Input(InputEvent @event)
+    public void Flush()
     {
-        if(!inside || globals.GrabbedItem == null){return;}
-        base._Input(@event);
-        if(@event.IsActionReleased("Grab")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             )
-        {
-            LiveItem grabbedItem = globals.GrabbedItem;
-            // grabbedItem.PivotOffset = grabbedItem.Size/2;
-            Tween removalTween = CreateTween().SetParallel(true);
-                removalTween.TweenProperty(grabbedItem, "scale", Vector2.Zero, 0.5f)
-				 .SetTrans(Tween.TransitionType.Sine)
-				 .SetEase(Tween.EaseType.In)
-                 .Finished += () => FreeObj(grabbedItem);
-                removalTween.TweenProperty(grabbedItem, "rotation", 720, 1f);
-                removalTween.Chain();
-        }
+        LiveItem grabbedItem = globals.GrabbedItem;
+        Tween removalTween = CreateTween().SetParallel(true);
+        removalTween.TweenProperty(grabbedItem, "scale", Vector2.Zero, 0.5f)
+            .SetTrans(Tween.TransitionType.Sine)
+            .SetEase(Tween.EaseType.In)
+            .Finished += () => FreeObj(grabbedItem);
+        removalTween.TweenProperty(grabbedItem, "rotation", 720, 1f);
+        removalTween.Chain();
     }
 
     private void MatchToFolderItem(Node item)
@@ -55,9 +51,6 @@ public partial class Trash : Node
                 createFolderObj.TweenProperty(obj, "scale", Vector2.One, 0.3f)
 				 .SetTrans(Tween.TransitionType.Back)
 				 .SetEase(Tween.EaseType.Out);
-                // createFolderObj.TweenProperty(obj, "scale", Vector2.One, 0.65f)
-				//  .SetTrans(Tween.TransitionType.Circ)
-				//  .SetEase(Tween.EaseType.Out);
                 createFolderObj.Chain();
                 break;
             }
@@ -67,7 +60,6 @@ public partial class Trash : Node
     private void FreeObj(Node node)
     {
         MatchToFolderItem(node);
-
         node.GetNode<LiveItem>(node.GetPath()).Free();
     }
 }

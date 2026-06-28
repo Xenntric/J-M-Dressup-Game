@@ -5,7 +5,7 @@ using Dressup;
 using Godot;
 using Utils;
 
-namespace DressupUI
+namespace Dressup
 {
 	public partial class FolderItem : TextureButton
 	{
@@ -45,7 +45,7 @@ namespace DressupUI
         {
             CreateNewObj();
             globals.OutFolderItems.Add(this);
-            // Shrink();
+            Shrink();
         }
 
         private void Shrink()
@@ -59,25 +59,22 @@ namespace DressupUI
             var menumidpoint = this.Position + Size / 2;
             PackedScene seed = Finder.FindClothesScene(this);
             LiveItem copy = seed.Instantiate<LiveItem>();
-
-            GD.Print(copy, ItemLayerNode);
+            copy.TestMode = false;
             ItemLayerNode.AddChild(copy);
-            GD.Print("spawning: ", copy.Name);
+            copy.genericName = this.Name;
+            GD.Print("spawning: ", copy.genericName);
             copy.Name = Name;
             copy.FolderContainer = FolderContainer;
-            // copy.magnetPosition = magnetPosition;
             copy.itemType = itemType;
             copy.globals = globals;
-            // copy.SetSize(TextureSize);
-
-            // copy.Position = menumidpoint - Size * .33f / 2;
-            copy.GlobalPosition = this.GetViewport().GetMousePosition() * copy.GetGlobalTransformWithCanvas().Scale;// * .66f;//- copy.Size * .33f; //+ Size/2;//this.GlobalPosition - copy.Size*.33f/2 + Size/2;
-            //- copy.PivotOffset *
+            copy.GlobalPosition = this.GetViewport().GetMousePosition();
             copy.PosOffset = this.GetViewport().GetMousePosition() - copy.GlobalPosition;
-            // copy.ToggleMode = true;
             globals.GrabbedItem = copy;
-            // copy.SetZIndex(true);
-            // copy.ButtonPressed = true;
+
+            Tween tween = GetTree().CreateTween();
+            tween.TweenProperty(globals.GrabbedItem, "scale", Vector2.One, .5f)
+								.SetTrans(Tween.TransitionType.Expo)
+								.SetEase(Tween.EaseType.Out);
         }
 
         private void runChecks()

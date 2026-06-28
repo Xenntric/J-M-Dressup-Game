@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://datctv4lilhv1"]
+[gd_scene format=3 uid="uid://datctv4lilhv1"]
 
 [ext_resource type="Script" uid="uid://dmovtwy5bcr68" path="res://Assets/Scripts/MainGame/Globals.cs" id="1_djp2r"]
 [ext_resource type="Texture2D" uid="uid://cwuerq3acdchl" path="res://Assets/Art/Splash Art/background.png" id="2_di5s5"]
@@ -31,9 +31,11 @@
 [ext_resource type="Script" uid="uid://bs8arr6vnsjtq" path="res://Assets/Scripts/MainGame/UI/AnimateReturnButton.cs" id="32_cqbeu"]
 [ext_resource type="Texture2D" uid="uid://bujft8t40nnu3" path="res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-1 13.png" id="32_mwaay"]
 [ext_resource type="PackedScene" uid="uid://bvi56ihcs2jtu" path="res://Assets/Objects/FolderObjects/m_hair_0.tscn" id="32_ou4cb"]
+[ext_resource type="PackedScene" uid="uid://bs2a0glsc7b7a" path="res://Assets/Objects/FolderObjects/j_hat_0.tscn" id="33_2hbc0"]
 [ext_resource type="Texture2D" uid="uid://cl4bv106r7pry" path="res://Assets/Art/Clothes Menu/Asset Menu/Untitled_Artwork-3 5.png" id="33_4dasf"]
 [ext_resource type="Script" uid="uid://c6omjwfw6oomd" path="res://Assets/Scripts/MainGame/UI/AnimateMenuButton.cs" id="33_d1kvk"]
 [ext_resource type="PackedScene" uid="uid://crwj8gx1pusm6" path="res://Assets/Objects/FolderObjects/j_accessory_0.tscn" id="33_fk1bi"]
+[ext_resource type="PackedScene" uid="uid://bfcv6m8depel4" path="res://Assets/Objects/FolderObjects/m_hat_0.tscn" id="34_5f468"]
 [ext_resource type="Texture2D" uid="uid://bngjpb31tlehb" path="res://Assets/Art/Clothes Menu/Selection Menu/HatFrame_1.png" id="34_jbwk2"]
 [ext_resource type="PackedScene" uid="uid://bbkqec6f6ojxr" path="res://Assets/Objects/FolderObjects/m_accessory_0.tscn" id="34_m7j6i"]
 [ext_resource type="Texture2D" uid="uid://civh0otp52sej" path="res://Assets/Art/Clothes Menu/Selection Menu/HatFrame_2.png" id="35_6nwkt"]
@@ -50,6 +52,7 @@
 [ext_resource type="Script" uid="uid://bqsw3lesjkgex" path="res://addons/strict_grid_container/StrictGrid.cs" id="43_rxod3"]
 [ext_resource type="Texture2D" uid="uid://c4ee7qvfym2gb" path="res://Assets/Art/Clothes Menu/Selection Menu/DressFrame_1.png" id="45_1rj3u"]
 [ext_resource type="Texture2D" uid="uid://dfp5r0ccombyp" path="res://Assets/Art/Clothes Menu/Selection Menu/DressFrame_2.png" id="46_jwtwa"]
+[ext_resource type="Script" uid="uid://safrkjuoes4c" path="res://Assets/Scripts/MainGame/Trash.cs" id="52_gmpd3"]
 [ext_resource type="PackedScene" uid="uid://bfhwss10o16mo" path="res://Assets/Objects/j_scene.tscn" id="53_ou4cb"]
 [ext_resource type="PackedScene" uid="uid://deudord1g3sna" path="res://Assets/Objects/m_scene.tscn" id="59_irn57"]
 
@@ -512,6 +515,9 @@ _data = {
 &"show_clothes": SubResource("Animation_4yfvj")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_gmpd3"]
+radius = 288.76547
+
 [sub_resource type="Animation" id="Animation_8r3oa"]
 resource_name = "Play_Animation"
 tracks/0/type = "value"
@@ -548,20 +554,23 @@ _data = {
 &"RESET": SubResource("Animation_1m2oe")
 }
 
-[node name="DressUpScene" type="Node2D"]
+[node name="DressUpScene" type="Node2D" unique_id=545737552 node_paths=PackedStringArray("CharacterNode", "OptionsMenu", "trash")]
 process_priority = -1
 texture_filter = 1
 scale = Vector2(1.65, 1.65)
 script = ExtResource("1_djp2r")
+CharacterNode = NodePath("Characters")
+OptionsMenu = NodePath("UI/Options Menu")
+trash = NodePath("Rubbish")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=1176435033]
 modulate = Color(0.411765, 0.223529, 0.647059, 1)
 visibility_layer = 2
 position = Vector2(585.083, 330.907)
 scale = Vector2(1168, 664)
 texture = ExtResource("2_di5s5")
 
-[node name="UI" type="Control" parent="."]
+[node name="UI" type="Control" parent="." unique_id=848841626]
 visibility_layer = 2
 z_index = 2
 layout_mode = 3
@@ -570,7 +579,7 @@ offset_right = 1170.0
 offset_bottom = 662.0
 mouse_filter = 2
 
-[node name="Circle" type="TextureRect" parent="UI"]
+[node name="Circle" type="TextureRect" parent="UI" unique_id=1525122917]
 layout_mode = 0
 offset_left = 834.462
 offset_top = 268.563
@@ -581,7 +590,7 @@ pivot_offset = Vector2(368.746, 376.247)
 texture = ExtResource("39_xnbbi")
 stretch_mode = 5
 
-[node name="Circle2" type="TextureRect" parent="UI/Circle"]
+[node name="Circle2" type="TextureRect" parent="UI/Circle" unique_id=1159089204]
 modulate = Color(0, 0, 0, 0.32549)
 show_behind_parent = true
 visibility_layer = 2
@@ -593,13 +602,12 @@ pivot_offset = Vector2(368.746, 376.247)
 texture = ExtResource("39_xnbbi")
 stretch_mode = 5
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="UI/Circle"]
-libraries = {
-&"": SubResource("AnimationLibrary_33ahl")
-}
-autoplay = "spin"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI/Circle" unique_id=334070254]
+libraries/ = SubResource("AnimationLibrary_33ahl")
+autoplay = &"spin"
 
-[node name="Options Menu" type="Control" parent="UI" node_paths=PackedStringArray("Buttons")]
+[node name="Options Menu" type="Control" parent="UI" unique_id=748474734 node_paths=PackedStringArray("Buttons")]
+process_priority = 1
 texture_filter = 1
 anchors_preset = 0
 offset_left = 767.0
@@ -607,10 +615,11 @@ offset_top = 230.0
 offset_right = 1363.0
 offset_bottom = 886.0
 scale = Vector2(0.643532, 0.643532)
+mouse_filter = 2
 script = ExtResource("4_5bos3")
 Buttons = [NodePath("Settings Button"), NodePath("Home Button"), NodePath("Magnetise Button"), NodePath("Return Button"), NodePath("Sound Button")]
 
-[node name="Settings Button" type="TextureButton" parent="UI/Options Menu"]
+[node name="Settings Button" type="TextureButton" parent="UI/Options Menu" unique_id=1762018698]
 layout_mode = 0
 offset_left = 440.183
 offset_top = 15.2099
@@ -618,13 +627,13 @@ offset_right = 540.235
 offset_bottom = 115.21
 texture_normal = SubResource("AnimatedTexture_7j1f8")
 
-[node name="TextureRect" type="TextureRect" parent="UI/Options Menu/Settings Button"]
+[node name="TextureRect" type="TextureRect" parent="UI/Options Menu/Settings Button" unique_id=286125635]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = SubResource("AnimatedTexture_0qrst")
 
-[node name="Home Button" type="TextureButton" parent="UI/Options Menu"]
+[node name="Home Button" type="TextureButton" parent="UI/Options Menu" unique_id=237336332]
 layout_mode = 0
 offset_left = 276.233
 offset_top = 89.7323
@@ -632,13 +641,13 @@ offset_right = 376.233
 offset_bottom = 189.744
 texture_normal = SubResource("AnimatedTexture_7j1f8")
 
-[node name="TextureRect" type="TextureRect" parent="UI/Options Menu/Home Button"]
+[node name="TextureRect" type="TextureRect" parent="UI/Options Menu/Home Button" unique_id=1050514083]
 layout_mode = 0
 offset_right = 1.0
 offset_bottom = 1.0
 texture = SubResource("AnimatedTexture_edvgv")
 
-[node name="Magnetise Button" type="TextureButton" parent="UI/Options Menu"]
+[node name="Magnetise Button" type="TextureButton" parent="UI/Options Menu" unique_id=1898807999]
 layout_mode = 0
 offset_left = 144.515
 offset_top = 233.089
@@ -646,12 +655,14 @@ offset_right = 244.516
 offset_bottom = 333.102
 grow_horizontal = 2
 grow_vertical = 2
+mouse_force_pass_scroll_events = false
+mouse_default_cursor_shape = 2
 keep_pressed_outside = true
 texture_normal = SubResource("AnimatedTexture_7j1f8")
 script = ExtResource("11_14mak")
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureRect" type="TextureRect" parent="UI/Options Menu/Magnetise Button"]
+[node name="TextureRect" type="TextureRect" parent="UI/Options Menu/Magnetise Button" unique_id=748459423]
 layout_mode = 0
 offset_left = 2.82532
 offset_top = 0.941772
@@ -660,7 +671,7 @@ offset_bottom = 94.9418
 texture = SubResource("AnimatedTexture_mgifu")
 stretch_mode = 2
 
-[node name="DisabledTextureRect" type="TextureRect" parent="UI/Options Menu/Magnetise Button"]
+[node name="DisabledTextureRect" type="TextureRect" parent="UI/Options Menu/Magnetise Button" unique_id=128417135]
 modulate = Color(0.94, 0.94, 0.94, 0.737255)
 layout_mode = 1
 anchors_preset = 8
@@ -678,7 +689,7 @@ scale = Vector2(1e-05, 1e-05)
 pivot_offset = Vector2(50, 50)
 texture = SubResource("AnimatedTexture_u5oh7")
 
-[node name="Return Button" type="TextureButton" parent="UI/Options Menu"]
+[node name="Return Button" type="TextureButton" parent="UI/Options Menu" unique_id=47597377]
 layout_mode = 0
 offset_left = 37.7612
 offset_top = 543.026
@@ -686,13 +697,13 @@ offset_right = 137.761
 offset_bottom = 643.026
 texture_normal = SubResource("AnimatedTexture_7j1f8")
 
-[node name="TextureRect" type="TextureRect" parent="UI/Options Menu/Return Button"]
+[node name="TextureRect" type="TextureRect" parent="UI/Options Menu/Return Button" unique_id=772275333]
 layout_mode = 0
 offset_right = 1.0
 offset_bottom = 1.0
 texture = SubResource("AnimatedTexture_uwno0")
 
-[node name="Sound Button" type="TextureButton" parent="UI/Options Menu"]
+[node name="Sound Button" type="TextureButton" parent="UI/Options Menu" unique_id=1884931833]
 visible = false
 layout_mode = 0
 offset_left = 112.886
@@ -701,13 +712,13 @@ offset_right = 212.886
 offset_bottom = 380.087
 texture_normal = SubResource("AnimatedTexture_7j1f8")
 
-[node name="TextureRect" type="TextureRect" parent="UI/Options Menu/Sound Button"]
+[node name="TextureRect" type="TextureRect" parent="UI/Options Menu/Sound Button" unique_id=420848707]
 layout_mode = 0
 offset_right = 1.0
 offset_bottom = 1.0
 texture = SubResource("AnimatedTexture_8ojr2")
 
-[node name="Clothes Menu" type="Control" parent="UI"]
+[node name="Clothes Menu" type="Control" parent="UI" unique_id=1743209990]
 anchors_preset = 0
 offset_left = -340.0
 offset_top = 100.0
@@ -716,7 +727,7 @@ offset_bottom = 555.0
 mouse_filter = 2
 script = ExtResource("15_vmklf")
 
-[node name="OpenButton" type="TextureButton" parent="UI/Clothes Menu" node_paths=PackedStringArray("menuController", "AnimationPlayer")]
+[node name="OpenButton" type="TextureButton" parent="UI/Clothes Menu" unique_id=509789604 node_paths=PackedStringArray("menuController", "AnimationPlayer")]
 layout_mode = 0
 offset_left = 350.091
 offset_top = 186.435
@@ -731,7 +742,7 @@ menuController = NodePath("..")
 AnimationPlayer = NodePath("../MenuAnimations")
 Animation = Array[StringName]([&"menu_open"])
 
-[node name="OpenTexture" type="TextureRect" parent="UI/Clothes Menu/OpenButton"]
+[node name="OpenTexture" type="TextureRect" parent="UI/Clothes Menu/OpenButton" unique_id=1506310843]
 layout_mode = 0
 offset_left = 16.1857
 offset_top = 14.9867
@@ -742,7 +753,7 @@ texture = SubResource("AnimatedTexture_pseom")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="MenuBody" type="TextureRect" parent="UI/Clothes Menu"]
+[node name="MenuBody" type="TextureRect" parent="UI/Clothes Menu" unique_id=1209460622]
 clip_children = 2
 visibility_layer = 2
 layout_mode = 0
@@ -751,7 +762,7 @@ offset_bottom = 453.541
 texture = ExtResource("38_vmes8")
 expand_mode = 1
 
-[node name="MenuClothes" type="Control" parent="UI/Clothes Menu/MenuBody"]
+[node name="MenuClothes" type="Control" parent="UI/Clothes Menu/MenuBody" unique_id=376382856]
 anchors_preset = 0
 offset_left = 381.363
 offset_top = 53.3533
@@ -759,7 +770,7 @@ offset_right = 691.563
 offset_bottom = 438.408
 mouse_filter = 2
 
-[node name="Dress container" type="Container" parent="UI/Clothes Menu/MenuBody/MenuClothes"]
+[node name="Dress container" type="Container" parent="UI/Clothes Menu/MenuBody/MenuClothes" unique_id=15275111]
 visible = false
 layout_mode = 0
 offset_right = 260.0
@@ -770,17 +781,17 @@ Columns = 2
 CellSize = Vector2(130, 130)
 RatioCellSize = true
 
-[node name="j_dress_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Dress container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("27_p0vt7")]
+[node name="j_dress_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Dress container" unique_id=1987887363 node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("27_p0vt7")]
 layout_mode = 2
 FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
-[node name="m_dress_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Dress container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("28_gmpd3")]
+[node name="m_dress_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Dress container" unique_id=1926201765 node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("28_gmpd3")]
 layout_mode = 2
 FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
-[node name="Shoes container" type="Container" parent="UI/Clothes Menu/MenuBody/MenuClothes"]
+[node name="Shoes container" type="Container" parent="UI/Clothes Menu/MenuBody/MenuClothes" unique_id=1952215129]
 visible = false
 layout_mode = 0
 offset_right = 260.0
@@ -791,54 +802,67 @@ Columns = 2
 CellSize = Vector2(130, 130)
 RatioCellSize = true
 
-[node name="Outfits container" type="Container" parent="UI/Clothes Menu/MenuBody/MenuClothes"]
+[node name="Outfits container" type="Container" parent="UI/Clothes Menu/MenuBody/MenuClothes" unique_id=606261826]
 visible = false
 layout_mode = 0
-offset_right = 130.0
-offset_bottom = 260.0
+offset_right = 260.0
+offset_bottom = 130.0
 pivot_offset = Vector2(130, 65)
 script = ExtResource("43_rxod3")
-Columns = 1
+Columns = 2
 CellSize = Vector2(130, 130)
 RatioCellSize = true
 
-[node name="j_outfit_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Outfits container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("29_i1f81")]
+[node name="j_outfit_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Outfits container" unique_id=3099086 node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("29_i1f81")]
 layout_mode = 2
 FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
-[node name="m_outfit_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Outfits container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("30_2hbc0")]
+[node name="m_outfit_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Outfits container" unique_id=1694808773 node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("30_2hbc0")]
 layout_mode = 2
 FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
-[node name="Headwear container" type="Container" parent="UI/Clothes Menu/MenuBody/MenuClothes"]
+[node name="Headwear container" type="Container" parent="UI/Clothes Menu/MenuBody/MenuClothes" unique_id=1357458642]
 visible = false
 layout_mode = 0
-offset_right = 130.0
+offset_right = 260.0
 offset_bottom = 390.0
 pivot_offset = Vector2(130, 130)
 script = ExtResource("43_rxod3")
-Columns = 1
+Columns = 2
 CellSize = Vector2(130, 130)
 RatioCellSize = true
 
-[node name="j_hair_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("31_5f468")]
+[node name="j_hair_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Headwear container" unique_id=765786880 node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("31_5f468")]
 layout_mode = 2
 FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
-[node name="m_hair_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("32_ou4cb")]
+[node name="m_hair_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Headwear container" unique_id=342325265 node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("32_ou4cb")]
 layout_mode = 2
 FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
-[node name="x_hat_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Headwear container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("36_irn57")]
+[node name="j_hat_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Headwear container" unique_id=1880427514 node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("33_2hbc0")]
 layout_mode = 2
+itemType = 6
 FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
-[node name="Accessories container" type="Container" parent="UI/Clothes Menu/MenuBody/MenuClothes"]
+[node name="m_hat_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Headwear container" unique_id=759111119 node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("34_5f468")]
+layout_mode = 2
+itemType = 6
+FolderContainer = NodePath("../..")
+ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
+
+[node name="x_hat_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Headwear container" unique_id=804043566 node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("36_irn57")]
+layout_mode = 2
+itemType = 6
+FolderContainer = NodePath("../..")
+ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
+
+[node name="Accessories container" type="Container" parent="UI/Clothes Menu/MenuBody/MenuClothes" unique_id=101096114]
 visible = false
 layout_mode = 0
 offset_right = 130.0
@@ -849,22 +873,22 @@ Columns = 1
 CellSize = Vector2(130, 130)
 RatioCellSize = true
 
-[node name="j_accessory_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Accessories container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("33_fk1bi")]
+[node name="j_accessory_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Accessories container" unique_id=509283672 node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("33_fk1bi")]
 layout_mode = 2
 FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
-[node name="m_accessory_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Accessories container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("34_m7j6i")]
+[node name="m_accessory_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Accessories container" unique_id=1887915532 node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("34_m7j6i")]
 layout_mode = 2
 FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
-[node name="x_accessory_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Accessories container" node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("35_d60x8")]
+[node name="x_accessory_0" parent="UI/Clothes Menu/MenuBody/MenuClothes/Accessories container" unique_id=1926445418 node_paths=PackedStringArray("FolderContainer", "ItemLayerNode") instance=ExtResource("35_d60x8")]
 layout_mode = 2
 FolderContainer = NodePath("../..")
 ItemLayerNode = NodePath("../../../../../../Characters/ItemLayer")
 
-[node name="MenuClothesButtons" type="Container" parent="UI/Clothes Menu/MenuBody"]
+[node name="MenuClothesButtons" type="Container" parent="UI/Clothes Menu/MenuBody" unique_id=129888127]
 layout_mode = 0
 offset_left = 56.0
 offset_right = 251.0
@@ -876,7 +900,7 @@ CellSize = Vector2(95, 95)
 CellSpacing = Vector2(5, 5)
 CellPadding = Vector2(0, 76)
 
-[node name="HatButton" type="TextureButton" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons" node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
+[node name="HatButton" type="TextureButton" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons" unique_id=592109580 node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_lwubn")
 ignore_texture_size = true
@@ -887,7 +911,7 @@ menuController = NodePath("../../..")
 AnimationPlayer = NodePath("../../../MenuAnimations")
 Animation = Array[StringName]([&"show_clothes"])
 
-[node name="OpenTexture" type="TextureRect" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons/HatButton"]
+[node name="OpenTexture" type="TextureRect" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons/HatButton" unique_id=466545210]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -903,7 +927,7 @@ grow_vertical = 2
 texture = SubResource("AnimatedTexture_o0px6")
 stretch_mode = 5
 
-[node name="DressButton" type="TextureButton" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons" node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
+[node name="DressButton" type="TextureButton" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons" unique_id=664173658 node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -916,7 +940,7 @@ menuController = NodePath("../../..")
 AnimationPlayer = NodePath("../../../MenuAnimations")
 Animation = Array[StringName]([&"show_clothes"])
 
-[node name="OpenTexture" type="TextureRect" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons/DressButton"]
+[node name="OpenTexture" type="TextureRect" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons/DressButton" unique_id=1887793070]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -932,7 +956,7 @@ grow_vertical = 2
 texture = SubResource("AnimatedTexture_yl46r")
 stretch_mode = 5
 
-[node name="OutfitsButton" type="TextureButton" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons" node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
+[node name="OutfitsButton" type="TextureButton" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons" unique_id=39216197 node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_lwubn")
 ignore_texture_size = true
@@ -943,7 +967,7 @@ menuController = NodePath("../../..")
 AnimationPlayer = NodePath("../../../MenuAnimations")
 Animation = Array[StringName]([&"show_clothes"])
 
-[node name="OpenTexture" type="TextureRect" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons/OutfitsButton"]
+[node name="OpenTexture" type="TextureRect" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons/OutfitsButton" unique_id=1227134421]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -959,7 +983,7 @@ grow_vertical = 2
 texture = SubResource("AnimatedTexture_dlyvr")
 stretch_mode = 5
 
-[node name="AccessoriesButton" type="TextureButton" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons" node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
+[node name="AccessoriesButton" type="TextureButton" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons" unique_id=334349967 node_paths=PackedStringArray("Clothes", "menuController", "AnimationPlayer")]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_lwubn")
 ignore_texture_size = true
@@ -970,7 +994,7 @@ menuController = NodePath("../../..")
 AnimationPlayer = NodePath("../../../MenuAnimations")
 Animation = Array[StringName]([&"show_clothes"])
 
-[node name="OpenTexture" type="TextureRect" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons/AccessoriesButton"]
+[node name="OpenTexture" type="TextureRect" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons/AccessoriesButton" unique_id=1653894175]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -986,19 +1010,19 @@ grow_vertical = 2
 texture = SubResource("AnimatedTexture_ffrpt")
 stretch_mode = 5
 
-[node name="TextureButton5" type="TextureButton" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons"]
+[node name="TextureButton5" type="TextureButton" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons" unique_id=1031972366]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_lwubn")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureButton6" type="TextureButton" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons"]
+[node name="TextureButton6" type="TextureButton" parent="UI/Clothes Menu/MenuBody/MenuClothesButtons" unique_id=176897549]
 layout_mode = 2
 texture_normal = SubResource("AnimatedTexture_lwubn")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="ReturnButton" type="TextureButton" parent="UI/Clothes Menu/MenuBody" node_paths=PackedStringArray("MenuBody", "menuController", "AnimationPlayer")]
+[node name="ReturnButton" type="TextureButton" parent="UI/Clothes Menu/MenuBody" unique_id=1094536729 node_paths=PackedStringArray("MenuBody", "menuController", "AnimationPlayer")]
 layout_mode = 0
 offset_left = 20.3828
 offset_top = -55.1512
@@ -1013,7 +1037,7 @@ menuController = NodePath("../..")
 AnimationPlayer = NodePath("../../MenuAnimations")
 Animation = Array[StringName]([&"menu_open", &"show_clothes"])
 
-[node name="ReturnTexture" type="TextureRect" parent="UI/Clothes Menu/MenuBody/ReturnButton"]
+[node name="ReturnTexture" type="TextureRect" parent="UI/Clothes Menu/MenuBody/ReturnButton" unique_id=315076051]
 layout_mode = 0
 offset_left = 2.39785
 offset_top = 0.59947
@@ -1024,7 +1048,7 @@ texture = SubResource("AnimatedTexture_jtuke")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="MenuOutline" type="TextureRect" parent="UI/Clothes Menu"]
+[node name="MenuOutline" type="TextureRect" parent="UI/Clothes Menu" unique_id=1426078080]
 layout_mode = 0
 offset_right = 335.0
 offset_bottom = 455.0
@@ -1033,46 +1057,66 @@ texture = ExtResource("37_ssbm1")
 expand_mode = 1
 flip_h = true
 
-[node name="MenuAnimations" type="AnimationPlayer" parent="UI/Clothes Menu"]
-libraries = {
-&"": SubResource("AnimationLibrary_ykktq")
-}
+[node name="MenuAnimations" type="AnimationPlayer" parent="UI/Clothes Menu" unique_id=1689861947]
+libraries/ = SubResource("AnimationLibrary_ykktq")
 
-[node name="Characters" type="Node2D" parent="."]
+[node name="Rubbish" type="Node2D" parent="." unique_id=623933619]
+process_priority = 1
+visibility_layer = 2
+position = Vector2(1166.6667, 659.394)
+script = ExtResource("52_gmpd3")
+
+[node name="Area2D" type="Area2D" parent="Rubbish" unique_id=678321613]
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 1
+position = Vector2(-7.8788605, -12.72728)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rubbish/Area2D" unique_id=726366502]
+process_priority = 1
+visible = false
+z_index = -1
+scale = Vector2(1.0007643, 1)
+build_mode = 1
+polygon = PackedVector2Array(892.727, 669.091, 896.364, 558.182, 950.303, 450.303, 1049.09, 368.485, 1157.58, 332.727, 1238.79, 328.485, 1237.58, 673.939)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rubbish/Area2D" unique_id=1923240664]
+position = Vector2(36.363636, -4.2424245)
+shape = SubResource("CircleShape2D_gmpd3")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Rubbish/Area2D" unique_id=1799664039]
+visible = false
+position = Vector2(-115.151596, -135.75758)
+build_mode = 1
+polygon = PackedVector2Array(111.51514, -181.8182, -39.39392, -123.030304, -147.87878, 30.909058, -159.39392, 149.09088, 158.78784, 156.96967)
+
+[node name="Characters" type="Node2D" parent="." unique_id=580373535]
 visibility_layer = 2
 scale = Vector2(0.33, 0.33)
 
-[node name="ItemLayer" type="Node2D" parent="Characters"]
+[node name="ItemLayer" type="Node2D" parent="Characters" unique_id=2049395215]
 process_priority = 1
 z_index = 1
 
-[node name="NakedbaseJulius" parent="Characters" instance=ExtResource("53_ou4cb")]
+[node name="NakedbaseJulius" parent="Characters" unique_id=1914601148 instance=ExtResource("53_ou4cb")]
 position = Vector2(945.183, 1042.84)
 
-[node name="NakedbaseMatt" parent="Characters" instance=ExtResource("59_irn57")]
+[node name="NakedbaseMatt" parent="Characters" unique_id=573494981 instance=ExtResource("59_irn57")]
 position = Vector2(1620.95, 1042.84)
 
-[node name="Rubbish" type="Node2D" parent="."]
-visibility_layer = 2
-
-[node name="Area2D" type="Area2D" parent="Rubbish"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rubbish/Area2D"]
-polygon = PackedVector2Array(892.727, 669.091, 896.364, 558.182, 950.303, 450.303, 1049.09, 368.485, 1157.58, 332.727, 1238.79, 328.485, 1237.58, 673.939)
-
-[node name="PlayTransition" type="Node2D" parent="."]
+[node name="PlayTransition" type="Node2D" parent="." unique_id=1767425352]
 visible = false
 visibility_layer = 2
 position = Vector2(-24, 47.9999)
 scale = Vector2(1.33754, 1.14983)
 
-[node name="HeartCurtainBacker" type="Sprite2D" parent="PlayTransition"]
+[node name="HeartCurtainBacker" type="Sprite2D" parent="PlayTransition" unique_id=648542492]
 modulate = Color(0.356863, 0, 0.552941, 1)
 position = Vector2(446.996, 240.036)
 scale = Vector2(924.271, 577.477)
 texture = ExtResource("2_di5s5")
 
-[node name="HeartCurtainBackground" type="NinePatchRect" parent="PlayTransition"]
+[node name="HeartCurtainBackground" type="NinePatchRect" parent="PlayTransition" unique_id=1326428396]
 modulate = Color(1, 0, 1, 1)
 offset_left = -12.0
 offset_top = -49.0
@@ -1083,7 +1127,7 @@ texture = ExtResource("9_cn02w")
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 
-[node name="HeartCurtainForeground" type="NinePatchRect" parent="PlayTransition"]
+[node name="HeartCurtainForeground" type="NinePatchRect" parent="PlayTransition" unique_id=37251527]
 offset_top = -42.0
 offset_right = 679.0
 offset_bottom = 466.0
@@ -1092,36 +1136,34 @@ texture = ExtResource("9_cn02w")
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 
-[node name="EnterTransition" type="AnimationPlayer" parent="PlayTransition"]
-libraries = {
-&"": SubResource("AnimationLibrary_nfu2l")
-}
-autoplay = "Play_Animation"
+[node name="EnterTransition" type="AnimationPlayer" parent="PlayTransition" unique_id=41200357]
+libraries/ = SubResource("AnimationLibrary_nfu2l")
+autoplay = &"Play_Animation"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2064765185]
 visible = false
 texture_filter = 1
 position = Vector2(620.606, 346.667)
 scale = Vector2(25.2781, 25.2781)
 texture = ExtResource("9_cn02w")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D"]
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D" unique_id=1377784341]
 modulate = Color(0.800491, 0.800491, 0.800491, 1)
 texture_filter = 1
 scale = Vector2(0.849571, 0.849571)
 texture = ExtResource("9_cn02w")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D/Sprite2D3"]
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D/Sprite2D3" unique_id=1579590785]
 texture_filter = 1
 scale = Vector2(0.793561, 0.793561)
 texture = ExtResource("9_cn02w")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D/Sprite2D3/Sprite2D2"]
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D/Sprite2D3/Sprite2D2" unique_id=724913596]
 modulate = Color(0.800491, 0.800491, 0.800491, 1)
 texture_filter = 1
 texture = ExtResource("9_cn02w")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D/Sprite2D3/Sprite2D2/Sprite2D3"]
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D/Sprite2D3/Sprite2D2/Sprite2D3" unique_id=1166712655]
 clip_children = 2
 texture_filter = 1
 texture = ExtResource("9_cn02w")

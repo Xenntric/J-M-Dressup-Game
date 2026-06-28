@@ -1,24 +1,25 @@
 using System;
+using System.Linq;
 using Dressup;
+using DressupUI;
 using Godot;
 
-namespace DressupUI
+namespace Dressup
 {
 	public partial class LiveItem : Sprite2D
 	{
         [Export] public FolderItem.ItemType itemType;
-        [Export] protected bool TestMode = false;
+        [Export] public bool TestMode = false;
 		public Globals globals {get;set;}
         public Control FolderContainer {get;set;}
 		public Node ItemLayerNode {get;set;}
-
 		private Vector2	TextureSize;
         public Vector2 PosOffset;
-
         private Area2D area;
-
-        private bool inside;
+        public bool inside;
         private bool grabbed;
+
+        public string genericName;
         public override void _EnterTree()
         {
             if (!TestMode)
@@ -35,55 +36,23 @@ namespace DressupUI
 			    globals = GetNode<Globals>(GetTree().Root.GetChild(0).GetPath());
             }
 
-			ProcessPriority = 1;
+			ProcessPriority = 0;
             area = GetNode<Area2D>(GetChild(0).GetPath());
             area.InputPickable = true;
             area.MouseEntered += HandleMouseEntered;
             area.MouseExited += HandleMouseExited;
-            // IgnoreTextureSize = true;
-            // TextureSize = this.TextureNormal.GetSize();
-            // this.ButtonDown += AttachAndMove;
         }
-
-		private void AttachAndMove()
-		{
-			PosOffset = GetViewport().GetMousePosition() - this.GlobalPosition;
-
-            if (TestMode) { return; }
-            globals.GrabbedItem = this;
-            this.GetParent<Node>().MoveChild(this, 0); // might do this for zIndexes but now that i think to we shouldnt need to;
-            // ButtonPressed = true;
-            // SetZIndex(true);
-        }
-
         private void HandleMouseEntered() 
         {
+            if (TestMode) { return; }
             inside = true;
-            GD.Print(inside);
+            globals.PushItem(this);
         }
 		private void HandleMouseExited() 
         {
+            if (TestMode) { return; }
             inside = false;
-            GD.Print(inside);
+            globals.PopItem(this);
         }
-
-        public override void _UnhandledInput(InputEvent @event)
-		{
-			// if (GetParent() is StrictGrid){ return; }
-			base._Input(@event);
-			if (@event.IsActionReleased("Grab")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             )
-			{
-                if (!TestMode)
-                {
-                    globals.GrabbedItem = null;
-                }
-                // ToggleMode = false;
-                // SetZIndex(false);
-            }
-			// else if (@event is InputEventMouseMotion eventMouseMotion && ButtonPressed)
-			{
-				// GlobalPosition = eventMouseMotion.Position - PosOffset;
-			}
-		}
 	}
 }

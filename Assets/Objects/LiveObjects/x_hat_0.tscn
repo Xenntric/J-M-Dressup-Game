@@ -1,18 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://g7wooglx3jyl"]
+[gd_scene format=3 uid="uid://g7wooglx3jyl"]
 
 [ext_resource type="Texture2D" uid="uid://na7mb7k7g4t2" path="res://Assets/Art/Clothes/Hats/x_hat_0.png" id="1_gd5hg"]
 [ext_resource type="Script" uid="uid://cf70tehjs6tpy" path="res://Assets/Scripts/MainGame/LiveItem.cs" id="2_f11sy"]
 
-[node name="x_hat_0" type="Sprite2D"]
+[node name="x_hat_0" type="Sprite2D" unique_id=1424897221]
 texture = ExtResource("1_gd5hg")
 offset = Vector2(0, -4)
 script = ExtResource("2_f11sy")
-itemType = 7
+itemType = 6
 TestMode = true
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1176173633]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1484313804]
 visible = false
 position = Vector2(1.5653107, -2.0426881)
 polygon = PackedVector2Array(-38.56531, 28.042688, -25.565311, -29.957312, 27.434689, -29.957312, 36.43469, 29.042688)
