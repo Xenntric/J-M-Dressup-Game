@@ -19,12 +19,10 @@ public partial class Trash : Node
     protected void HandleMouseEntered()
     {
         inside = true;
-        GD.Print(inside);
     }
     protected void HandleMouseExited()
     {
         inside = false;
-        GD.Print(inside);
     }
 
     public void Flush()

@@ -1,2 +1,14 @@
-res://Assets/Scenes/main_dressup.tscn
-res://Assets/Art/Splash Art/new_shader.gdshader
+res://Assets/Scripts/MainGame/LiveItem.cs
+res://Assets/Scripts/MainGame/Magnetism.cs
+res://Assets/Scripts/MainGame/Trash.cs
+res://Assets/Scripts/MainGame/UI/AnimateMenuButton.cs
+res://Assets/Scripts/MainGame/UI/AnimateReturnButton.cs
+res://Assets/Scripts/MainGame/FolderItem.cs
+res://Assets/Scripts/MainGame/UI/MenuController.cs
+res://Assets/Scripts/Util/CallAnimateButton.cs
+res://Assets/Scripts/MainGame/UI/MagnitiseButton.cs
+res://Assets/Scripts/MainGame/OptionsMenu.cs
+res://Assets/Scripts/MainGame/Globals.cs
+res://addons/strict_grid_container/StrictGrid.cs
+res://addons/strict_grid_container/StrictGridContainer.cs
+res://Assets/Scripts/SplashandMenu/MenuScript.cs
