@@ -102,7 +102,6 @@ namespace Dressup
                 }
                 catch {
                     globals.itemStack.Clear();
-
                     throw new WarningException("Exiting Loop as ItemStack was Changed");
                 }
             }
