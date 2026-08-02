@@ -18,6 +18,7 @@ namespace Dressup
 		{
 			globals = GetNode<Globals>(GetTree().Root.GetChild(0).GetPath());
 			globals.ItemClicked += HandleMouseClicked;
+			globals.ItemDropped += HandleMouseClicked;
 
 			var area = GetChild<Area2D>(0);
 			area.MouseEntered += HandleMouseEntered;

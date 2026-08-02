@@ -189,7 +189,6 @@
 /mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/bin/ExportRelease/win-x64/hostfxr.dll
 /mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/bin/ExportRelease/win-x64/hostpolicy.dll
 /mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/bin/ExportRelease/win-x64/mscordaccore.dll
-/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/bin/ExportRelease/win-x64/mscordaccore_amd64_amd64_8.0.1825.31117.dll
 /mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/bin/ExportRelease/win-x64/mscordbi.dll
 /mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/bin/ExportRelease/win-x64/mscorrc.dll
 /mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/bin/ExportRelease/win-x64/msquic.dll
@@ -203,3 +202,4 @@
 /mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/obj/ExportRelease/win-x64/refint/Dressup.dll
 /mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/obj/ExportRelease/win-x64/Dressup.genruntimeconfig.cache
 /mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/obj/ExportRelease/win-x64/ref/Dressup.dll
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/.godot/mono/temp/bin/ExportRelease/win-x64/mscordaccore_amd64_amd64_8.0.2826.26413.dll

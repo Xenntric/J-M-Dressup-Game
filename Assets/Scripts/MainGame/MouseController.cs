@@ -20,7 +20,6 @@ namespace Dressup
         public void Input(InputEvent @event)
         {
             HandleRotation(@event);
-            if (rotating) { return; }
             HandleMovement(@event);           
         }
         private void HandleMovement(InputEvent @event)
@@ -28,6 +27,7 @@ namespace Dressup
             if (@event.IsActionReleased("Grab", true)) { Released(); }
             if (globals.itemStack?.Count <= 0) { return; }
             if (@event.IsActionPressed("Grab", true)) { Pressed(); }
+            if (rotating) { return; }
             if (@event is InputEventMouseMotion eventMouseMotion) { Moving(eventMouseMotion); }
         }
         private void Pressed()
@@ -39,6 +39,7 @@ namespace Dressup
 
         private void Released()
         {
+            globals.EmitSignal(nameof(globals.ItemDropped));
             if (globals.trash.Inside && globals.GrabbedItem != null)
             {
                 globals.trash.Flush(globals.GrabbedItem);
@@ -134,6 +135,11 @@ namespace Dressup
                 rotatingItem = globals.GrabbedItem.GetNode<LiveItem>(globals.GrabbedItem.GetPathTo(globals.GrabbedItem, true));
                 CreateNewLabel();
             }
+            
+            if (@event is InputEventMouseMotion && rotating)
+            {
+                RotateItem();
+            }
 
             if (@event.IsActionReleased("Rotate", true) && rotating == true)
             {
@@ -147,10 +153,7 @@ namespace Dressup
                 rotatingItem = null;
             }
 
-            if (@event is InputEventMouseMotion && rotating)
-            {
-                RotateItem();
-            }
+            
         }
 
         private void CreateNewLabel()

@@ -1,10 +1,12 @@
 is_global = true
 build_property.GodotDisabledSourceGenerators = 
 build_property.GodotProjectDir = /mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/
-build_property.GodotProjectDirBase64 = 
+build_property.GodotProjectDirBase64 = L21udC9TbG93SEREL1Byb2plY3RzL0dvZG90L0otTS1EcmVzc3VwLUdhbWUv
 build_property.GodotSourceGenerators = 
 build_property.IsGodotToolsProject = 
 build_property.TargetFramework = net8.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v8.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
 build_property.ProjectTypeGuids = 
