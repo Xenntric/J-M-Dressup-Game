@@ -25,6 +25,8 @@ namespace Dressup
         public Vector2 getCharacterScale { get { return characterScale; }}
         private MouseController mouseController;
         private DollSlotController dollSlotController;
+        [Signal] public delegate void ItemClickedEventHandler();
+        [Signal] public delegate void ItemDroppedEventHandler();
         public override void _EnterTree()
 		{
 			GrabbedItem = null;
@@ -35,7 +37,6 @@ namespace Dressup
 
 		public void HandleItemClicked()
 		{
-
 		}
 
 		public void HandleItemDropped()

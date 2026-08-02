@@ -16,3 +16,4 @@ res://addons/strict_grid_container/StrictGridContainer.cs
 res://Assets/Scripts/SplashandMenu/MenuScript.cs
 res://Assets/Scripts/MainGame/MouseController.cs
 res://Assets/Objects/LiveObjects/j_outfit_0.tscn
+res://Assets/Objects/j_scene.tscn

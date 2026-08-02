@@ -11,12 +11,14 @@ namespace Dressup
 		private Globals globals;
         [Export] FolderItem.ItemType itemType;
 		private Sprite2D MatchingSprite;
-		private Tween tween;
+		private Tween alphaTween;
+        private Tween positionTween;
 		private bool inside = false;
 		public override void _Ready()
 		{
 			globals = GetNode<Globals>(GetTree().Root.GetChild(0).GetPath());
-			
+			globals.ItemClicked += HandleMouseClicked;
+
 			var area = GetChild<Area2D>(0);
 			area.MouseEntered += HandleMouseEntered;
 			area.MouseExited += HandleMouseExited;
@@ -26,6 +28,15 @@ namespace Dressup
                 sprite.Modulate = new Color(sprite.Modulate, 0);
             }
 		}
+		protected void HandleMouseClicked()
+        {
+            if (inside && (int)(globals.GrabbedItem as LiveItem).itemType == (int)itemType)
+            {
+                CheckMatchingSprites();
+                positionTween?.Kill();
+                positionTween = null;
+            }
+        }
 
 		protected void HandleMouseEntered()
         {
@@ -35,7 +46,7 @@ namespace Dressup
             CheckMatchingSprites();
         }
 
-        private void CheckMatchingSprites()
+        public void CheckMatchingSprites()
         {
             for (int i = 1; i < GetChildCount(); i++)
             {
@@ -43,47 +54,66 @@ namespace Dressup
                 {
                     MatchingSprite = GetChild<Sprite2D>(i);
                     globals.magnetTarget = this;
-                    tween = GetTree().CreateTween();
-                    ModifyAlpha();
+                    GD.Print("matched");
+                    if (alphaTween == null)
+                    {
+                        alphaTween = GetTree().CreateTween();
+                        ModifyAlpha();
+                    }
+
                     break;
                 }
             }
         }
 
         protected void HandleMouseExited()
-		{
-			inside = false;
-			if (MatchingSprite == null) { return; }
+        {
+            GD.Print($"Exited {this.Name}");
+            inside = false;
+            KillTweens();
             globals.magnetTarget = null;
-			tween?.Kill();
-			Tween dim = GetTree().CreateTween();
-			dim.TweenProperty(MatchingSprite, "modulate:a", 0f, .15f);
-			MatchingSprite = null;
-		}
+            MatchingSprite = null;
+        }
+
+        private void KillTweens()
+        {
+            alphaTween?.Kill();
+            alphaTween = null;
+            foreach (LiveItem sprite in GetSprites())
+            {
+                if (sprite.Modulate.A == 0) { continue; }
+                Tween dim = GetTree().CreateTween();
+                dim.TweenProperty(sprite, "modulate:a", 0f, .15f);
+            }
+        }
 
         public void TranslateToMagnet()
         {
-            var localTween = GetTree().CreateTween();
-                localTween.SetParallel(true);
-                localTween.TweenProperty(globals.GrabbedItem, "global_position", MatchingSprite.GlobalPosition, .5f)
-                            .SetTrans(Tween.TransitionType.Expo)
-                            .SetEase(Tween.EaseType.Out);
-                localTween.TweenProperty(globals.GrabbedItem, "rotation", MatchingSprite.Rotation, .5f)
-                .SetTrans(Tween.TransitionType.Expo)
-                .SetEase(Tween.EaseType.Out);
-                localTween.Chain();
+            if (positionTween == null)
+            {
+                positionTween ??= GetTree().CreateTween();
+                positionTween.SetParallel(true);
+                positionTween.TweenProperty(globals.GrabbedItem, "global_position", MatchingSprite.GlobalPosition, .5f)
+                                .SetTrans(Tween.TransitionType.Expo)
+                                .SetEase(Tween.EaseType.Out);
+                positionTween.TweenProperty(globals.GrabbedItem, "rotation", MatchingSprite.Rotation, .5f)
+                                .SetTrans(Tween.TransitionType.Expo)
+                                .SetEase(Tween.EaseType.Out);
+                positionTween.Chain();
+            }
 
+            positionTween = null;
             MatchingSprite.Modulate = new Color(MatchingSprite.Modulate, 0f);
         }
         private void ModifyAlpha()
         {
-            tween.TweenProperty(MatchingSprite, "modulate:a", 0f, 1.25f)
-                .SetTrans(Tween.TransitionType.Sine)
-                .SetEase(Tween.EaseType.Out);
-            tween.TweenProperty(MatchingSprite, "modulate:a", .33f, 1.25f)
+            alphaTween.TweenProperty(MatchingSprite, "modulate:a", 0f, 1.25f)
                 .SetTrans(Tween.TransitionType.Sine)
                 .SetEase(Tween.EaseType.In);
-            tween.SetLoops();
+            alphaTween.TweenProperty(MatchingSprite, "modulate:a", .33f, 1.25f)
+                .SetTrans(Tween.TransitionType.Sine)
+                .SetEase(Tween.EaseType.Out);
+            alphaTween.SetLoops();
         }
 
         private List<LiveItem> GetSprites()

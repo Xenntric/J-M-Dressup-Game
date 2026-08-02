@@ -34,6 +34,7 @@ namespace Dressup
         {
             GD.Print(TakeStackNames());
             AttachAndMove(FindExpectedItem());
+            globals.EmitSignal(nameof(globals.ItemClicked));
         }
 
         private void Released()
@@ -42,7 +43,7 @@ namespace Dressup
             {
                 globals.trash.Flush(globals.GrabbedItem);
             }
-            else if (globals.magnetTarget != null)
+            if (globals.magnetTarget != null)
             {
                 globals.magnetTarget.TranslateToMagnet();
                 GD.Print($"{globals.GrabbedItem} && {globals.trash.CheckConflictingItems(globals.GrabbedItem)}");
@@ -63,7 +64,6 @@ namespace Dressup
 
         private void Moving(InputEventMouseMotion eventMouseMotion)
         {
-            
             CleanUpItems();
             if (globals.GrabbedItem == null) { return; }
             mousePos = eventMouseMotion.Position;
@@ -126,7 +126,6 @@ namespace Dressup
             }
             return names;
         }
-        
         private void HandleRotation(InputEvent @event)
         {
             if (@event.IsActionPressed("Rotate", true) && this.globals.GrabbedItem != null && rotating == false)
