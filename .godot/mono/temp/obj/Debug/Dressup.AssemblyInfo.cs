@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dressup")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93180303b65eb09c96e892d5cf5fb75ade94dc4e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5e1bccb4ee0dac2586d3e73e17d293fb3bd52ab")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dressup")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dressup")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

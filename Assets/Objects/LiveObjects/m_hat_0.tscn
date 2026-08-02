@@ -6,7 +6,8 @@
 [node name="m_hat_0" type="Sprite2D" unique_id=500936529]
 texture = ExtResource("1_uyvjs")
 script = ExtResource("2_jwce1")
-itemType = 6
+doll = 1
+itemType = 7
 TestMode = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=88572250]

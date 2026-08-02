@@ -1,13 +1,11 @@
-res://Assets/Objects/Matt/LiveObjects
-res://Assets/Objects/Julius/
-res://Assets/Objects/Matt
-/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/build/linux
-/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/build/windows
-/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/build
-res://Assets/Objects/Matt/
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/Assets/Objects/
+res://Assets/Scenes/
+res://Assets/Art/Sprite Sheets/
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/build/linux/
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/build/windows/
+/mnt/SlowHDD/Projects/Godot/J-M-Dressup-Game/build/
 res://Assets/Objects/
-res://Assets/Scripts/MainGame
-res://Assets/Scripts/MainGame/UI
-res://Assets/Animations
-res://Assets/Scenes
-res://Assets/Scripts
+res://Assets/Scripts/MainGame/
+res://Assets/Scripts/MainGame/UI/
+res://Assets/Animations/
+res://Assets/Scripts/

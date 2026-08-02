@@ -9,6 +9,7 @@ radius = 61.008198
 [node name="x_accessory_0" type="Sprite2D" unique_id=141124358]
 texture = ExtResource("1_ir8ha")
 script = ExtResource("2_ugoyo")
+doll = 2
 itemType = 8
 TestMode = true
 

@@ -1,6 +1,8 @@
 using Dressup;
 using DressupUI;
 using Godot;
+using System;
+using System.Collections.Generic;
 
 public partial class Trash : Node
 {
@@ -25,16 +27,21 @@ public partial class Trash : Node
         inside = false;
     }
 
-    public void Flush()
+    public void Flush(LiveItem item)
     {
-        LiveItem grabbedItem = globals.GrabbedItem;
+        globals.ItemsInPlace.Remove(item);
         Tween removalTween = CreateTween().SetParallel(true);
-        removalTween.TweenProperty(grabbedItem, "scale", Vector2.Zero, 0.5f)
+        removalTween.TweenProperty(item, "scale", Vector2.Zero, 0.5f)
             .SetTrans(Tween.TransitionType.Sine)
             .SetEase(Tween.EaseType.In)
-            .Finished += () => FreeObj(grabbedItem);
-        removalTween.TweenProperty(grabbedItem, "rotation", 720, 1f);
+            .Finished += () => FreeObj(item);
+        removalTween.TweenProperty(item, "rotation", 720, 1f);
         removalTween.Chain();
+    }
+
+    public void Poof(LiveItem item)
+    {
+
     }
 
     private void MatchToFolderItem(Node item)
@@ -59,5 +66,35 @@ public partial class Trash : Node
     {
         MatchToFolderItem(node);
         node.GetNode<LiveItem>(node.GetPath()).Free();
+    }
+
+    public List<LiveItem> CheckConflictingItems(LiveItem newItem)
+    {
+        List<LiveItem> conflictingItems = [];
+        foreach (FolderItem.ItemType newItemSlot in newItem.itemSlots)
+        {
+            foreach (LiveItem outItem in globals.ItemsInPlace)
+            {
+                if (newItem.Name == outItem.Name) { continue; }
+                foreach (FolderItem.ItemType outItemSlot in outItem.itemSlots)
+                {
+                    if (newItemSlot == outItemSlot && newItem.doll == outItem.doll)
+                    {
+                        conflictingItems.Add(outItem);
+                        GD.Print($"found conflicting item {newItem.Name}, {outItem.Name}");
+                        GD.Print($"conflicting slots {newItemSlot}, {outItemSlot}");
+
+                        break;
+                    }
+                }
+            }
+        }
+
+        return conflictingItems;
+    }
+
+    public void CleanFlushedItems()
+    {
+        
     }
 }

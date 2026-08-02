@@ -6,6 +6,7 @@
 [node name="m_dress_0" type="Sprite2D" unique_id=828454]
 texture = ExtResource("1_304lh")
 script = ExtResource("2_k15od")
+doll = 1
 itemType = 3
 TestMode = true
 

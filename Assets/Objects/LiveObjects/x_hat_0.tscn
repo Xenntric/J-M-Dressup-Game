@@ -7,6 +7,7 @@
 texture = ExtResource("1_gd5hg")
 offset = Vector2(0, -4)
 script = ExtResource("2_f11sy")
+doll = 2
 itemType = 6
 TestMode = true
 

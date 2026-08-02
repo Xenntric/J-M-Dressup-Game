@@ -11,12 +11,12 @@ namespace Dressup
 		[Export] public Control ClothesControl;
 		[Export] public TextureRect MenuPanel;
 		[Export] public Container ItemFolders;
-        [Export] private Node2D CharacterNode;
+        [Export] public Node2D CharacterNode;
         [Export] private OptionsMenu OptionsMenu;
-        public OptionsMenu getOptionsMenu { get { return OptionsMenu; }}
-
+        public OptionsMenu getOptionsMenu { get { return OptionsMenu; } }
         [Export] public Trash trash;
 		[Export] public bool magnetise = true;
+        public List<LiveItem> ItemsInPlace= [];
         public Magnetism magnetTarget;
 		[Export] public LiveItem GrabbedItem {get;set;}
         public Godot.Collections.Array<FolderItem> OutFolderItems { get; set; } = [];
@@ -24,10 +24,12 @@ namespace Dressup
         private Vector2 characterScale;
         public Vector2 getCharacterScale { get { return characterScale; }}
         private MouseController mouseController;
+        private DollSlotController dollSlotController;
         public override void _EnterTree()
 		{
 			GrabbedItem = null;
             mouseController = new MouseController(this);
+            dollSlotController = new DollSlotController(this);
             characterScale = CharacterNode.Scale;
 		}
 

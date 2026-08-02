@@ -22,10 +22,8 @@ namespace Dressup
 		private Globals globals;
         public override void _EnterTree()
         {
-            // Size = new Vector2(0, 0);
             IgnoreTextureSize = true;
         }
-
 		public override void _Ready()
 		{
             if (GetNode(GetPathTo(GetTree().Root)) != this) { runChecks(); }
@@ -51,8 +49,8 @@ namespace Dressup
         private void Shrink()
         {
             CreateTween().TweenProperty(GetNode(GetPath()), "scale", Vector2.Zero, 0.15f)
-				 .SetTrans(Tween.TransitionType.Sine)
-				 .SetEase(Tween.EaseType.In);
+                .SetTrans(Tween.TransitionType.Sine)
+                .SetEase(Tween.EaseType.In);
         }
         private void CreateNewObj()
         {
@@ -70,11 +68,15 @@ namespace Dressup
             copy.GlobalPosition = this.GetViewport().GetMousePosition();
             copy.PosOffset = this.GetViewport().GetMousePosition() - copy.GlobalPosition;
             globals.GrabbedItem = copy;
+            Grow();
+        }
 
+        private void Grow()
+        {
             Tween tween = GetTree().CreateTween();
             tween.TweenProperty(globals.GrabbedItem, "scale", Vector2.One, .5f)
-								.SetTrans(Tween.TransitionType.Expo)
-								.SetEase(Tween.EaseType.Out);
+                .SetTrans(Tween.TransitionType.Expo)
+                .SetEase(Tween.EaseType.Out);
         }
 
         private void runChecks()

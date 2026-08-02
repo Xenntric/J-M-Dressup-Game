@@ -1,3 +1,5 @@
+res://Assets/Scenes/main_dressup.tscn
+res://Assets/Art/Splash Art/new_shader.gdshader
 res://Assets/Scripts/MainGame/LiveItem.cs
 res://Assets/Scripts/MainGame/Magnetism.cs
 res://Assets/Scripts/MainGame/Trash.cs
@@ -12,3 +14,5 @@ res://Assets/Scripts/MainGame/Globals.cs
 res://addons/strict_grid_container/StrictGrid.cs
 res://addons/strict_grid_container/StrictGridContainer.cs
 res://Assets/Scripts/SplashandMenu/MenuScript.cs
+res://Assets/Scripts/MainGame/MouseController.cs
+res://Assets/Objects/LiveObjects/j_outfit_0.tscn

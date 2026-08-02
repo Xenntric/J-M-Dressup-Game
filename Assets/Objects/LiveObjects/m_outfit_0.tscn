@@ -7,7 +7,9 @@
 texture = ExtResource("1_88dfn")
 offset = Vector2(77, 12)
 script = ExtResource("2_1i6fj")
+doll = 1
 itemType = 4
+itemSlots = Array[int]([0, 1, 2, 5, 4, 3])
 TestMode = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1522625320]

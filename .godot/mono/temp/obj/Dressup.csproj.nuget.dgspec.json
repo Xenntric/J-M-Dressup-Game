@@ -47,17 +47,17 @@
             "Godot.SourceGenerators": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[4.6.3, )",
+              "version": "[4.7.0, )",
               "autoReferenced": true
             },
             "GodotSharp": {
               "target": "Package",
-              "version": "[4.6.3, )",
+              "version": "[4.7.0, )",
               "autoReferenced": true
             },
             "GodotSharpEditor": {
               "target": "Package",
-              "version": "[4.6.3, )",
+              "version": "[4.7.0, )",
               "autoReferenced": true
             },
             "NuGet.Protocol": {
@@ -79,7 +79,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.27, 8.0.27]"
+              "version": "[8.0.28, 8.0.28]"
             }
           ],
           "frameworkReferences": {
@@ -87,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.108/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.109/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

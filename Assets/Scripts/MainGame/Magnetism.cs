@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using DressupUI;
 using Godot;
 
@@ -20,7 +21,7 @@ namespace Dressup
 			area.MouseEntered += HandleMouseEntered;
 			area.MouseExited += HandleMouseExited;
 
-            foreach (LiveItem sprite in getSprites())
+            foreach (LiveItem sprite in GetSprites())
             {
                 sprite.Modulate = new Color(sprite.Modulate, 0);
             }
@@ -43,7 +44,7 @@ namespace Dressup
                     MatchingSprite = GetChild<Sprite2D>(i);
                     globals.magnetTarget = this;
                     tween = GetTree().CreateTween();
-                    modifyAlpha();
+                    ModifyAlpha();
                     break;
                 }
             }
@@ -60,16 +61,21 @@ namespace Dressup
 			MatchingSprite = null;
 		}
 
-        public void translateToMagnet()
+        public void TranslateToMagnet()
         {
             var localTween = GetTree().CreateTween();
+                localTween.SetParallel(true);
                 localTween.TweenProperty(globals.GrabbedItem, "global_position", MatchingSprite.GlobalPosition, .5f)
                             .SetTrans(Tween.TransitionType.Expo)
                             .SetEase(Tween.EaseType.Out);
+                localTween.TweenProperty(globals.GrabbedItem, "rotation", MatchingSprite.Rotation, .5f)
+                .SetTrans(Tween.TransitionType.Expo)
+                .SetEase(Tween.EaseType.Out);
+                localTween.Chain();
 
             MatchingSprite.Modulate = new Color(MatchingSprite.Modulate, 0f);
         }
-        private void modifyAlpha()
+        private void ModifyAlpha()
         {
             tween.TweenProperty(MatchingSprite, "modulate:a", 0f, 1.25f)
                 .SetTrans(Tween.TransitionType.Sine)
@@ -80,17 +86,16 @@ namespace Dressup
             tween.SetLoops();
         }
 
-        private List<LiveItem> getSprites()
+        private List<LiveItem> GetSprites()
         {
             List<LiveItem> children = [];
             foreach (var child in GetChildren(true))
             {
-                if (child is LiveItem) { children.Add(child as LiveItem);
-                    GD.Print(child.Name); 
+                if (child is LiveItem) 
+                { 
+                    children.Add(child as LiveItem);
                 }
-                
             }
-            GD.Print(children.Count);
             return children;
         }
 	}

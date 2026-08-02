@@ -554,6 +554,8 @@ _data = {
 &"RESET": SubResource("Animation_1m2oe")
 }
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_2hbc0"]
+
 [node name="DressUpScene" type="Node2D" unique_id=545737552 node_paths=PackedStringArray("CharacterNode", "OptionsMenu", "trash")]
 process_priority = -1
 texture_filter = 1
@@ -572,7 +574,7 @@ texture = ExtResource("2_di5s5")
 
 [node name="UI" type="Control" parent="." unique_id=848841626]
 visibility_layer = 2
-z_index = 2
+z_index = 1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1170.0
@@ -1081,11 +1083,11 @@ build_mode = 1
 polygon = PackedVector2Array(892.727, 669.091, 896.364, 558.182, 950.303, 450.303, 1049.09, 368.485, 1157.58, 332.727, 1238.79, 328.485, 1237.58, 673.939)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rubbish/Area2D" unique_id=1923240664]
+visible = false
 position = Vector2(36.363636, -4.2424245)
 shape = SubResource("CircleShape2D_gmpd3")
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Rubbish/Area2D" unique_id=1799664039]
-visible = false
 position = Vector2(-115.151596, -135.75758)
 build_mode = 1
 polygon = PackedVector2Array(111.51514, -181.8182, -39.39392, -123.030304, -147.87878, 30.909058, -159.39392, 149.09088, 158.78784, 156.96967)
@@ -1167,3 +1169,6 @@ texture = ExtResource("9_cn02w")
 clip_children = 2
 texture_filter = 1
 texture = ExtResource("9_cn02w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D" unique_id=307887641]
+sprite_frames = SubResource("SpriteFrames_2hbc0")
