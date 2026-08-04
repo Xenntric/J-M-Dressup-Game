@@ -31,7 +31,8 @@ namespace Dressup
 		}
 		protected void HandleMouseClicked()
         {
-            if (inside && (int)(globals.GrabbedItem as LiveItem).itemType == (int)itemType)
+            if (globals?.GrabbedItem == null) { return; }
+            if (inside && (int)(globals?.GrabbedItem as LiveItem).itemType == (int)itemType)
             {
                 CheckMatchingSprites();
                 positionTween?.Kill();

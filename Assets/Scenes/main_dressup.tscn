@@ -1107,6 +1107,7 @@ position = Vector2(945.183, 1042.84)
 position = Vector2(1620.95, 1042.84)
 
 [node name="PlayTransition" type="Node2D" parent="." unique_id=1767425352]
+visible = false
 visibility_layer = 2
 z_index = 1000
 z_as_relative = false

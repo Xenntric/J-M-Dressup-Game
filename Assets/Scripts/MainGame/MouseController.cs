@@ -8,10 +8,12 @@ namespace Dressup
     {
         private readonly Globals globals;
         private Vector2 mousePos = new(0,0);
-        private bool rotating;
         private LiveItem rotatingItem;
         private RichTextLabel rotationLabel;
         private Vector2 rotationLabelOffset = new(10,5);
+        public bool LeftMBDown {get;set;} = false;
+        public bool RightMBDown {get;set;} = false;
+
         public MouseController(Globals globals)
         {
             this.globals = globals;
@@ -19,26 +21,27 @@ namespace Dressup
 
         public void Input(InputEvent @event)
         {
-            HandleRotation(@event);
-            HandleMovement(@event);           
+            HandleItemRotation(@event);
+            HandleItemMovement(@event);
         }
-        private void HandleMovement(InputEvent @event)
+        private void HandleItemMovement(InputEvent @event)
         {
-            if (@event.IsActionReleased("Grab", true)) { Released(); }
+            if (@event.IsActionReleased("Grab", true)) { Released();  }
             if (globals.itemStack?.Count <= 0) { return; }
-            if (@event.IsActionPressed("Grab", true)) { Pressed(); }
-            if (rotating) { return; }
+            if (@event.IsActionPressed("Grab", true)) { Pressed();  }
+
+            if (RightMBDown) { return; }
             if (@event is InputEventMouseMotion eventMouseMotion) { Moving(eventMouseMotion); }
         }
-        private void Pressed()
+        public void Pressed()
         {
-            GD.Print(TakeStackNames());
+            LeftMBDown = true;
             AttachAndMove(FindExpectedItem());
             globals.EmitSignal(nameof(globals.ItemClicked));
         }
-
         private void Released()
         {
+            LeftMBDown = false;
             globals.EmitSignal(nameof(globals.ItemDropped));
             if (globals.trash.Inside && globals.GrabbedItem != null)
             {
@@ -72,6 +75,7 @@ namespace Dressup
         }
         private void AttachAndMove(LiveItem item)
 		{
+            if (item == null) { return; }
 			item.PosOffset = globals.GetViewport().GetMousePosition() - item.GlobalPosition;
 
             globals.GrabbedItem = item;
@@ -81,7 +85,7 @@ namespace Dressup
 
         private LiveItem FindExpectedItem()
         {
-            var expectedItem = globals.itemStack.Last();
+            var expectedItem = globals.itemStack.Count != 0 ? globals.itemStack.Last() : globals.GrabbedItem;
             foreach (LiveItem item in globals.itemStack)
             {
                 if (item == expectedItem) { continue; }
@@ -127,33 +131,39 @@ namespace Dressup
             }
             return names;
         }
-        private void HandleRotation(InputEvent @event)
+        private void HandleItemRotation(InputEvent @event)
         {
-            if (@event.IsActionPressed("Rotate", true) && this.globals.GrabbedItem != null && rotating == false)
+            if (!LeftMBDown) { return; }
+            if (@event.IsActionPressed("Rotate", true) && this.globals.GrabbedItem != null)
             {
-                rotating = true;
+                RightMBDown = true;
                 rotatingItem = globals.GrabbedItem.GetNode<LiveItem>(globals.GrabbedItem.GetPathTo(globals.GrabbedItem, true));
                 CreateNewLabel();
             }
             
-            if (@event is InputEventMouseMotion && rotating)
+            if (@event is InputEventMouseMotion && RightMBDown)
             {
                 RotateItem();
             }
 
-            if (@event.IsActionReleased("Rotate", true) && rotating == true)
+            if (@event.IsActionReleased("Rotate", true) || @event.IsActionReleased("Grab", true))
             {
-                rotating = false;
-                var localTween = globals.GetTree().CreateTween();
-                rotatingItem.PosOffset = new(0,0);
-                localTween.TweenProperty(rotatingItem, "global_position", globals.GetViewport().GetMousePosition(), .05f)
+                RightMBDown = false;
+                if (rotatingItem != null)
+                {
+                    var localTween = globals.GetTree().CreateTween();
+                    rotatingItem.PosOffset = new(0,0);
+                    localTween.TweenProperty(rotatingItem, "global_position", globals.GetViewport().GetMousePosition(), .05f)
                             .SetTrans(Tween.TransitionType.Expo)
-                            .SetEase(Tween.EaseType.Out);
-                globals.RemoveChild(rotationLabel);
+                            .SetEase(Tween.EaseType.Out);           
+                }
+
+                if (rotationLabel.IsInsideTree())
+                {
+                    globals.RemoveChild(rotationLabel);
+                }
                 rotatingItem = null;
             }
-
-            
         }
 
         private void CreateNewLabel()

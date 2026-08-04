@@ -35,6 +35,11 @@ namespace Dressup
             characterScale = CharacterNode.Scale;
 		}
 
+		public void HandleItemSpawned()
+		{
+            mouseController.Pressed();
+		}
+
 		public void HandleItemClicked()
 		{
 		}

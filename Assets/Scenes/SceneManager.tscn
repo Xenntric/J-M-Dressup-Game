@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dvti61pnop4mn"]
+
+[ext_resource type="Script" uid="uid://b5bc8wr1igbqw" path="res://Assets/Scenes/SceneManager.cs" id="1_tks54"]
+[ext_resource type="PackedScene" uid="uid://jrkflywtdx4e" path="res://Assets/Scenes/splash_scene.tscn" id="2_r44vt"]
+
+[node name="SceneManager" type="CanvasLayer" unique_id=370322597]
+script = ExtResource("1_tks54")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=422383882]
+
+[node name="SplashScene" parent="." unique_id=1896331932 instance=ExtResource("2_r44vt")]

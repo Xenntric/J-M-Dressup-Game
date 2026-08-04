@@ -58,6 +58,7 @@ namespace Dressup
             PackedScene seed = Finder.FindClothesScene(this);
             LiveItem copy = seed.Instantiate<LiveItem>();
             copy.TestMode = false;
+            copy.globals = globals;
             ItemLayerNode.AddChild(copy);
             copy.genericName = this.Name;
             GD.Print("spawning: ", copy.genericName);

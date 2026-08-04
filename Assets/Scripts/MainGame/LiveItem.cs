@@ -21,6 +21,7 @@ namespace Dressup
 		private Vector2	TextureSize;
         public bool inside;
         private bool grabbed;
+        [Signal] public delegate void ItemSpawnedEventHandler();
         public override void _EnterTree()
         {
             if (!TestMode)
@@ -46,6 +47,11 @@ namespace Dressup
             area.InputPickable = true;
             area.MouseEntered += HandleMouseEntered;
             area.MouseExited += HandleMouseExited;
+
+            if (!TestMode)
+            {
+                globals.HandleItemSpawned(); 
+            }
         }
         private void HandleMouseEntered() 
         {
